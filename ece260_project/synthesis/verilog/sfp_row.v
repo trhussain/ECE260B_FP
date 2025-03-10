@@ -9,8 +9,8 @@ module sfp_row (clk, acc, div, fifo_ext_rd, sum_in, sum_out, sfp_in, sfp_out);
  
   input  clk, div, acc, fifo_ext_rd;
   input  [bw_psum+3:0] sum_in;
-  input  [col*bw_psum-1:0] sfp_in;
-  wire  [col*bw_psum-1:0] abs;
+  input  [col*bw_psum-1:0] sfp_in; // is the input and it takes in all 8 numbers at once
+  wire  [col*bw_psum-1:0] abs; // holds absolute value of input numbers
   reg    div_q;
   output [col*bw_psum-1:0] sfp_out;
   output [bw_psum+3:0] sum_out;
@@ -38,7 +38,7 @@ module sfp_row (clk, acc, div, fifo_ext_rd, sum_in, sum_out, sfp_in, sfp_out);
   reg [bw_psum+3:0] sum_q;
   reg fifo_wr;
 
-  assign sfp_in_sign0 =  sfp_in[bw_psum*1-1 : bw_psum*0];
+  assign sfp_in_sign0 =  sfp_in[bw_psum*1-1 : bw_psum*0]; // holds signed input numbers
   assign sfp_in_sign1 =  sfp_in[bw_psum*2-1 : bw_psum*1];
   assign sfp_in_sign2 =  sfp_in[bw_psum*3-1 : bw_psum*2];
   assign sfp_in_sign3 =  sfp_in[bw_psum*4-1 : bw_psum*3];
@@ -98,7 +98,7 @@ module sfp_row (clk, acc, div, fifo_ext_rd, sum_in, sum_out, sfp_in, sfp_out);
        if (acc) begin
       
          sum_q <= 
-           {4'b0, abs[bw_psum*1-1 : bw_psum*0]} +
+           {4'b0, abs[bw_psum*1-1 : bw_psum*0]} + // Defined above, just doing 2's complement
            {4'b0, abs[bw_psum*2-1 : bw_psum*1]} +
            {4'b0, abs[bw_psum*3-1 : bw_psum*2]} +
            {4'b0, abs[bw_psum*4-1 : bw_psum*3]} +
@@ -112,7 +112,7 @@ module sfp_row (clk, acc, div, fifo_ext_rd, sum_in, sum_out, sfp_in, sfp_out);
          fifo_wr <= 0;
    
          if (div) begin
-           sfp_out_sign0 <= sfp_in_sign0 / sum_2core;
+           sfp_out_sign0 <= sfp_in_sign0 / sum_2core; // signed output from sfp
            sfp_out_sign1 <= sfp_in_sign1 / sum_2core;
            sfp_out_sign2 <= sfp_in_sign2 / sum_2core;
            sfp_out_sign3 <= sfp_in_sign3 / sum_2core;

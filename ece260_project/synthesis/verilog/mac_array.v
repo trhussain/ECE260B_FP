@@ -38,6 +38,16 @@ for (i=1; i < col+1 ; i=i+1) begin : col_idx
 	.out(out[bw_psum*i-1 : bw_psum*(i-1)])
    );
 end 
+// integer j;
+// always @(posedge clk) begin
+//    if (inst[0] || inst[1]) begin
+//       $write("MAC ARRAY INPUT: ");
+//       for (j = 0; j < pr; j = j + 1) begin
+//          $write("%4d ", $signed(in[(j+1)*bw-1 -: bw])); // Print input vector
+//       end
+//       $display("");  // New line
+//    end
+// end
 
 
 endmodule

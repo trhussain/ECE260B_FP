@@ -19,19 +19,12 @@ integer  captured_data;
 integer  weight [col*pr-1:0];
 `define NULL 0
 
-
-
-
 integer  K[col-1:0][pr-1:0];
 integer  Q[total_cycle-1:0][pr-1:0];
 integer  result[total_cycle-1:0][col-1:0];
 integer  sum[total_cycle-1:0];
 
 integer i,j,k,t,p,q,s,u, m;
-
-
-
-
 
 reg reset = 1;
 reg clk = 0;
@@ -49,8 +42,7 @@ reg load = 0;
 reg [3:0] qkmem_add = 0;
 reg [3:0] pmem_add = 0;
 
-
-assign inst[8] = ofifo_rd;
+assign inst[16] = ofifo_rd;
 assign inst[15:12] = qkmem_add;
 assign inst[11:8]  = pmem_add;
 assign inst[7] = execute;
@@ -62,13 +54,9 @@ assign inst[2] = kmem_wr;
 assign inst[1] = pmem_rd;
 assign inst[0] = pmem_wr;
 
-
-
 reg [bw_psum-1:0] temp5b;
 reg [bw_psum+3:0] temp_sum;
 reg [bw_psum*col-1:0] temp16b;
-
-
 
 fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
       .reset(reset),
@@ -76,7 +64,6 @@ fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
       .mem_in(mem_in), 
       .inst(inst)
 );
-
 
 initial begin 
 
@@ -91,12 +78,6 @@ $display("##### Q data txt reading #####");
 
 
   qk_file = $fopen("qdata.txt", "r");
-
-  //// To get rid of first 4 lines in data file ////
-  // qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  // qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  // qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  // qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
 
 
   for (q=0; q<total_cycle; q=q+1) begin
@@ -130,14 +111,6 @@ $display("##### K data txt reading #####");
   reset = 0;
 
   qk_file = $fopen("kdata.txt", "r");
-
-  //// To get rid of first 4 lines in data file ////
-  // qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  // qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  // qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-  // qk_scan_file = $fscanf(qk_file, "%s\n", captured_data);
-
-
 
 
   for (q=0; q<col; q=q+1) begin
@@ -189,7 +162,7 @@ $display("##### Estimated multiplication result (HEX) #####");
   for (t=0; t<total_cycle; t=t+1) begin
      for (q=0; q<col; q=q+1) begin
          for (k=0; k<pr; k=k+1) begin
-            result[t][q] = result[t][q] + Q[t][k] * K[k][q];
+            result[t][q] = result[t][q] + Q[t][k] * K[q][k];
             //$display("Q[%2d][%2d] * K[%2d][%2d] = %2d * %2d", t, k, k, q, Q[t][k], K[k][q]);
          end
 
@@ -303,7 +276,7 @@ $display("##### Kmem writing #####");
 
 /////  K data loading  /////
 $display("##### K data loading to processor #####");
-    // col+1 -> col + 2 to capture 
+    // col+1 -> col + 2 to capture
   for (q=0; q<col+2; q=q+1) begin
     #0.5 clk = 1'b0;  
     load = 1; 
@@ -368,7 +341,7 @@ $display("##### execute #####");
 ////////////// output fifo rd and wb to psum mem ///////////////////
 // pMEM results 
 $display("##### move ofifo to pmem #####");
-
+pmem_add = 0; 
   for (q=0; q<total_cycle; q=q+1) begin
     #0.5 clk = 1'b0;  
     ofifo_rd = 1; 
@@ -377,13 +350,26 @@ $display("##### move ofifo to pmem #####");
     if (q>0) begin
        pmem_add = pmem_add + 1;
     end
+  #0.5 clk = 1'b1;  
 
-    #0.5 clk = 1'b1;  
   end
 
   #0.5 clk = 1'b0;  
+  $display("##### PMEM TO OUT #####");
+  pmem_rd = 1;
   pmem_wr = 0; pmem_add = 0; ofifo_rd = 0;
+  for (q=0; q<total_cycle+1; q=q+1) begin
+    #0.5 clk = 1'b0;  
+
+    if (q>0) begin
+       pmem_add = pmem_add + 1;
+    end
+    #0.5 clk = 1'b1;  
+
+  end
+
   #0.5 clk = 1'b1;  
+
 
 ///////////////////////////////////////////
 

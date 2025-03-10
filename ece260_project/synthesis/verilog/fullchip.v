@@ -21,22 +21,19 @@ core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance (
       .inst(inst),
       .out(core_out)
 );
+integer q; // Declare loop variable properly
 
-// always @(posedge clk) begin
-//       if (inst[0])
-//             $display("Fullchip core_out = %h", core_out);
-// end
-// integer q; // Declare loop variable properly
-// always @(posedge clk) begin
-//     if (inst[0]) begin
-//         $write("Core Output |");
-//         for (q = col-1; q >= 0; q = q - 1) begin  // Reverse the order to match expected output
-//             $write(" %6d |", $signed(core_out[q*bw_psum +: bw_psum])); // Ensure sign extension
-//         end
-//         $display(""); // Move to new line
-//         $display("---------------------------------------------------");
-//     end
-// end
+always @(posedge clk) begin
+    if (inst[1]) begin
+        $write("Core Output |");
+        for (q = col-1; q >= 0; q = q - 1) begin  // Reverse the order to match expected output
+            $write(" %6d |", $signed(core_out[q*bw_psum +: bw_psum])); // Convert HEX to signed DECIMAL
+        end
+        $display(""); // Move to new line
+        $display("---------------------------------------------------");
+    end
+end
+
 
 
 endmodule

@@ -50,7 +50,6 @@ module sram_w16 (CLK, D, Q, CEN, WEN, A);
       4'b0101: Q <= memory5; 
       4'b0110: Q <= memory6; 
       4'b0111: Q <= memory7; 
-
     endcase
    end
 
@@ -68,5 +67,32 @@ module sram_w16 (CLK, D, Q, CEN, WEN, A);
     endcase
   end
 end
+          integer i;
+
+// always @ (posedge CLK) begin
+
+//     if (!CEN && !WEN) begin // When writing to memory
+//         $write("WRITE: Address = %d | Data = ", A);
+//         for ( i = 0; i < 16; i = i + 1) begin
+//             $write("%4d ", $signed(D[(i+1)*8-1 -: 8])); // Extract 8-bit values
+//         end
+//         $display("");
+//     end
+
+//     if (!CEN && WEN) begin // When reading from memory
+//         $write("READ: Address = %d | Data = ", A);
+//         case (A)
+//             4'b0000: for ( i = 0; i < 16; i = i + 1) $write("%4d ", $signed(memory0[(i+1)*8-1 -: 8]));
+//             4'b0001: for ( i = 0; i < 16; i = i + 1) $write("%4d ", $signed(memory1[(i+1)*8-1 -: 8]));
+//             4'b0010: for ( i = 0; i < 16; i = i + 1) $write("%4d ", $signed(memory2[(i+1)*8-1 -: 8]));
+//             4'b0011: for ( i = 0; i < 16; i = i + 1) $write("%4d ", $signed(memory3[(i+1)*8-1 -: 8]));
+//             4'b0100: for ( i = 0; i < 16; i = i + 1) $write("%4d ", $signed(memory4[(i+1)*8-1 -: 8]));
+//             4'b0101: for ( i = 0; i < 16; i = i + 1) $write("%4d ", $signed(memory5[(i+1)*8-1 -: 8]));
+//             4'b0110: for ( i = 0; i < 16; i = i + 1) $write("%4d ", $signed(memory6[(i+1)*8-1 -: 8]));
+//             4'b0111: for ( i = 0; i < 16; i = i + 1) $write("%4d ", $signed(memory7[(i+1)*8-1 -: 8]));
+//         endcase
+//         $display("");
+//     end
+// end
 
 endmodule
