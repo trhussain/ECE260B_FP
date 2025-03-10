@@ -163,12 +163,12 @@ $display("##### Estimated multiplication result (HEX) #####");
      for (q=0; q<col; q=q+1) begin
          for (k=0; k<pr; k=k+1) begin
             result[t][q] = result[t][q] + Q[t][k] * K[q][k];
-            //$display("Q[%2d][%2d] * K[%2d][%2d] = %2d * %2d", t, k, k, q, Q[t][k], K[k][q]);
+            $display("Q[%2d][%2d] * K[%2d][%2d] = %2d * %2d", t, k, q, k, Q[t][k], K[q][k]);
          end
 
          temp5b = result[t][q]; // Stores current dot product
          temp16b = {temp16b[139:0], temp5b}; // Concatenate results 
-          //$display("@cycle%2d: %3d", t, result[t][q]);
+          $display("@cycle%2d: %3d", t, result[t][q]);
 //             $display("Q[%2d][%2d] * K[%2d][%2d] = %2d * %2d", k, t, k, q, Q[t][k], K[k][q]);
 
      end
