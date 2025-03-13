@@ -30,7 +30,7 @@ reg reset = 1;
 reg clk = 0;
 reg [pr*bw-1:0] mem_in; 
 reg ofifo_rd = 0;
-wire [16:0] inst; // <= Keep inst as 16:0? represents 17 values... why?
+wire [18:0] inst; 
 reg qmem_rd = 0;
 reg qmem_wr = 0; 
 reg kmem_rd = 0; 
@@ -42,6 +42,10 @@ reg load = 0;
 reg [3:0] qkmem_add = 0;
 reg [3:0] pmem_add = 0;
 
+reg div = 0; 
+reg acc = 0;
+assign inst[18] = acc;
+assign inst[17] =  div;
 assign inst[16] = ofifo_rd;
 assign inst[15:12] = qkmem_add;
 assign inst[11:8]  = pmem_add;
@@ -335,32 +339,62 @@ $display("##### execute #####");
     #0.5 clk = 1'b1;   
  end
 
-
-
-
 ////////////// output fifo rd and wb to psum mem ///////////////////
-// pMEM results 
-$display("##### move ofifo to pmem #####");
-pmem_add = 0; 
-  for (q=0; q<total_cycle; q=q+1) begin
-    #0.5 clk = 1'b0;  
-    ofifo_rd = 1; 
-    pmem_wr = 1; 
+// PMEM results 
+// $display("##### move ofifo to pmem #####");
+// pmem_add = 0; 
+//   for (q=0; q<total_cycle; q=q+1) begin
+//     #0.5 clk = 1'b0;  
+//     ofifo_rd = 1; 
+//     pmem_wr = 1; 
 
-    if (q>0) begin
-       pmem_add = pmem_add + 1;
-    end
-  #0.5 clk = 1'b1;  
+//     if (q>0) begin
+//        pmem_add = pmem_add + 1;
+//     end
+
+//   #0.5 clk = 1'b1;  
+//   end
+
+// #0.5 clk = 1'b0; // initialize values
+// acc = 0;
+// div = 0;
+
+// // pmem_wr = 1;
+// #0.5 clk = 1'b1;  
+
+//  for (q=0; q<10; q=q+1) begin
+//     #0.5 clk = 1'b0;   
+//     #0.5 clk = 1'b1;   
+//  end
+
+
+$display("##### move ofifo to SFU to PMEM #####");
+pmem_add = -1; 
+  for (q=0; q<8; q=q+1) begin // This is going to be slow but whatever 
+    #0.5 clk = 1'b0; // Read and store into SFP
+    ofifo_rd = 1; 
+    acc = 1;  
+    pmem_wr = 0;
+    
+    #0.5 clk = 1'b1;  
+    #0.5 clk = 1'b0;  // Stop reading and do division
+    ofifo_rd = 0; 
+    acc = 0;
+    div = 1; 
+    #0.5 clk = 1'b1; 
+    #0.5 clk = 1'b0;  // Store into memory
+    div = 0; 
+    pmem_add = pmem_add + 1;
+    pmem_wr = 1;
+    #0.5 clk = 1'b1;
 
   end
 
   #0.5 clk = 1'b0;  
-  $display("##### PMEM TO OUT #####");
   pmem_rd = 1;
   pmem_wr = 0; pmem_add = 0; ofifo_rd = 0;
   for (q=0; q<total_cycle+1; q=q+1) begin
     #0.5 clk = 1'b0;  
-
     if (q>0) begin
        pmem_add = pmem_add + 1;
     end

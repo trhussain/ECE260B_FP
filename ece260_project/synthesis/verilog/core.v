@@ -13,7 +13,7 @@ output [bw_psum*col-1:0] out;
 wire   [bw_psum*col-1:0] pmem_out;
 input  [pr*bw-1:0] mem_in;
 input  clk;
-input  [16:0] inst; 
+input  [18:0] inst; 
 input  reset;
 
 wire  [pr*bw-1:0] mac_in;
@@ -35,6 +35,9 @@ wire  kmem_wr;
 wire  pmem_rd;
 wire  pmem_wr; 
 
+wire [1:0] sfp_inst;
+
+assign sfp_inst = inst[18:17];
 assign ofifo_rd = inst[16];
 assign qkmem_add = inst[15:12];
 assign pmem_add = inst[11:8];
@@ -46,11 +49,8 @@ assign kmem_wr = inst[2];
 assign pmem_rd = inst[1];
 assign pmem_wr = inst[0];
 
-
-
-
 assign mac_in  = inst[6] ? kmem_out : qmem_out;
-assign pmem_in = fifo_out;
+assign pmem_in = sfp_out;
 
 assign out = pmem_out; // Delay by 1 cycle to ensure data is stable
 
@@ -103,6 +103,23 @@ sram_w16 #(.sram_bit(col*bw_psum)) psum_mem_instance (
         .A(pmem_add)
 );
 
+ming_sfp_row ming_sfp_instance (
+        .clk(clk),
+        .inst(sfp_inst),
+        .sfp_in(fifo_out),
+        .sfp_out(sfp_out),
+        .reset(reset)
+);
+
+/* FOR SFU
+
+- Initalize SFU
+- when "ready to be read to PMEM" intercept
+- compute the sum and do the normalization 
+- write to PMEM
+
+*/ // I thing should write own SFP ?? Their built in SFU is super confusing
+
 
 
   //////////// For printing purpose ////////////
@@ -114,6 +131,14 @@ integer i;
 integer fi;
 
 always @(posedge clk) begin
+//     if (pmem_wr) begin
+//         $write("PMEM WRITE: addr=%d | ", pmem_add);
+//         for (i = 0; i < pr; i = i + 1) begin
+//             $write(" %6d |", $signed(pmem_in[i*bw_psum +: bw_psum]));  // 20-bit chunks
+//         end
+//         $display(""); 
+//     end
+
 
     // $display("Mem in: %h", mem_in);
 //     if (qmem_wr) begin
