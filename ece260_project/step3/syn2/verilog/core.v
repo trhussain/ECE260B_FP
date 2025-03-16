@@ -95,7 +95,8 @@ sram_w16 /*#(.sram_bit(pr*bw))*/ kmem_instance (
 
 // partial sum memory, pmemin = fifo_out 
 // submodule already has param sizing
-sram_w16 /*#(.sram_bit(col*bw_psum))*/ psum_mem_instance (
+// I had to make this a new submodule to differentiate it from the 64 wide ones
+sram_w16_160 /*#(.sram_bit(col*bw_psum))*/ psum_mem_instance (
         .CLK(clk),
         .D(pmem_in),
         .Q(pmem_out),

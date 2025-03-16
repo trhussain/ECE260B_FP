@@ -1,7 +1,7 @@
 # Load design
 set desdir 		"/home/linux/ieng6/ee260bwi25/public/DESIGNdata"
 set libdir 		"/home/linux/ieng6/ee260bwi25/public/PDKdata"
-set design 		"core"
+set design 		"sram_w16_160"
 set netlist 		"./netlist/$design.out.v"
 set sdc 		"./constraints/$design.sdc"
 set best_timing_lib 	"$libdir/lib/tcbn65gplusbc.lib"

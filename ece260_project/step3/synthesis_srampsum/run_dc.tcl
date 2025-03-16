@@ -1,4 +1,4 @@
-set top_module sram_w16
+set top_module sram_w16_160
 set rtlPath "./verilog"
 
 # Target library
@@ -47,7 +47,7 @@ set verilogout_single_bit false
 analyze -format verilog -lib WORK sfp_row.v
 analyze -format verilog -lib WORK sram_128b_w16.v
 analyze -format verilog -lib WORK sram_160b_w16.v
-analyze -format verilog -lib WORK sram_w16.v
+analyze -format verilog -lib WORK sram_w16_160.v
 analyze -format verilog -lib WORK sync.v
 
 elaborate $top_module -lib WORK -update
