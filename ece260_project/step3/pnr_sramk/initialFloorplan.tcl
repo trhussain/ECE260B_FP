@@ -1,5 +1,5 @@
 # Set floorplan with estimated core area & utilization
-floorPlan -site core -r 0.5 0.70 10.0 10.0 10.0 10.0
+floorPlan -site core -r 0.3 0.70 10.0 10.0 10.0 10.0
 # 0.7 : Core Utilization Factor 
 
 

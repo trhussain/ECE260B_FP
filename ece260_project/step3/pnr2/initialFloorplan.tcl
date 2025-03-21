@@ -1,5 +1,5 @@
 # Set floorplan with estimated core area & utilization
-floorPlan -site core -r 0.5 0.10 10.0 10.0 10.0 10.0
+floorPlan -site core -r 0.5 0.70 10.0 10.0 10.0 10.0
 # 0.7 : Core Utilization Factor 
 
 
@@ -19,9 +19,9 @@ addRing -spacing {top 2 bottom 2 left 2 right 2} -width {top 3 bottom 3 left 3 r
 addStripe -number_of_sets 30 -spacing 5 -layer M6 -width 2 -start_offset 20 -stop_offset 20 -nets { VSS VDD } -direction horizontal
 
 # via https://ucsd.instructure.com/courses/61768/discussion_topics/895458
-setObjFPlanBox Instance qmem_instance 425 50 600 200
-setObjFPlanBox Instance kmem_instance 625 50 800 200
-setObjFPlanBox Instance psum_mem_instance 825 50 1000 200
+setObjFPlanBox Instance qmem_instance 25 250 300 350
+setObjFPlanBox Instance kmem_instance 400 250 700 350
+setObjFPlanBox Instance psum_mem_instance 200 50 500 200
 
 addHaloToBlock {3 3 3 3} qmem_instance 
 addHaloToBlock {3 3 3 3} kmem_instance 
