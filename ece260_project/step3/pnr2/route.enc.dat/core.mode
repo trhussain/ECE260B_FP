@@ -17,6 +17,7 @@ catch { setOptMode -fixFanoutLoad true }
 catch { setOptMode -leakageToDynamicRatio 0.5 }
 catch { setOptMode -optimizeFF true }
 catch { setOptMode -powerEffort high }
+catch { setOptMode -preserveAllSequential false }
 catch { setOptMode -restruct true }
 catch { setOptMode -setupTargetSlack 0 }
 catch { setOptMode -verbose true }
@@ -28,7 +29,6 @@ catch {setNanoRouteMode -quiet -drouteAutoStop true}
 catch {setNanoRouteMode -quiet -drouteFixAntenna true}
 catch {setNanoRouteMode -quiet -droutePostRouteSpreadWire "false"}
 catch {setNanoRouteMode -quiet -drouteStartIteration 0}
-catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
 catch {setNanoRouteMode -quiet -routeExpPreserveConstraints true}
 catch {setNanoRouteMode -quiet -routeSiEffort "medium"}
 catch {setNanoRouteMode -quiet -routeWithSiDriven true}
@@ -41,6 +41,7 @@ catch { setPlaceMode -placeIoPins false }
 catch { setPlaceMode -reorderScan false }
 catch { setPlaceMode -timingDriven true }
 catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepFlatten true }
+catch { setUsefulSkewMode -ecoRoute false }
 catch { setDelayCalMode -enable_high_fanout true }
 catch { setDelayCalMode -engine aae }
 catch { setDelayCalMode -ignoreNetLoad false }

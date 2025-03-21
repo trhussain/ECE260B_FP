@@ -1,4 +1,4 @@
-streamOut ${design}.gds2 -merge {./subckt/add.gds2}
+# streamOut ${design}.gds2 -merge {./subckt/add.gds2}
 write_lef_abstract ${design}.lef
 defOut -netlist -routing ${design}.def
 saveNetlist ${design}.pnr.v

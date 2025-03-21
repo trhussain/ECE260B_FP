@@ -1,0 +1,1372 @@
+[03/21 14:11:24      0] 
+[03/21 14:11:24      0] Cadence Innovus(TM) Implementation System.
+[03/21 14:11:24      0] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[03/21 14:11:24      0] 
+[03/21 14:11:24      0] Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+[03/21 14:11:24      0] Options:	
+[03/21 14:11:24      0] Date:		Fri Mar 21 14:11:24 2025
+[03/21 14:11:24      0] Host:		ieng6-ece-17.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB)
+[03/21 14:11:24      0] OS:		CentOS Linux release 7.9.2009 (Core)
+[03/21 14:11:24      0] 
+[03/21 14:11:24      0] License:
+[03/21 14:11:24      0] 		invs	Innovus Implementation System	15.2	checkout succeeded
+[03/21 14:11:24      0] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[03/21 14:11:25      0] **ERROR: (IMPOAX-142):	Could not open shared library libinnovusoax22.so : /acsnfs3/software/cadence-innovus152/tools/lib/64bit/libcdsSkillPcell.so: undefined symbol: _ZTIN12OpenAccess_413oaFSComponentE
+[03/21 14:11:25      0] 
+[03/21 14:11:25      0] **ERROR: (IMPOAX-142):	Could not open shared library libcdsSkillPcell.so : (null)
+[03/21 14:11:25      0] 
+[03/21 14:11:25      0] **ERROR: (IMPOAX-142):	OA features will be disabled in this session.
+[03/21 14:11:25      0] 
+[03/21 14:11:33      7] @(#)CDS: Innovus v15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+[03/21 14:11:33      7] @(#)CDS: NanoRoute 15.23-s045_1 NR160414-1105/15_23-UB (database version 2.30, 317.6.1) {superthreading v1.26}
+[03/21 14:11:33      7] @(#)CDS: AAE 15.23-s014 (64bit) 04/22/2016 (Linux 2.6.18-194.el5)
+[03/21 14:11:33      7] @(#)CDS: CTE 15.23-s022_1 () Apr 22 2016 09:38:45 ( )
+[03/21 14:11:33      7] @(#)CDS: SYNTECH 15.23-s008_1 () Apr 12 2016 21:52:59 ( )
+[03/21 14:11:33      7] @(#)CDS: CPE v15.23-s045
+[03/21 14:11:33      7] @(#)CDS: IQRC/TQRC 15.1.4-s213 (64bit) Tue Feb  9 17:31:28 PST 2016 (Linux 2.6.18-194.el5)
+[03/21 14:11:33      7] @(#)CDS: OA 22.50-p036 Tue Nov  3 09:29:52 2015
+[03/21 14:11:33      7] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[03/21 14:11:33      7] @(#)CDS: RCDB 11.7
+[03/21 14:11:33      7] --- Running on ieng6-ece-17.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB) ---
+[03/21 14:11:33      7] Create and set the environment variable TMPDIR to /tmp/innovus_temp_17471_ieng6-ece-17.ucsd.edu_aekeng_r84Bye.
+
+[03/21 14:11:33      8] 
+[03/21 14:11:33      8] **INFO:  MMMC transition support version v31-84 
+[03/21 14:11:33      8] 
+[03/21 14:11:33      8] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[03/21 14:11:33      8] <CMD> suppressMessage ENCEXT-2799
+[03/21 14:11:34      8] <CMD> getDrawView
+[03/21 14:11:34      8] <CMD> loadWorkspace -name Physical
+[03/21 14:11:34      8] <CMD> win
+[03/21 14:11:38      8] <CMD> set init_pwr_net VDD
+[03/21 14:11:38      8] <CMD> set init_gnd_net VSS
+[03/21 14:11:38      8] <CMD> set init_verilog ./netlist/core.out.v
+[03/21 14:11:38      8] <CMD> set init_design_netlisttype Verilog
+[03/21 14:11:38      8] <CMD> set init_design_settop 1
+[03/21 14:11:38      8] <CMD> set init_top_cell core
+[03/21 14:11:38      8] <CMD> set init_lef_file {/home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef ./subckt/sram_w16_160.lef ./subckt/sram_w16.lef}
+[03/21 14:11:38      8] <CMD> create_library_set -name WC_LIB -timing [list $worst_timing_lib ./subckt/sram_w16_160_WC.lib ./subckt/sram_w16_WC.lib]
+[03/21 14:11:38      8] <CMD> create_library_set -name BC_LIB -timing [list $best_timing_lib ./subckt/sram_w16_160_BC.lib ./subckt/sram_w16_BC.lib]
+[03/21 14:11:38      8] <CMD> create_rc_corner -name Cmax -cap_table $worst_captbl -T 125
+[03/21 14:11:38      8] <CMD> create_rc_corner -name Cmin -cap_table $best_captbl -T -40
+[03/21 14:11:38      8] <CMD> create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
+[03/21 14:11:38      8] <CMD> create_delay_corner -name BC -library_set BC_LIB -rc_corner Cmin
+[03/21 14:11:38      8] <CMD> create_constraint_mode -name CON -sdc_file [list $sdc]
+[03/21 14:11:38      8] <CMD> create_analysis_view -name WC_VIEW -delay_corner WC -constraint_mode CON
+[03/21 14:11:38      8] <CMD> create_analysis_view -name BC_VIEW -delay_corner BC -constraint_mode CON
+[03/21 14:11:38      8] <CMD> init_design -setup WC_VIEW -hold BC_VIEW
+[03/21 14:11:38      8] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[03/21 14:11:38      8] 
+[03/21 14:11:38      8] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[03/21 14:11:38      8] 
+[03/21 14:11:38      8] Loading LEF file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef ...
+[03/21 14:11:38      8] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 28.
+[03/21 14:11:38      8] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 867.
+[03/21 14:11:38      8] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 877.
+[03/21 14:11:38      8] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1014.
+[03/21 14:11:38      8] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1024.
+[03/21 14:11:38      8] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1161.
+[03/21 14:11:38      8] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1171.
+[03/21 14:11:38      8] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1308.
+[03/21 14:11:38      8] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1318.
+[03/21 14:11:38      8] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1372.
+[03/21 14:11:38      8] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1383.
+[03/21 14:11:38      8] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1604.
+[03/21 14:11:38      8] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1614.
+[03/21 14:11:38      8] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1769.
+[03/21 14:11:38      8] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1771.
+[03/21 14:11:38      8] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1772.
+[03/21 14:11:38      8] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1776.
+[03/21 14:11:38      8] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1778.
+[03/21 14:11:38      8] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1779.
+[03/21 14:11:38      8] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/21 14:11:38      8] The LEF parser will ignore this statement.
+[03/21 14:11:38      8] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1783.
+[03/21 14:11:38      8] Set DBUPerIGU to M2 pitch 400.
+[03/21 14:11:39      9] 
+[03/21 14:11:39      9] Loading LEF file ./subckt/sram_w16_160.lef ...
+[03/21 14:11:39      9] 
+[03/21 14:11:39      9] Loading LEF file ./subckt/sram_w16.lef ...
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'CLK' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[127]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[126]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[125]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[124]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[123]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[122]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[121]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[120]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[119]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[118]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[117]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[116]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[115]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[114]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[113]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[112]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[111]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[110]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-200):	Pin 'D[109]' in macro 'sram_w16' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-200' for more detail.
+[03/21 14:11:39      9] **WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+[03/21 14:11:39      9] To increase the message display limit, refer to the product command reference manual.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[127]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[126]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[125]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[124]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[123]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[122]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[121]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[120]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[119]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[118]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[117]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[116]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[115]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[114]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[113]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[112]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[111]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[110]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[109]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (IMPLF-201):	Pin 'Q[108]' in macro 'sram_w16' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/21 14:11:39      9] Type 'man IMPLF-201' for more detail.
+[03/21 14:11:39      9] **WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
+[03/21 14:11:39      9] To increase the message display limit, refer to the product command reference manual.
+[03/21 14:11:39      9] 
+[03/21 14:11:39      9] viaInitial starts at Fri Mar 21 14:11:39 2025
+viaInitial ends at Fri Mar 21 14:11:39 2025
+Reading WC_LIB timing library '/home/linux/ieng6/ee260bwi25/public/PDKdata/lib/tcbn65gpluswc.lib' ...
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D0' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D1' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D2' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D4' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D8' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2XD1' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D0' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D1' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D2' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D4' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D8' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3XD1' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D0' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D1' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D2' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D4' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D8' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4XD1' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AO211D0' is not defined in the library.
+[03/21 14:11:39      9] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AO211D1' is not defined in the library.
+[03/21 14:11:39      9] Message <TECHLIB-436> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+[03/21 14:11:40     10] Read 811 cells in library 'tcbn65gpluswc' 
+[03/21 14:11:40     10] Reading WC_LIB timing library '/home/linux/ieng6/ee260bwi25/aekeng/ECE260B_FP/ece260_project/step3/pnr2/subckt/sram_w16_160_WC.lib' ...
+[03/21 14:11:40     10] Read 1 cells in library 'sram_w16_160' 
+[03/21 14:11:40     10] Reading WC_LIB timing library '/home/linux/ieng6/ee260bwi25/aekeng/ECE260B_FP/ece260_project/step3/pnr2/subckt/sram_w16_WC.lib' ...
+[03/21 14:11:40     10] Read 1 cells in library 'sram_w16' 
+[03/21 14:11:40     10] Reading BC_LIB timing library '/home/linux/ieng6/ee260bwi25/public/PDKdata/lib/tcbn65gplusbc.lib' ...
+[03/21 14:11:41     11] Read 811 cells in library 'tcbn65gplusbc' 
+[03/21 14:11:41     11] Reading BC_LIB timing library '/home/linux/ieng6/ee260bwi25/aekeng/ECE260B_FP/ece260_project/step3/pnr2/subckt/sram_w16_160_BC.lib' ...
+[03/21 14:11:41     11] Read 1 cells in library 'sram_w16_160' 
+[03/21 14:11:41     11] Reading BC_LIB timing library '/home/linux/ieng6/ee260bwi25/aekeng/ECE260B_FP/ece260_project/step3/pnr2/subckt/sram_w16_BC.lib' ...
+[03/21 14:11:41     11] Read 1 cells in library 'sram_w16' 
+[03/21 14:11:41     11] *** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.19min, fe_real=0.28min, fe_mem=467.3M) ***
+[03/21 14:11:41     11] *** Begin netlist parsing (mem=467.3M) ***
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D4' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D4' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D2' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D2' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D1' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D1' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D0' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D0' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D4' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D4' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D2' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D2' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D1' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D1' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D0' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D0' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2D4' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2D4' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2D2' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2D2' is defined in LEF but not in the timing library.
+[03/21 14:11:41     11] **WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+[03/21 14:11:41     11] To increase the message display limit, refer to the product command reference manual.
+[03/21 14:11:41     11] Created 813 new cells from 6 timing libraries.
+[03/21 14:11:41     11] Reading netlist ...
+[03/21 14:11:41     11] Backslashed names will retain backslash and a trailing blank character.
+[03/21 14:11:41     11] Reading verilog netlist './netlist/core.out.v'
+[03/21 14:11:41     11] 
+[03/21 14:11:41     11] *** Memory Usage v#1 (Current mem = 479.332M, initial mem = 149.258M) ***
+[03/21 14:11:41     11] *** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=479.3M) ***
+[03/21 14:11:41     11] Set top cell to core.
+[03/21 14:11:41     11] Hooked 1626 DB cells to tlib cells.
+[03/21 14:11:41     11] Starting recursive module instantiation check.
+[03/21 14:11:41     11] No recursion found.
+[03/21 14:11:41     11] Building hierarchical netlist for Cell core ...
+[03/21 14:11:41     12] *** Netlist is unique.
+[03/21 14:11:41     12] ** info: there are 1832 modules.
+[03/21 14:11:41     12] ** info: there are 21384 stdCell insts.
+[03/21 14:11:41     12] ** info: there are 3 macros.
+[03/21 14:11:41     12] 
+[03/21 14:11:41     12] *** Memory Usage v#1 (Current mem = 551.164M, initial mem = 149.258M) ***
+[03/21 14:11:41     12] **WARN: (IMPFP-3961):	The techSite 'dcore' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[03/21 14:11:41     12] Type 'man IMPFP-3961' for more detail.
+[03/21 14:11:41     12] **WARN: (IMPFP-3961):	The techSite 'ccore' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[03/21 14:11:41     12] Type 'man IMPFP-3961' for more detail.
+[03/21 14:11:41     12] Set Default Net Delay as 1000 ps.
+[03/21 14:11:41     12] Set Default Net Load as 0.5 pF. 
+[03/21 14:11:41     12] Set Default Input Pin Transition as 0.1 ps.
+[03/21 14:11:42     12] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[03/21 14:11:42     12] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/21 14:11:42     12] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:11:42     12] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:11:42     12] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:11:42     12] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:11:42     12] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable ...
+[03/21 14:11:42     12] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:11:42     12] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:11:42     12] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:11:42     12] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:11:42     12] Importing multi-corner RC tables ... 
+[03/21 14:11:42     12] Summary of Active RC-Corners : 
+[03/21 14:11:42     12]  
+[03/21 14:11:42     12]  Analysis View: WC_VIEW
+[03/21 14:11:42     12]     RC-Corner Name        : Cmax
+[03/21 14:11:42     12]     RC-Corner Index       : 0
+[03/21 14:11:42     12]     RC-Corner Temperature : 125 Celsius
+[03/21 14:11:42     12]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/21 14:11:42     12]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:11:42     12]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:11:42     12]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:11:42     12]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:11:42     12]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:11:42     12]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:11:42     12]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:11:42     12]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:11:42     12]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:11:42     12]  
+[03/21 14:11:42     12]  Analysis View: BC_VIEW
+[03/21 14:11:42     12]     RC-Corner Name        : Cmin
+[03/21 14:11:42     12]     RC-Corner Index       : 1
+[03/21 14:11:42     12]     RC-Corner Temperature : -40 Celsius
+[03/21 14:11:42     12]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable'
+[03/21 14:11:42     12]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:11:42     12]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:11:42     12]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:11:42     12]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:11:42     12]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:11:42     12]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:11:42     12]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:11:42     12]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:11:42     12]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:11:42     12] *Info: initialize multi-corner CTS.
+[03/21 14:11:42     12] Reading timing constraints file './constraints/core.sdc' ...
+[03/21 14:11:42     12] Current (total cpu=0:00:12.5, real=0:00:18.0, peak res=306.7M, current mem=672.2M)
+[03/21 14:11:42     12] INFO (CTE): Constraints read successfully.
+[03/21 14:11:42     12] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=321.8M, current mem=689.4M)
+[03/21 14:11:42     12] Current (total cpu=0:00:12.5, real=0:00:18.0, peak res=321.8M, current mem=689.4M)
+[03/21 14:11:42     12] Summary for sequential cells idenfication: 
+[03/21 14:11:42     12] Identified SBFF number: 199
+[03/21 14:11:42     12] Identified MBFF number: 0
+[03/21 14:11:42     12] Not identified SBFF number: 0
+[03/21 14:11:42     12] Not identified MBFF number: 0
+[03/21 14:11:42     12] Number of sequential cells which are not FFs: 104
+[03/21 14:11:42     12] 
+[03/21 14:11:42     12] Total number of combinational cells: 492
+[03/21 14:11:42     12] Total number of sequential cells: 303
+[03/21 14:11:42     12] Total number of tristate cells: 11
+[03/21 14:11:42     12] Total number of level shifter cells: 0
+[03/21 14:11:42     12] Total number of power gating cells: 0
+[03/21 14:11:42     12] Total number of isolation cells: 0
+[03/21 14:11:42     12] Total number of power switch cells: 0
+[03/21 14:11:42     12] Total number of pulse generator cells: 0
+[03/21 14:11:42     12] Total number of always on buffers: 0
+[03/21 14:11:42     12] Total number of retention cells: 0
+[03/21 14:11:42     12] List of usable buffers: BUFFD1 BUFFD0 BUFFD2 BUFFD3 BUFFD4 BUFFD6 BUFFD8 BUFFD12 BUFFD16 CKBD1 CKBD0 CKBD2 CKBD3 CKBD4 CKBD6 CKBD8 CKBD12 CKBD16
+[03/21 14:11:42     12] Total number of usable buffers: 18
+[03/21 14:11:42     12] List of unusable buffers: BUFFD20 BUFFD24 CKBD20 CKBD24 GBUFFD1 GBUFFD3 GBUFFD2 GBUFFD4 GBUFFD8
+[03/21 14:11:42     12] Total number of unusable buffers: 9
+[03/21 14:11:42     12] List of usable inverters: CKND1 CKND0 CKND2 CKND3 CKND4 CKND6 CKND8 CKND12 CKND16 INVD1 INVD0 INVD2 INVD3 INVD4 INVD6 INVD8 INVD12 INVD16
+[03/21 14:11:42     12] Total number of usable inverters: 18
+[03/21 14:11:42     12] List of unusable inverters: CKND20 CKND24 GINVD2 GINVD1 GINVD4 GINVD3 GINVD8 INVD20 INVD24
+[03/21 14:11:42     12] Total number of unusable inverters: 9
+[03/21 14:11:42     12] List of identified usable delay cells:
+[03/21 14:11:42     12] Total number of identified usable delay cells: 0
+[03/21 14:11:42     12] List of identified unusable delay cells: DEL0 DEL005 DEL01 DEL015 DEL02 DEL1 DEL2 DEL3 DEL4
+[03/21 14:11:42     12] Total number of identified unusable delay cells: 9
+[03/21 14:11:42     12] All delay cells are dont_use. Buffers will be used to fix hold violations.
+[03/21 14:11:42     12] 
+[03/21 14:11:42     12] *** Summary of all messages that are not suppressed in this session:
+[03/21 14:11:42     12] Severity  ID               Count  Summary                                  
+[03/21 14:11:42     12] WARNING   IMPLF-200          303  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[03/21 14:11:42     12] WARNING   IMPLF-201          288  Pin '%s' in macro '%s' has no ANTENNADIF...
+[03/21 14:11:42     12] WARNING   IMPFP-3961           2  The techSite '%s' has no related cells i...
+[03/21 14:11:42     12] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[03/21 14:11:42     12] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[03/21 14:11:42     12] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[03/21 14:11:42     12] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[03/21 14:11:42     12] WARNING   IMPVL-159         1626  Pin '%s' of cell '%s' is defined in LEF ...
+[03/21 14:11:42     12] ERROR     IMPOAX-820           1  The OA features are disabled in the curr...
+[03/21 14:11:42     12] ERROR     IMPOAX-850           1  %s command cannot be run as OA features ...
+[03/21 14:11:42     12] *** Message Summary: 2227 warning(s), 2 error(s)
+[03/21 14:11:42     12] 
+[03/21 14:11:42     12] <CMD> set_interactive_constraint_modes {CON}
+[03/21 14:11:42     12] <CMD> setDesignMode -process 65
+[03/21 14:11:42     12] Applying the recommended capacitance filtering threshold values for 65nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[03/21 14:11:42     12] 	These values will be used by all post-route extraction engines, including tQuantus, IQRC and Quantus QRC extraction.
+[03/21 14:11:42     12] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[03/21 14:11:42     12] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[03/21 14:11:42     12] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[03/21 14:11:42     12] Updating process node dependent CCOpt properties for the 65nm process node.
+[03/21 14:12:49     21] <CMD> checkTimingLibrary
+[03/21 14:12:57     22] <CMD> set init_pwr_net VDD
+[03/21 14:12:57     22] <CMD> set init_gnd_net VSS
+[03/21 14:12:57     22] <CMD> set init_verilog ./netlist/core.out.v
+[03/21 14:12:57     22] <CMD> set init_design_netlisttype Verilog
+[03/21 14:12:57     22] <CMD> set init_design_settop 1
+[03/21 14:12:57     22] <CMD> set init_top_cell core
+[03/21 14:12:57     22] <CMD> set init_lef_file {/home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef ./subckt/sram_w16_160.lef ./subckt/sram_w16.lef}
+[03/21 14:12:57     22] <CMD> create_library_set -name WC_LIB -timing [list $worst_timing_lib ./subckt/sram_w16_160_WC.lib ./subckt/sram_w16_WC.lib]
+[03/21 14:12:57     22] <CMD> create_library_set -name BC_LIB -timing [list $best_timing_lib ./subckt/sram_w16_160_BC.lib ./subckt/sram_w16_BC.lib]
+[03/21 14:12:57     22] <CMD> create_rc_corner -name Cmax -cap_table $worst_captbl -T 125
+[03/21 14:12:57     22] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[03/21 14:12:57     22] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/21 14:12:57     22] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:57     22] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:57     22] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:12:58     22] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable ...
+[03/21 14:12:58     22] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:12:58     22] Importing multi-corner RC tables ... 
+[03/21 14:12:58     22] Summary of Active RC-Corners : 
+[03/21 14:12:58     22]  
+[03/21 14:12:58     22]  Analysis View: WC_VIEW
+[03/21 14:12:58     22]     RC-Corner Name        : Cmax
+[03/21 14:12:58     22]     RC-Corner Index       : 0
+[03/21 14:12:58     22]     RC-Corner Temperature : 125 Celsius
+[03/21 14:12:58     22]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/21 14:12:58     22]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22]  
+[03/21 14:12:58     22]  Analysis View: BC_VIEW
+[03/21 14:12:58     22]     RC-Corner Name        : Cmin
+[03/21 14:12:58     22]     RC-Corner Index       : 1
+[03/21 14:12:58     22]     RC-Corner Temperature : -40 Celsius
+[03/21 14:12:58     22]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable'
+[03/21 14:12:58     22]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22] <CMD> create_rc_corner -name Cmin -cap_table $best_captbl -T -40
+[03/21 14:12:58     22] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[03/21 14:12:58     22] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/21 14:12:58     22] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:12:58     22] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable ...
+[03/21 14:12:58     22] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:12:58     22] Importing multi-corner RC tables ... 
+[03/21 14:12:58     22] Summary of Active RC-Corners : 
+[03/21 14:12:58     22]  
+[03/21 14:12:58     22]  Analysis View: WC_VIEW
+[03/21 14:12:58     22]     RC-Corner Name        : Cmax
+[03/21 14:12:58     22]     RC-Corner Index       : 0
+[03/21 14:12:58     22]     RC-Corner Temperature : 125 Celsius
+[03/21 14:12:58     22]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/21 14:12:58     22]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22]  
+[03/21 14:12:58     22]  Analysis View: BC_VIEW
+[03/21 14:12:58     22]     RC-Corner Name        : Cmin
+[03/21 14:12:58     22]     RC-Corner Index       : 1
+[03/21 14:12:58     22]     RC-Corner Temperature : -40 Celsius
+[03/21 14:12:58     22]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable'
+[03/21 14:12:58     22]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22] <CMD> create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
+[03/21 14:12:58     22] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[03/21 14:12:58     22] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/21 14:12:58     22] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:12:58     22] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable ...
+[03/21 14:12:58     22] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:12:58     22] Importing multi-corner RC tables ... 
+[03/21 14:12:58     22] Summary of Active RC-Corners : 
+[03/21 14:12:58     22]  
+[03/21 14:12:58     22]  Analysis View: WC_VIEW
+[03/21 14:12:58     22]     RC-Corner Name        : Cmax
+[03/21 14:12:58     22]     RC-Corner Index       : 0
+[03/21 14:12:58     22]     RC-Corner Temperature : 125 Celsius
+[03/21 14:12:58     22]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/21 14:12:58     22]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22]  
+[03/21 14:12:58     22]  Analysis View: BC_VIEW
+[03/21 14:12:58     22]     RC-Corner Name        : Cmin
+[03/21 14:12:58     22]     RC-Corner Index       : 1
+[03/21 14:12:58     22]     RC-Corner Temperature : -40 Celsius
+[03/21 14:12:58     22]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable'
+[03/21 14:12:58     22]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22] <CMD> create_delay_corner -name BC -library_set BC_LIB -rc_corner Cmin
+[03/21 14:12:58     22] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[03/21 14:12:58     22] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/21 14:12:58     22] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:12:58     22] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable ...
+[03/21 14:12:58     22] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:12:58     22] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:12:58     22] Importing multi-corner RC tables ... 
+[03/21 14:12:58     22] Summary of Active RC-Corners : 
+[03/21 14:12:58     22]  
+[03/21 14:12:58     22]  Analysis View: WC_VIEW
+[03/21 14:12:58     22]     RC-Corner Name        : Cmax
+[03/21 14:12:58     22]     RC-Corner Index       : 0
+[03/21 14:12:58     22]     RC-Corner Temperature : 125 Celsius
+[03/21 14:12:58     22]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/21 14:12:58     22]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22]  
+[03/21 14:12:58     22]  Analysis View: BC_VIEW
+[03/21 14:12:58     22]     RC-Corner Name        : Cmin
+[03/21 14:12:58     22]     RC-Corner Index       : 1
+[03/21 14:12:58     22]     RC-Corner Temperature : -40 Celsius
+[03/21 14:12:58     22]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable'
+[03/21 14:12:58     22]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:12:58     22]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:12:58     22]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:12:58     22] <CMD> create_constraint_mode -name CON -sdc_file [list $sdc]
+[03/21 14:12:58     23] Reading timing constraints file './constraints/core.sdc' ...
+[03/21 14:12:58     23] Current (total cpu=0:00:23.1, real=0:01:34, peak res=370.4M, current mem=776.3M)
+[03/21 14:12:58     23] INFO (CTE): Constraints read successfully.
+[03/21 14:12:58     23] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=378.7M, current mem=787.4M)
+[03/21 14:12:58     23] Current (total cpu=0:00:23.1, real=0:01:34, peak res=378.7M, current mem=787.4M)
+[03/21 14:12:58     23] <CMD> create_analysis_view -name WC_VIEW -delay_corner WC -constraint_mode CON
+[03/21 14:12:58     23] The existing analysis_view 'WC_VIEW' has been replaced with new attributes.
+[03/21 14:12:58     23] <CMD> create_analysis_view -name BC_VIEW -delay_corner BC -constraint_mode CON
+[03/21 14:12:58     23] The existing analysis_view 'BC_VIEW' has been replaced with new attributes.
+[03/21 14:12:58     23] <CMD> init_design -setup WC_VIEW -hold BC_VIEW
+[03/21 14:12:58     23] **WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+[03/21 14:12:58     23] 
+[03/21 14:12:58     23] *** Summary of all messages that are not suppressed in this session:
+[03/21 14:12:58     23] Severity  ID               Count  Summary                                  
+[03/21 14:12:58     23] WARNING   IMPSYT-7329          1  Cannot load design with init_design, aft...
+[03/21 14:12:58     23] *** Message Summary: 1 warning(s), 0 error(s)
+[03/21 14:12:58     23] 
+[03/21 14:12:58     23] <CMD> set_interactive_constraint_modes {CON}
+[03/21 14:12:58     23] <CMD> setDesignMode -process 65
+[03/21 14:12:58     23] Applying the recommended capacitance filtering threshold values for 65nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[03/21 14:12:58     23] 	These values will be used by all post-route extraction engines, including tQuantus, IQRC and Quantus QRC extraction.
+[03/21 14:12:58     23] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[03/21 14:12:58     23] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[03/21 14:12:58     23] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[03/21 14:12:58     23] Updating process node dependent CCOpt properties for the 65nm process node.
+[03/21 14:13:37     26] <CMD> set init_pwr_net VDD
+[03/21 14:13:37     26] <CMD> set init_gnd_net VSS
+[03/21 14:13:37     26] <CMD> set init_verilog ./netlist/core.out.v
+[03/21 14:13:37     26] <CMD> set init_design_netlisttype Verilog
+[03/21 14:13:37     26] <CMD> set init_design_settop 1
+[03/21 14:13:37     26] <CMD> set init_top_cell core
+[03/21 14:13:37     26] <CMD> set init_lef_file {/home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef ./subckt/sram_w16_160.lef ./subckt/sram_w16.lef}
+[03/21 14:13:37     26] <CMD> create_library_set -name WC_LIB -timing [list $worst_timing_lib ./subckt/sram_w16_160_WC.lib ./subckt/sram_w16_WC.lib]
+[03/21 14:13:37     26] <CMD> create_library_set -name BC_LIB -timing [list $best_timing_lib ./subckt/sram_w16_160_BC.lib ./subckt/sram_w16_BC.lib]
+[03/21 14:13:37     26] <CMD> create_rc_corner -name Cmax -cap_table $worst_captbl -T 125
+[03/21 14:13:37     26] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[03/21 14:13:37     26] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/21 14:13:37     26] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:13:37     26] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable ...
+[03/21 14:13:37     26] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:13:37     26] Importing multi-corner RC tables ... 
+[03/21 14:13:37     26] Summary of Active RC-Corners : 
+[03/21 14:13:37     26]  
+[03/21 14:13:37     26]  Analysis View: WC_VIEW
+[03/21 14:13:37     26]     RC-Corner Name        : Cmax
+[03/21 14:13:37     26]     RC-Corner Index       : 0
+[03/21 14:13:37     26]     RC-Corner Temperature : 125 Celsius
+[03/21 14:13:37     26]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/21 14:13:37     26]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26]  
+[03/21 14:13:37     26]  Analysis View: BC_VIEW
+[03/21 14:13:37     26]     RC-Corner Name        : Cmin
+[03/21 14:13:37     26]     RC-Corner Index       : 1
+[03/21 14:13:37     26]     RC-Corner Temperature : -40 Celsius
+[03/21 14:13:37     26]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable'
+[03/21 14:13:37     26]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26] <CMD> create_rc_corner -name Cmin -cap_table $best_captbl -T -40
+[03/21 14:13:37     26] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[03/21 14:13:37     26] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/21 14:13:37     26] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:13:37     26] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable ...
+[03/21 14:13:37     26] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:13:37     26] Importing multi-corner RC tables ... 
+[03/21 14:13:37     26] Summary of Active RC-Corners : 
+[03/21 14:13:37     26]  
+[03/21 14:13:37     26]  Analysis View: WC_VIEW
+[03/21 14:13:37     26]     RC-Corner Name        : Cmax
+[03/21 14:13:37     26]     RC-Corner Index       : 0
+[03/21 14:13:37     26]     RC-Corner Temperature : 125 Celsius
+[03/21 14:13:37     26]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/21 14:13:37     26]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26]  
+[03/21 14:13:37     26]  Analysis View: BC_VIEW
+[03/21 14:13:37     26]     RC-Corner Name        : Cmin
+[03/21 14:13:37     26]     RC-Corner Index       : 1
+[03/21 14:13:37     26]     RC-Corner Temperature : -40 Celsius
+[03/21 14:13:37     26]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable'
+[03/21 14:13:37     26]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26] <CMD> create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
+[03/21 14:13:37     26] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[03/21 14:13:37     26] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/21 14:13:37     26] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:13:37     26] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable ...
+[03/21 14:13:37     26] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:13:37     26] Importing multi-corner RC tables ... 
+[03/21 14:13:37     26] Summary of Active RC-Corners : 
+[03/21 14:13:37     26]  
+[03/21 14:13:37     26]  Analysis View: WC_VIEW
+[03/21 14:13:37     26]     RC-Corner Name        : Cmax
+[03/21 14:13:37     26]     RC-Corner Index       : 0
+[03/21 14:13:37     26]     RC-Corner Temperature : 125 Celsius
+[03/21 14:13:37     26]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/21 14:13:37     26]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26]  
+[03/21 14:13:37     26]  Analysis View: BC_VIEW
+[03/21 14:13:37     26]     RC-Corner Name        : Cmin
+[03/21 14:13:37     26]     RC-Corner Index       : 1
+[03/21 14:13:37     26]     RC-Corner Temperature : -40 Celsius
+[03/21 14:13:37     26]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable'
+[03/21 14:13:37     26]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26] <CMD> create_delay_corner -name BC -library_set BC_LIB -rc_corner Cmin
+[03/21 14:13:37     26] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[03/21 14:13:37     26] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/21 14:13:37     26] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:13:37     26] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable ...
+[03/21 14:13:37     26] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/21 14:13:37     26] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/21 14:13:37     26] Importing multi-corner RC tables ... 
+[03/21 14:13:37     26] Summary of Active RC-Corners : 
+[03/21 14:13:37     26]  
+[03/21 14:13:37     26]  Analysis View: WC_VIEW
+[03/21 14:13:37     26]     RC-Corner Name        : Cmax
+[03/21 14:13:37     26]     RC-Corner Index       : 0
+[03/21 14:13:37     26]     RC-Corner Temperature : 125 Celsius
+[03/21 14:13:37     26]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/21 14:13:37     26]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26]  
+[03/21 14:13:37     26]  Analysis View: BC_VIEW
+[03/21 14:13:37     26]     RC-Corner Name        : Cmin
+[03/21 14:13:37     26]     RC-Corner Index       : 1
+[03/21 14:13:37     26]     RC-Corner Temperature : -40 Celsius
+[03/21 14:13:37     26]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable'
+[03/21 14:13:37     26]     RC-Corner PreRoute Res Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PreRoute Cap Factor         : 1
+[03/21 14:13:37     26]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/21 14:13:37     26]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/21 14:13:37     26] <CMD> create_constraint_mode -name CON -sdc_file [list $sdc]
+[03/21 14:13:38     26] Reading timing constraints file './constraints/core.sdc' ...
+[03/21 14:13:38     26] Current (total cpu=0:00:26.9, real=0:02:14, peak res=378.9M, current mem=780.0M)
+[03/21 14:13:38     26] INFO (CTE): Constraints read successfully.
+[03/21 14:13:38     26] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=380.8M, current mem=789.7M)
+[03/21 14:13:38     26] Current (total cpu=0:00:27.0, real=0:02:14, peak res=380.8M, current mem=789.7M)
+[03/21 14:13:38     26] <CMD> create_analysis_view -name WC_VIEW -delay_corner WC -constraint_mode CON
+[03/21 14:13:38     26] The existing analysis_view 'WC_VIEW' has been replaced with new attributes.
+[03/21 14:13:38     26] <CMD> create_analysis_view -name BC_VIEW -delay_corner BC -constraint_mode CON
+[03/21 14:13:38     26] The existing analysis_view 'BC_VIEW' has been replaced with new attributes.
+[03/21 14:13:38     26] <CMD> init_design -setup WC_VIEW -hold BC_VIEW
+[03/21 14:13:38     26] **WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+[03/21 14:13:38     26] 
+[03/21 14:13:38     26] *** Summary of all messages that are not suppressed in this session:
+[03/21 14:13:38     26] Severity  ID               Count  Summary                                  
+[03/21 14:13:38     26] WARNING   IMPSYT-7329          1  Cannot load design with init_design, aft...
+[03/21 14:13:38     26] *** Message Summary: 1 warning(s), 0 error(s)
+[03/21 14:13:38     26] 
+[03/21 14:13:38     26] <CMD> set_interactive_constraint_modes {CON}
+[03/21 14:13:38     26] <CMD> setDesignMode -process 65
+[03/21 14:13:38     26] Applying the recommended capacitance filtering threshold values for 65nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[03/21 14:13:38     26] 	These values will be used by all post-route extraction engines, including tQuantus, IQRC and Quantus QRC extraction.
+[03/21 14:13:38     26] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[03/21 14:13:38     26] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[03/21 14:13:38     26] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[03/21 14:13:38     26] Updating process node dependent CCOpt properties for the 65nm process node.
+[03/21 14:13:38     26] <CMD> floorPlan -site core -r 0.5 0.70 10.0 10.0 10.0 10.0
+[03/21 14:13:38     27] **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+[03/21 14:13:38     27] <CMD> timeDesign -preplace -prefix preplace
+[03/21 14:13:38     27] **WARN: (IMPOPT-7136):	timing_socv_statistical_min_max_mode 'statistical' is not supported by Innovus. Setting it to 'mean_and_three_sigma_bounded'.
+[03/21 14:13:38     27] Set Using Default Delay Limit as 101.
+[03/21 14:13:38     27] **WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+[03/21 14:13:38     27] Setting High Fanout Nets ( > 100 ) as ideal temporarily for -prePlace option
+[03/21 14:13:38     27] Set Default Net Delay as 0 ps.
+[03/21 14:13:38     27] Set Default Net Load as 0 pF. 
+[03/21 14:13:38     27] Effort level <high> specified for reg2reg path_group
+[03/21 14:13:39     27] #################################################################################
+[03/21 14:13:39     27] # Design Stage: PreRoute
+[03/21 14:13:39     27] # Design Name: core
+[03/21 14:13:39     27] # Design Mode: 65nm
+[03/21 14:13:39     27] # Analysis Mode: MMMC Non-OCV 
+[03/21 14:13:39     27] # Parasitics Mode: No SPEF/RCDB
+[03/21 14:13:39     27] # Signoff Settings: SI Off 
+[03/21 14:13:39     27] #################################################################################
+[03/21 14:13:39     27] AAE_INFO: 1 threads acquired from CTE.
+[03/21 14:13:39     27] Calculate delays in BcWc mode...
+[03/21 14:13:39     27] Topological Sorting (CPU = 0:00:00.0, MEM = 853.4M, InitMEM = 849.1M)
+[03/21 14:13:42     31] End Timing Check Calculation. (CPU Time=0:00:00.1, Real Time=0:00:00.0)
+[03/21 14:13:42     31] End delay calculation. (MEM=1061.99 CPU=0:00:02.4 REAL=0:00:02.0)
+[03/21 14:13:42     31] *** CDM Built up (cpu=0:00:03.4  real=0:00:03.0  mem= 1062.0M) ***
+[03/21 14:13:42     31] *** Done Building Timing Graph (cpu=0:00:03.9 real=0:00:03.0 totSessionCpu=0:00:31.6 mem=1062.0M)
+[03/21 14:13:43     31] 
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
+Setup views included:
+ WC_VIEW 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.684  | -0.684  | -0.165  |
+|           TNS (ns):| -1422.0 | -1420.1 | -1.908  |
+|    Violating Paths:|  2741   |  2725   |   16    |
+|          All Paths:|  5626   |  5166   |  4164   |
++--------------------+---------+---------+---------+
+
+Density: 0.000%
+------------------------------------------------------------
+Set Using Default Delay Limit as 1000.
+[03/21 14:13:43     32] Resetting back High Fanout Nets as non-ideal
+[03/21 14:13:43     32] Set Default Net Delay as 1000 ps.
+[03/21 14:13:43     32] Set Default Net Load as 0.5 pF. 
+[03/21 14:13:43     32] Reported timing to dir ./timingReports
+[03/21 14:13:43     32] Total CPU time: 5.04 sec
+[03/21 14:13:43     32] Total Real time: 5.0 sec
+[03/21 14:13:43     32] Total Memory Usage: 964.574219 Mbytes
+[03/21 14:13:43     32] <CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
+[03/21 14:13:43     32] 21387 new pwr-pin connections were made to global net 'VDD'.
+[03/21 14:13:43     32] <CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
+[03/21 14:13:43     32] 21387 new gnd-pin connections were made to global net 'VSS'.
+[03/21 14:13:43     32] <CMD> addRing -spacing {top 2 bottom 2 left 2 right 2} -width {top 3 bottom 3 left 3 right 3} -layer {top M1 bottom M1 left M2 right M2} -center 1 -type core_rings -nets {VSS  VDD}
+[03/21 14:13:43     32] 
+[03/21 14:13:43     32] Ring generation is complete; vias are now being generated.
+[03/21 14:13:43     32] The power planner created 8 wires.
+[03/21 14:13:43     32] *** Ending Ring Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 964.6M) ***
+[03/21 14:13:43     32] <CMD> addStripe -number_of_sets 30 -spacing 5 -layer M6 -width 2 -start_offset 20 -stop_offset 20 -nets { VSS VDD } -direction horizontal
+[03/21 14:13:43     32] 
+[03/21 14:13:43     32] Starting stripe generation ...
+[03/21 14:13:43     32] Non-Default setAddStripeOption Settings :
+[03/21 14:13:43     32]   NONE
+[03/21 14:13:43     32] Stripe generation is complete; vias are now being generated.
+[03/21 14:13:43     32] The power planner created 60 wires.
+[03/21 14:13:43     32] *** Ending Stripe Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 964.6M) ***
+[03/21 14:13:43     32] <CMD> setObjFPlanBox Instance qmem_instance 75 240 300 340
+[03/21 14:13:43     32] <CMD> setObjFPlanBox Instance kmem_instance 415 240 700 340
+[03/21 14:13:43     32] <CMD> setObjFPlanBox Instance psum_mem_instance 200 50 500 200
+[03/21 14:13:43     32] <CMD> flipOrRotateObject -flip MY -name qmem_instance
+[03/21 14:13:43     32] <CMD> flipOrRotateObject -flip MY -name kmem_instance
+[03/21 14:13:43     32] <CMD> flipOrRotateObject -flip MY -name psum_mem_instance
+[03/21 14:13:43     32] <CMD> addHaloToBlock {3 3 3 3} qmem_instance
+[03/21 14:13:43     32] <CMD> addHaloToBlock {3 3 3 3} kmem_instance
+[03/21 14:13:43     32] <CMD> addHaloToBlock {3 3 3 3} psum_mem_instance
+[03/21 14:13:43     32] <CMD> sroute
+[03/21 14:13:43     32] *** Begin SPECIAL ROUTE on Fri Mar 21 14:13:43 2025 ***
+[03/21 14:13:43     32] SPECIAL ROUTE ran on directory: /home/linux/ieng6/ee260bwi25/aekeng/ECE260B_FP/ece260_project/step3/pnr2
+[03/21 14:13:43     32] SPECIAL ROUTE ran on machine: ieng6-ece-17.ucsd.edu (Linux 3.10.0-1160.119.1.el7.x86_64 Xeon 2.19Ghz)
+[03/21 14:13:43     32] 
+[03/21 14:13:43     32] Begin option processing ...
+[03/21 14:13:43     32] srouteConnectPowerBump set to false
+[03/21 14:13:43     32] routeSpecial set to true
+[03/21 14:13:43     32] srouteConnectConverterPin set to false
+[03/21 14:13:43     32] srouteFollowCorePinEnd set to 3
+[03/21 14:13:43     32] srouteJogControl set to "preferWithChanges differentLayer"
+[03/21 14:13:43     32] sroutePadPinAllPorts set to true
+[03/21 14:13:43     32] sroutePreserveExistingRoutes set to true
+[03/21 14:13:43     32] srouteRoutePowerBarPortOnBothDir set to true
+[03/21 14:13:43     32] End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1945.00 megs.
+[03/21 14:13:43     32] 
+[03/21 14:13:43     32] Reading DB technology information...
+[03/21 14:13:43     32] Finished reading DB technology information.
+[03/21 14:13:43     32] Reading floorplan and netlist information...
+[03/21 14:13:43     32] Finished reading floorplan and netlist information.
+[03/21 14:13:44     32] Read in 17 layers, 8 routing layers, 1 overlap layer
+[03/21 14:13:44     32] Read in 848 macros, 146 used
+[03/21 14:13:44     32] Read in 147 components
+[03/21 14:13:44     32]   144 core components: 144 unplaced, 0 placed, 0 fixed
+[03/21 14:13:44     32]   3 block/ring components: 0 unplaced, 3 placed, 0 fixed
+[03/21 14:13:44     32] Read in 331 logical pins
+[03/21 14:13:44     32] Read in 4 blockages
+[03/21 14:13:44     32] Read in 331 nets
+[03/21 14:13:44     32] Read in 2 special nets, 2 routed
+[03/21 14:13:44     32] Read in 294 terminals
+[03/21 14:13:44     32] Begin power routing ...
+[03/21 14:13:44     32] **WARN: (IMPSR-1256):	Cannot find any CORE class pad pin of net VDD. Change routing area or layer to include the expected pin, or check netlist, or change port class in the technology file.
+[03/21 14:13:44     32] Type 'man IMPSR-1256' for more detail.
+[03/21 14:13:44     32] Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port class in the technology file, or change option to include pin in given range.
+[03/21 14:13:44     32] **WARN: (IMPSR-1256):	Cannot find any CORE class pad pin of net VSS. Change routing area or layer to include the expected pin, or check netlist, or change port class in the technology file.
+[03/21 14:13:44     32] Type 'man IMPSR-1256' for more detail.
+[03/21 14:13:44     32] Cannot find any AREAIO class pad pin of net VSS. Check net list, or change port class in the technology file, or change option to include pin in given range.
+[03/21 14:13:44     32] CPU time for FollowPin 0 seconds
+[03/21 14:13:44     32] CPU time for FollowPin 0 seconds
+[03/21 14:13:44     32]   Number of IO ports routed: 0
+[03/21 14:13:44     32]   Number of Block ports routed: 4
+[03/21 14:13:44     32]   Number of Stripe ports routed: 0
+[03/21 14:13:44     32]   Number of Core ports routed: 392  open: 326
+[03/21 14:13:44     32]   Number of Pad ports routed: 0
+[03/21 14:13:44     32]   Number of Power Bump ports routed: 0
+[03/21 14:13:44     32]   Number of Followpin connections: 359
+[03/21 14:13:44     32] End power routing: cpu: 0:00:00, real: 0:00:00, peak: 1961.00 megs.
+[03/21 14:13:44     32] 
+[03/21 14:13:44     32] 
+[03/21 14:13:44     32] 
+[03/21 14:13:44     32]  Begin updating DB with routing results ...
+[03/21 14:13:44     32]  Updating DB with 110 via definition ...Extracting standard cell pins and blockage ...... 
+[03/21 14:13:44     32] Pin and blockage extraction finished
+[03/21 14:13:44     32] 
+[03/21 14:13:44     32] 
+sroute post-processing starts at Fri Mar 21 14:13:44 2025
+The viaGen is rebuilding shadow vias for net VSS.
+[03/21 14:13:44     32] sroute post-processing ends at Fri Mar 21 14:13:44 2025
+
+sroute post-processing starts at Fri Mar 21 14:13:44 2025
+The viaGen is rebuilding shadow vias for net VDD.
+[03/21 14:13:44     32] sroute post-processing ends at Fri Mar 21 14:13:44 2025
+sroute: Total CPU time used = 0:0:0
+[03/21 14:13:44     32] sroute: Total Real time used = 0:0:1
+[03/21 14:13:44     32] sroute: Total Memory used = 13.06 megs
+[03/21 14:13:44     32] sroute: Total Peak Memory used = 977.63 megs
+[03/21 14:13:44     32] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[03/21 14:13:44     32] <CMD> setPinAssignMode -pinEditInBatch true
+[03/21 14:13:44     32] <CMD> setPinAssignMode -pinEditInBatch true
+[03/21 14:13:44     32] <CMD> editPin -fixedPin 1 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 1.75 -pin {clk {inst[0]} {inst[1]} {inst[2]} {inst[3]} {inst[4]} {inst[5]} {inst[6]} {inst[7]} {inst[8]} {inst[9]} {inst[10]} {inst[11]} {inst[12]} {inst[13]} {inst[14]} {inst[15]} {inst[16]} {mem_in[0]} {mem_in[1]} {mem_in[2]} {mem_in[3]} {mem_in[4]} {mem_in[5]} {mem_in[6]} {mem_in[7]} {mem_in[8]} {mem_in[9]} {mem_in[10]} {mem_in[11]} {mem_in[12]} {mem_in[13]} {mem_in[14]} {mem_in[15]} {mem_in[16]} {mem_in[17]} {mem_in[18]} {mem_in[19]} {mem_in[20]} {mem_in[21]} {mem_in[22]} {mem_in[23]} {mem_in[24]} {mem_in[25]} {mem_in[26]} {mem_in[27]} {mem_in[28]} {mem_in[29]} {mem_in[30]} {mem_in[31]} {mem_in[32]} {mem_in[33]} {mem_in[34]} {mem_in[35]} {mem_in[36]} {mem_in[37]} {mem_in[38]} {mem_in[39]} {mem_in[40]} {mem_in[41]} {mem_in[42]} {mem_in[43]} {mem_in[44]} {mem_in[45]} {mem_in[46]} {mem_in[47]} {mem_in[48]} {mem_in[49]} {mem_in[50]} {mem_in[51]} {mem_in[52]} {mem_in[53]} {mem_in[54]} {mem_in[55]} {mem_in[56]} {mem_in[57]} {mem_in[58]} {mem_in[59]} {mem_in[60]} {mem_in[61]} {mem_in[62]} {mem_in[63]} {mem_in[64]} {mem_in[65]} {mem_in[66]} {mem_in[67]} {mem_in[68]} {mem_in[69]} {mem_in[70]} {mem_in[71]} {mem_in[72]} {mem_in[73]} {mem_in[74]} {mem_in[75]} {mem_in[76]} {mem_in[77]} {mem_in[78]} {mem_in[79]} {mem_in[80]} {mem_in[81]} {mem_in[82]} {mem_in[83]} {mem_in[84]} {mem_in[85]} {mem_in[86]} {mem_in[87]} {mem_in[88]} {mem_in[89]} {mem_in[90]} {mem_in[91]} {mem_in[92]} {mem_in[93]} {mem_in[94]} {mem_in[95]} {mem_in[96]} {mem_in[97]} {mem_in[98]} {mem_in[99]} {mem_in[100]} {mem_in[101]} {mem_in[102]} {mem_in[103]} {mem_in[104]} {mem_in[105]} {mem_in[106]} {mem_in[107]} {mem_in[108]} {mem_in[109]} {mem_in[110]} {mem_in[111]} {mem_in[112]} {mem_in[113]} {mem_in[114]} {mem_in[115]} {mem_in[116]} {mem_in[117]} {mem_in[118]} {mem_in[119]} {mem_in[120]} {mem_in[121]} {mem_in[122]} {mem_in[123]} {mem_in[124]} {mem_in[125]} {mem_in[126]} {mem_in[127]} reset}
+[03/21 14:13:44     32] Successfully spread [147] pins.
+[03/21 14:13:44     32] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 985.6M).
+[03/21 14:13:44     32] <CMD> editPin -fixedPin 1 -pinWidth 0.1 -pinDepth 0.6 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Bottom -layer 3 -spreadType center -spacing 3.5 -pin {{out[0]} {out[1]} {out[2]} {out[3]} {out[4]} {out[5]} {out[6]} {out[7]} {out[8]} {out[9]} {out[10]} {out[11]} {out[12]} {out[13]} {out[14]} {out[15]} {out[16]} {out[17]} {out[18]} {out[19]} {out[20]} {out[21]} {out[22]} {out[23]} {out[24]} {out[25]} {out[26]} {out[27]} {out[28]} {out[29]} {out[30]} {out[31]} {out[32]} {out[33]} {out[34]} {out[35]} {out[36]} {out[37]} {out[38]} {out[39]} {out[40]} {out[41]} {out[42]} {out[43]} {out[44]} {out[45]} {out[46]} {out[47]} {out[48]} {out[49]} {out[50]} {out[51]} {out[52]} {out[53]} {out[54]} {out[55]} {out[56]} {out[57]} {out[58]} {out[59]} {out[60]} {out[61]} {out[62]} {out[63]} {out[64]} {out[65]} {out[66]} {out[67]} {out[68]} {out[69]} {out[70]} {out[71]} {out[72]} {out[73]} {out[74]} {out[75]} {out[76]} {out[77]} {out[78]} {out[79]} {out[80]} {out[81]} {out[82]} {out[83]} {out[84]} {out[85]} {out[86]} {out[87]} {out[88]} {out[89]} {out[90]} {out[91]} {out[92]} {out[93]} {out[94]} {out[95]} {out[96]} {out[97]} {out[98]} {out[99]} {out[100]} {out[101]} {out[102]} {out[103]} {out[104]} {out[105]} {out[106]} {out[107]} {out[108]} {out[109]} {out[110]} {out[111]} {out[112]} {out[113]} {out[114]} {out[115]} {out[116]} {out[117]} {out[118]} {out[119]} {out[120]} {out[121]} {out[122]} {out[123]} {out[124]} {out[125]} {out[126]} {out[127]} {out[128]} {out[129]} {out[130]} {out[131]} {out[132]} {out[133]} {out[134]} {out[135]} {out[136]} {out[137]} {out[138]} {out[139]} {out[140]} {out[141]} {out[142]} {out[143]} {out[144]} {out[145]} {out[146]} {out[147]} {out[148]} {out[149]} {out[150]} {out[151]} {out[152]} {out[153]} {out[154]} {out[155]} {out[156]} {out[157]} {out[158]} {out[159]}}
+[03/21 14:13:44     32] Successfully spread [160] pins.
+[03/21 14:13:44     32] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 985.6M).
+[03/21 14:13:44     32] <CMD> setPinAssignMode -pinEditInBatch false
+[03/21 14:13:44     32] <CMD> saveDesign floorplan.enc
+[03/21 14:13:44     32] Writing Netlist "floorplan.enc.dat.tmp/core.v.gz" ...
+[03/21 14:13:44     32] Saving AAE Data ...
+[03/21 14:13:44     32] Saving preference file floorplan.enc.dat.tmp/gui.pref.tcl ...
+[03/21 14:13:44     32] Saving mode setting ...
+[03/21 14:13:44     32] Saving global file ...
+[03/21 14:13:44     32] Saving floorplan file ...
+[03/21 14:13:44     32] Saving Drc markers ...
+[03/21 14:13:44     32] ... 326 markers are saved ...
+[03/21 14:13:44     32] ... 0 geometry drc markers are saved ...
+[03/21 14:13:44     32] ... 0 antenna drc markers are saved ...
+[03/21 14:13:44     32] Saving placement file ...
+[03/21 14:13:44     32] *** Completed savePlace (cpu=0:00:00.0 real=0:00:00.0 mem=985.6M) ***
+[03/21 14:13:44     32] Saving route file ...
+[03/21 14:13:44     32] *** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=985.6M) ***
+[03/21 14:13:44     32] Saving DEF file ...
+[03/21 14:13:44     32] **ERROR: (IMPOAX-142):	Could not open shared library libinnovusoax22.so : /acsnfs3/software/cadence-innovus152/tools/lib/64bit/libcdsSkillPcell.so: undefined symbol: _ZTIN12OpenAccess_413oaFSComponentE
+[03/21 14:13:44     32] 
+[03/21 14:13:44     32] **ERROR: (IMPOAX-142):	Could not open shared library libcdsSkillPcell.so : (null)
+[03/21 14:13:44     32] 
+[03/21 14:13:44     32] **ERROR: (IMPSYT-6245):	Error , while saving MS constraint file.
+[03/21 14:13:46     34] Generated self-contained design floorplan.enc.dat.tmp
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] *** Summary of all messages that are not suppressed in this session:
+[03/21 14:13:46     34] Severity  ID               Count  Summary                                  
+[03/21 14:13:46     34] ERROR     IMPSYT-6245          1  Error %s, while saving MS constraint fil...
+[03/21 14:13:46     34] ERROR     IMPOAX-142           2  %s                                       
+[03/21 14:13:46     34] *** Message Summary: 0 warning(s), 3 error(s)
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] <CMD> setPlaceMode -timingDriven true -reorderScan false -congEffort medium -modulePlan True -placeIOPins false
+[03/21 14:13:46     34] <CMD> streamOut core.gds2 -merge ./subckt/sram_w16_160.gds2
+[03/21 14:13:46     34] Finding the highest version number among the merge files
+[03/21 14:13:46     34] Merge file: ./subckt/sram_w16_160.gds2 has version number: 3
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Parse map file...
+[03/21 14:13:46     34] **WARN: (IMPOGDS-399):	 Only 2 layer(s) (CO M1) of a VIA object is(are) specified in map file 'streamOut.map'. A VIA object needs 3 layers (PO CO M1) being specified at the same time in the map file. Add VIA contruct(s) to the map file for the following layer(s): PO or remove VIA construct(s) from the map file for the following layer(s): CO M1.
+[03/21 14:13:46     34] Type 'man IMPOGDS-399' for more detail.
+[03/21 14:13:46     34] **WARN: (IMPOGDS-399):	 Only 2 layer(s) (CO M1) of a VIAFILL object is(are) specified in map file 'streamOut.map'. A VIAFILL object needs 3 layers (PO CO M1) being specified at the same time in the map file. Add VIAFILL contruct(s) to the map file for the following layer(s): PO or remove VIAFILL construct(s) from the map file for the following layer(s): CO M1.
+[03/21 14:13:46     34] Type 'man IMPOGDS-399' for more detail.
+[03/21 14:13:46     34] **WARN: (IMPOGDS-399):	 Only 2 layer(s) (CO M1) of a VIAFILLOPC object is(are) specified in map file 'streamOut.map'. A VIAFILLOPC object needs 3 layers (PO CO M1) being specified at the same time in the map file. Add VIAFILLOPC contruct(s) to the map file for the following layer(s): PO or remove VIAFILLOPC construct(s) from the map file for the following layer(s): CO M1.
+[03/21 14:13:46     34] Type 'man IMPOGDS-399' for more detail.
+[03/21 14:13:46     34] Writing GDSII file ...
+[03/21 14:13:46     34] 	****** db unit per micron = 2000 ******
+[03/21 14:13:46     34] 	****** output gds2 file unit per micron = 2000 ******
+[03/21 14:13:46     34] 	****** unit scaling factor = 1 ******
+[03/21 14:13:46     34] Output for instance
+[03/21 14:13:46     34] Output for bump
+[03/21 14:13:46     34] No GDS was output for 21384 UNPLACED instances
+[03/21 14:13:46     34] Output for physical terminals
+[03/21 14:13:46     34] Output for logical terminals
+[03/21 14:13:46     34] Output for regular nets
+[03/21 14:13:46     34] Output for special nets and metal fills
+[03/21 14:13:46     34] Output for via structure generation
+[03/21 14:13:46     34] Statistics for GDS generated (version 3)
+[03/21 14:13:46     34] ----------------------------------------
+[03/21 14:13:46     34] Stream Out Layer Mapping Information:
+[03/21 14:13:46     34] GDS Layer Number          GDS Layer Name
+[03/21 14:13:46     34] ----------------------------------------
+[03/21 14:13:46     34]     170                             COMP
+[03/21 14:13:46     34]     171                          DIEAREA
+[03/21 14:13:46     34]     1                                 CO
+[03/21 14:13:46     34]     2                                 CO
+[03/21 14:13:46     34]     5                                 CO
+[03/21 14:13:46     34]     3                                 CO
+[03/21 14:13:46     34]     4                                 CO
+[03/21 14:13:46     34]     6                                 CO
+[03/21 14:13:46     34]     7                                 CO
+[03/21 14:13:46     34]     8                                 M1
+[03/21 14:13:46     34]     9                                 M1
+[03/21 14:13:46     34]     10                                M1
+[03/21 14:13:46     34]     11                                M1
+[03/21 14:13:46     34]     14                                M1
+[03/21 14:13:46     34]     12                                M1
+[03/21 14:13:46     34]     13                                M1
+[03/21 14:13:46     34]     15                                M1
+[03/21 14:13:46     34]     16                                M1
+[03/21 14:13:46     34]     17                                M1
+[03/21 14:13:46     34]     22                              VIA1
+[03/21 14:13:46     34]     23                              VIA1
+[03/21 14:13:46     34]     26                              VIA1
+[03/21 14:13:46     34]     24                              VIA1
+[03/21 14:13:46     34]     25                              VIA1
+[03/21 14:13:46     34]     27                              VIA1
+[03/21 14:13:46     34]     28                              VIA1
+[03/21 14:13:46     34]     29                                M2
+[03/21 14:13:46     34]     30                                M2
+[03/21 14:13:46     34]     31                                M2
+[03/21 14:13:46     34]     32                                M2
+[03/21 14:13:46     34]     35                                M2
+[03/21 14:13:46     34]     33                                M2
+[03/21 14:13:46     34]     34                                M2
+[03/21 14:13:46     34]     36                                M2
+[03/21 14:13:46     34]     37                                M2
+[03/21 14:13:46     34]     38                                M2
+[03/21 14:13:46     34]     43                              VIA2
+[03/21 14:13:46     34]     44                              VIA2
+[03/21 14:13:46     34]     47                              VIA2
+[03/21 14:13:46     34]     45                              VIA2
+[03/21 14:13:46     34]     46                              VIA2
+[03/21 14:13:46     34]     48                              VIA2
+[03/21 14:13:46     34]     49                              VIA2
+[03/21 14:13:46     34]     50                                M3
+[03/21 14:13:46     34]     51                                M3
+[03/21 14:13:46     34]     52                                M3
+[03/21 14:13:46     34]     53                                M3
+[03/21 14:13:46     34]     56                                M3
+[03/21 14:13:46     34]     54                                M3
+[03/21 14:13:46     34]     55                                M3
+[03/21 14:13:46     34]     57                                M3
+[03/21 14:13:46     34]     58                                M3
+[03/21 14:13:46     34]     59                                M3
+[03/21 14:13:46     34]     64                              VIA3
+[03/21 14:13:46     34]     65                              VIA3
+[03/21 14:13:46     34]     68                              VIA3
+[03/21 14:13:46     34]     66                              VIA3
+[03/21 14:13:46     34]     67                              VIA3
+[03/21 14:13:46     34]     69                              VIA3
+[03/21 14:13:46     34]     70                              VIA3
+[03/21 14:13:46     34]     71                                M4
+[03/21 14:13:46     34]     72                                M4
+[03/21 14:13:46     34]     73                                M4
+[03/21 14:13:46     34]     74                                M4
+[03/21 14:13:46     34]     77                                M4
+[03/21 14:13:46     34]     75                                M4
+[03/21 14:13:46     34]     76                                M4
+[03/21 14:13:46     34]     78                                M4
+[03/21 14:13:46     34]     79                                M4
+[03/21 14:13:46     34]     80                                M4
+[03/21 14:13:46     34]     85                              VIA4
+[03/21 14:13:46     34]     86                              VIA4
+[03/21 14:13:46     34]     89                              VIA4
+[03/21 14:13:46     34]     87                              VIA4
+[03/21 14:13:46     34]     88                              VIA4
+[03/21 14:13:46     34]     90                              VIA4
+[03/21 14:13:46     34]     91                              VIA4
+[03/21 14:13:46     34]     92                                M5
+[03/21 14:13:46     34]     93                                M5
+[03/21 14:13:46     34]     94                                M5
+[03/21 14:13:46     34]     95                                M5
+[03/21 14:13:46     34]     98                                M5
+[03/21 14:13:46     34]     96                                M5
+[03/21 14:13:46     34]     97                                M5
+[03/21 14:13:46     34]     99                                M5
+[03/21 14:13:46     34]     100                               M5
+[03/21 14:13:46     34]     101                               M5
+[03/21 14:13:46     34]     106                             VIA5
+[03/21 14:13:46     34]     107                             VIA5
+[03/21 14:13:46     34]     110                             VIA5
+[03/21 14:13:46     34]     108                             VIA5
+[03/21 14:13:46     34]     109                             VIA5
+[03/21 14:13:46     34]     111                             VIA5
+[03/21 14:13:46     34]     112                             VIA5
+[03/21 14:13:46     34]     113                               M6
+[03/21 14:13:46     34]     114                               M6
+[03/21 14:13:46     34]     115                               M6
+[03/21 14:13:46     34]     116                               M6
+[03/21 14:13:46     34]     119                               M6
+[03/21 14:13:46     34]     117                               M6
+[03/21 14:13:46     34]     118                               M6
+[03/21 14:13:46     34]     120                               M6
+[03/21 14:13:46     34]     121                               M6
+[03/21 14:13:46     34]     122                               M6
+[03/21 14:13:46     34]     127                             VIA6
+[03/21 14:13:46     34]     128                             VIA6
+[03/21 14:13:46     34]     131                             VIA6
+[03/21 14:13:46     34]     129                             VIA6
+[03/21 14:13:46     34]     130                             VIA6
+[03/21 14:13:46     34]     132                             VIA6
+[03/21 14:13:46     34]     133                             VIA6
+[03/21 14:13:46     34]     134                               M7
+[03/21 14:13:46     34]     135                               M7
+[03/21 14:13:46     34]     136                               M7
+[03/21 14:13:46     34]     137                               M7
+[03/21 14:13:46     34]     140                               M7
+[03/21 14:13:46     34]     138                               M7
+[03/21 14:13:46     34]     139                               M7
+[03/21 14:13:46     34]     141                               M7
+[03/21 14:13:46     34]     142                               M7
+[03/21 14:13:46     34]     143                               M7
+[03/21 14:13:46     34]     148                             VIA7
+[03/21 14:13:46     34]     149                             VIA7
+[03/21 14:13:46     34]     152                             VIA7
+[03/21 14:13:46     34]     150                             VIA7
+[03/21 14:13:46     34]     151                             VIA7
+[03/21 14:13:46     34]     153                             VIA7
+[03/21 14:13:46     34]     154                             VIA7
+[03/21 14:13:46     34]     155                               M8
+[03/21 14:13:46     34]     156                               M8
+[03/21 14:13:46     34]     157                               M8
+[03/21 14:13:46     34]     158                               M8
+[03/21 14:13:46     34]     161                               M8
+[03/21 14:13:46     34]     159                               M8
+[03/21 14:13:46     34]     160                               M8
+[03/21 14:13:46     34]     162                               M8
+[03/21 14:13:46     34]     163                               M8
+[03/21 14:13:46     34]     164                               M8
+[03/21 14:13:46     34]     18                                M1
+[03/21 14:13:46     34]     19                                M1
+[03/21 14:13:46     34]     20                                M1
+[03/21 14:13:46     34]     21                                M1
+[03/21 14:13:46     34]     39                                M2
+[03/21 14:13:46     34]     40                                M2
+[03/21 14:13:46     34]     41                                M2
+[03/21 14:13:46     34]     42                                M2
+[03/21 14:13:46     34]     60                                M3
+[03/21 14:13:46     34]     61                                M3
+[03/21 14:13:46     34]     62                                M3
+[03/21 14:13:46     34]     63                                M3
+[03/21 14:13:46     34]     81                                M4
+[03/21 14:13:46     34]     82                                M4
+[03/21 14:13:46     34]     83                                M4
+[03/21 14:13:46     34]     84                                M4
+[03/21 14:13:46     34]     102                               M5
+[03/21 14:13:46     34]     103                               M5
+[03/21 14:13:46     34]     104                               M5
+[03/21 14:13:46     34]     105                               M5
+[03/21 14:13:46     34]     123                               M6
+[03/21 14:13:46     34]     124                               M6
+[03/21 14:13:46     34]     125                               M6
+[03/21 14:13:46     34]     126                               M6
+[03/21 14:13:46     34]     144                               M7
+[03/21 14:13:46     34]     145                               M7
+[03/21 14:13:46     34]     146                               M7
+[03/21 14:13:46     34]     147                               M7
+[03/21 14:13:46     34]     165                               M8
+[03/21 14:13:46     34]     166                               M8
+[03/21 14:13:46     34]     167                               M8
+[03/21 14:13:46     34]     168                               M8
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Stream Out Information Processed for GDS version 3:
+[03/21 14:13:46     34] Units: 2000 DBU
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Object                             Count
+[03/21 14:13:46     34] ----------------------------------------
+[03/21 14:13:46     34] Instances                              3
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Ports/Pins                           306
+[03/21 14:13:46     34]     metal layer M3                   306
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Nets                                   0
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34]     Via Instances                      0
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Special Nets                         819
+[03/21 14:13:46     34]     metal layer M1                   754
+[03/21 14:13:46     34]     metal layer M2                     3
+[03/21 14:13:46     34]     metal layer M5                     3
+[03/21 14:13:46     34]     metal layer M6                    59
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34]     Via Instances                   1296
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Metal Fills                            0
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34]     Via Instances                      0
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Metal FillOPCs                         0
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34]     Via Instances                      0
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Text                                 307
+[03/21 14:13:46     34]     metal layer M2                     1
+[03/21 14:13:46     34]     metal layer M3                   306
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Blockages                              0
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Custom Text                            0
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Custom Box                             0
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Trim Metal                             0
+[03/21 14:13:46     34] 
+[03/21 14:13:46     34] Merging with GDS libraries
+[03/21 14:13:46     34] Scanning GDS file ./subckt/sram_w16_160.gds2 to register cell name ......
+[03/21 14:13:47     34] Merging GDS file ./subckt/sram_w16_160.gds2 ......
+[03/21 14:13:47     34] 	****** Merge file: ./subckt/sram_w16_160.gds2 has version number: 3.
+[03/21 14:13:47     34] 	****** Merge file: ./subckt/sram_w16_160.gds2 has units: 2000 per micron.
+[03/21 14:13:47     34] 	****** unit scaling factor = 1 ******
+[03/21 14:13:47     34] **WARN: (IMPOGDS-217):	Master cell: sram_w16 not found in merged file(s) and will therefore not be included in the resulting streamOut file. Verify the file names specified with the -merge option are correct and that they contain a definition of this cell.
+[03/21 14:13:47     34] **WARN: (IMPOGDS-218):	Number of master cells not found after merging: 1
+[03/21 14:13:47     34] 
+[03/21 14:13:47     34] ######Streamout is finished!
+[03/21 14:13:47     34] <CMD> setOptMode -effort high -powerEffort high -leakageToDynamicRatio 0.5 -fixFanoutLoad true -restruct true -verbose true
+[03/21 14:13:47     34] <CMD> place_opt_design
+[03/21 14:13:47     34] *** Starting GigaPlace ***
+[03/21 14:13:47     34] **INFO: user set placement options
+[03/21 14:13:47     34] setPlaceMode -congEffort medium -modulePlan true -placeIoPins false -reorderScan false -timingDriven true
+[03/21 14:13:47     34] **INFO: user set opt options
+[03/21 14:13:47     34] setOptMode -effort high -fixFanoutLoad true -leakageToDynamicRatio 0.5 -powerEffort high -restruct true -verbose true
+[03/21 14:13:47     34] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[03/21 14:13:47     34] **INFO: Enable pre-place timing setting for timing analysis
+[03/21 14:13:47     34] Set Using Default Delay Limit as 101.
+[03/21 14:13:47     34] **WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+[03/21 14:13:47     34] Set Default Net Delay as 0 ps.
+[03/21 14:13:47     34] Set Default Net Load as 0 pF. 
+[03/21 14:13:47     34] **INFO: Analyzing IO path groups for slack adjustment
+[03/21 14:13:48     35] Effort level <high> specified for reg2reg_tmp.17471 path_group
+[03/21 14:13:48     35] #################################################################################
+[03/21 14:13:48     35] # Design Stage: PreRoute
+[03/21 14:13:48     35] # Design Name: core
+[03/21 14:13:48     35] # Design Mode: 65nm
+[03/21 14:13:48     35] # Analysis Mode: MMMC Non-OCV 
+[03/21 14:13:48     35] # Parasitics Mode: No SPEF/RCDB
+[03/21 14:13:48     35] # Signoff Settings: SI Off 
+[03/21 14:13:48     35] #################################################################################
+[03/21 14:13:48     35] Calculate delays in BcWc mode...
+[03/21 14:13:48     35] Topological Sorting (CPU = 0:00:00.0, MEM = 1027.2M, InitMEM = 1023.9M)
+[03/21 14:13:50     38] End Timing Check Calculation. (CPU Time=0:00:00.1, Real Time=0:00:00.0)
+[03/21 14:13:50     38] End delay calculation. (MEM=1100.8 CPU=0:00:02.4 REAL=0:00:02.0)
+[03/21 14:13:50     38] *** CDM Built up (cpu=0:00:02.7  real=0:00:02.0  mem= 1100.8M) ***
+[03/21 14:13:52     39] **INFO : CPU of IO adjustment for placeDesign : (CPU : 0:00:04.6) (Real : 0:00:05.0) (mem : 1100.8M)
+[03/21 14:13:52     39] *** Start deleteBufferTree ***
+[03/21 14:13:52     39] *info: Marking 0 level shifter instances dont touch
+[03/21 14:13:52     39] *info: Marking 0 always on instances dont touch
+[03/21 14:13:52     39] Info: Detect buffers to remove automatically.
+[03/21 14:13:52     39] Analyzing netlist ...
+[03/21 14:13:52     39] All-RC-Corners-Per-Net-In-Memory is turned ON...
+[03/21 14:13:52     39] Updating netlist
+[03/21 14:13:52     39] 
+[03/21 14:13:52     39] Cleanup ECO timing graph ...
+Cleanup RC data ...
+Cleanup routing data ...
+*summary: 431 instances (buffers/inverters) removed
+[03/21 14:13:52     39] *       :      1 instance  of type 'INVD8' removed
+[03/21 14:13:52     39] *       :     27 instances of type 'INVD6' removed
+[03/21 14:13:52     39] *       :      6 instances of type 'INVD4' removed
+[03/21 14:13:52     39] *       :      5 instances of type 'INVD3' removed
+[03/21 14:13:52     39] *       :      8 instances of type 'INVD2' removed
+[03/21 14:13:52     39] *       :     18 instances of type 'INVD1' removed
+[03/21 14:13:52     39] *       :     57 instances of type 'INVD0' removed
+[03/21 14:13:52     39] *       :      4 instances of type 'CKND4' removed
+[03/21 14:13:52     39] *       :     35 instances of type 'CKND2' removed
+[03/21 14:13:52     39] *       :    147 instances of type 'CKBD4' removed
+[03/21 14:13:52     39] *       :      9 instances of type 'CKBD2' removed
+[03/21 14:13:52     39] *       :     33 instances of type 'CKBD1' removed
+[03/21 14:13:52     39] *       :      9 instances of type 'BUFFD8' removed
+[03/21 14:13:52     39] *       :      3 instances of type 'BUFFD6' removed
+[03/21 14:13:52     39] *       :      1 instance  of type 'BUFFD3' removed
+[03/21 14:13:52     39] *       :     47 instances of type 'BUFFD2' removed
+[03/21 14:13:52     39] *       :      4 instances of type 'BUFFD1' removed
+[03/21 14:13:52     39] *       :     17 instances of type 'BUFFD0' removed
+[03/21 14:13:52     39] *** Finish deleteBufferTree (0:00:00.4) ***
+[03/21 14:13:52     39] **INFO: Disable pre-place timing setting for timing analysis
+[03/21 14:13:52     39] Set Using Default Delay Limit as 1000.
+[03/21 14:13:52     39] Set Default Net Delay as 1000 ps.
+[03/21 14:13:52     39] Set Default Net Load as 0.5 pF. 
+[03/21 14:13:52     39] Deleted 0 physical inst  (cell - / prefix -).
+[03/21 14:13:52     39] Some Marcos are marked as preplaced.
+[03/21 14:13:52     39] Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=medium gpeffort=medium 
+[03/21 14:13:52     39] **WARN: (IMPSP-9042):	Scan chains were not defined, -ignoreScan option will be ignored.
+[03/21 14:13:52     39] Define the scan chains before using this option.
+[03/21 14:13:52     39] Type 'man IMPSP-9042' for more detail.
+[03/21 14:13:52     39] #spOpts: N=65 
+[03/21 14:13:52     39] #std cell=20989 (0 fixed + 20989 movable) #block=3 (0 floating + 3 preplaced)
+[03/21 14:13:52     39] #ioInst=0 #net=23481 #term=78594 #term/net=3.35, #fixedIo=0, #floatIo=0, #fixedPin=307, #floatPin=0
+[03/21 14:13:52     39] stdCell: 20989 single + 0 double + 0 multi
+[03/21 14:13:52     39] Total standard cell length = 51.0570 (mm), area = 0.0919 (mm^2)
+[03/21 14:13:52     39] Core basic site is core
+[03/21 14:13:52     39] Estimated cell power/ground rail width = 0.365 um
+[03/21 14:13:52     39] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[03/21 14:13:52     39] Apply auto density screen in pre-place stage.
+[03/21 14:13:52     39] Auto density screen increases utilization from 0.571 to 0.580
+[03/21 14:13:52     39] Auto density screen runtime: cpu = 0:00:00.0 real = 0:00:00.0 mem = 1086.4M
+[03/21 14:13:52     39] Average module density = 0.580.
+[03/21 14:13:52     39] Density for the design = 0.580.
+[03/21 14:13:52     39]        = stdcell_area 255285 sites (91903 um^2) / alloc_area 439877 sites (158356 um^2).
+[03/21 14:13:52     39] Pin Density = 0.1140.
+[03/21 14:13:52     39]             = total # of pins 78594 / total area 689715.
+[03/21 14:13:52     39] Initial padding reaches pin density 0.393 for top
+[03/21 14:13:52     39] Initial padding increases density from 0.580 to 0.712 for top
+[03/21 14:13:52     39] === lastAutoLevel = 10 
+[03/21 14:13:55     42] End Timing Check Calculation. (CPU Time=0:00:00.1, Real Time=0:00:00.0)
+[03/21 14:13:55     42] End delay calculation. (MEM=1100.8 CPU=0:00:02.5 REAL=0:00:02.0)
+[03/21 14:13:56     43] Clock gating cells determined by native netlist tracing.
+[03/21 14:13:57     43] Iteration  1: Total net bbox = 1.371e+05 (6.30e+04 7.41e+04)
+[03/21 14:13:57     43]               Est.  stn bbox = 1.452e+05 (6.76e+04 7.76e+04)
+[03/21 14:13:57     43]               cpu = 0:00:00.2 real = 0:00:00.0 mem = 1100.8M
+[03/21 14:13:57     43] Iteration  2: Total net bbox = 1.371e+05 (6.30e+04 7.41e+04)
+[03/21 14:13:57     43]               Est.  stn bbox = 1.452e+05 (6.76e+04 7.76e+04)
+[03/21 14:13:57     43]               cpu = 0:00:00.0 real = 0:00:00.0 mem = 1100.8M
+[03/21 14:13:57     44] Iteration  3: Total net bbox = 1.336e+05 (5.80e+04 7.56e+04)
+[03/21 14:13:57     44]               Est.  stn bbox = 1.612e+05 (6.91e+04 9.22e+04)
+[03/21 14:13:57     44]               cpu = 0:00:00.6 real = 0:00:00.0 mem = 1100.8M
+[03/21 14:14:00     46] Total number of setup views is 1.
+[03/21 14:14:00     46] Total number of active setup views is 1.
+[03/21 14:14:00     46] **WARN: (IMPTS-403):	Delay calculation was forced to extrapolate table data outside of the characterized range. In some cases, extrapolation can reduce the accuracy of the delay calculation. You can enable more detailed reporting of these cases by enabling the command 'setDelayCalMode -reportOutBound true'.
+[03/21 14:14:07     53] End Timing Check Calculation. (CPU Time=0:00:00.1, Real Time=0:00:00.0)
+[03/21 14:14:07     53] End delay calculation. (MEM=1205.89 CPU=0:00:02.4 REAL=0:00:02.0)
+[03/21 14:14:26     71] Iteration  4: Total net bbox = 2.362e+05 (1.35e+05 1.01e+05)
+[03/21 14:14:26     71]               Est.  stn bbox = 2.774e+05 (1.57e+05 1.20e+05)
+[03/21 14:14:26     71]               cpu = 0:00:27.4 real = 0:00:29.0 mem = 1250.4M
+[03/21 14:14:26     71] Iteration  5: Total net bbox = 2.362e+05 (1.35e+05 1.01e+05)
+[03/21 14:14:26     71]               Est.  stn bbox = 2.774e+05 (1.57e+05 1.20e+05)
+[03/21 14:14:26     71]               cpu = 0:00:00.0 real = 0:00:00.0 mem = 1250.4M
