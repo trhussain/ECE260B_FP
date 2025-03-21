@@ -1,0 +1,89 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sat Mar 15 13:11:16 2025                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 15.23-s045_1 NR160414-1105/15_23-UB (database version 2.30, 317.6.1) {superthreading v1.26}
+#@(#)CDS: AAE 15.23-s014 (64bit) 04/22/2016 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 15.23-s022_1 () Apr 22 2016 09:38:45 ( )
+#@(#)CDS: SYNTECH 15.23-s008_1 () Apr 12 2016 21:52:59 ( )
+#@(#)CDS: CPE v15.23-s045
+#@(#)CDS: IQRC/TQRC 15.1.4-s213 (64bit) Tue Feb  9 17:31:28 PST 2016 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getDrawView
+loadWorkspace -name Physical
+win
+restoreDesign /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/pnr/postPlacement.enc.dat core
+set_ccopt_property -update_io_latency false
+create_ccopt_clock_tree_spec -file ./constraints/core.ccopt
+ccopt_design
+saveDesign floorplan.enc
+setPlaceMode -timingDriven true -reorderScan false -congEffort medium -modulePlan false -placeIOPins false
+setOptMode -effort high -powerEffort high -leakageToDynamicRatio 0.5 -fixFanoutLoad true -restruct true -verbose true
+place_opt_design
+addFiller -cell {DCAP DCAP4 DCAP8 DCAP16 DCAP32} -merge true
+saveDesign step3.enc
+saveDesign twozeroonePostPlacement.enc
+saveDesign step2V2.tcl
+set_ccopt_property -update_io_latency false
+create_ccopt_clock_tree_spec -file ./constraints/core.ccopt
+report_clocks
+report_clock_timing 
+setNanoRouteMode -quiet -drouteAllowMergedWireAtPin false
+setNanoRouteMode -quiet -drouteFixAntenna true
+setNanoRouteMode -quiet -routeWithTimingDriven true
+setNanoRouteMode -quiet -routeWithSiDriven true
+setNanoRouteMode -quiet -routeSiEffort medium
+setNanoRouteMode -quiet -routeWithSiPostRouteFix false
+setNanoRouteMode -quiet -drouteAutoStop true
+setNanoRouteMode -quiet -routeSelectedNetOnly false
+setNanoRouteMode -quiet -drouteStartIteration default
+routeDesign
+setExtractRCMode -engine postRoute
+extractRC
+setAnalysisMode -analysisType onChipVariation -cppr both
+optDesign -postRoute -setup -hold
+optDesign -postRoute -drv
+optDesign -postRoute -inc
+saveDesign route.enc
+verifyGeometry
+checkPinAssignment
+saveDesign postRoutingStage.enc
+saveDesign step4.enc
+saveDesign step4RCsaved.tcl -rc
+streamOut core.gds2
+write_lef_abstract core.lef
+defOut -netlist -routing core.def
+saveNetlist core.pnr.v
+setAnalysisMode -setup
+set_analysis_view -setup WC_VIEW -hold WC_VIEW
+do_extract_model -view WC_VIEW -format dotlib ${design}_WC.lib
+write_sdf -view WC_VIEW ${design}_WC.sdf
+setAnalysisMode -hold
+set_analysis_view -setup BC_VIEW -hold BC_VIEW
+do_extract_model -view BC_VIEW -format dotlib ${design}_BC.lib
+write_sdf -view BC_VIEW ${design}_BC.sdf
+uiSetTool ruler
+uiSetTool ruler
+setDrawView ameba
+setDrawView ameba
+setDrawView ameba
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+setDrawView fplan
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+setDrawView ameba
+setDrawView fplan
+setDrawView place
+setDrawView ameba
+setDrawView place
+saveDesign finalStep.enc
+saveDesign finalStepRC.enc -rc

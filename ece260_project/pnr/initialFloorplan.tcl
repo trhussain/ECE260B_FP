@@ -8,8 +8,8 @@ timeDesign -preplace -prefix preplace
 
 
 
-# -------- Cross Check against CorePower -------- #
-# Global power routing
+# -------- Cross Check against CorePower Requirements? () -------- #
+# Global power routing 
 globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
 globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
 

@@ -1,0 +1,24 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-VFILE
+./core.pnr.v
+-VFILE
+/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
+-VFILE
+./../synthesis/verilog/mac_array.v
+-VFILE
+./../synthesis/verilog/mac_col.v
+-VFILE
+./../synthesis/verilog/ofifo.v
+-VFILE
+./../synthesis/verilog/fifo_depth16.v
+-VFILE
+./../synthesis/verilog/fifo_mux_2_1.v
+-VFILE
+./../synthesis/verilog/fifo_mux_8_1.v
+-VFILE
+./../synthesis/verilog/fifo_mux_16_1.v
+-DEFINE
+INITIALIZE_MEMORY

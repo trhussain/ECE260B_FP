@@ -57,12 +57,15 @@ assign inst[0] = pmem_wr;
 reg [bw_psum-1:0] temp5b;
 reg [bw_psum+3:0] temp_sum;
 reg [bw_psum*col-1:0] temp16b;
+wire [bw_psum*col-1:0] fullchipout; // TAHSEEN EDIT 
 
 fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
       .reset(reset),
       .clk(clk), 
       .mem_in(mem_in), 
-      .inst(inst)
+      .inst(inst),
+      .full_out(fullchipout)
+
 );
 
 initial begin 
@@ -77,7 +80,7 @@ initial begin
 $display("##### Q data txt reading #####");
 
 
-  qk_file = $fopen("qdata.txt", "r");
+  qk_file = $fopen("./../synthesis/qdata.txt", "r");
 
 
   for (q=0; q<total_cycle; q=q+1) begin
@@ -110,13 +113,13 @@ $display("##### K data txt reading #####");
   end
   reset = 0;
 
-  qk_file = $fopen("kdata.txt", "r");
+  qk_file = $fopen("./../synthesis/kdata.txt", "r");
 
 
   for (q=0; q<col; q=q+1) begin
     for (j=0; j<pr; j=j+1) begin
           qk_scan_file = $fscanf(qk_file, "%d\n", captured_data);
-          K[q][j] = captured_data;
+          K[j][q] = captured_data;
           //$display("##### %d\n", K[q][j]);
     end
   end

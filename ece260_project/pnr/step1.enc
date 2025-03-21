@@ -1,0 +1,1 @@
+restoreDesign [file dirname [file normalize [info script]]]/step1.enc.dat core

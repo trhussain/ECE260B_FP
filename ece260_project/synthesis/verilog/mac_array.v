@@ -41,10 +41,12 @@ end
 // integer j;
 // always @(posedge clk) begin
 //    if (inst[0] || inst[1]) begin
-//       $write("MAC ARRAY INPUT: ");
-//       for (j = 0; j < pr; j = j + 1) begin
-//          $write("%4d ", $signed(in[(j+1)*bw-1 -: bw])); // Print input vector
-//       end
+//       // $write("MAC ARRAY INPUT: ");
+//       // for (j = 0; j < pr; j = j + 1) begin
+//       //    $write("%4d ", $signed(in[(j+1)*bw-1 -: bw])); // Print input vector
+//       // end
+//       $write("MAC ARRAY OUTPUT: ");
+//       $write("%h ", out[163:0]); // Print hex value
 //       $display("");  // New line
 //    end
 // end

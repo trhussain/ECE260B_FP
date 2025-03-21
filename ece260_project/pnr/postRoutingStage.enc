@@ -1,0 +1,1 @@
+restoreDesign [file dirname [file normalize [info script]]]/postRoutingStage.enc.dat core

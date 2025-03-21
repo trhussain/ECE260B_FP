@@ -43,5 +43,4 @@ assign out =
 	+	{{(4){product6[2*bw-1]}},product6	}
 	+	{{(4){product7[2*bw-1]}},product7	};
 
-
 endmodule

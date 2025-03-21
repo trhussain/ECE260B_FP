@@ -1,12 +1,13 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
 //module core (clk, sum_out, mem_in, out, inst, reset);
-module core (clk, mem_in, out, inst, reset);
+module core #(parameter bw = 8, parameter bw_psum = 2*bw+4, parameter col = 8, parameter pr = 8)
+(clk, mem_in, out, inst, reset);
 
-parameter col = 8;
-parameter bw = 8;
-parameter bw_psum = 2*bw+4;
-parameter pr = 8;
+// parameter col = 8;
+// parameter bw = 8;
+// parameter bw_psum = 2*bw+4;
+// parameter pr = 8;
 
 //output [bw_psum+3:0] sum_out;
 output [bw_psum*col-1:0] out;
@@ -131,27 +132,41 @@ always @(posedge clk) begin
 //         end
 //         $display(""); 
 //     end
-//     if (kmem_wr) begin
-//         $write("KMEM WRITE: addr=%d | ", qkmem_add);
-//         for (i = 0; i < pr; i = i + 1) begin
-//             $write("%4d ", $signed(mem_in[(i+1)*bw-1 -: bw]));  // 8-bit chunks
-//         end
+//     if (kmem_rd) begin
+//         $write("KMEM OUT: addr=%d | ", qkmem_add);
+//         $write("%h ", kmem_out[63:0]); // Print hex value
+
+//         // for (i = 0; i < pr; i = i + 1) begin
+//         //     $write("%4d ", $signed(kmem_out[(i+1)*bw-1 -: bw]));  // 8-bit chunks
+//         // end
 //         $display("");   
 //     end
 //     if (kmem_rd) begin
 //         $write("KMEM RD: addr=%d | ", qkmem_add);
 //         for (i = 0; i < pr; i = i + 1) begin
-//             $write("%4d ", $signed(kmem_out[(i+1)*bw-1 -: bw]));  // 8-bit chunks
+//                 $write("%h ", kmem_out[(i+1)*bw-1 -: bw]); // Print hex value
+
+//         //     $write("%4d ", $signed(kmem_out[(i+1)*bw-1 -: bw]));  // 8-bit chunks
 //         end
 //         $display(""); 
 //     end
-//     if (!pmem_wr && pmem_rd) begin
-//         $write("PMEME OUT: addr=%d | ", pmem_add);
-//         for (i = 0; i < pr; i = i + 1) begin
-//             $write("%4d ", $signed(out[(i+1)*bw-1 -: bw]));  // 8-bit chunks
-//         end
-//         $display(""); 
-//     end
+// --------
+        // if (!pmem_wr && pmem_rd) begin
+        //         $write("OUT: addr=%d | ", pmem_add);
+        //         for (i = 0; i < pr; i = i + 1) begin
+        //         $write("%4d ", $signed(out[(i+1)*bw_psum-1 -: bw_psum]));  // 8-bit chunks
+        //         end
+        //         $display(""); 
+        // end
+        //     if (pmem_rd && !pmem_wr) begin
+        //         $write("PMEM OUT: ");
+        //         for (fi = 0; fi < col; fi = fi + 1) begin
+        //                 $write("%6d ", $signed(pmem_out[(fi+1)*bw_psum-1 -: bw_psum])); 
+        //         end
+        //         $display("");  
+        // end
+// --------
+
 //     if (pmem_wr && ofifo_rd) begin
 
 //         $write("PMEME WRITE: addr=%d | ", pmem_add);
@@ -163,10 +178,16 @@ always @(posedge clk) begin
                 // $display("PMEM WRITING: pmem_wr=%b | pmem_add=%d | ofifo_rd=%b", pmem_wr, pmem_add, ofifo_rd);
 
 //     if (|fifo_wr) begin  // If any bit of fifo_wr is high, meaning a valid write
-//         $write("MAC ARRAY OUT/FIFO IN: ");
+//         $write("Mac In: ");
 //         for (fi = 0; fi < col; fi= fi + 1) begin
-//             $write("%6d ", $signed(array_out[(fi+1)*bw_psum-1 -: bw_psum])); // Extract each column's result
+//             $write("%h ", mac_in[63: 0]); 
+//             //$write("%6d ", $signed(array_out[(fi+1)*bw_psum-1 -: bw_psum])); // Extract each column's result
 //         end
+//         $display("");  // New line
+//     end
+//         if (|fifo_wr) begin  // If any bit of fifo_wr is high, meaning a valid write
+//         $write("Array Out : ");
+//         $write("%h ", array_out[159: 0]); 
 //         $display("");  // New line
 //     end
 //     if (ofifo_rd) begin
@@ -175,15 +196,15 @@ always @(posedge clk) begin
 //             $write("%6d ", $signed(fifo_out[(fi+1)*bw_psum-1 -: bw_psum])); 
 //         end
 //         $display("");  
-//         end
-        // if (!pmem_rd) begin
-        // $write("PMEM OUT: ");
-        // for (fi = 0; fi < col; fi = fi + 1) begin
-        //         $write("%6d ", $signed(pmem_out[(fi+1)*bw_psum-1 -: bw_psum])); 
-        // end
-        // $display("");  
-        // end
+//          end
 
+//     if (inst[6]) begin  // Check if mac_array is active (controlled by inst[6])
+//         $write("MAC IN (Cycle %0d): ", $time);
+//         for (i = 0; i < pr; i = i + 1) begin
+//             $write("%h ", mac_in[(i+1)*bw-1 -: bw]); // Print each segment in hex
+//         end
+//         $display(""); // Move to a new line
+//     end
 //$display("PSUM WRITE: addr=%d, data=%h", pmem_add, pmem_in);
 end
 

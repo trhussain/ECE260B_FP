@@ -1,13 +1,14 @@
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Warning: Design has unannotated primary inputs. (PWR-414)
 Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
  
 ****************************************
 Report : power
         -analysis_effort low
 Design : core
 Version: K-2015.06-SP2
-Date   : Sun Mar  9 13:07:42 2025
+Date   : Fri Mar 21 10:19:01 2025
 ****************************************
 
 
@@ -22,31 +23,14 @@ Wire Load Model Mode: segmented
 Design        Wire Load Model            Library
 ------------------------------------------------
 core                   ZeroWireload      tcbn65gplustc
-mac_array_col8_bw8_bw_psum20_pr16
+mac_array_col8_bw8_bw_psum20_pr8
                        ZeroWireload      tcbn65gplustc
 ofifo_col8_bw20        ZeroWireload      tcbn65gplustc
-sram_w16_sram_bit128_1 ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr16_col_id1
-                       ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr16_col_id2
-                       ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr16_col_id3
-                       ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr16_col_id4
-                       ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr16_col_id5
-                       ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr16_col_id6
-                       ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr16_col_id7
-                       ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr16_col_id8
-                       ZeroWireload      tcbn65gplustc
+sram_w16_sram_bit64_1  ZeroWireload      tcbn65gplustc
+sram_w16_sram_bit160   ZeroWireload      tcbn65gplustc
 fifo_depth16_bw20_simd1_7
                        ZeroWireload      tcbn65gplustc
 fifo_depth16_bw20_simd1_6
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr16_7
                        ZeroWireload      tcbn65gplustc
 fifo_mux_16_1_bw20_simd1_7
                        ZeroWireload      tcbn65gplustc
@@ -56,7 +40,7 @@ fifo_mux_8_1_bw20_simd1_15
                        ZeroWireload      tcbn65gplustc
 fifo_mux_2_1_bw20_simd1_119
                        ZeroWireload      tcbn65gplustc
-sram_w16_sram_bit128_0 ZeroWireload      tcbn65gplustc
+sram_w16_sram_bit64_0  ZeroWireload      tcbn65gplustc
 fifo_depth16_bw20_simd1_0
                        ZeroWireload      tcbn65gplustc
 fifo_depth16_bw20_simd1_1
@@ -110,20 +94,6 @@ fifo_mux_8_1_bw20_simd1_12
 fifo_mux_8_1_bw20_simd1_13
                        ZeroWireload      tcbn65gplustc
 fifo_mux_8_1_bw20_simd1_14
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr16_0
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr16_1
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr16_2
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr16_3
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr16_4
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr16_5
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr16_6
                        ZeroWireload      tcbn65gplustc
 fifo_mux_2_1_bw20_simd1_0
                        ZeroWireload      tcbn65gplustc
@@ -374,12 +344,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =  75.0437 mW   (98%)
-  Net Switching Power  =   1.7540 mW    (2%)
+  Cell Internal Power  =  41.5385 mW    (4%)
+  Net Switching Power  = 889.7336 mW   (96%)
                          ---------
-Total Dynamic Power    =  76.7976 mW  (100%)
+Total Dynamic Power    = 931.2722 mW  (100%)
 
-Cell Leakage Power     =   1.1496 mW
+Cell Leakage Power     = 280.7403 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -388,10 +358,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register          72.1313            0.3014        3.9108e+05           72.8236  (  93.43%)
+clock_network  5.0265e-02          889.0914        1.4554e+04          889.1649  (  95.45%)
+register          41.0348            0.1371        2.0415e+05           41.3761  (   4.44%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      2.9126            1.4526        7.5857e+05            5.1237  (   6.57%)
+combinational      0.4534            0.4956        6.2035e+04            1.0110  (   0.11%)
 --------------------------------------------------------------------------------------------------
-Total             75.0439 mW         1.7540 mW     1.1496e+06 nW        77.9473 mW
+Total             41.5385 mW       889.7241 mW     2.8074e+05 nW       931.5520 mW
 1
