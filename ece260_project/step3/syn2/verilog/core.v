@@ -1,15 +1,15 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
-//module core (clk, sum_out, mem_in, out, inst, reset);
-module core (clk, mem_in, out, inst, reset);
+module core (clk, sum_out, mem_in, out, inst, reset);
+//module core (clk, mem_in, out, inst, reset);
 
 parameter col = 8;
 parameter bw = 8;
 parameter bw_psum = 2*bw+4;
 parameter pr = 8;
 
-//output [bw_psum+3:0] sum_out;
-output [bw_psum*col-1:0] out;
+output [bw_psum+3:0] sum_out;
+output wire [bw_psum*col-1:0] out; // Ming slightly modified, added the word "wire" so that can assign to pmem output
 wire   [bw_psum*col-1:0] pmem_out;
 input  [pr*bw-1:0] mem_in;
 input  clk;

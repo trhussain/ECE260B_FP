@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Thu Mar 20 17:02:49 2025                
+#  Created on Thu Mar 20 18:41:23 2025                
 #                                                     
 #######################################################
 
@@ -24,14 +24,6 @@ set init_verilog ./netlist/core.out.v
 set init_design_netlisttype Verilog
 set init_design_settop 1
 set init_top_cell core
-set init_lef_file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef
-create_library_set -name WC_LIB -timing $worst_timing_lib ./subckt/sram_w16_160_WC.lib
-set init_pwr_net VDD
-set init_gnd_net VSS
-set init_verilog ./netlist/core.out.v
-set init_design_netlisttype Verilog
-set init_design_settop 1
-set init_top_cell core
 set init_lef_file {/home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef ./subckt/sram_w16_160.lef}
 create_library_set -name WC_LIB -timing "$worst_timing_lib ./subckt/sram_w16_160_WC.lib"
 create_library_set -name BC_LIB -timing "$best_timing_lib ./subckt/sram_w16_160_BC.lib"
@@ -45,38 +37,15 @@ create_analysis_view -name BC_VIEW -delay_corner BC -constraint_mode CON
 init_design -setup WC_VIEW -hold BC_VIEW
 set_interactive_constraint_modes {CON}
 setDesignMode -process 65
-floorPlan -site core -r 0.5 0.70 10.0 10.0 10.0 10.0
+floorPlan -site core -r 0.5 0.10 10.0 10.0 10.0 10.0
 timeDesign -preplace -prefix preplace
 globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
 globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
-setObjFPlanBox Instance core_instance/qmem_instance 25 75.4675 52.9745 99.8675
-setObjFPlanBox Instance core_instance/kmem_instance 25 25.831 52.971 52.231
-setObjFPlanBox Instance core_instance/psum_mem_instance 25 50.831 12.971 52.231
-addHaloToBlock {3 3 3 3} core_instance/qmem_instance
-floorPlan -site core -r 0.5 0.70 10.0 10.0 10.0 10.0
-timeDesign -preplace -prefix preplace
-globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
-globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
-setObjFPlanBox Instance qmem_instance 25 75.4675 52.9745 99.8675
-setObjFPlanBox Instance kmem_instance 25 25.831 52.971 52.231
-setObjFPlanBox Instance psum_mem_instance 25 50.831 12.971 52.231
-addHaloToBlock {3 3 3 3} qmem_instance
-pan 4.755 -7.402
-pan -316.530 -55.761
-floorPlan -site core -r 0.5 0.70 10.0 10.0 10.0 10.0
-timeDesign -preplace -prefix preplace
-globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
-globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
-setObjFPlanBox Instance qmem_instance 25 75.4675 52.9745 99.8675
-setObjFPlanBox Instance kmem_instance 25 25.831 52.971 52.231
-setObjFPlanBox Instance psum_mem_instance 25 50.831 12.971 52.231
-addHaloToBlock {3 3 3 3} qmem_instance
-getIoFlowFlag
-floorPlan -site core -r 0.5 0.70 10.0 10.0 10.0 10.0
-timeDesign -preplace -prefix preplace
-globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
-globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
-setObjFPlanBox Instance qmem_instance 25 75.4675 52.9745 99.8675
-setObjFPlanBox Instance kmem_instance 25 25.831 52.971 52.231
-setObjFPlanBox Instance psum_mem_instance 25 50.831 12.971 52.231
+addRing -spacing {top 2 bottom 2 left 2 right 2} -width {top 3 bottom 3 left 3 right 3} -layer {top M1 bottom M1 left M2 right M2} -center 1 -type core_rings -nets {VSS  VDD}
+addStripe -number_of_sets 4 -spacing 5 -layer M6 -width 2 -start_offset 20 -stop_offset 20 -nets { VSS VDD } -direction horizontal
+setObjFPlanBox Instance psum_mem_instance 25 50.831 300 200
 addHaloToBlock {3 3 3 3} psum_mem_instance
+setObjFPlanBox Instance qmem_instance 225 210 300 400
+setObjFPlanBox Instance kmem_instance 625 410 300 600
+addHaloToBlock {3 3 3 3} qmem_instance
+pan -354.736 -137.614

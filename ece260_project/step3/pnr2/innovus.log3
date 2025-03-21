@@ -4,7 +4,7 @@ Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
 Options:	
-Date:		Thu Mar 20 17:02:39 2025
+Date:		Thu Mar 20 18:07:50 2025
 Host:		ieng6-ece-17.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB)
 OS:		CentOS Linux release 7.9.2009 (Core)
 
@@ -25,16 +25,6 @@ License:
 <CMD> getDrawView
 <CMD> loadWorkspace -name Physical
 <CMD> win
-<CMD> set init_pwr_net VDD
-<CMD> set init_gnd_net VSS
-<CMD> set init_verilog ./netlist/core.out.v
-<CMD> set init_design_netlisttype Verilog
-<CMD> set init_design_settop 1
-<CMD> set init_top_cell core
-<CMD> set init_lef_file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef
-<CMD> create_library_set -name WC_LIB -timing $worst_timing_lib ./subckt/sram_w16_160_WC.lib
-**ERROR: (TCLCMD-981):	Unsupported extra argument './subckt/sram_w16_160_WC.lib' in command 'create_library_set'.
-
 <CMD> set init_pwr_net VDD
 <CMD> set init_gnd_net VSS
 <CMD> set init_verilog ./netlist/core.out.v
@@ -205,8 +195,8 @@ Type 'man IMPLF-201' for more detail.
 **WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
 
-viaInitial starts at Thu Mar 20 17:49:12 2025
-viaInitial ends at Thu Mar 20 17:49:12 2025
+viaInitial starts at Thu Mar 20 18:08:07 2025
+viaInitial ends at Thu Mar 20 18:08:07 2025
 Reading WC_LIB timing library '/home/linux/ieng6/ee260bwi25/public/PDKdata/lib/tcbn65gpluswc.lib' ...
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D0' is not defined in the library.
 **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D1' is not defined in the library.
@@ -236,8 +226,8 @@ Reading BC_LIB timing library '/home/linux/ieng6/ee260bwi25/public/PDKdata/lib/t
 Read 811 cells in library 'tcbn65gplusbc' 
 Reading BC_LIB timing library '/home/linux/ieng6/ee260bwi25/aekeng/ECE260B_FP/ece260_project/step3/pnr2/subckt/sram_w16_160_BC.lib' ...
 Read 1 cells in library 'sram_w16_160' 
-*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=3.86min, fe_real=46.58min, fe_mem=468.1M) ***
-*** Begin netlist parsing (mem=468.1M) ***
+*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.18min, fe_real=0.32min, fe_mem=473.6M) ***
+*** Begin netlist parsing (mem=473.6M) ***
 **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D4' is defined in LEF but not in the timing library.
 **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D4' is defined in LEF but not in the timing library.
 **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D2' is defined in LEF but not in the timing library.
@@ -265,8 +255,8 @@ Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
 Reading verilog netlist './netlist/core.out.v'
 
-*** Memory Usage v#1 (Current mem = 495.113M, initial mem = 152.258M) ***
-*** End netlist parsing (cpu=0:00:00.3, real=0:00:01.0, mem=495.1M) ***
+*** Memory Usage v#1 (Current mem = 495.645M, initial mem = 149.258M) ***
+*** End netlist parsing (cpu=0:00:00.3, real=0:00:00.0, mem=495.6M) ***
 Set top cell to core.
 Hooked 1624 DB cells to tlib cells.
 Starting recursive module instantiation check.
@@ -276,7 +266,7 @@ Building hierarchical netlist for Cell core ...
 ** info: there are 1832 modules.
 ** info: there are 41285 stdCell insts.
 
-*** Memory Usage v#1 (Current mem = 570.445M, initial mem = 152.258M) ***
+*** Memory Usage v#1 (Current mem = 570.977M, initial mem = 149.258M) ***
 **WARN: (IMPFP-3961):	The techSite 'dcore' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
 Type 'man IMPFP-3961' for more detail.
 **WARN: (IMPFP-3961):	The techSite 'ccore' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
@@ -330,10 +320,10 @@ Summary of Active RC-Corners :
     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
 *Info: initialize multi-corner CTS.
 Reading timing constraints file './constraints/core.sdc' ...
-Current (total cpu=0:03:53, real=0:46:37, peak res=325.3M, current mem=693.7M)
+Current (total cpu=0:00:12.3, real=0:00:20.0, peak res=325.9M, current mem=694.6M)
 INFO (CTE): Constraints read successfully.
-Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=340.4M, current mem=710.9M)
-Current (total cpu=0:03:53, real=0:46:37, peak res=340.4M, current mem=710.9M)
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=341.1M, current mem=711.8M)
+Current (total cpu=0:00:12.3, real=0:00:20.0, peak res=341.1M, current mem=711.8M)
 Total number of combinational cells: 492
 Total number of sequential cells: 303
 Total number of tristate cells: 11
@@ -380,7 +370,7 @@ Applying the recommended capacitance filtering threshold values for 65nm process
 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
 Updating process node dependent CCOpt properties for the 65nm process node.
-<CMD> floorPlan -site core -r 0.5 0.70 10.0 10.0 10.0 10.0
+<CMD> floorPlan -site core -r 0.5 0.10 10.0 10.0 10.0 10.0
 **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
 <CMD> timeDesign -preplace -prefix preplace
 **WARN: (IMPOPT-7136):	timing_socv_statistical_min_max_mode 'statistical' is not supported by Innovus. Setting it to 'mean_and_three_sigma_bounded'.
@@ -399,9 +389,9 @@ Set Default Net Load as 0 pF.
 #################################################################################
 AAE_INFO: 1 threads acquired from CTE.
 Calculate delays in BcWc mode...
-End delay calculation. (MEM=1147.06 CPU=0:00:04.3 REAL=0:00:05.0)
-*** CDM Built up (cpu=0:00:05.5  real=0:00:06.0  mem= 1147.1M) ***
-*** Done Building Timing Graph (cpu=0:00:06.3 real=0:00:06.0 totSessionCpu=0:04:01 mem=1147.1M)
+End delay calculation. (MEM=1129.16 CPU=0:00:04.6 REAL=0:00:04.0)
+*** CDM Built up (cpu=0:00:05.8  real=0:00:05.0  mem= 1129.2M) ***
+*** Done Building Timing Graph (cpu=0:00:06.7 real=0:00:06.0 totSessionCpu=0:00:27.6 mem=1129.2M)
 
 ------------------------------------------------------------
           timeDesign Summary                             
@@ -426,17 +416,15 @@ Resetting back High Fanout Nets as non-ideal
 Set Default Net Delay as 1000 ps.
 Set Default Net Load as 0.5 pF. 
 Reported timing to dir ./timingReports
-Total CPU time: 8.34 sec
-Total Real time: 8.0 sec
-Total Memory Usage: 1041.933594 Mbytes
+Total CPU time: 8.85 sec
+Total Real time: 9.0 sec
+Total Memory Usage: 1042.480469 Mbytes
 <CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
 41285 new pwr-pin connections were made to global net 'VDD'.
 <CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
 41285 new gnd-pin connections were made to global net 'VSS'.
-<CMD> setObjFPlanBox Instance core_instance/qmem_instance 25 75.4675 52.9745 99.8675
-<CMD> setObjFPlanBox Instance core_instance/kmem_instance 25 25.831 52.971 52.231
-<CMD> setObjFPlanBox Instance core_instance/psum_mem_instance 25 50.831 12.971 52.231
-<CMD> addHaloToBlock {3 3 3 3} core_instance/qmem_instance
+<CMD> setObjFPlanBox Instance core_instance/psum_mem_instance 25 50.831 300 200
+<CMD> addHaloToBlock {3 3 3 3} core_instance/psum_mem_instance
 
 Usage: addHaloToBlock [-help] <left_bottom_right_top> [-fromInstBox]
                       [-ori <orientation>] [-snapToSite] [<inst_name> | -allMacro  | -allBlackBox  | -allCommitPtn  | -allBlock  | -allIOPad  | -cell <name>]
@@ -458,239 +446,73 @@ Usage: addHaloToBlock [-help] <left_bottom_right_top> [-fromInstBox]
 
 **ERROR: (IMPSYC-194):	Incorrect usage for command 'addHaloToBlock'.
 
-<CMD> floorPlan -site core -r 0.5 0.70 10.0 10.0 10.0 10.0
-<CMD> timeDesign -preplace -prefix preplace
-Set Using Default Delay Limit as 101.
-**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
-Setting High Fanout Nets ( > 100 ) as ideal temporarily for -prePlace option
-Set Default Net Delay as 0 ps.
-Set Default Net Load as 0 pF. 
-#################################################################################
-# Design Stage: PreRoute
-# Design Name: core
-# Design Mode: 65nm
-# Analysis Mode: MMMC Non-OCV 
-# Parasitics Mode: No SPEF/RCDB
-# Signoff Settings: SI Off 
-#################################################################################
-AAE_INFO: 1 threads acquired from CTE.
-Calculate delays in BcWc mode...
-End delay calculation. (MEM=1142.82 CPU=0:00:04.2 REAL=0:00:05.0)
-*** CDM Built up (cpu=0:00:04.7  real=0:00:05.0  mem= 1142.8M) ***
-*** Done Building Timing Graph (cpu=0:00:05.5 real=0:00:06.0 totSessionCpu=0:04:18 mem=1142.8M)
+<CMD> gui_select -rect {-52.037 341.380 -49.534 308.671}
+<CMD> uiSetTool ruler
+<CMD> setObjFPlanBox Instance core_instance/psum_mem_instance
 
-------------------------------------------------------------
-          timeDesign Summary                             
-------------------------------------------------------------
+Usage: setObjFPlanBox [-help] <objectType> <objectName> <llx> <lly> <urx> <ury>
 
-Setup views included:
- WC_VIEW 
+**ERROR: (IMPTCM-46):	Argument "llx" is required for command "setObjFPlanBox", either this option is not specified or an option prior to it is not specified correctly.
+  
+<CMD> setObjFPlanBox Instance core_instance/psum_mem_instance 0 0 0 0
+<CMD> pan 232.480 -128.806
+<CMD> uiSetTool ruler
+<CMD> setObjFPlanBox list
 
-+--------------------+---------+---------+---------+
-|     Setup mode     |   all   | reg2reg | default |
-+--------------------+---------+---------+---------+
-|           WNS (ns):| -0.896  | -0.896  | -0.232  |
-|           TNS (ns):| -2150.4 | -1853.1 |-297.370 |
-|    Violating Paths:|  4561   |  2952   |  1609   |
-|          All Paths:|  14152  |  8846   |  11954  |
-+--------------------+---------+---------+---------+
+Usage: setObjFPlanBox [-help] <objectType> <objectName> <llx> <lly> <urx> <ury>
 
-Density: 0.000%
-------------------------------------------------------------
-Set Using Default Delay Limit as 1000.
-Resetting back High Fanout Nets as non-ideal
-Set Default Net Delay as 1000 ps.
-Set Default Net Load as 0.5 pF. 
-Reported timing to dir ./timingReports
-Total CPU time: 7.56 sec
-Total Real time: 7.0 sec
-Total Memory Usage: 1046.214844 Mbytes
-<CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
-0 new pwr-pin connection was made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
-0 new gnd-pin connection was made to global net 'VSS'.
-<CMD> setObjFPlanBox Instance qmem_instance 25 75.4675 52.9745 99.8675
-<CMD> setObjFPlanBox Instance kmem_instance 25 25.831 52.971 52.231
-<CMD> setObjFPlanBox Instance psum_mem_instance 25 50.831 12.971 52.231
-<CMD> addHaloToBlock {3 3 3 3} qmem_instance
+**ERROR: (IMPTCM-46):	Argument "objectName" is required for command "setObjFPlanBox", either this option is not specified or an option prior to it is not specified correctly.
+  
+<CMD> setObjFPlanBox -help
 
-Usage: addHaloToBlock [-help] <left_bottom_right_top> [-fromInstBox]
-                      [-ori <orientation>] [-snapToSite] [<inst_name> | -allMacro  | -allBlackBox  | -allCommitPtn  | -allBlock  | -allIOPad  | -cell <name>]
+Usage: setObjFPlanBox [-help] <objectType> <objectName> <llx> <lly> <urx> <ury>
 
--help                       # Prints out the command usage
-<left_bottom_right_top>     # halo of 4 side: left bottom right top
-                            # (box, required)
-<inst_name>                 # for instance (string, optional)
--allBlackBox                # for all blackBoxs (bool, optional)
--allBlock                   # for all blocks (bool, optional)
--allCommitPtn               # for all partitions (bool, optional)
--allIOPad                   # for all Io Pads (bool, optional)
--allMacro                   # for all Macros (bool, optional)
--cell <name>                # by cell name (string, optional)
--fromInstBox                # for all blocks (bool, optional)
--ori <orientation>          # base on orientation (string, optional)
--snapToSite                 # halo box will snap to site (bool, optional)
+-help            # Prints out the command usage
+<objectType>     # Object type (string, required)
+<objectName>     # Object name (string, required)
+<llx>            # lower left x coordinate of the object (float, required)
+<lly>            # lower left y coordinate of the object (float, required)
+<urx>            # upper right x coordinate of the object (float, required)
+<ury>            # upper right y coordinate of the object (float, required)
 
 
-**ERROR: (IMPSYC-194):	Incorrect usage for command 'addHaloToBlock'.
 
-<CMD> pan 4.755 -7.402
-<CMD> pan -316.530 -55.761
-<CMD> floorPlan -site core -r 0.5 0.70 10.0 10.0 10.0 10.0
-<CMD> timeDesign -preplace -prefix preplace
-Set Using Default Delay Limit as 101.
-**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
-Setting High Fanout Nets ( > 100 ) as ideal temporarily for -prePlace option
-Set Default Net Delay as 0 ps.
-Set Default Net Load as 0 pF. 
-#################################################################################
-# Design Stage: PreRoute
-# Design Name: core
-# Design Mode: 65nm
-# Analysis Mode: MMMC Non-OCV 
-# Parasitics Mode: No SPEF/RCDB
-# Signoff Settings: SI Off 
-#################################################################################
-AAE_INFO: 1 threads acquired from CTE.
-Calculate delays in BcWc mode...
-End delay calculation. (MEM=1146.6 CPU=0:00:04.3 REAL=0:00:04.0)
-*** CDM Built up (cpu=0:00:04.8  real=0:00:05.0  mem= 1146.6M) ***
-*** Done Building Timing Graph (cpu=0:00:05.6 real=0:00:06.0 totSessionCpu=0:04:29 mem=1146.6M)
+Usage: all_instances [-help] <object> [-hierarchical ]
 
-------------------------------------------------------------
-          timeDesign Summary                             
-------------------------------------------------------------
-
-Setup views included:
- WC_VIEW 
-
-+--------------------+---------+---------+---------+
-|     Setup mode     |   all   | reg2reg | default |
-+--------------------+---------+---------+---------+
-|           WNS (ns):| -0.896  | -0.896  | -0.232  |
-|           TNS (ns):| -2150.4 | -1853.1 |-297.370 |
-|    Violating Paths:|  4561   |  2952   |  1609   |
-|          All Paths:|  14152  |  8846   |  11954  |
-+--------------------+---------+---------+---------+
-
-Density: 0.000%
-------------------------------------------------------------
-Set Using Default Delay Limit as 1000.
-Resetting back High Fanout Nets as non-ideal
-Set Default Net Delay as 1000 ps.
-Set Default Net Load as 0.5 pF. 
-Reported timing to dir ./timingReports
-Total CPU time: 7.69 sec
-Total Real time: 8.0 sec
-Total Memory Usage: 1049.949219 Mbytes
-<CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
-0 new pwr-pin connection was made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
-0 new gnd-pin connection was made to global net 'VSS'.
-<CMD> setObjFPlanBox Instance qmem_instance 25 75.4675 52.9745 99.8675
-<CMD> setObjFPlanBox Instance kmem_instance 25 25.831 52.971 52.231
-<CMD> setObjFPlanBox Instance psum_mem_instance 25 50.831 12.971 52.231
-<CMD> addHaloToBlock {3 3 3 3} qmem_instance
-
-Usage: addHaloToBlock [-help] <left_bottom_right_top> [-fromInstBox]
-                      [-ori <orientation>] [-snapToSite] [<inst_name> | -allMacro  | -allBlackBox  | -allCommitPtn  | -allBlock  | -allIOPad  | -cell <name>]
-
--help                       # Prints out the command usage
-<left_bottom_right_top>     # halo of 4 side: left bottom right top
-                            # (box, required)
-<inst_name>                 # for instance (string, optional)
--allBlackBox                # for all blackBoxs (bool, optional)
--allBlock                   # for all blocks (bool, optional)
--allCommitPtn               # for all partitions (bool, optional)
--allIOPad                   # for all Io Pads (bool, optional)
--allMacro                   # for all Macros (bool, optional)
--cell <name>                # by cell name (string, optional)
--fromInstBox                # for all blocks (bool, optional)
--ori <orientation>          # base on orientation (string, optional)
--snapToSite                 # halo box will snap to site (bool, optional)
+**ERROR: (IMPTCM-32):	Wrong number of arguments specified for command "CTE::all_instances".
 
 
-**ERROR: (IMPSYC-194):	Incorrect usage for command 'addHaloToBlock'.
+Usage: all_instances [-help] <object> [-hierarchical ]
 
-<CMD> getIoFlowFlag
-<CMD> floorPlan -site core -r 0.5 0.70 10.0 10.0 10.0 10.0
-<CMD> timeDesign -preplace -prefix preplace
-Set Using Default Delay Limit as 101.
-**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
-Setting High Fanout Nets ( > 100 ) as ideal temporarily for -prePlace option
-Set Default Net Delay as 0 ps.
-Set Default Net Load as 0 pF. 
-#################################################################################
-# Design Stage: PreRoute
-# Design Name: core
-# Design Mode: 65nm
-# Analysis Mode: MMMC Non-OCV 
-# Parasitics Mode: No SPEF/RCDB
-# Signoff Settings: SI Off 
-#################################################################################
-AAE_INFO: 1 threads acquired from CTE.
-Calculate delays in BcWc mode...
-End delay calculation. (MEM=1149.33 CPU=0:00:04.3 REAL=0:00:04.0)
-*** CDM Built up (cpu=0:00:04.8  real=0:00:05.0  mem= 1149.3M) ***
-*** Done Building Timing Graph (cpu=0:00:05.6 real=0:00:06.0 totSessionCpu=0:04:47 mem=1149.3M)
-
-------------------------------------------------------------
-          timeDesign Summary                             
-------------------------------------------------------------
-
-Setup views included:
- WC_VIEW 
-
-+--------------------+---------+---------+---------+
-|     Setup mode     |   all   | reg2reg | default |
-+--------------------+---------+---------+---------+
-|           WNS (ns):| -0.896  | -0.896  | -0.232  |
-|           TNS (ns):| -2150.4 | -1853.1 |-297.370 |
-|    Violating Paths:|  4561   |  2952   |  1609   |
-|          All Paths:|  14152  |  8846   |  11954  |
-+--------------------+---------+---------+---------+
-
-Density: 0.000%
-------------------------------------------------------------
-Set Using Default Delay Limit as 1000.
-Resetting back High Fanout Nets as non-ideal
-Set Default Net Delay as 1000 ps.
-Set Default Net Load as 0.5 pF. 
-Reported timing to dir ./timingReports
-Total CPU time: 7.7 sec
-Total Real time: 8.0 sec
-Total Memory Usage: 1053.886719 Mbytes
-<CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
-0 new pwr-pin connection was made to global net 'VDD'.
-<CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
-0 new gnd-pin connection was made to global net 'VSS'.
-<CMD> setObjFPlanBox Instance qmem_instance 25 75.4675 52.9745 99.8675
-<CMD> setObjFPlanBox Instance kmem_instance 25 25.831 52.971 52.231
-<CMD> setObjFPlanBox Instance psum_mem_instance 25 50.831 12.971 52.231
-<CMD> addHaloToBlock {3 3 3 3} psum_mem_instance
-
-Usage: addHaloToBlock [-help] <left_bottom_right_top> [-fromInstBox]
-                      [-ori <orientation>] [-snapToSite] [<inst_name> | -allMacro  | -allBlackBox  | -allCommitPtn  | -allBlock  | -allIOPad  | -cell <name>]
-
--help                       # Prints out the command usage
-<left_bottom_right_top>     # halo of 4 side: left bottom right top
-                            # (box, required)
-<inst_name>                 # for instance (string, optional)
--allBlackBox                # for all blackBoxs (bool, optional)
--allBlock                   # for all blocks (bool, optional)
--allCommitPtn               # for all partitions (bool, optional)
--allIOPad                   # for all Io Pads (bool, optional)
--allMacro                   # for all Macros (bool, optional)
--cell <name>                # by cell name (string, optional)
--fromInstBox                # for all blocks (bool, optional)
--ori <orientation>          # base on orientation (string, optional)
--snapToSite                 # halo box will snap to site (bool, optional)
+-help             # Prints out the command usage
+<object>          # Returns collection of all instance for specified name or pattern of design or a library cell in the current design (string, required)
+-hierarchical     # Patterns should be matched hierarchically (bool, optional)
 
 
-**ERROR: (IMPSYC-194):	Incorrect usage for command 'addHaloToBlock'.
+**ERROR: (TCLCMD-917):	Cannot find 'designs or library cells' that match 'Instance'
+**ERROR: (TCLCMD-917):	Cannot find 'designs or library cells' that match 'core/instance'
+**ERROR: (TCLCMD-917):	Cannot find 'designs or library cells' that match 'core_instance'
+**ERROR: (TCLCMD-917):	Cannot find 'designs or library cells' that match 'psum'
+**ERROR: (TCLCMD-918):	The argument passed to command 'all_instances' should resolve to a single unique object. Multiple objects were found that matched the name 'sram_w16_160'. Make the argument unique by modifying the argument such that it maps to a single unique object by use of collection commands (eg: '[get_pins sram_w16_160]' instead of 'sram_w16_160') or by reorgnaizing wildcards.
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'sram_w16_160'
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match 'sram_w16_160'
+empty command name ""
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'sram_w16_160'
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match 'sram_w16_160'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'sram_w16_160'
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match 'sram_w16_160'
+**WARN: (TCLCMD-746):	Empty collection specified as argument to 'all_instances'
+**ERROR: (TCLCMD-917):	Cannot find 'designs or library cells' that match 'psum_mem_instance'
+**ERROR: (TCLCMD-917):	Cannot find 'designs or library cells' that match 'core_instance/psum_mem_instance'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'psum_mem_instance'
+**ERROR: (TCLCMD-917):	Cannot find 'modules' that match 'psum_mem_instance'
+**WARN: (TCLCMD-746):	Empty collection specified as argument to 'all_instances'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'sram_w16_160'
+**ERROR: (TCLCMD-917):	Cannot find 'modules' that match 'sram_w16_160'
+**WARN: (TCLCMD-746):	Empty collection specified as argument to 'all_instances'
+**ERROR: (TCLCMD-917):	Cannot find 'designs or library cells' that match 'qmem_instance'
 
+*** Memory Usage v#1 (Current mem = 1044.480M, initial mem = 149.258M) ***
+*** Message Summary: 1965 warning(s), 9 error(s)
 
-*** Memory Usage v#1 (Current mem = 1053.887M, initial mem = 152.258M) ***
-*** Message Summary: 1968 warning(s), 9 error(s)
-
---- Ending "Innovus" (totcpu=0:05:12, real=0:54:50, mem=1053.9M) ---
+--- Ending "Innovus" (totcpu=0:01:51, real=0:11:28, mem=1044.5M) ---

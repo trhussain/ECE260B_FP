@@ -2,7 +2,7 @@
 set desdir 		"/home/linux/ieng6/ee260bwi25/public/DESIGNdata"
 set libdir 		"/home/linux/ieng6/ee260bwi25/public/PDKdata"
 set design 		"core"
-set netlist 		"./netlist/$design.out.v"
+set netlist 	"./netlist/$design.out.v"
 set sdc 		"./constraints/$design.sdc"
 set best_timing_lib 	"$libdir/lib/tcbn65gplusbc.lib"
 set worst_timing_lib 	"$libdir/lib/tcbn65gpluswc.lib"
@@ -19,11 +19,11 @@ set init_verilog "$netlist"
 set init_design_netlisttype "Verilog"
 set init_design_settop 1
 set init_top_cell "$design"
-set init_lef_file "$lef"
+set init_lef_file "$lef ./subckt/sram_w16_160.lef ./subckt/sram_w16.lef"
 
 # MCMM setup
-create_library_set -name WC_LIB -timing $worst_timing_lib ./subckt/sram_w16_160_WC.lib
-create_library_set -name BC_LIB -timing $best_timing_lib ./subckt/sram_w16_160_BC.lib
+create_library_set -name WC_LIB -timing "$worst_timing_lib ./subckt/sram_w16_160_WC.lib"
+create_library_set -name BC_LIB -timing "$best_timing_lib ./subckt/sram_w16_160_BC.lib"
 create_rc_corner -name Cmax -cap_table $worst_captbl -T 125
 create_rc_corner -name Cmin -cap_table $best_captbl -T -40
 create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
