@@ -34,7 +34,6 @@ catch { setDelayCalMode -enable_high_fanout true }
 catch { setDelayCalMode -engine aae }
 catch { setDelayCalMode -ignoreNetLoad false }
 catch { setPinAssignMode -maxLayer 4 }
-catch { setPinAssignMode -pinEditInBatch true }
 catch { setTrialRouteMode -handlePreroute true }
 catch { setTrialRouteMode -keepMarkedOptRoutes true }
 catch { setTrialRouteMode -maxRouteLayer 4 }

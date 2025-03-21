@@ -16,16 +16,15 @@ globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
 addRing -spacing {top 2 bottom 2 left 2 right 2} -width {top 3 bottom 3 left 3 right 3}  -layer {top M1 bottom M1 left M2 right M2} -center 1 -type core_rings -nets {VSS  VDD}
 
 # Add power stripes 
-addStripe -number_of_sets 4 -spacing 5 -layer M6 -width 2 -start_offset 20 -stop_offset 20 -nets { VSS VDD } -direction horizontal
+addStripe -number_of_sets 30 -spacing 5 -layer M6 -width 2 -start_offset 20 -stop_offset 20 -nets { VSS VDD } -direction horizontal
 
 # via https://ucsd.instructure.com/courses/61768/discussion_topics/895458
-setObjFPlanBox Instance psum_mem_instance 25 50.831 300 200
-addHaloToBlock {3 3 3 3} psum_mem_instance 
-
-setObjFPlanBox Instance qmem_instance 225 210 300 400
-setObjFPlanBox Instance kmem_instance 625 410 300 600
+setObjFPlanBox Instance qmem_instance 425 50 600 200
+setObjFPlanBox Instance kmem_instance 625 50 800 200
+setObjFPlanBox Instance psum_mem_instance 825 50 1000 200
 
 addHaloToBlock {3 3 3 3} qmem_instance 
 addHaloToBlock {3 3 3 3} kmem_instance 
+addHaloToBlock {3 3 3 3} psum_mem_instance 
 # # Routing of standard signals
 sroute

@@ -6,7 +6,7 @@ module core (clk, sum_out, mem_in, out, inst, reset);
 parameter col = 8;
 parameter bw = 8;
 parameter bw_psum = 2*bw+4;
-parameter pr = 8;
+parameter pr = 16;
 
 output [bw_psum+3:0] sum_out;
 output wire [bw_psum*col-1:0] out; // Ming slightly modified, added the word "wire" so that can assign to pmem output

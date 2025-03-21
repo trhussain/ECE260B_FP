@@ -540,3 +540,110 @@ sroute: Total CPU time used = 0:0:0
 [03/20 18:43:59     18] <CMD> pan -507.944 -97.224
 [03/20 18:44:49     23] <CMD> pan 8.434 -133.254
 [03/20 18:44:51     24] <CMD> pan -3.969 -136.925
+[03/20 18:46:13     35] <CMD> pan -102.722 -4.669
+[03/20 18:46:40     39] <CMD> pan -159.303 0.000
+[03/20 18:49:07     62] <CMD> addStripe -number_of_sets 10 -spacing 5 -layer M6 -width 2 -start_offset 20 -stop_offset 20 -nets { VSS VDD } -direction horizontal
+[03/20 18:49:07     62] 
+[03/20 18:49:07     62] Starting stripe generation ...
+[03/20 18:49:07     62] Non-Default setAddStripeOption Settings :
+[03/20 18:49:07     62]   NONE
+[03/20 18:49:07     62] **WARN: (IMPPP-170):	The power planner failed to create a wire at (6.00, 31.00) (1751.80, 31.00) because same wire already exists.
+[03/20 18:49:07     62] **WARN: (IMPPP-170):	The power planner failed to create a wire at (6.00, 303.27) (1751.80, 303.27) because same wire already exists.
+[03/20 18:49:07     62] **WARN: (IMPPP-170):	The power planner failed to create a wire at (6.00, 575.53) (1751.80, 575.53) because same wire already exists.
+[03/20 18:49:07     62] **WARN: (IMPPP-170):	The power planner failed to create a wire at (6.00, 847.79) (1751.80, 847.79) because same wire already exists.
+[03/20 18:49:07     62] **WARN: (IMPPP-170):	The power planner failed to create a wire at (1.00, 38.00) (1756.80, 38.00) because same wire already exists.
+[03/20 18:49:07     62] **WARN: (IMPPP-170):	The power planner failed to create a wire at (1.00, 310.27) (1756.80, 310.27) because same wire already exists.
+[03/20 18:49:07     62] **WARN: (IMPPP-170):	The power planner failed to create a wire at (1.00, 582.53) (1756.80, 582.53) because same wire already exists.
+[03/20 18:49:07     62] **WARN: (IMPPP-170):	The power planner failed to create a wire at (1.00, 854.79) (1756.80, 854.79) because same wire already exists.
+[03/20 18:49:07     62] Stripe generation is complete; vias are now being generated.
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M7 & M1 at (6.00, 213.24) (10.00, 213.51)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M7 & M1 at (10.00, 213.24) (13.25, 213.51)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (11.25, 213.24) (222.00, 213.51)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (382.60, 213.24) (1746.55, 213.51)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M7 & M1 at (1744.55, 213.24) (1747.80, 213.51)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M7 & M1 at (1747.80, 213.24) (1751.80, 213.51)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (6.00, 393.23) (10.00, 393.57)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (10.00, 393.23) (1747.80, 393.57)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (1747.80, 393.23) (1751.80, 393.57)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (6.00, 666.84) (10.00, 667.16)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (10.00, 666.84) (1747.80, 667.16)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (1747.80, 666.84) (1751.80, 667.16)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (6.00, 756.84) (10.00, 757.16)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (10.00, 756.84) (1747.80, 757.16)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (1747.80, 756.84) (1751.80, 757.16)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (1.00, 128.63) (10.00, 128.96)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (10.00, 128.63) (22.00, 128.96)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (350.40, 128.63) (1747.80, 128.96)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (1747.80, 128.63) (1756.80, 128.96)
+[03/20 18:49:07     62] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (1.00, 218.63) (10.00, 218.96)
+[03/20 18:49:07     62] **WARN: (EMS-27):	Message (IMPPP-532) has exceeded the current message display limit of 20.
+[03/20 18:49:07     62] To increase the message display limit, refer to the product command reference manual.
+[03/20 18:49:07     62] The power planner created 18 wires.
+[03/20 18:49:07     62] *** Ending Stripe Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 1028.2M) ***
+[03/20 18:49:13     63] <CMD> pan 529.841 -41.673
+[03/20 18:49:14     63] <CMD> pan -107.159 9.922
+[03/20 18:49:40     67] <CMD> addStripe -number_of_sets 20 -spacing 5 -layer M6 -width 2 -start_offset 20 -stop_offset 20 -nets { VSS VDD } -direction horizontal
+[03/20 18:49:40     67] 
+[03/20 18:49:40     67] Starting stripe generation ...
+[03/20 18:49:40     67] Non-Default setAddStripeOption Settings :
+[03/20 18:49:40     67]   NONE
+[03/20 18:49:40     67] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 675.78 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/20 18:49:40     67] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 761.74 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/20 18:49:40     67] **WARN: (IMPPP-170):	The power planner failed to create a wire at (6.00, 31.00) (1751.80, 31.00) because same wire already exists.
+[03/20 18:49:40     67] **WARN: (IMPPP-170):	The power planner failed to create a wire at (1.00, 38.00) (1756.80, 38.00) because same wire already exists.
+[03/20 18:49:40     67] Stripe generation is complete; vias are now being generated.
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M7 & M1 at (6.00, 72.99) (10.00, 73.17)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M7 & M1 at (10.00, 72.99) (13.25, 73.17)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (11.25, 72.99) (22.00, 73.17)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (350.40, 72.99) (1746.55, 73.17)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M7 & M1 at (1744.55, 72.99) (1747.80, 73.17)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M7 & M1 at (1747.80, 72.99) (1751.80, 73.17)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (6.00, 116.04) (10.00, 116.36)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (10.00, 116.04) (22.00, 116.36)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (350.40, 116.04) (1747.80, 116.36)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (1747.80, 116.04) (1751.80, 116.36)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (6.00, 159.24) (10.00, 159.57)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (10.00, 159.24) (1747.80, 159.57)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (1747.80, 159.24) (1751.80, 159.57)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (6.00, 202.43) (10.00, 202.76)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (10.00, 202.43) (1747.80, 202.76)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (1747.80, 202.43) (1751.80, 202.76)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (6.00, 245.63) (10.00, 245.96)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (10.00, 245.63) (222.00, 245.96)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (382.60, 245.63) (1747.80, 245.96)
+[03/20 18:49:40     67] **WARN: (IMPPP-532):	ViaGen Warning: top layer and bottom layer have same direction but only orthogonal via is allowed between layer: M6 & M1 at (1747.80, 245.63) (1751.80, 245.96)
+[03/20 18:49:40     67] **WARN: (EMS-27):	Message (IMPPP-532) has exceeded the current message display limit of 20.
+[03/20 18:49:40     67] To increase the message display limit, refer to the product command reference manual.
+[03/20 18:49:40     67] The power planner created 60 wires.
+[03/20 18:49:40     67] *** Ending Stripe Generation (totcpu: 0:00:00.1,real: 0:00:00.0, mem: 1028.2M) ***
+[03/20 18:49:54     69] <CMD> setEdit -layer_minimum M1
+[03/20 18:49:54     69] <CMD> setEdit -layer_maximum M8
+[03/20 18:49:54     69] <CMD> setEdit -force_regular 1
+[03/20 18:49:57     70] 
+[03/20 18:49:57     70] *** Memory Usage v#1 (Current mem = 1028.203M, initial mem = 149.258M) ***
+[03/20 18:49:57     70] 
+[03/20 18:49:57     70] *** Summary of all messages that are not suppressed in this session:
+[03/20 18:49:57     70] Severity  ID               Count  Summary                                  
+[03/20 18:49:57     70] WARNING   IMPLF-200          239  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[03/20 18:49:57     70] WARNING   IMPLF-201          224  Pin '%s' in macro '%s' has no ANTENNADIF...
+[03/20 18:49:57     70] WARNING   IMPFP-325            1  Floorplan of the design is resized. All ...
+[03/20 18:49:57     70] WARNING   IMPFP-3961           2  The techSite '%s' has no related cells i...
+[03/20 18:49:57     70] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[03/20 18:49:57     70] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[03/20 18:49:57     70] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[03/20 18:49:57     70] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[03/20 18:49:57     70] WARNING   IMPSYC-2             1  Timing information is not defined for ce...
+[03/20 18:49:57     70] WARNING   IMPVL-159         1624  Pin '%s' of cell '%s' is defined in LEF ...
+[03/20 18:49:57     70] WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
+[03/20 18:49:57     70] WARNING   IMPPP-531            1  ViaGen Warning: %s rule violation, no vi...
+[03/20 18:49:57     70] WARNING   IMPPP-532          141  ViaGen Warning: top layer and bottom lay...
+[03/20 18:49:57     70] WARNING   IMPPP-170           10  The power planner failed to create a wir...
+[03/20 18:49:57     70] WARNING   IMPPP-354            2  The power planner did not generate %s st...
+[03/20 18:49:57     70] WARNING   IMPSR-1256           2  Cannot find any CORE class pad pin of ne...
+[03/20 18:49:57     70] WARNING   IMPOPT-7136          1  %s '%s' is not supported by Innovus. Set...
+[03/20 18:49:57     70] ERROR     IMPOAX-142           3  %s                                       
+[03/20 18:49:57     70] ERROR     IMPOAX-820           1  The OA features are disabled in the curr...
+[03/20 18:49:57     70] ERROR     IMPOAX-850           1  %s command cannot be run as OA features ...
+[03/20 18:49:57     70] *** Message Summary: 2257 warning(s), 5 error(s)
+[03/20 18:49:57     70] 
+[03/20 18:49:57     70] --- Ending "Innovus" (totcpu=0:01:10, real=0:06:32, mem=1028.2M) ---

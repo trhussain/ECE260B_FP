@@ -53,3 +53,12 @@ sroute
 pan -507.944 -97.224
 pan 8.434 -133.254
 pan -3.969 -136.925
+pan -102.722 -4.669
+pan -159.303 0.000
+addStripe -number_of_sets 10 -spacing 5 -layer M6 -width 2 -start_offset 20 -stop_offset 20 -nets { VSS VDD } -direction horizontal
+pan 529.841 -41.673
+pan -107.159 9.922
+addStripe -number_of_sets 20 -spacing 5 -layer M6 -width 2 -start_offset 20 -stop_offset 20 -nets { VSS VDD } -direction horizontal
+setEdit -layer_minimum M1
+setEdit -layer_maximum M8
+setEdit -force_regular 1
