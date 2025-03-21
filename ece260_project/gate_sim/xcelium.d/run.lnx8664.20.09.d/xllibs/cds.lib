@@ -1,9 +1,2 @@
-define fifo_mux_16_1 ./fifo_mux_16_1
-define fifo_mux_8_1 ./fifo_mux_8_1
-define fifo_mux_2_1 ./fifo_mux_2_1
-define fifo_depth16 ./fifo_depth16
-define ofifo ./ofifo
-define mac_col ./mac_col
-define mac_array ./mac_array
 define tcbn65gplus ./tcbn65gplus
 define core ./core

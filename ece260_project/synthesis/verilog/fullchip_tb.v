@@ -1,7 +1,7 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
 
-`timescale 1ns/1ps
+`timescale 10ns/1ps
 
 module fullchip_tb;
 
@@ -65,7 +65,6 @@ fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
       .mem_in(mem_in), 
       .inst(inst),
       .full_out(fullchipout)
-
 );
 
 initial begin 
@@ -119,7 +118,7 @@ $display("##### K data txt reading #####");
   for (q=0; q<col; q=q+1) begin
     for (j=0; j<pr; j=j+1) begin
           qk_scan_file = $fscanf(qk_file, "%d\n", captured_data);
-          K[j][q] = captured_data;
+          K[q][j] = captured_data;
           //$display("##### %d\n", K[q][j]);
     end
   end
@@ -379,7 +378,7 @@ pmem_add = 0;
 
 
 
-  #10 $finish;
+  #0.50 $finish;
 
 
 end

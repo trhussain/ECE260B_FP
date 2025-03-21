@@ -33,24 +33,21 @@ mac_16in #(.bw(bw), .bw_psum(bw_psum), .pr(pr)) mac_16in_instance (
 	.out(psum)
 ); 
 
-always @(posedge clk) begin
-  $write("Q_in Q: %h\n", q_in);
-end
 
-always @ (posedge clk) begin
+reg    [3:0] myMacColDummy;
 
-
+always @ (posedge clk or posedge reset) begin
   if (reset) begin
     cnt_q <= 0;
     load_ready_q <= 1;
     inst_q <= 0;
     inst_2q <= 0;
-    q_out <= 0; // RST signal -> if 0 then NOT pnr(likely verilog), if not 0 then pnr 
+    myMacColDummy <= 0; 
   end
   else begin
     //   $write("MAC 16IN PSUM: %h ", psum);
     // $display("");
-
+    myMacColDummy <= ~myMacColDummy;
     inst_q <= i_inst;
     inst_2q <= inst_q;
     if (inst_q[0]) begin

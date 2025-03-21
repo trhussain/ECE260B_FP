@@ -1,14 +1,13 @@
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Warning: Design has unannotated primary inputs. (PWR-414)
 Warning: Design has unannotated sequential cell outputs. (PWR-415)
-Warning: Design has unannotated black box outputs. (PWR-428)
  
 ****************************************
 Report : power
         -analysis_effort low
 Design : core
 Version: K-2015.06-SP2
-Date   : Fri Mar 21 10:19:01 2025
+Date   : Fri Mar 21 15:20:48 2025
 ****************************************
 
 
@@ -28,9 +27,27 @@ mac_array_col8_bw8_bw_psum20_pr8
 ofifo_col8_bw20        ZeroWireload      tcbn65gplustc
 sram_w16_sram_bit64_1  ZeroWireload      tcbn65gplustc
 sram_w16_sram_bit160   ZeroWireload      tcbn65gplustc
+mac_col_bw8_bw_psum20_pr8_col_id1
+                       ZeroWireload      tcbn65gplustc
+mac_col_bw8_bw_psum20_pr8_col_id2
+                       ZeroWireload      tcbn65gplustc
+mac_col_bw8_bw_psum20_pr8_col_id3
+                       ZeroWireload      tcbn65gplustc
+mac_col_bw8_bw_psum20_pr8_col_id4
+                       ZeroWireload      tcbn65gplustc
+mac_col_bw8_bw_psum20_pr8_col_id5
+                       ZeroWireload      tcbn65gplustc
+mac_col_bw8_bw_psum20_pr8_col_id6
+                       ZeroWireload      tcbn65gplustc
+mac_col_bw8_bw_psum20_pr8_col_id7
+                       ZeroWireload      tcbn65gplustc
+mac_col_bw8_bw_psum20_pr8_col_id8
+                       ZeroWireload      tcbn65gplustc
 fifo_depth16_bw20_simd1_7
                        ZeroWireload      tcbn65gplustc
 fifo_depth16_bw20_simd1_6
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr8_7
                        ZeroWireload      tcbn65gplustc
 fifo_mux_16_1_bw20_simd1_7
                        ZeroWireload      tcbn65gplustc
@@ -64,6 +81,20 @@ fifo_mux_16_1_bw20_simd1_3
 fifo_mux_16_1_bw20_simd1_4
                        ZeroWireload      tcbn65gplustc
 fifo_mux_16_1_bw20_simd1_5
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr8_0
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr8_1
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr8_2
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr8_3
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr8_4
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr8_5
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr8_6
                        ZeroWireload      tcbn65gplustc
 fifo_mux_8_1_bw20_simd1_0
                        ZeroWireload      tcbn65gplustc
@@ -344,12 +375,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =  41.5385 mW    (4%)
-  Net Switching Power  = 889.7336 mW   (96%)
+  Cell Internal Power  =  50.7410 mW   (98%)
+  Net Switching Power  = 959.8613 uW    (2%)
                          ---------
-Total Dynamic Power    = 931.2722 mW  (100%)
+Total Dynamic Power    =  51.7009 mW  (100%)
 
-Cell Leakage Power     = 280.7403 uW
+Cell Leakage Power     = 671.0075 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -358,10 +389,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network  5.0265e-02          889.0914        1.4554e+04          889.1649  (  95.45%)
-register          41.0348            0.1371        2.0415e+05           41.3761  (   4.44%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register          49.5169            0.1436        2.6086e+05           49.9213  (  95.32%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      0.4534            0.4956        6.2035e+04            1.0110  (   0.11%)
+combinational      1.2242            0.8163        4.1015e+05            2.4506  (   4.68%)
 --------------------------------------------------------------------------------------------------
-Total             41.5385 mW       889.7241 mW     2.8074e+05 nW       931.5520 mW
+Total             50.7411 mW         0.9599 mW     6.7101e+05 nW        52.3720 mW
 1

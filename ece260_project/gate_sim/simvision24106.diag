@@ -1,0 +1,96 @@
+*** Message Type: info ***
+When: Fri Mar 21 12:27:25 PDT 2025
+SimVision started.
+Version: TOOL:  simvision(64)   20.09-s017
+User: trhussain
+Host: ieng6-ece-11.ucsd.edu
+Platform: Linux/x86_64/3.10.0-1160.119.1.el7.x86_64
+Started: Fri Mar 21 12:27:25 PDT 2025
+Command: /software/ECE/XCELIUM-2009/tools.lnx86/simvision/bin/64bit/simvision.exe -connect dc:ieng6-ece-11.ucsd.edu:41094 -64BIT -nocopyright
+Work Directory: /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/gate_sim
+ 
+*** Message Type: info ***
+When: Fri Mar 21 12:27:26 PDT 2025
+Create browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Fri Mar 21 12:27:29 PDT 2025
+Create console window: "Console"
+ 
+*** Message Type: info ***
+When: Fri Mar 21 12:27:31 PDT 2025
+Connect to Simulator
+      Design: worklib.fullchip_tb:v
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:      xmsim(64)       20.09-s017
+        User: trhussain
+        Host: ieng6-ece-11.ucsd.edu
+Time Started: Fri Mar 21 12:27:23 PDT 2025
+  Process ID: 24069
+   Directory: /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/gate_sim
+     Command: xrun -define INITIALIZE_MEMORY -xminitialize 0 +gui +access+rwc +xm64bit +xmstatus +xmtimescale+1ns/1ps +xmoveride_timescale -v ./core.out.v -v /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v ./../synthesis/verilog/fullchip_tb.v -v ./../synthesis/verilog/mac_array.v -v ./../synthesis/verilog/mac_col.v -v ./../synthesis/verilog/ofifo.v -v ./../synthesis/verilog/fifo_depth16.v -v ./../synthesis/verilog/fifo_mux_2_1.v -v ./../synthesis/verilog/fifo_mux_8_1.v -v ./../synthesis/verilog/fifo_mux_16_1.v
+
+ 
+*** Message Type: info ***
+When: Fri Mar 21 12:27:32 PDT 2025
+Create utility window: "Properties"
+ 
+*** Message Type: info ***
+When: Fri Mar 21 12:29:48 PDT 2025
+Create waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Fri Mar 21 13:16:51 PDT 2025
+Delete waveform window: "Waveform 1"
+ 
+*** Message Type: info ***
+When: Fri Mar 21 13:16:52 PDT 2025
+Delete browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Fri Mar 21 13:17:24 PDT 2025
+Exit XM-Sim: user
+      Design: worklib.fullchip_tb:v
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:      xmsim(64)       20.09-s017
+        User: trhussain
+        Host: ieng6-ece-11.ucsd.edu
+Time Started: Fri Mar 21 12:27:23 PDT 2025
+  Process ID: 24069
+   Directory: /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/gate_sim
+     Command: xrun -define INITIALIZE_MEMORY -xminitialize 0 +gui +access+rwc +xm64bit +xmstatus +xmtimescale+1ns/1ps +xmoveride_timescale -v ./core.out.v -v /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v ./../synthesis/verilog/fullchip_tb.v -v ./../synthesis/verilog/mac_array.v -v ./../synthesis/verilog/mac_col.v -v ./../synthesis/verilog/ofifo.v -v ./../synthesis/verilog/fifo_depth16.v -v ./../synthesis/verilog/fifo_mux_2_1.v -v ./../synthesis/verilog/fifo_mux_8_1.v -v ./../synthesis/verilog/fifo_mux_16_1.v
+
+ 
+*** Message Type: error ***
+When: Fri Mar 21 13:17:25 PDT 2025
+XM-Sim Crashed:
+      Design: worklib.fullchip_tb:v
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:      xmsim(64)       20.09-s017
+        User: trhussain
+        Host: ieng6-ece-11.ucsd.edu
+Time Started: Fri Mar 21 12:27:23 PDT 2025
+  Process ID: 24069
+   Directory: /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/gate_sim
+     Command: xrun -define INITIALIZE_MEMORY -xminitialize 0 +gui +access+rwc +xm64bit +xmstatus +xmtimescale+1ns/1ps +xmoveride_timescale -v ./core.out.v -v /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v ./../synthesis/verilog/fullchip_tb.v -v ./../synthesis/verilog/mac_array.v -v ./../synthesis/verilog/mac_col.v -v ./../synthesis/verilog/ofifo.v -v ./../synthesis/verilog/fifo_depth16.v -v ./../synthesis/verilog/fifo_mux_2_1.v -v ./../synthesis/verilog/fifo_mux_8_1.v -v ./../synthesis/verilog/fifo_mux_16_1.v
+      Design: worklib.fullchip_tb:v
+   Languages: verilog
+   Simulator: XM-Sim
+     Version: TOOL:        xmsim(64)       20.09-s017
+        User: trhussain
+        Host: ieng6-ece-11.ucsd.edu
+Time Started: Fri Mar 21 12:27:23 PDT 2025
+  Process ID: 24069
+   Directory: /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/gate_sim
+     Command: xrun -define INITIALIZE_MEMORY -xminitialize 0 +gui +access+rwc +xm64bit +xmstatus +xmtimescale+1ns/1ps +xmoveride_timescale -v ./core.out.v -v /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v ./../synthesis/verilog/fullchip_tb.v -v ./../synthesis/verilog/mac_array.v -v ./../synthesis/verilog/mac_col.v -v ./../synthesis/verilog/ofifo.v -v ./../synthesis/verilog/fifo_depth16.v -v ./../synthesis/verilog/fifo_mux_2_1.v -v ./../synthesis/verilog/fifo_mux_8_1.v -v ./../synthesis/verilog/fifo_mux_16_1.v
+
+Outstanding STRAP Requests:
+        strap::report enable out
+ 
+*** Message Type: info ***
+When: Fri Mar 21 13:17:29 PDT 2025
+SimVision Exit.
+ 

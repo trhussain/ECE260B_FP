@@ -2,7 +2,11 @@
 // Please do not spread this code without permission 
 //module core (clk, sum_out, mem_in, out, inst, reset);
 module core #(parameter bw = 8, parameter bw_psum = 2*bw+4, parameter col = 8, parameter pr = 8)
-(clk, mem_in, out, inst, reset);
+(clk, mem_in, out, inst, reset, myFakeCoreInit, myFakeCoreNoNInit);
+
+output reg myFakeCoreInit;       // Forces it to stay in synthesis
+output reg myFakeCoreNoNInit;    // Forces it to stay in synthesis
+
 
 // parameter col = 8;
 // parameter bw = 8;
@@ -114,7 +118,22 @@ sram_w16 #(.sram_bit(col*bw_psum)) psum_mem_instance (
 integer i;
 integer fi;
 
-always @(posedge clk) begin
+// reg [3:0] myFakeCoreCounter = 4'b1010;  // Start with a known value
+
+// always @(posedge clk or posedge reset) begin
+//     if (reset) begin
+//         myFakeCoreInit <= 0;       // Initialize to 0 on reset
+//         //myFakeCoreNoNInit <= 0;    // Initialize to 0 on reset
+//     end else begin
+//         myFakeCoreInit <= ~myFakeCoreInit;  // Toggle every cycle
+//         myFakeCoreNoNInit <= myFakeCoreInit; // Shift value from myFakeCoreInit
+//     end
+//         $write("Fake Core Innit: %d \n", myFakeCoreInit);  // 8-bit chunks
+    
+// end
+
+
+always  @(posedge clk) begin
 
     // $display("Mem in: %h", mem_in);
 //     if (qmem_wr) begin
