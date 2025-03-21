@@ -8,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : core
 Version: K-2015.06-SP2
-Date   : Thu Mar 20 17:46:03 2025
+Date   : Fri Mar 21 09:31:19 2025
 ****************************************
 
 
@@ -23,30 +23,30 @@ Wire Load Model Mode: segmented
 Design        Wire Load Model            Library
 ------------------------------------------------
 core                   ZeroWireload      tcbn65gplustc
-mac_array_col8_bw8_bw_psum20_pr8
+mac_array_col8_bw8_bw_psum20_pr16
                        ZeroWireload      tcbn65gplustc
 ofifo_col8_bw20        ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr8_col_id1
+mac_col_bw8_bw_psum20_pr16_col_id1
                        ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr8_col_id2
+mac_col_bw8_bw_psum20_pr16_col_id2
                        ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr8_col_id3
+mac_col_bw8_bw_psum20_pr16_col_id3
                        ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr8_col_id4
+mac_col_bw8_bw_psum20_pr16_col_id4
                        ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr8_col_id5
+mac_col_bw8_bw_psum20_pr16_col_id5
                        ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr8_col_id6
+mac_col_bw8_bw_psum20_pr16_col_id6
                        ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr8_col_id7
+mac_col_bw8_bw_psum20_pr16_col_id7
                        ZeroWireload      tcbn65gplustc
-mac_col_bw8_bw_psum20_pr8_col_id8
+mac_col_bw8_bw_psum20_pr16_col_id8
                        ZeroWireload      tcbn65gplustc
 fifo_depth16_bw20_simd1_7
                        ZeroWireload      tcbn65gplustc
 fifo_depth16_bw20_simd1_6
                        ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr8_7
+mac_16in_bw8_bw_psum20_pr16_7
                        ZeroWireload      tcbn65gplustc
 fifo_mux_16_1_bw20_simd1_7
                        ZeroWireload      tcbn65gplustc
@@ -79,6 +79,50 @@ fifo_mux_16_1_bw20_simd1_3
 fifo_mux_16_1_bw20_simd1_4
                        ZeroWireload      tcbn65gplustc
 fifo_mux_16_1_bw20_simd1_5
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr16_0
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr16_1
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr16_2
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr16_3
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr16_4
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr16_5
+                       ZeroWireload      tcbn65gplustc
+mac_16in_bw8_bw_psum20_pr16_6
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_0
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_1
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_2
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_3
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_4
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_5
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_6
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_7
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_8
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_9
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_10
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_11
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_12
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_13
+                       ZeroWireload      tcbn65gplustc
+fifo_mux_8_1_bw20_simd1_14
                        ZeroWireload      tcbn65gplustc
 fifo_mux_2_1_bw20_simd1_0
                        ZeroWireload      tcbn65gplustc
@@ -318,50 +362,6 @@ fifo_mux_2_1_bw20_simd1_117
                        ZeroWireload      tcbn65gplustc
 fifo_mux_2_1_bw20_simd1_118
                        ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr8_0
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr8_1
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr8_2
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr8_3
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr8_4
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr8_5
-                       ZeroWireload      tcbn65gplustc
-mac_16in_bw8_bw_psum20_pr8_6
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_0
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_1
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_2
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_3
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_4
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_5
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_6
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_7
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_8
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_9
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_10
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_11
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_12
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_13
-                       ZeroWireload      tcbn65gplustc
-fifo_mux_8_1_bw20_simd1_14
-                       ZeroWireload      tcbn65gplustc
 
 
 Global Operating Voltage = 1    
@@ -373,12 +373,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  =  32.5253 mW    (4%)
-  Net Switching Power  = 751.7816 mW   (96%)
+  Cell Internal Power  =  32.5486 mW    (4%)
+  Net Switching Power  = 751.7947 mW   (96%)
                          ---------
-Total Dynamic Power    = 784.3069 mW  (100%)
+Total Dynamic Power    = 784.3433 mW  (100%)
 
-Cell Leakage Power     = 540.6255 uW
+Cell Leakage Power     = 545.1225 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -387,10 +387,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network  2.9489e-02          750.4170        2.3982e+03          750.4441  (  95.62%)
-register          29.6854            0.2054        1.5421e+05           30.0450  (   3.83%)
+clock_network  2.9489e-02          750.4170        2.3982e+03          750.4441  (  95.61%)
+register          29.6976            0.2054        1.5446e+05           30.0574  (   3.83%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      2.8104            1.1616        3.8402e+05            4.3561  (   0.56%)
+combinational      2.8215            1.1748        3.8827e+05            4.3847  (   0.56%)
 --------------------------------------------------------------------------------------------------
-Total             32.5254 mW       751.7840 mW     5.4063e+05 nW       784.8452 mW
+Total             32.5486 mW       751.7972 mW     5.4512e+05 nW       784.8861 mW
 1
