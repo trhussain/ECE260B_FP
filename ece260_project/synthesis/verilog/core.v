@@ -2,10 +2,10 @@
 // Please do not spread this code without permission 
 //module core (clk, sum_out, mem_in, out, inst, reset);
 module core #(parameter bw = 8, parameter bw_psum = 2*bw+4, parameter col = 8, parameter pr = 8)
-(clk, mem_in, out, inst, reset, myFakeCoreInit, myFakeCoreNoNInit);
+(clk, mem_in, out, inst, reset);
 
-output reg myFakeCoreInit;       // Forces it to stay in synthesis
-output reg myFakeCoreNoNInit;    // Forces it to stay in synthesis
+// output reg myFakeCoreInit;       // Forces it to stay in synthesis
+// output reg myFakeCoreNoNInit;    // Forces it to stay in synthesis
 
 
 // parameter col = 8;

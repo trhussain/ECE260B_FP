@@ -16,15 +16,12 @@ output [bw_psum*col-1:0] full_out;
 wire [bw_psum*col-1:0] core_out; 
 assign full_out = core_out;  
 
-wire unused1, unused2;
 core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance (
     .reset(reset), 
     .clk(clk), 
     .mem_in(mem_in), 
     .inst(inst),
-    .out(core_out),
-    .myFakeCoreInit(unused1),  // Just to satisfy port connection, debug signals
-    .myFakeCoreNoNInit(unused2)
+    .out(core_out)
 );
 
 integer q; // Declare loop variable properly

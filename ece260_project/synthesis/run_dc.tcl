@@ -45,7 +45,7 @@ set verilogout_single_bit false
 analyze -format verilog -lib WORK core.v
 analyze -format verilog -lib WORK mac_col.v
 
-analyze -format verilog -lib WORK fifo_depth16.v
+analyze -format verilog -lib WORK fifo_depth8.v
 analyze -format verilog -lib WORK fifo_mux_2_1.v
 analyze -format verilog -lib WORK fifo_mux_8_1.v
 analyze -format verilog -lib WORK fifo_mux_16_1.v

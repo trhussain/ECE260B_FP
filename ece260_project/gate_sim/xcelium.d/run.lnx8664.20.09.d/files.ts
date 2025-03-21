@@ -1,14 +1,14 @@
 1742592984 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/gate_sim/netlist/core.out.v
 1737007846 /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
-1742592894 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/synthesis/core.out.v
+1742597005 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/synthesis/core.out.v
 1742232873 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/synthesis/verilog/mac_array.v
-1742592558 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/synthesis/verilog/mac_col.v
+1742596583 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/synthesis/verilog/mac_col.v
 1742587711 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/synthesis/verilog/mac_16in.v
 1741586429 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/synthesis/verilog/ofifo.v
 1741586429 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/synthesis/verilog/fifo_depth16.v
 1741586429 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/synthesis/verilog/fifo_mux_2_1.v
 1741586429 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/synthesis/verilog/fifo_mux_8_1.v
 1741586429 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/synthesis/verilog/fifo_mux_16_1.v
-1742588116 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/gate_sim/core.out.v
+1742597077 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/gate_sim/core.out.v
 1742588518 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/synthesis/verilog/fullchip_tb.v
 1742591878 /home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/gate_sim/netlist/fullchip_tb.v

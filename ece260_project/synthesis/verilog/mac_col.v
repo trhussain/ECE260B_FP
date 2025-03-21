@@ -15,7 +15,7 @@ input  [1:0] i_inst; // [1]: execute, [0]: load
 output [1:0] o_inst; // [1]: execute, [0]: load 
 output fifo_wr;
 reg    load_ready_q;
-reg    [3:0] cnt_q;
+reg    [3:0] cnt_q = 0;
 reg    [1:0] inst_q;
 reg    [1:0] inst_2q;
 reg   signed [pr*bw-1:0] query_q;
@@ -38,30 +38,32 @@ reg    [3:0] myMacColDummy;
 
 always @ (posedge clk or posedge reset) begin
   if (reset) begin
-    cnt_q <= 0;
+    cnt_q <= 4'b0000;
     load_ready_q <= 1;
     inst_q <= 0;
     inst_2q <= 0;
     myMacColDummy <= 0; 
   end
   else begin
-    //   $write("MAC 16IN PSUM: %h ", psum);
+    // $write("myMacColDummy Val: %4b ", myMacColDummy);
     // $display("");
-    myMacColDummy <= ~myMacColDummy;
     inst_q <= i_inst;
     inst_2q <= inst_q;
     if (inst_q[0]) begin
        query_q <= q_in;
        if (cnt_q == 9-col_id)begin
+         myMacColDummy <= 0;
          cnt_q <= 0;
          key_q <= q_in;
          load_ready_q <= 0;
        end
        else if (load_ready_q)
+         myMacColDummy <= myMacColDummy + 1;
          cnt_q <= cnt_q + 1;
     end
     else if(inst_q[1]) begin
       //out     <= psum;
+      myMacColDummy <= myMacColDummy + 1;
       query_q <= q_in;
     end
   end
