@@ -1,7 +1,7 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
 
-`timescale 1ns/1ps
+`timescale 10ns/1ps
 
 module fullchip_tb;
 
@@ -57,12 +57,14 @@ assign inst[0] = pmem_wr;
 reg [bw_psum-1:0] temp5b;
 reg [bw_psum+3:0] temp_sum;
 reg [bw_psum*col-1:0] temp16b;
+wire [bw_psum*col-1:0] fullchipout; // TAHSEEN EDIT 
 
 fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
       .reset(reset),
       .clk(clk), 
       .mem_in(mem_in), 
-      .inst(inst)
+      .inst(inst),
+      .full_out(fullchipout)
 );
 
 initial begin 
@@ -311,7 +313,7 @@ $display("##### K data loading to processor #####");
 $display("##### execute #####");
   // INCREASED TOTAL CYCLE BY 1 => CC delay from SRAM <= to load data into Q, 
   // so increased CC count 
-  for (q=0; q<total_cycle+1; q=q+1) begin
+  for (q=0; q<total_cycle; q=q+1) begin
     #0.5 clk = 1'b0;  
     execute = 1; 
     qmem_rd = 1;
@@ -376,9 +378,28 @@ pmem_add = 0;
 
 
 
-  #10 $finish;
+  #0.50 $finish;
 
 
+end
+// Declare variables
+reg [bw_psum*col-1:0] expected_out; 
+integer first = 0;  // assuming 'k' is an integer index for the cycles
+integer second = 0;  // assuming 'p' is the column index
+//integer m = 0;  // This could be used for other shifting logic
+
+always @(posedge clk) begin
+    if ($time > 825000) 
+        // Store the current value into expected_out when pmem_rd is high
+        expected_out <= result[first][second];  // or whatever value you want to store in expected_out
+        
+        // Increment p until it reaches col-1, then reset p and increment k
+        if (second < col - 1) begin
+            second <= second + 1;  // Increment p until it reaches col-1
+        end else begin
+            second <= 0;      // Reset p to 0 when it reaches col-1
+            first <= first + 1;  // Increment k when p resets
+        end
 end
 
 endmodule

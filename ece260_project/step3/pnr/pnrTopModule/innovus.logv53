@@ -1,0 +1,90 @@
+[03/22 14:07:49      0] 
+[03/22 14:07:49      0] Cadence Innovus(TM) Implementation System.
+[03/22 14:07:49      0] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[03/22 14:07:49      0] 
+[03/22 14:07:49      0] Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+[03/22 14:07:49      0] Options:	
+[03/22 14:07:49      0] Date:		Sat Mar 22 14:07:49 2025
+[03/22 14:07:49      0] Host:		ieng6-ece-17.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB)
+[03/22 14:07:49      0] OS:		CentOS Linux release 7.9.2009 (Core)
+[03/22 14:07:49      0] 
+[03/22 14:07:49      0] License:
+[03/22 14:07:50      0] 		invs	Innovus Implementation System	15.2	checkout succeeded
+[03/22 14:07:50      0] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[03/22 14:07:50      0] **ERROR: (IMPOAX-142):	Could not open shared library libinnovusoax22.so : /acsnfs3/software/cadence-innovus152/tools/lib/64bit/libcdsSkillPcell.so: undefined symbol: _ZTIN12OpenAccess_413oaFSComponentE
+[03/22 14:07:50      0] 
+[03/22 14:07:50      0] **ERROR: (IMPOAX-142):	Could not open shared library libcdsSkillPcell.so : (null)
+[03/22 14:07:50      0] 
+[03/22 14:07:50      0] **ERROR: (IMPOAX-142):	OA features will be disabled in this session.
+[03/22 14:07:50      0] 
+[03/22 14:07:57      6] @(#)CDS: Innovus v15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+[03/22 14:07:57      6] @(#)CDS: NanoRoute 15.23-s045_1 NR160414-1105/15_23-UB (database version 2.30, 317.6.1) {superthreading v1.26}
+[03/22 14:07:57      6] @(#)CDS: AAE 15.23-s014 (64bit) 04/22/2016 (Linux 2.6.18-194.el5)
+[03/22 14:07:57      6] @(#)CDS: CTE 15.23-s022_1 () Apr 22 2016 09:38:45 ( )
+[03/22 14:07:57      6] @(#)CDS: SYNTECH 15.23-s008_1 () Apr 12 2016 21:52:59 ( )
+[03/22 14:07:57      6] @(#)CDS: CPE v15.23-s045
+[03/22 14:07:57      6] @(#)CDS: IQRC/TQRC 15.1.4-s213 (64bit) Tue Feb  9 17:31:28 PST 2016 (Linux 2.6.18-194.el5)
+[03/22 14:07:57      6] @(#)CDS: OA 22.50-p036 Tue Nov  3 09:29:52 2015
+[03/22 14:07:57      6] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[03/22 14:07:57      6] @(#)CDS: RCDB 11.7
+[03/22 14:07:57      6] --- Running on ieng6-ece-17.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB) ---
+[03/22 14:07:57      6] Create and set the environment variable TMPDIR to /tmp/innovus_temp_30696_ieng6-ece-17.ucsd.edu_aekeng_8bXupD.
+
+[03/22 14:07:57      7] 
+[03/22 14:07:57      7] **INFO:  MMMC transition support version v31-84 
+[03/22 14:07:57      7] 
+[03/22 14:07:57      7] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[03/22 14:07:57      7] <CMD> suppressMessage ENCEXT-2799
+[03/22 14:07:57      7] <CMD> getDrawView
+[03/22 14:07:57      7] <CMD> loadWorkspace -name Physical
+[03/22 14:07:57      7] <CMD> win
+[03/22 14:08:08      7] <CMD> restoreDesign /home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/pnr/pnrTopModule/placement.enc.dat core
+[03/22 14:08:08      7] exclude_path_collection 0
+[03/22 14:08:08      7] Set Default Input Pin Transition as 0.1 ps.
+[03/22 14:08:08      7] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[03/22 14:08:08      7] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[03/22 14:08:08      7] 
+[03/22 14:08:08      7] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[03/22 14:08:08      7] **ERROR: (TCLCMD-995):	Can not open file '/home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/pnr/pnrTopModule/placement.enc.dat/libs/mmmc/sram_w16_160_WC.lib' for library set
+[03/22 14:08:08      7] **ERROR: (TCLCMD-995):	Can not open file '/home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/pnr/pnrTopModule/placement.enc.dat/libs/mmmc/sram_w16_64_WC.lib' for library set
+[03/22 14:08:08      7] 
+[03/22 14:08:08      7] 
+[03/22 14:08:08      7] ERROR: 
+[03/22 14:08:08      7] 
+[03/22 14:08:08      7] 
+[03/22 14:08:08      7]     while executing
+[03/22 14:08:08      7] "error $catchMsg"
+[03/22 14:08:08      7]     (procedure "restoreDesign" line 24)
+[03/22 14:08:08      7] 
+[03/22 14:08:08      8] 
+[03/22 14:08:12      8] <CMD> restoreDesign /home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/pnr/pnrTopModule/route.enc.dat core
+[03/22 14:08:12      8] exclude_path_collection 0
+[03/22 14:08:12      8] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[03/22 14:08:12      8] Set Default Input Pin Transition as 0.1 ps.
+[03/22 14:08:13      8] **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+[03/22 14:08:13      8] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[03/22 14:08:13      8] 
+[03/22 14:08:13      8] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[03/22 14:08:13      8] **ERROR: (TCLCMD-995):	Can not open file '/home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/pnr/pnrTopModule/route.enc.dat/libs/mmmc/sram_w16_160_WC.lib' for library set
+[03/22 14:08:13      8] **ERROR: (TCLCMD-995):	Can not open file '/home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/pnr/pnrTopModule/route.enc.dat/libs/mmmc/sram_w16_64_WC.lib' for library set
+[03/22 14:08:13      8] 
+[03/22 14:08:13      8] 
+[03/22 14:08:13      8] ERROR: 
+[03/22 14:08:13      8] 
+[03/22 14:08:13      8] 
+[03/22 14:08:13      8]     while executing
+[03/22 14:08:13      8] "error $catchMsg"
+[03/22 14:08:13      8]     (procedure "restoreDesign" line 24)
+[03/22 14:08:13      8] 
+[03/22 14:08:13      8] 
+[03/22 14:08:28      8] 
+[03/22 14:08:28      8] *** Memory Usage v#1 (Current mem = 416.586M, initial mem = 149.258M) ***
+[03/22 14:08:28      8] 
+[03/22 14:08:28      8] *** Summary of all messages that are not suppressed in this session:
+[03/22 14:08:28      8] Severity  ID               Count  Summary                                  
+[03/22 14:08:28      8] ERROR     IMPOAX-142           3  %s                                       
+[03/22 14:08:28      8] ERROR     IMPOAX-820           2  The OA features are disabled in the curr...
+[03/22 14:08:28      8] ERROR     IMPOAX-850           2  %s command cannot be run as OA features ...
+[03/22 14:08:28      8] *** Message Summary: 0 warning(s), 7 error(s)
+[03/22 14:08:28      8] 
+[03/22 14:08:28      8] --- Ending "Innovus" (totcpu=0:00:08.6, real=0:00:39.0, mem=416.6M) ---
