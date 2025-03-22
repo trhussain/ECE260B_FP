@@ -23,8 +23,8 @@ addStripe -number_of_sets 30 -spacing 5 -layer M6 -width 2 -start_offset 20 -sto
 # setObjFPlanBox Instance qmem_instance 75 220 600 330
 # setObjFPlanBox Instance kmem_instance 405 220 800 330
 # setObjFPlanBox Instance psum_mem_instance 150 45 1000 200
-setObjFPlanBox Instance qmem_instance 75 210 300 310
-setObjFPlanBox Instance kmem_instance 415 210 700 310
+setObjFPlanBox Instance qmem_instance 75 190 300 290
+setObjFPlanBox Instance kmem_instance 415 190 700 290
 setObjFPlanBox Instance psum_mem_instance 160 50 500 200
 
 flipOrRotateObject -flip MY -name qmem_instance
