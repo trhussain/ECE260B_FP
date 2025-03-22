@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : core
+Version: K-2015.06-SP2
+Date   : Sat Mar 22 14:10:33 2025
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'core' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    tcbn65gplustc (File: /home/linux/ieng6/ee260bwi25/public/PDKdata/db/tcbn65gplustc.db)
+
+Number of ports:                        31837
+Number of nets:                        132845
+Number of cells:                        88025
+Number of combinational cells:          72459
+Number of sequential cells:             15361
+Number of macros/black boxes:               0
+Number of buf/inv:                       5489
+Number of references:                      22
+
+Combinational area:             274191.479708
+Buf/Inv area:                     6111.000241
+Noncombinational area:          126515.157871
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                400706.637579
+Total area:                 undefined
+1
