@@ -32,7 +32,8 @@ reg reset = 1;
 reg clk = 0;
 reg [pr*bw-1:0] mem0_in; 
 reg [pr*bw-1:0] mem1_in;
-reg [pr*bw_psum-1:0] vmem_in;
+reg [pr*bw_psum-1:0] vmem0_in;
+reg [pr*bw_psum-1:0] vmem1_in;
 reg ofifo_rd = 0;
 reg mac2_ofifo_rd = 0;
 wire [31:0] inst; 
@@ -87,7 +88,8 @@ fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
       .clk(clk), 
       .mem0_in(mem0_in), 
       .mem1_in(mem1_in),
-      .vmem_in(vmem_in),
+      .vmem0_in(vmem0_in),
+      .vmem1_in(vmem1_in),
       .inst(inst)
 );
 
@@ -243,23 +245,23 @@ $display("##### Norm writing #####");
     #0.5 clk = 1'b0;  
     pmem_wr = 1; if (q>0) pmem_add = pmem_add + 1; 
     
-    mem0_in[1*bw-1:0*bw] = K0[q][0];
-    mem0_in[2*bw-1:1*bw] = K0[q][1];
-    mem0_in[3*bw-1:2*bw] = K0[q][2];
-    mem0_in[4*bw-1:3*bw] = K0[q][3];
-    mem0_in[5*bw-1:4*bw] = K0[q][4];
-    mem0_in[6*bw-1:5*bw] = K0[q][5];
-    mem0_in[7*bw-1:6*bw] = K0[q][6];
-    mem0_in[8*bw-1:7*bw] = K0[q][7];
+    vmem0_in[1*bw_psum-1:0*bw_psum] = K0[q][0];
+    vmem0_in[2*bw_psum-1:1*bw_psum] = K0[q][1];
+    vmem0_in[3*bw_psum-1:2*bw_psum] = K0[q][2];
+    vmem0_in[4*bw_psum-1:3*bw_psum] = K0[q][3];
+    vmem0_in[5*bw_psum-1:4*bw_psum] = K0[q][4];
+    vmem0_in[6*bw_psum-1:5*bw_psum] = K0[q][5];
+    vmem0_in[7*bw_psum-1:6*bw_psum] = K0[q][6];
+    vmem0_in[8*bw_psum-1:7*bw_psum] = K0[q][7];
     
-    mem1_in[1*bw-1:0*bw] = K1[q][0];
-    mem1_in[2*bw-1:1*bw] = K1[q][1];
-    mem1_in[3*bw-1:2*bw] = K1[q][2];
-    mem1_in[4*bw-1:3*bw] = K1[q][3];
-    mem1_in[5*bw-1:4*bw] = K1[q][4];
-    mem1_in[6*bw-1:5*bw] = K1[q][5];
-    mem1_in[7*bw-1:6*bw] = K1[q][6];
-    mem1_in[8*bw-1:7*bw] = K1[q][7];
+    vmem1_in[1*bw_psum-1:0*bw_psum] = K1[q][0];
+    vmem1_in[2*bw_psum-1:1*bw_psum] = K1[q][1];
+    vmem1_in[3*bw_psum-1:2*bw_psum] = K1[q][2];
+    vmem1_in[4*bw_psum-1:3*bw_psum] = K1[q][3];
+    vmem1_in[5*bw_psum-1:4*bw_psum] = K1[q][4];
+    vmem1_in[6*bw_psum-1:5*bw_psum] = K1[q][5];
+    vmem1_in[7*bw_psum-1:6*bw_psum] = K1[q][6];
+    vmem1_in[8*bw_psum-1:7*bw_psum] = K1[q][7];
     #0.5 clk = 1'b1;  
 
   end
@@ -280,14 +282,23 @@ $display("##### Vmem writing #####");
     #0.5 clk = 1'b0;  
     vmem_wr = 1; if (q>0) qkmem_add = qkmem_add + 1; 
     
-    vmem_in[1*bw_psum-1:0*bw_psum] = V[q][7];
-    vmem_in[2*bw_psum-1:1*bw_psum] = V[q][6];
-    vmem_in[3*bw_psum-1:2*bw_psum] = V[q][5];
-    vmem_in[4*bw_psum-1:3*bw_psum] = V[q][4];
-    vmem_in[5*bw_psum-1:4*bw_psum] = V[q][3];
-    vmem_in[6*bw_psum-1:5*bw_psum] = V[q][2];
-    vmem_in[7*bw_psum-1:6*bw_psum] = V[q][1];
-    vmem_in[8*bw_psum-1:7*bw_psum] = V[q][0];
+    vmem0_in[1*bw_psum-1:0*bw_psum] = V[q][7];
+    vmem0_in[2*bw_psum-1:1*bw_psum] = V[q][6];
+    vmem0_in[3*bw_psum-1:2*bw_psum] = V[q][5];
+    vmem0_in[4*bw_psum-1:3*bw_psum] = V[q][4];
+    vmem0_in[5*bw_psum-1:4*bw_psum] = V[q][3];
+    vmem0_in[6*bw_psum-1:5*bw_psum] = V[q][2];
+    vmem0_in[7*bw_psum-1:6*bw_psum] = V[q][1];
+    vmem0_in[8*bw_psum-1:7*bw_psum] = V[q][0];
+
+    vmem1_in[1*bw_psum-1:0*bw_psum] = V[q][7];
+    vmem1_in[2*bw_psum-1:1*bw_psum] = V[q][6];
+    vmem1_in[3*bw_psum-1:2*bw_psum] = V[q][5];
+    vmem1_in[4*bw_psum-1:3*bw_psum] = V[q][4];
+    vmem1_in[5*bw_psum-1:4*bw_psum] = V[q][3];
+    vmem1_in[6*bw_psum-1:5*bw_psum] = V[q][2];
+    vmem1_in[7*bw_psum-1:6*bw_psum] = V[q][1];
+    vmem1_in[8*bw_psum-1:7*bw_psum] = V[q][0];
 
     #0.5 clk = 1'b1;  
 

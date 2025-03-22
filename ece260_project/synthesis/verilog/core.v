@@ -92,7 +92,7 @@ assign pmem_rd = inst[1];
 assign pmem_wr = inst[0];
 
 assign mac_in  = inst[6] ? kmem_out : qmem_out;
-assign pmem_in = pmem_load ? mem_in : sfp_out;
+assign pmem_in = inst[26] ? vmem_in : sfp_out;
 assign mac_in2  = inst[27] ? vmem_out : pmem_out;
 
 assign out = outmem_out; // Delay by 1 cycle to ensure data is stable
@@ -178,7 +178,7 @@ sram_w16 #(.sram_bit(pr*bw)) kmem_instance (
         .A(qkmem_add)
 );
 
-sram_w16 #(.sram_bit(col*bw_psum)) vmem_instance (
+sram_w16 #(.sram_bit(col*bw_psum)) vmem_instance (    //changed from col*bw_psum
         .CLK(clk),
         .D(vmem_in),
         .Q(vmem_out),
@@ -214,7 +214,7 @@ normalization normalization_instance(
         .execute(norm_execute),
         .abs_in(fifo_add_row_abs_out),
         .abs_sum_in(add_sum_out),
-        .normalization_out(pmem_in) //output to pmem
+        .normalization_out(sfp_out) //output to pmem
 );
 
 mac_array #(.bw(bw_psum), .bw_psum((bw_psum+bw+4)), .col(col), .pr(pr)) mac_array_instance2 ( //mac array instance for norm*value

@@ -87,7 +87,8 @@ fullchip #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) fullchip_instance (
       .clk(clk), 
       .mem0_in(mem0_in), 
       .mem1_in(mem1_in),
-      .vmem_in(vmem_in),
+      .vmem0_in(vmem_in),
+      .vmem1_in(vmem_in),
       .inst(inst)
 );
 

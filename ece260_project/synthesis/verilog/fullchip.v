@@ -1,6 +1,6 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
-module fullchip (clk, mem0_in, mem1_in, inst, reset, core_out0, core_out1, vmem_in);
+module fullchip (clk, mem0_in, mem1_in, inst, reset, core_out0, core_out1, vmem0_in, vmem1_in);
 
 parameter col = 8;
 parameter bw = 8;
@@ -12,7 +12,8 @@ input  [pr*bw-1:0] mem0_in;
 input  [pr*bw-1:0] mem1_in;
 input  [31:0] inst; 
 input  reset;
-input [pr*bw_psum-1:0] vmem_in;
+input [pr*bw_psum-1:0] vmem0_in;
+input [pr*bw_psum-1:0] vmem1_in;
 
 output [(bw_psum+bw+4)*col-1:0] core_out0; 
 output [(bw_psum+bw+4)*col-1:0] core_out1; 
@@ -37,7 +38,7 @@ core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance0 (
       .out(core_out0),
       .core_sum_out(core_0_add_sum),
       .core_sum_in(core_1_add_sum_fifo), // Coming from the FIFO 
-      .vmem_in(vmem_in)
+      .vmem_in(vmem0_in)
 );
 
 core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance1 (
@@ -48,7 +49,7 @@ core #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) core_instance1 (
       .out(core_out1),
       .core_sum_out(core_1_add_sum),
       .core_sum_in(core_0_add_sum_fifo),
-      .vmem_in(vmem_in)
+      .vmem_in(vmem1_in)
 );
 
 fifo_depth8 #(.bw(bw_psum+4))  fifo_core0_sum (
