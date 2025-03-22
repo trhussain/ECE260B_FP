@@ -44,3 +44,61 @@ Error: Current design is not defined. (UID-4)
 0
 Error: Current design is not defined. (UID-4)
 0
+ 
+****************************************
+Report : reference
+Design : core
+Version: K-2015.06-SP2
+Date   : Sat Mar 22 00:00:58 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA1D0              tcbn65gplustc
+                                  9.000000       4     36.000000  r
+FA1D1              tcbn65gplustc
+                                 10.080000       4     40.320000  r
+FA1D2              tcbn65gplustc
+                                 10.440000       1     10.440000  r
+HA1D0              tcbn65gplustc
+                                  5.760000       1      5.760000  r
+INVD0              tcbn65gplustc
+                                  1.080000       4      4.320000  
+MUX2D0             tcbn65gplustc
+                                  3.240000     224    725.760002  
+NR2D0              tcbn65gplustc
+                                  1.440000       5      7.200000  
+TIEL               tcbn65gplustc
+                                  1.080000       1      1.080000  
+XOR3D0             tcbn65gplustc
+                                  6.120000       1      6.120000  
+add_row                        2203.200004       1   2203.200004  h
+fifo_depth8_bw24_simd1         1227.599988       1   1227.599988  h, n
+fifo_depth8_bw160_simd1       15996.239870       1  15996.239870  h, n
+mac_array_col8_bw8_bw_psum20_pr8
+                              45818.999831       1  45818.999831  h, n
+mac_array_col8_bw20_bw_psum32_pr8
+                              194484.239112
+                                                 1  194484.239112 h, n
+normalization                 27174.240041       1  27174.240041  h, n
+ofifo_col8_bw20               16905.599794       1  16905.599794  h, n
+ofifo_col8_bw32               26297.279505       1  26297.279505  h, n
+sram_w16_sram_bit64_0          6427.080025       1   6427.080025  h, n
+sram_w16_sram_bit64_1          6427.080025       1   6427.080025  h, n
+sram_w16_sram_bit160_0        15990.120063       1  15990.120063  h, n
+sram_w16_sram_bit160_1        15990.120063       1  15990.120063  h, n
+sram_w16_sram_bit256          25467.840127       1  25467.840127  h, n
+-----------------------------------------------------------------------------
+Total 22 references                                 401246.638450
+1
