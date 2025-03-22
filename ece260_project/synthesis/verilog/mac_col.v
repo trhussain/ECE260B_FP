@@ -50,6 +50,8 @@ always @ (posedge clk) begin
          cnt_q <= 0;
          key_q <= q_in;
          load_ready_q <= 0;
+        // $write("MAC COL INPUT1: %d %d %d %d %d %d %d %d", $signed(q_in[1*bw-1:0*bw]), $signed(q_in[2*bw-1:1*bw]), $signed(q_in[3*bw-1:2*bw]), $signed(q_in[4*bw-1:3*bw]), $signed(q_in[5*bw-1:4*bw]), $signed(q_in[6*bw-1:5*bw]), $signed(q_in[7*bw-1:6*bw]), $signed(q_in[8*bw-1:7*bw]));
+	      // $display("");
        end
        else if (load_ready_q)
          cnt_q <= cnt_q + 1;
@@ -57,6 +59,8 @@ always @ (posedge clk) begin
     else if(inst_q[1]) begin
       //out     <= psum;
       query_q <= q_in;
+      // $write("MAC COL INPUT2: %d %d %d %d %d %d %d %d", $signed(q_in[1*bw-1:0*bw]), $signed(q_in[2*bw-1:1*bw]), $signed(q_in[3*bw-1:2*bw]), $signed(q_in[4*bw-1:3*bw]), $signed(q_in[5*bw-1:4*bw]), $signed(q_in[6*bw-1:5*bw]), $signed(q_in[7*bw-1:6*bw]), $signed(q_in[8*bw-1:7*bw]));
+	    // $display("");
     end
   end
 end

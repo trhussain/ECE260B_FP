@@ -41,6 +41,18 @@ end
 // integer j;
 // always @(posedge clk) begin
 //    if (inst[0] || inst[1]) begin
+//       for (j = 0; j < pr; j = j + 1) begin
+//          $write("MAC ARRAY OUTPUT: ");
+//          $write("%d ", $signed(in[(j+1)*bw-1 -: bw])); // Print input vector
+//          $write(" INPUT: ");
+//          $write("%d ", $signed(out[(j+1)*bw_psum-1 -: bw_psum])); // Print output vector
+//       end
+//       $display("");  // New line
+//    end
+// end
+// integer j;
+// always @(posedge clk) begin
+//    if (inst[0] || inst[1]) begin
 //       $write("MAC ARRAY INPUT: ");
 //       for (j = 0; j < pr; j = j + 1) begin
 //          $write("%4d ", $signed(in[(j+1)*bw-1 -: bw])); // Print input vector

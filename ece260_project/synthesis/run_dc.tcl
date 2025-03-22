@@ -44,7 +44,7 @@ set verilogout_single_bit false
 # read RTL
 analyze -format verilog -lib WORK core.v
 
-analyze -format verilog -lib WORK fifo_depth16.v
+analyze -format verilog -lib WORK fifo_depth8.v
 analyze -format verilog -lib WORK fifo_mux_2_1.v
 analyze -format verilog -lib WORK fifo_mux_8_1.v
 analyze -format verilog -lib WORK fifo_mux_16_1.v
@@ -58,11 +58,14 @@ analyze -format verilog -lib WORK mac_col.v
 
 analyze -format verilog -lib WORK ofifo.v
 
-analyze -format verilog -lib WORK sfp_row.v
+# analyze -format verilog -lib WORK sfp_row.v
 analyze -format verilog -lib WORK sram_128b_w16.v
 analyze -format verilog -lib WORK sram_160b_w16.v
 analyze -format verilog -lib WORK sram_w16.v
 analyze -format verilog -lib WORK sync.v
+
+analyze -format verilog -lib WORK add_row.v
+analyze -format verilog -lib WORK normalization.v
 
 elaborate $top_module -lib WORK -update
 current_design $top_module
@@ -99,6 +102,8 @@ foreach_in_collection design [ get_designs "*" ] {
 	set_fix_multiple_port_nets -all
 }
 current_design $top_module
+
+
 
 
 # Compile

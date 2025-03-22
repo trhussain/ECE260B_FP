@@ -1,7 +1,7 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
 //module core (clk, sum_out, mem_in, out, inst, reset);
-module core (clk, mem_in, out, inst, reset, core_sum_in, core_sum_out);
+module core (clk, mem_in, out, inst, reset, core_sum_in, core_sum_out, vmem_in);
 
 parameter col = 8;
 parameter bw = 8;
@@ -11,21 +11,25 @@ parameter pr = 8;
 parameter bw_sum = bw_psum+3;
 
 //output [bw_psum+3:0] sum_out;
-output [bw_psum*col-1:0] out;
+output [(bw_psum+bw+4)*col-1:0] out;
 wire   [bw_psum*col-1:0] pmem_out;
 input  [pr*bw-1:0] mem_in;
 input  clk;
-input  [20:0] inst; 
+input  [31:0] inst; 
 input  reset;
+input [pr*bw_psum-1:0] vmem_in;
 
 input  [bw_psum+3:0] core_sum_in; //input sum from the other core
 output [bw_psum+3:0] core_sum_out; //output sum from add_row
 
 wire  [pr*bw-1:0] mac_in;
+wire  [pr*bw_psum-1:0] mac_in2;
 wire  [pr*bw-1:0] kmem_out;
 wire  [pr*bw-1:0] qmem_out;
+wire  [pr*bw_psum-1:0] vmem_out;
 wire  [bw_psum*col-1:0] pmem_in;
-wire  [bw_psum*col-1:0] fifo_mac_out; // fifo output from mac_col
+wire  [(bw_psum+bw+4)*col-1:0] outmem_in;
+wire  [(bw_psum+bw+4)*col-1:0] outmem_out;
 
 // add_row
 wire  [bw_psum+3:0] add_row_sum_out;    //sum output from add_row
@@ -39,9 +43,17 @@ wire  [bw_psum*col-1:0] fifo_add_row_abs_out; // fifo output from add_row_abs
 wire  [bw_psum+4:0] add_sum_out; // output from add_sum
 
 wire  [bw_psum*col-1:0] sfp_out;
+// fifo param
 wire  [bw_psum*col-1:0] array_out;
 wire  [col-1:0] fifo_wr;
 wire  ofifo_rd;
+wire  [bw_psum*col-1:0] fifo_mac_out; // fifo output from mac_col
+
+// mac2_ofifo param
+wire  [(bw_psum+bw+4)*col-1:0] mac2_out;
+wire  [col-1:0] mac2_ofifo_wr;
+wire  mac2_ofifo_rd;
+
 wire [3:0] qkmem_add;
 wire [3:0] pmem_add;
 
@@ -52,7 +64,17 @@ wire  kmem_wr;
 wire  pmem_rd;
 wire  pmem_wr; 
 
-wire sum_fifo_rd, sum_fifo_wr, norm_execute, add_sum;
+wire sum_fifo_rd, sum_fifo_wr, norm_execute, add_sum, fifo_valid, mac2_ofifo_valid;
+
+assign outmem_rd = inst[31];
+assign outmem_wr = inst[30];
+
+assign mac2_ofifo_rd = inst[29]; // mac2_fifo_rd signal for mac2 ofifo !!! Need to be added to fullchip_tb
+assign mac2_execute = inst[28];
+assign mac2_load = inst[27];
+assign vmem_add = inst[26:23];
+assign vmem_rd = inst[22];
+assign vmem_wr = inst[21];
 
 assign norm_execute = inst[20];
 assign sum_fifo_rd = inst[19];
@@ -71,8 +93,9 @@ assign pmem_wr = inst[0];
 
 assign mac_in  = inst[6] ? kmem_out : qmem_out;
 assign pmem_in = sfp_out;
+assign mac_in2  = inst[27] ? vmem_out : pmem_out;
 
-assign out = pmem_out; // Delay by 1 cycle to ensure data is stable
+assign out = outmem_out; // Delay by 1 cycle to ensure data is stable
 
 //the out put sum of this core is the sum from add_row
 assign core_sum_out = add_row_sum_out;
@@ -102,16 +125,8 @@ ofifo #(.bw(bw_psum), .col(col))  ofifo_mac ( //from mac array
         .out(fifo_mac_out)
 );
 
-//write into pmem somewhere here, begin the norm process when the pmem_rd is high
-
-/*
-Notes:
-        fifo depth could be much lower than 16, set this high for testing
-        pmem rd and write not used atm
-*/
-
 //stores the sum output of the add_row
-fifo_depth16 #(.bw(bw_psum+4), .simd(1))  fifo_sum ( //should hold enough for sum of the abs numbers from the mac
+fifo_depth8 #(.bw(bw_psum+4), .simd(1))  fifo_sum ( //should hold enough for sum of the abs numbers from the mac
         .reset(reset),
         .rd_clk(clk),
         .wr_clk(clk),
@@ -124,7 +139,7 @@ fifo_depth16 #(.bw(bw_psum+4), .simd(1))  fifo_sum ( //should hold enough for su
 );
 
 //stores the abs outputs of the add_row
-fifo_depth16 #(.bw(col*bw_psum), .simd(1))  fifo_abs ( //should hold enough for all 8 abs numbers from the mac
+fifo_depth8 #(.bw(col*bw_psum), .simd(1))  fifo_abs ( //should hold enough for all 8 abs numbers from the mac
         .reset(reset),
         .rd_clk(clk),
         .wr_clk(clk),
@@ -137,19 +152,11 @@ fifo_depth16 #(.bw(col*bw_psum), .simd(1))  fifo_abs ( //should hold enough for 
 );
 
 
-add_row #() add_row_instance ( //should be fed 8 numbers from pmem
+add_row add_row_instance ( //should be fed 8 numbers from pmem
         .sum_in(fifo_mac_out), 
         .sum_out(add_row_sum_out), 
         .abs_out(add_row_abs_out)
 );
-
-// add_sum #() add_sum_instance (
-//         .inst(add_sum),
-//         .fifo1_in(fifo_add_row_sum_out),
-//         .fifo2_in(core_sum_in), 
-//         .sum_out(add_sum_out),
-//         .clk(clk)
-// );
 
 assign add_sum_out = fifo_add_row_sum_out + core_sum_in;
 
@@ -171,6 +178,17 @@ sram_w16 #(.sram_bit(pr*bw)) kmem_instance (
         .A(qkmem_add)
 );
 
+sram_w16 #(.sram_bit(col*bw_psum)) vmem_instance (
+        .CLK(clk),
+        .D(vmem_in),
+        .Q(vmem_out),
+        .CEN(!(vmem_rd||vmem_wr)),
+        .WEN(!vmem_wr), 
+        .A(qkmem_add)
+);
+
+
+
 // partial sum memory, pmemin = fifo_out 
 sram_w16 #(.sram_bit(col*bw_psum)) psum_mem_instance (
         .CLK(clk),
@@ -181,40 +199,81 @@ sram_w16 #(.sram_bit(col*bw_psum)) psum_mem_instance (
         .A(pmem_add)
 );
 
+sram_w16 #(.sram_bit(col*(bw_psum+bw+4))) outmem_instance (
+        .CLK(clk),
+        .D(outmem_in),
+        .Q(outmem_out),
+        .CEN(!(outmem_rd||outmem_wr)),
+        .WEN(!outmem_wr), 
+        .A(pmem_add)
+);
+
 normalization normalization_instance(
         .clk(clk),
         .execute(norm_execute),
         .abs_in(fifo_add_row_abs_out),
         .abs_sum_in(add_sum_out),
-        .normalization_out(pmem_in)
+        .normalization_out(pmem_in) //output to pmem
 );
 
+mac_array #(.bw(bw_psum), .bw_psum((bw_psum+bw+4)), .col(col), .pr(pr)) mac_array_instance2 ( //mac array instance for norm*value
+        .in(mac_in2), 
+        .clk(clk), 
+        .reset(reset), 
+        .inst(inst[28:27]),     
+        .fifo_wr(mac2_ofifo_wr),     
+	.out(mac2_out)
+);
 
-  //////////// For printing purpose ////////////
-//   always @(posedge clk) begin
-//       if(pmem_wr)
-//          $display("Memory write to PSUM mem add %x %x ", pmem_add, pmem_in); 
-//   end
+ofifo #(.bw(bw_psum+bw+4), .col(col))  ofifo_mac2 ( //from mac array
+        .reset(reset),
+        .clk(clk),
+        .in(mac2_out),
+        .wr(mac2_ofifo_wr),
+        .rd(mac2_ofifo_rd),
+        .o_valid(mac2_ofifo_valid),
+        .out(outmem_in) //output to pmem
+);
+
 integer i;
 integer fi;
 
 always @(posedge clk) begin
-    if (sum_fifo_wr) begin
-            $display("FIFO_ADD_ROW_SUM_OUT: %d", add_row_sum_out);
-    end
+//     if (sum_fifo_wr) begin
+//             $display("FIFO_ADD_ROW_SUM_OUT: %d", add_row_sum_out);
+//     end
 
-    // if (sum_fifo_rd) begin
-    //         $display("ADD SUM OUT (Core.v): %d", add_sum_out);
-    // end
+//     if (vmem_rd) begin
+//         $write("VMEM RD: addr=%d | ", qkmem_add);
+//         for (i = 0; i < pr; i = i + 1) begin
+//             $write("%4d ", $signe(vmem_out[(i+1)*bw-1 -: bw]));  // 8-bit chunks
+//         end
+//         $display(""); 
+//     end
 
-    // if (pmem_wr) begin
-    //     $write("PMEM WRITE: addr=%d | ", pmem_add);
-    //     for (i = 0; i < pr; i = i + 1) begin
-    //         $write(" %6d |", $signed(pmem_in[i*bw_psum +: bw_psum]));  // 20-bit chunks
-    //     end
-    //     $display(""); 
-    // end
+//     if (pmem_rd) begin
+//         $write("PMEM RD: addr=%d | ", pmem_add);
+//         for (i = 0; i < pr; i = i + 1) begin
+//             $write("%d ", $signed(pmem_out[(i+1)*20-1 -: 20]));  // 8-bit chunks
+//         end
+//         $display(""); 
+//     end
+    
+//     if (|mac2_ofifo_wr) begin  // If any bit of fifo_wr is high, meaning a valid write
+//         $write("MAC ARRAY OUT/FIFO IN: ");
+//         for (fi = 0; fi < col; fi= fi + 1) begin
+//             $write("%6d ", $signed(mac2_out[(fi+1)*32-1 -: 32])); // Extract each column's result
+//         end
+//         $display("");  // New line
+//     end
 
+//     if (pmem_wr) begin
+//         $write("PMEM WRITE: addr=%d | ", pmem_add);
+//         for (i = 0; i < pr; i = i + 1) begin
+//             $write(" %6d |", $signed(pmem_in[i*bw_psum +: bw_psum]));  // Should print out chunks of data
+//         end
+//         $display(""); 
+//     end
 
     // $display("Mem in: %h", mem_in);
 //     if (qmem_wr) begin
@@ -224,14 +283,7 @@ always @(posedge clk) begin
 //         end
 //         $display(""); 
 //     end
-
-//     if (qmem_rd) begin
-//         $write("QMEM RD: addr=%d | ", qkmem_add);
-//         for (i = 0; i < pr; i = i + 1) begin
-//             $write("%4d ", $signed(qmem_out[(i+1)*bw-1 -: bw]));  // 8-bit chunks
-//         end
-//         $display(""); 
-//     end
+    
 //     if (kmem_wr) begin
 //         $write("KMEM WRITE: addr=%d | ", qkmem_add);
 //         for (i = 0; i < pr; i = i + 1) begin
@@ -263,13 +315,7 @@ always @(posedge clk) begin
 //     end
                 // $display("PMEM WRITING: pmem_wr=%b | pmem_add=%d | ofifo_rd=%b", pmem_wr, pmem_add, ofifo_rd);
 
-//     if (|fifo_wr) begin  // If any bit of fifo_wr is high, meaning a valid write
-//         $write("MAC ARRAY OUT/FIFO IN: ");
-//         for (fi = 0; fi < col; fi= fi + 1) begin
-//             $write("%6d ", $signed(array_out[(fi+1)*bw_psum-1 -: bw_psum])); // Extract each column's result
-//         end
-//         $display("");  // New line
-//     end
+    
 //     if (ofifo_rd) begin
 //         $write("FIFO OUT: ");
 //         for (fi = 0; fi < col; fi = fi + 1) begin

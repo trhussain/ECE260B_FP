@@ -34,7 +34,7 @@ assign	product7	=	{{(bw){a[bw*	8	-1]}},	a[bw*	8	-1:bw*	7	]}	*	{{(bw){b[bw*	8	-1]
 
 
 assign out = 
-                {{(4){product0[2*bw-1]}},product0	}
+        {{(4){product0[2*bw-1]}},product0	}
 	+	{{(4){product1[2*bw-1]}},product1	}
 	+	{{(4){product2[2*bw-1]}},product2	}
 	+	{{(4){product3[2*bw-1]}},product3	}
@@ -43,5 +43,9 @@ assign out =
 	+	{{(4){product6[2*bw-1]}},product6	}
 	+	{{(4){product7[2*bw-1]}},product7	};
 
+always @(out) begin
+	// $write("MAC ARRAY Product Sum: %d, PRODUCT0: %d, NUM1: %d, NUM2: %d", $signed(out), $signed(product0), $signed(a[bw*	1	-1:bw*	0	]),	$signed(b[bw*	1	-1:	bw*	0	]));
+	// $display("");
+end
 
 endmodule
