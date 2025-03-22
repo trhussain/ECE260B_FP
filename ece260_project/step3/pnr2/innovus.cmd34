@@ -49,3 +49,8 @@ setAnalysisMode -hold
 set_analysis_view -setup BC_VIEW -hold BC_VIEW
 do_extract_model -view BC_VIEW -format dotlib ${design}_BC.lib
 write_sdf -view BC_VIEW ${design}_BC.sdf
+verify_drc
+verifyConnectivity
+verifyGeometry
+restoreDesign /home/linux/ieng6/ee260bwi25/aekeng/ECE260B_FP/ece260_project/step3/pnr2/route.enc.dat core
+fit

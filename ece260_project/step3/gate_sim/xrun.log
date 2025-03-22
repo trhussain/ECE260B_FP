@@ -1,0 +1,1055 @@
+xrun(64): 20.09-s017: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s017: Started on Mar 21, 2025 at 17:23:26 PDT
+xrun
+	-define INITIALIZE_MEMORY
+	-xminitialize 0
+	+gui
+	+access+rwc
+	+xm64bit
+	+xmstatus
+	+xmtimescale+1ns/1ps
+	+xmoveride_timescale
+	-v ./netlist/core.pnr.v
+	-v ./netlist/sram_w16.pnr.v
+	-v ./netlist/sram_w16_160.pnr.v
+	-v /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
+	./netlist/fullchip_tb.v
+	-v ./netlist/fullchip.v
+
+   User defined plus("+") options:
+	+xmoveride_timescale
+
+xrun: *W,FILOD: The file /home/linux/ieng6/ee260bwi25/aekeng/ECE260B_FP/ece260_project/step3/gate_sim/netlist/fullchip.v is out of date, the exec xmvlog will be re-invoked.
+file: ./netlist/fullchip.v
+	module fullchip.fullchip:v
+		errors: 0, warnings: 0
+xmvlog: Memory Usage - Current physical: 22.7M, Current virtual: 94.4M
+xmvlog: CPU Usage - 0.0s system + 1.6s user = 1.6s total (1.8s, 90.1% cpu)
+		Caching library 'fullchip' ....... Done
+		Caching library 'sram_w16' ....... Done
+		Caching library 'worklib' ....... Done
+		Caching library 'sram_w16_160' ....... Done
+		Caching library 'core' ....... Done
+		Caching library 'tcbn65gplus' ....... Done
+	Elaborating the design hierarchy:
+core /*#(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr))*/ core_instance (
+                                                                       |
+xmelab: *W,CUVWSP (./netlist/fullchip.v,17|71): 2 output ports were not connected:
+xmelab: (./netlist/core.pnr.v,129599): sum_out
+xmelab: (./netlist/core.pnr.v,129601): out
+
+   DFD2 cnt_q_reg_2_ (.CP(clk),
+                   |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,10009|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5860): Q
+
+   DFD1 cnt_q_reg_0_ (.CP(clk),
+                   |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,20587|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
+
+   DFD1 cnt_q_reg_0_ (.CP(clk_clone2),
+                   |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,31428|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
+
+   DFD1 cnt_q_reg_0_ (.CP(CTS_4),
+                   |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,43452|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
+
+   FA1D1 U23 (.A(n786),
+           |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,59656|11): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,9795): CO
+
+   DFD1 cnt_q_reg_0_ (.CP(clk_clone1),
+                   |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,64267|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
+
+   DFD1 cnt_q_reg_3_ (.CP(clk_clone1),
+                   |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,64319|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+   FA1D1 U166 (.A(FE_OCPN2915_n1556),
+            |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,70837|12): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,9795): CO
+
+   DFD1 cnt_q_reg_0_ (.CP(clk),
+                   |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,86591|19): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): Q
+
+   ofifo_col8_bw20 ofifo_inst (.in({ array_out[159],
+                            |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,130792|28): 2 output ports were not connected:
+xmelab: (./netlist/core.pnr.v,128870): o_valid
+xmelab: (./netlist/core.pnr.v,128872): o_full
+
+   fifo_depth16_bw20_simd1_7 col_idx_0__fifo_instance (.in({ in[19],
+                                                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,129207|52): 2 output ports were not connected:
+xmelab: (./netlist/core.pnr.v,92830): o_full
+xmelab: (./netlist/core.pnr.v,92831): o_empty
+
+   DFD1 rd_ptr_reg_1_ (.CP(rd_clk),
+                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,94989|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+   fifo_depth16_bw20_simd1_6 col_idx_1__fifo_instance (.in({ in[39],
+                                                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,129254|52): 2 output ports were not connected:
+xmelab: (./netlist/core.pnr.v,97574): o_full
+xmelab: (./netlist/core.pnr.v,97575): o_empty
+
+   DFD1 rd_ptr_reg_1_ (.CP(rd_clk),
+                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,99453|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+   fifo_depth16_bw20_simd1_5 col_idx_2__fifo_instance (.in({ in[59],
+                                                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,129304|52): 2 output ports were not connected:
+xmelab: (./netlist/core.pnr.v,125831): o_full
+xmelab: (./netlist/core.pnr.v,125832): o_empty
+
+   DFD1 rd_ptr_reg_1_ (.CP(rd_clk_clone6),
+                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,127933|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+   fifo_depth16_bw20_simd1_4 col_idx_3__fifo_instance (.in({ in[79],
+                                                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,129355|52): 2 output ports were not connected:
+xmelab: (./netlist/core.pnr.v,121103): o_full
+xmelab: (./netlist/core.pnr.v,121104): o_empty
+
+   DFD2 rd_ptr_reg_1_ (.CP(rd_clk_clone2),
+                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,123292|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5860): QN
+
+   DFD1 q1_reg_12_ (.CP(CTS_13),
+                 |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,123298|17): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+   DFD1 q1_reg_13_ (.CP(CTS_13),
+                 |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,123301|17): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+   fifo_depth16_bw20_simd1_3 col_idx_4__fifo_instance (.in({ in[99],
+                                                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,129402|52): 2 output ports were not connected:
+xmelab: (./netlist/core.pnr.v,116420): o_full
+xmelab: (./netlist/core.pnr.v,116421): o_empty
+
+   DFD1 rd_ptr_reg_1_ (.CP(rd_clk_clone3),
+                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,118469|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+   fifo_depth16_bw20_simd1_2 col_idx_5__fifo_instance (.in({ in[119],
+                                                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,129449|52): 2 output ports were not connected:
+xmelab: (./netlist/core.pnr.v,111694): o_full
+xmelab: (./netlist/core.pnr.v,111695): o_empty
+
+   DFD2 rd_ptr_reg_1_ (.CP(rd_clk_clone4),
+                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,113754|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5860): QN
+
+   fifo_depth16_bw20_simd1_1 col_idx_6__fifo_instance (.in({ in[139],
+                                                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,129499|52): 2 output ports were not connected:
+xmelab: (./netlist/core.pnr.v,106990): o_full
+xmelab: (./netlist/core.pnr.v,106991): o_empty
+
+   DFD1 rd_ptr_reg_1_ (.CP(rd_clk_clone1),
+                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,109073|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+   fifo_depth16_bw20_simd1_0 col_idx_7__fifo_instance (.in({ in[159],
+                                                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,129548|52): 2 output ports were not connected:
+xmelab: (./netlist/core.pnr.v,102230): o_full
+xmelab: (./netlist/core.pnr.v,102231): o_empty
+
+   DFD1 rd_ptr_reg_1_ (.CP(rd_clk_clone1),
+                    |
+xmelab: *W,CUVWSP (./netlist/core.pnr.v,104443|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5821): QN
+
+	Top level design units:
+		fullchip_tb
+      .mem_in(mem_in), 
+                   |
+xmelab: *W,CUVMPW (./netlist/fullchip.v,20|19): port sizes differ in port connection(64/128) for the instance(fullchip_tb.fullchip_instance) .
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.fullchip_tb:v <0x48e2adb1>
+			streams:  28, words: 48505
+		fullchip.fullchip:v <0x7aa104cf>
+			streams:   0, words:     0
+		core.fifo_mux_16_1_bw20_simd1_0:v <0x36c54d00>
+			streams:   0, words:     0
+		core.fifo_depth16_bw20_simd1_0:v <0x56da2292>
+			streams:   0, words:     0
+		core.fifo_mux_16_1_bw20_simd1_1:v <0x54556d35>
+			streams:   0, words:     0
+		core.fifo_depth16_bw20_simd1_1:v <0x2260d7b5>
+			streams:   0, words:     0
+		core.fifo_mux_16_1_bw20_simd1_2:v <0x4571b717>
+			streams:   0, words:     0
+		core.fifo_depth16_bw20_simd1_2:v <0x11dce6e2>
+			streams:   0, words:     0
+		core.fifo_mux_16_1_bw20_simd1_3:v <0x5695c78a>
+			streams:   0, words:     0
+		core.fifo_depth16_bw20_simd1_3:v <0x6835904b>
+			streams:   0, words:     0
+		core.fifo_mux_16_1_bw20_simd1_4:v <0x25bd6219>
+			streams:   0, words:     0
+		core.fifo_depth16_bw20_simd1_4:v <0x79208890>
+			streams:   0, words:     0
+		core.fifo_mux_16_1_bw20_simd1_5:v <0x60b58ff2>
+			streams:   0, words:     0
+		core.fifo_depth16_bw20_simd1_5:v <0x5f758c58>
+			streams:   0, words:     0
+		core.fifo_mux_16_1_bw20_simd1_6:v <0x1a6d2cae>
+			streams:   0, words:     0
+		core.fifo_depth16_bw20_simd1_6:v <0x0840d580>
+			streams:   0, words:     0
+		core.fifo_mux_16_1_bw20_simd1_7:v <0x6bc9ac78>
+			streams:   0, words:     0
+		core.fifo_depth16_bw20_simd1_7:v <0x59f6506b>
+			streams:   0, words:     0
+		core.ofifo_col8_bw20:v <0x47dd00fc>
+			streams:   0, words:     0
+		core.mac_16in_bw8_bw_psum20_pr16_0:v <0x2364a991>
+			streams:   0, words:     0
+		core.mac_col_bw8_bw_psum20_pr16_col_id8:v <0x060e7f73>
+			streams:   0, words:     0
+		core.mac_16in_bw8_bw_psum20_pr16_1:v <0x7e062694>
+			streams:   0, words:     0
+		core.mac_col_bw8_bw_psum20_pr16_col_id7:v <0x646d18d6>
+			streams:   0, words:     0
+		core.mac_16in_bw8_bw_psum20_pr16_2:v <0x0f4a214e>
+			streams:   0, words:     0
+		core.mac_col_bw8_bw_psum20_pr16_col_id6:v <0x54a91c71>
+			streams:   0, words:     0
+		core.mac_16in_bw8_bw_psum20_pr16_3:v <0x7d220f89>
+			streams:   0, words:     0
+		core.mac_col_bw8_bw_psum20_pr16_col_id5:v <0x4537b127>
+			streams:   0, words:     0
+		core.mac_col_bw8_bw_psum20_pr16_col_id4:v <0x322d602e>
+			streams:   0, words:     0
+		core.mac_col_bw8_bw_psum20_pr16_col_id3:v <0x4b37c3b6>
+			streams:   0, words:     0
+		core.mac_16in_bw8_bw_psum20_pr16_6:v <0x17115f63>
+			streams:   0, words:     0
+		core.mac_col_bw8_bw_psum20_pr16_col_id2:v <0x3d5d52f0>
+			streams:   0, words:     0
+		core.mac_16in_bw8_bw_psum20_pr16_7:v <0x1f02ac10>
+			streams:   0, words:     0
+		core.mac_col_bw8_bw_psum20_pr16_col_id1:v <0x15fe91e0>
+			streams:   0, words:     0
+		core.mac_array_col8_bw8_bw_psum20_pr16:v <0x49a18faa>
+			streams:   0, words:     0
+		core.core:v <0x4ec47417>
+			streams:   0, words:     0
+		tcbn65gplus.CKMUX2D2:v <0x29131fd7>
+			streams:   0, words:     0
+		tcbn65gplus.MUX2D4:v <0x294a62a0>
+			streams:   0, words:     0
+		tcbn65gplus.MUX2D2:v <0x030c1112>
+			streams:   0, words:     0
+		tcbn65gplus.CKMUX2D0:v <0x236388d6>
+			streams:   0, words:     0
+		tcbn65gplus.MUX2D1:v <0x5a0781b8>
+			streams:   0, words:     0
+		tcbn65gplus.EDFQD1:v <0x675ea67f>
+			streams:   0, words:     0
+		tcbn65gplus.CKMUX2D2:v <0x4e7e41fb>
+			streams:   0, words:     0
+		tcbn65gplus.MUX2D0:v <0x48ec7697>
+			streams:   0, words:     0
+		tcbn65gplus.CKXOR2D0:v <0x12dc2496>
+			streams:   0, words:     0
+		tcbn65gplus.XNR2D4:v <0x47e5eaad>
+			streams:   0, words:     0
+		tcbn65gplus.FCICIND1:v <0x2fba927d>
+			streams:   0, words:     0
+		tcbn65gplus.CKXOR2D2:v <0x7d1068cf>
+			streams:   0, words:     0
+		tcbn65gplus.XOR2D4:v <0x78c7864b>
+			streams:   0, words:     0
+		tcbn65gplus.MUX2ND2:v <0x5f80d814>
+			streams:   0, words:     0
+		tcbn65gplus.CKXOR2D1:v <0x67663f2b>
+			streams:   0, words:     0
+		tcbn65gplus.HA1D0:v <0x21f3d3ab>
+			streams:   0, words:     0
+		tcbn65gplus.XOR2D1:v <0x0b5e8841>
+			streams:   0, words:     0
+		tcbn65gplus.CKMUX2D1:v <0x37838521>
+			streams:   0, words:     0
+		tcbn65gplus.DFKCNQD2:v <0x08c2c3e7>
+			streams:   0, words:     0
+		tcbn65gplus.CKXOR2D4:v <0x02ef3db9>
+			streams:   0, words:     0
+		tcbn65gplus.XOR3D4:v <0x4bd76c99>
+			streams:   0, words:     0
+		tcbn65gplus.DFKCNQD2:v <0x1392b461>
+			streams:   0, words:     0
+		tcbn65gplus.FICOND1:v <0x784450be>
+			streams:   0, words:     0
+		tcbn65gplus.XNR3D1:v <0x28eda738>
+			streams:   0, words:     0
+		tcbn65gplus.MUX2D1:v <0x3d6adf94>
+			streams:   0, words:     0
+		tcbn65gplus.CKMUX2D1:v <0x50eedb0d>
+			streams:   0, words:     0
+		tcbn65gplus.MUX2D0:v <0x2f8128bb>
+			streams:   0, words:     0
+		tcbn65gplus.DFD2:v <0x1bf66f75>
+			streams:   0, words:     0
+		tcbn65gplus.DFD1:v <0x1d14f822>
+			streams:   0, words:     0
+		tcbn65gplus.DFQD2:v <0x33dafabb>
+			streams:   0, words:     0
+		tcbn65gplus.DFQD1:v <0x73430d59>
+			streams:   0, words:     0
+		tcbn65gplus.DFQD4:v <0x5124745b>
+			streams:   0, words:     0
+		tcbn65gplus.DFKCNQD1:v <0x6616a74c>
+			streams:   0, words:     0
+		tcbn65gplus.DFKCNQD4:v <0x4760aac0>
+			streams:   0, words:     0
+		tcbn65gplus.DFKCNQD1:v <0x7d46d0ca>
+			streams:   0, words:     0
+		tcbn65gplus.XOR2D0:v <0x343407ea>
+			streams:   0, words:     0
+		tcbn65gplus.XOR2D0:v <0x2f64706c>
+			streams:   0, words:     0
+		tcbn65gplus.FICOND1:v <0x5dcdc2b6>
+			streams:   0, words:     0
+		tcbn65gplus.FA1D0:v <0x4111e99a>
+			streams:   0, words:     0
+		tcbn65gplus.HA1D1:v <0x22c15b11>
+			streams:   0, words:     0
+		tcbn65gplus.HA1D4:v <0x2d39f143>
+			streams:   0, words:     0
+		tcbn65gplus.XNR2D2:v <0x4d7f133f>
+			streams:   0, words:     0
+		tcbn65gplus.CKXOR2D1:v <0x7c3648ad>
+			streams:   0, words:     0
+		tcbn65gplus.XNR2D0:v <0x0b166b0c>
+			streams:   0, words:     0
+		tcbn65gplus.XNR3D2:v <0x73bccb3a>
+			streams:   0, words:     0
+		tcbn65gplus.HA1D2:v <0x2796c2df>
+			streams:   0, words:     0
+		tcbn65gplus.FA1D4:v <0x7b44e6d1>
+			streams:   0, words:     0
+		tcbn65gplus.FA1D2:v <0x3183ed1f>
+			streams:   0, words:     0
+		tcbn65gplus.FA1D1:v <0x54e068f8>
+			streams:   0, words:     0
+		tcbn65gplus.XOR2D2:v <0x725d7fd9>
+			streams:   0, words:     0
+		tcbn65gplus.XNR2D1:v <0x347ce4a7>
+			streams:   0, words:     0
+		tcbn65gplus.XOR2D4:v <0x6397f1cd>
+			streams:   0, words:     0
+		tcbn65gplus.XNR3D4:v <0x40653b8f>
+			streams:   0, words:     0
+		tcbn65gplus.CKXOR2D4:v <0x19bf4a3f>
+			streams:   0, words:     0
+		tcbn65gplus.XNR2D4:v <0x5cb59d2b>
+			streams:   0, words:     0
+		tcbn65gplus.XOR3D1:v <0x4c5ae756>
+			streams:   0, words:     0
+		tcbn65gplus.XOR3D2:v <0x780e9c2c>
+			streams:   0, words:     0
+		tcbn65gplus.MUX2ND0:v <0x059508c6>
+			streams:   0, words:     0
+		tcbn65gplus.MUX2D2:v <0x64614f3e>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:               33963     402
+		UDPs:                  21309       3
+		Primitives:            70551       9
+		Timing outputs:        35673     249
+		Registers:              7507      45
+		Scalar wires:          44217       -
+		Expanded wires:           72       3
+		Vectored wires:            1       -
+		Always blocks:             1       1
+		Initial blocks:           14      14
+		Cont. assignments:        11      17
+		Pseudo assignments:        3       3
+		Timing checks:         65024       -
+		Simulation timescale:    1ps
+	Writing initial simulation snapshot: worklib.fullchip_tb:v
+xmelab: Memory Usage - Final: 69.1M, Peak: 78.5M, Peak virtual: 202.9M
+xmelab: CPU Usage - 0.2s system + 3.6s user = 3.8s total (5.1s, 74.7% cpu)
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /software/ECE/XCELIUM-2009/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm fullchip_tb.K fullchip_tb.Q fullchip_tb.clk fullchip_tb.inst fullchip_tb.mem_in fullchip_tb.result fullchip_tb.sum
+Created probe 1
+xcelium> run
+##### Q data txt reading #####
+##### K data txt reading #####
+##### Feed in data for Q  #####
+---------------------------------------------------
+     -5 |      7 |     -5 |     -7 |     -1 |      6 |      1 |      2 |
+     -4 |      7 |     -2 |     -5 |     -3 |      4 |      1 |     -3 |
+     -4 |     -1 |     -4 |     -4 |     -1 |      0 |      5 |      2 |
+     -3 |      3 |      6 |     -4 |      6 |      2 |      1 |      6 |
+     -8 |      5 |     -2 |      6 |      2 |      1 |     -3 |      4 |
+     -2 |     -1 |     -2 |     -6 |     -1 |      4 |      0 |      2 |
+      5 |     -7 |     -1 |      3 |      2 |      1 |     -7 |      6 |
+      5 |     -8 |     -3 |      6 |      0 |     -2 |      6 |     -1 |
+---------------------------------------------------
+##### Feed in data for K  #####
+---------------------------------------------------
+     -6 |      3 |     -2 |     -1 |     -5 |      1 |      0 |      7 |
+      0 |     -5 |     -8 |      0 |      6 |      0 |     -5 |     -7 |
+      4 |     -7 |     -6 |      3 |      7 |      7 |      6 |      6 |
+     -3 |      0 |      0 |     -7 |      6 |      3 |      4 |      7 |
+      6 |     -3 |      4 |     -7 |     -4 |     -3 |     -2 |     -5 |
+      0 |     -7 |      3 |      3 |     -2 |      6 |      4 |     -1 |
+      7 |     -5 |      2 |      1 |      3 |      6 |      1 |     -5 |
+      3 |     -1 |      6 |      3 |     -6 |     -2 |      1 |     -4 |
+---------------------------------------------------
+##### Estimated multiplication result (HEX) #####
+Q[ 0][ 0] * K[ 0][ 0] = -5 * -6
+Q[ 0][ 1] * K[ 0][ 1] =  7 *  3
+Q[ 0][ 2] * K[ 0][ 2] = -5 * -2
+Q[ 0][ 3] * K[ 0][ 3] = -7 * -1
+Q[ 0][ 4] * K[ 0][ 4] = -1 * -5
+Q[ 0][ 5] * K[ 0][ 5] =  6 *  1
+Q[ 0][ 6] * K[ 0][ 6] =  1 *  0
+Q[ 0][ 7] * K[ 0][ 7] =  2 *  7
+@cycle 0:  93
+Q[ 0][ 0] * K[ 1][ 0] = -5 *  0
+Q[ 0][ 1] * K[ 1][ 1] =  7 * -5
+Q[ 0][ 2] * K[ 1][ 2] = -5 * -8
+Q[ 0][ 3] * K[ 1][ 3] = -7 *  0
+Q[ 0][ 4] * K[ 1][ 4] = -1 *  6
+Q[ 0][ 5] * K[ 1][ 5] =  6 *  0
+Q[ 0][ 6] * K[ 1][ 6] =  1 * -5
+Q[ 0][ 7] * K[ 1][ 7] =  2 * -7
+@cycle 0: -20
+Q[ 0][ 0] * K[ 2][ 0] = -5 *  4
+Q[ 0][ 1] * K[ 2][ 1] =  7 * -7
+Q[ 0][ 2] * K[ 2][ 2] = -5 * -6
+Q[ 0][ 3] * K[ 2][ 3] = -7 *  3
+Q[ 0][ 4] * K[ 2][ 4] = -1 *  7
+Q[ 0][ 5] * K[ 2][ 5] =  6 *  7
+Q[ 0][ 6] * K[ 2][ 6] =  1 *  6
+Q[ 0][ 7] * K[ 2][ 7] =  2 *  6
+@cycle 0:  -7
+Q[ 0][ 0] * K[ 3][ 0] = -5 * -3
+Q[ 0][ 1] * K[ 3][ 1] =  7 *  0
+Q[ 0][ 2] * K[ 3][ 2] = -5 *  0
+Q[ 0][ 3] * K[ 3][ 3] = -7 * -7
+Q[ 0][ 4] * K[ 3][ 4] = -1 *  6
+Q[ 0][ 5] * K[ 3][ 5] =  6 *  3
+Q[ 0][ 6] * K[ 3][ 6] =  1 *  4
+Q[ 0][ 7] * K[ 3][ 7] =  2 *  7
+@cycle 0:  94
+Q[ 0][ 0] * K[ 4][ 0] = -5 *  6
+Q[ 0][ 1] * K[ 4][ 1] =  7 * -3
+Q[ 0][ 2] * K[ 4][ 2] = -5 *  4
+Q[ 0][ 3] * K[ 4][ 3] = -7 * -7
+Q[ 0][ 4] * K[ 4][ 4] = -1 * -4
+Q[ 0][ 5] * K[ 4][ 5] =  6 * -3
+Q[ 0][ 6] * K[ 4][ 6] =  1 * -2
+Q[ 0][ 7] * K[ 4][ 7] =  2 * -5
+@cycle 0: -48
+Q[ 0][ 0] * K[ 5][ 0] = -5 *  0
+Q[ 0][ 1] * K[ 5][ 1] =  7 * -7
+Q[ 0][ 2] * K[ 5][ 2] = -5 *  3
+Q[ 0][ 3] * K[ 5][ 3] = -7 *  3
+Q[ 0][ 4] * K[ 5][ 4] = -1 * -2
+Q[ 0][ 5] * K[ 5][ 5] =  6 *  6
+Q[ 0][ 6] * K[ 5][ 6] =  1 *  4
+Q[ 0][ 7] * K[ 5][ 7] =  2 * -1
+@cycle 0: -45
+Q[ 0][ 0] * K[ 6][ 0] = -5 *  7
+Q[ 0][ 1] * K[ 6][ 1] =  7 * -5
+Q[ 0][ 2] * K[ 6][ 2] = -5 *  2
+Q[ 0][ 3] * K[ 6][ 3] = -7 *  1
+Q[ 0][ 4] * K[ 6][ 4] = -1 *  3
+Q[ 0][ 5] * K[ 6][ 5] =  6 *  6
+Q[ 0][ 6] * K[ 6][ 6] =  1 *  1
+Q[ 0][ 7] * K[ 6][ 7] =  2 * -5
+@cycle 0: -63
+Q[ 0][ 0] * K[ 7][ 0] = -5 *  3
+Q[ 0][ 1] * K[ 7][ 1] =  7 * -1
+Q[ 0][ 2] * K[ 7][ 2] = -5 *  6
+Q[ 0][ 3] * K[ 7][ 3] = -7 *  3
+Q[ 0][ 4] * K[ 7][ 4] = -1 * -6
+Q[ 0][ 5] * K[ 7][ 5] =  6 * -2
+Q[ 0][ 6] * K[ 7][ 6] =  1 *  1
+Q[ 0][ 7] * K[ 7][ 7] =  2 * -4
+@cycle 0: -86
+prd @cycle 0: 0005dfffecffff90005efffd0fffd3fffc1fffaa
+Q[ 1][ 0] * K[ 0][ 0] = -4 * -6
+Q[ 1][ 1] * K[ 0][ 1] =  7 *  3
+Q[ 1][ 2] * K[ 0][ 2] = -2 * -2
+Q[ 1][ 3] * K[ 0][ 3] = -5 * -1
+Q[ 1][ 4] * K[ 0][ 4] = -3 * -5
+Q[ 1][ 5] * K[ 0][ 5] =  4 *  1
+Q[ 1][ 6] * K[ 0][ 6] =  1 *  0
+Q[ 1][ 7] * K[ 0][ 7] = -3 *  7
+@cycle 1:  52
+Q[ 1][ 0] * K[ 1][ 0] = -4 *  0
+Q[ 1][ 1] * K[ 1][ 1] =  7 * -5
+Q[ 1][ 2] * K[ 1][ 2] = -2 * -8
+Q[ 1][ 3] * K[ 1][ 3] = -5 *  0
+Q[ 1][ 4] * K[ 1][ 4] = -3 *  6
+Q[ 1][ 5] * K[ 1][ 5] =  4 *  0
+Q[ 1][ 6] * K[ 1][ 6] =  1 * -5
+Q[ 1][ 7] * K[ 1][ 7] = -3 * -7
+@cycle 1: -21
+Q[ 1][ 0] * K[ 2][ 0] = -4 *  4
+Q[ 1][ 1] * K[ 2][ 1] =  7 * -7
+Q[ 1][ 2] * K[ 2][ 2] = -2 * -6
+Q[ 1][ 3] * K[ 2][ 3] = -5 *  3
+Q[ 1][ 4] * K[ 2][ 4] = -3 *  7
+Q[ 1][ 5] * K[ 2][ 5] =  4 *  7
+Q[ 1][ 6] * K[ 2][ 6] =  1 *  6
+Q[ 1][ 7] * K[ 2][ 7] = -3 *  6
+@cycle 1: -73
+Q[ 1][ 0] * K[ 3][ 0] = -4 * -3
+Q[ 1][ 1] * K[ 3][ 1] =  7 *  0
+Q[ 1][ 2] * K[ 3][ 2] = -2 *  0
+Q[ 1][ 3] * K[ 3][ 3] = -5 * -7
+Q[ 1][ 4] * K[ 3][ 4] = -3 *  6
+Q[ 1][ 5] * K[ 3][ 5] =  4 *  3
+Q[ 1][ 6] * K[ 3][ 6] =  1 *  4
+Q[ 1][ 7] * K[ 3][ 7] = -3 *  7
+@cycle 1:  24
+Q[ 1][ 0] * K[ 4][ 0] = -4 *  6
+Q[ 1][ 1] * K[ 4][ 1] =  7 * -3
+Q[ 1][ 2] * K[ 4][ 2] = -2 *  4
+Q[ 1][ 3] * K[ 4][ 3] = -5 * -7
+Q[ 1][ 4] * K[ 4][ 4] = -3 * -4
+Q[ 1][ 5] * K[ 4][ 5] =  4 * -3
+Q[ 1][ 6] * K[ 4][ 6] =  1 * -2
+Q[ 1][ 7] * K[ 4][ 7] = -3 * -5
+@cycle 1:  -5
+Q[ 1][ 0] * K[ 5][ 0] = -4 *  0
+Q[ 1][ 1] * K[ 5][ 1] =  7 * -7
+Q[ 1][ 2] * K[ 5][ 2] = -2 *  3
+Q[ 1][ 3] * K[ 5][ 3] = -5 *  3
+Q[ 1][ 4] * K[ 5][ 4] = -3 * -2
+Q[ 1][ 5] * K[ 5][ 5] =  4 *  6
+Q[ 1][ 6] * K[ 5][ 6] =  1 *  4
+Q[ 1][ 7] * K[ 5][ 7] = -3 * -1
+@cycle 1: -33
+Q[ 1][ 0] * K[ 6][ 0] = -4 *  7
+Q[ 1][ 1] * K[ 6][ 1] =  7 * -5
+Q[ 1][ 2] * K[ 6][ 2] = -2 *  2
+Q[ 1][ 3] * K[ 6][ 3] = -5 *  1
+Q[ 1][ 4] * K[ 6][ 4] = -3 *  3
+Q[ 1][ 5] * K[ 6][ 5] =  4 *  6
+Q[ 1][ 6] * K[ 6][ 6] =  1 *  1
+Q[ 1][ 7] * K[ 6][ 7] = -3 * -5
+@cycle 1: -41
+Q[ 1][ 0] * K[ 7][ 0] = -4 *  3
+Q[ 1][ 1] * K[ 7][ 1] =  7 * -1
+Q[ 1][ 2] * K[ 7][ 2] = -2 *  6
+Q[ 1][ 3] * K[ 7][ 3] = -5 *  3
+Q[ 1][ 4] * K[ 7][ 4] = -3 * -6
+Q[ 1][ 5] * K[ 7][ 5] =  4 * -2
+Q[ 1][ 6] * K[ 7][ 6] =  1 *  1
+Q[ 1][ 7] * K[ 7][ 7] = -3 * -4
+@cycle 1: -23
+prd @cycle 1: 00034fffebfffb700018ffffbfffdffffd7fffe9
+Q[ 2][ 0] * K[ 0][ 0] = -4 * -6
+Q[ 2][ 1] * K[ 0][ 1] = -1 *  3
+Q[ 2][ 2] * K[ 0][ 2] = -4 * -2
+Q[ 2][ 3] * K[ 0][ 3] = -4 * -1
+Q[ 2][ 4] * K[ 0][ 4] = -1 * -5
+Q[ 2][ 5] * K[ 0][ 5] =  0 *  1
+Q[ 2][ 6] * K[ 0][ 6] =  5 *  0
+Q[ 2][ 7] * K[ 0][ 7] =  2 *  7
+@cycle 2:  52
+Q[ 2][ 0] * K[ 1][ 0] = -4 *  0
+Q[ 2][ 1] * K[ 1][ 1] = -1 * -5
+Q[ 2][ 2] * K[ 1][ 2] = -4 * -8
+Q[ 2][ 3] * K[ 1][ 3] = -4 *  0
+Q[ 2][ 4] * K[ 1][ 4] = -1 *  6
+Q[ 2][ 5] * K[ 1][ 5] =  0 *  0
+Q[ 2][ 6] * K[ 1][ 6] =  5 * -5
+Q[ 2][ 7] * K[ 1][ 7] =  2 * -7
+@cycle 2:  -8
+Q[ 2][ 0] * K[ 2][ 0] = -4 *  4
+Q[ 2][ 1] * K[ 2][ 1] = -1 * -7
+Q[ 2][ 2] * K[ 2][ 2] = -4 * -6
+Q[ 2][ 3] * K[ 2][ 3] = -4 *  3
+Q[ 2][ 4] * K[ 2][ 4] = -1 *  7
+Q[ 2][ 5] * K[ 2][ 5] =  0 *  7
+Q[ 2][ 6] * K[ 2][ 6] =  5 *  6
+Q[ 2][ 7] * K[ 2][ 7] =  2 *  6
+@cycle 2:  38
+Q[ 2][ 0] * K[ 3][ 0] = -4 * -3
+Q[ 2][ 1] * K[ 3][ 1] = -1 *  0
+Q[ 2][ 2] * K[ 3][ 2] = -4 *  0
+Q[ 2][ 3] * K[ 3][ 3] = -4 * -7
+Q[ 2][ 4] * K[ 3][ 4] = -1 *  6
+Q[ 2][ 5] * K[ 3][ 5] =  0 *  3
+Q[ 2][ 6] * K[ 3][ 6] =  5 *  4
+Q[ 2][ 7] * K[ 3][ 7] =  2 *  7
+@cycle 2:  68
+Q[ 2][ 0] * K[ 4][ 0] = -4 *  6
+Q[ 2][ 1] * K[ 4][ 1] = -1 * -3
+Q[ 2][ 2] * K[ 4][ 2] = -4 *  4
+Q[ 2][ 3] * K[ 4][ 3] = -4 * -7
+Q[ 2][ 4] * K[ 4][ 4] = -1 * -4
+Q[ 2][ 5] * K[ 4][ 5] =  0 * -3
+Q[ 2][ 6] * K[ 4][ 6] =  5 * -2
+Q[ 2][ 7] * K[ 4][ 7] =  2 * -5
+@cycle 2: -25
+Q[ 2][ 0] * K[ 5][ 0] = -4 *  0
+Q[ 2][ 1] * K[ 5][ 1] = -1 * -7
+Q[ 2][ 2] * K[ 5][ 2] = -4 *  3
+Q[ 2][ 3] * K[ 5][ 3] = -4 *  3
+Q[ 2][ 4] * K[ 5][ 4] = -1 * -2
+Q[ 2][ 5] * K[ 5][ 5] =  0 *  6
+Q[ 2][ 6] * K[ 5][ 6] =  5 *  4
+Q[ 2][ 7] * K[ 5][ 7] =  2 * -1
+@cycle 2:   3
+Q[ 2][ 0] * K[ 6][ 0] = -4 *  7
+Q[ 2][ 1] * K[ 6][ 1] = -1 * -5
+Q[ 2][ 2] * K[ 6][ 2] = -4 *  2
+Q[ 2][ 3] * K[ 6][ 3] = -4 *  1
+Q[ 2][ 4] * K[ 6][ 4] = -1 *  3
+Q[ 2][ 5] * K[ 6][ 5] =  0 *  6
+Q[ 2][ 6] * K[ 6][ 6] =  5 *  1
+Q[ 2][ 7] * K[ 6][ 7] =  2 * -5
+@cycle 2: -43
+Q[ 2][ 0] * K[ 7][ 0] = -4 *  3
+Q[ 2][ 1] * K[ 7][ 1] = -1 * -1
+Q[ 2][ 2] * K[ 7][ 2] = -4 *  6
+Q[ 2][ 3] * K[ 7][ 3] = -4 *  3
+Q[ 2][ 4] * K[ 7][ 4] = -1 * -6
+Q[ 2][ 5] * K[ 7][ 5] =  0 * -2
+Q[ 2][ 6] * K[ 7][ 6] =  5 *  1
+Q[ 2][ 7] * K[ 7][ 7] =  2 * -4
+@cycle 2: -44
+prd @cycle 2: 00034ffff80002600044fffe700003fffd5fffd4
+Q[ 3][ 0] * K[ 0][ 0] = -3 * -6
+Q[ 3][ 1] * K[ 0][ 1] =  3 *  3
+Q[ 3][ 2] * K[ 0][ 2] =  6 * -2
+Q[ 3][ 3] * K[ 0][ 3] = -4 * -1
+Q[ 3][ 4] * K[ 0][ 4] =  6 * -5
+Q[ 3][ 5] * K[ 0][ 5] =  2 *  1
+Q[ 3][ 6] * K[ 0][ 6] =  1 *  0
+Q[ 3][ 7] * K[ 0][ 7] =  6 *  7
+@cycle 3:  33
+Q[ 3][ 0] * K[ 1][ 0] = -3 *  0
+Q[ 3][ 1] * K[ 1][ 1] =  3 * -5
+Q[ 3][ 2] * K[ 1][ 2] =  6 * -8
+Q[ 3][ 3] * K[ 1][ 3] = -4 *  0
+Q[ 3][ 4] * K[ 1][ 4] =  6 *  6
+Q[ 3][ 5] * K[ 1][ 5] =  2 *  0
+Q[ 3][ 6] * K[ 1][ 6] =  1 * -5
+Q[ 3][ 7] * K[ 1][ 7] =  6 * -7
+@cycle 3: -74
+Q[ 3][ 0] * K[ 2][ 0] = -3 *  4
+Q[ 3][ 1] * K[ 2][ 1] =  3 * -7
+Q[ 3][ 2] * K[ 2][ 2] =  6 * -6
+Q[ 3][ 3] * K[ 2][ 3] = -4 *  3
+Q[ 3][ 4] * K[ 2][ 4] =  6 *  7
+Q[ 3][ 5] * K[ 2][ 5] =  2 *  7
+Q[ 3][ 6] * K[ 2][ 6] =  1 *  6
+Q[ 3][ 7] * K[ 2][ 7] =  6 *  6
+@cycle 3:  17
+Q[ 3][ 0] * K[ 3][ 0] = -3 * -3
+Q[ 3][ 1] * K[ 3][ 1] =  3 *  0
+Q[ 3][ 2] * K[ 3][ 2] =  6 *  0
+Q[ 3][ 3] * K[ 3][ 3] = -4 * -7
+Q[ 3][ 4] * K[ 3][ 4] =  6 *  6
+Q[ 3][ 5] * K[ 3][ 5] =  2 *  3
+Q[ 3][ 6] * K[ 3][ 6] =  1 *  4
+Q[ 3][ 7] * K[ 3][ 7] =  6 *  7
+@cycle 3: 125
+Q[ 3][ 0] * K[ 4][ 0] = -3 *  6
+Q[ 3][ 1] * K[ 4][ 1] =  3 * -3
+Q[ 3][ 2] * K[ 4][ 2] =  6 *  4
+Q[ 3][ 3] * K[ 4][ 3] = -4 * -7
+Q[ 3][ 4] * K[ 4][ 4] =  6 * -4
+Q[ 3][ 5] * K[ 4][ 5] =  2 * -3
+Q[ 3][ 6] * K[ 4][ 6] =  1 * -2
+Q[ 3][ 7] * K[ 4][ 7] =  6 * -5
+@cycle 3: -37
+Q[ 3][ 0] * K[ 5][ 0] = -3 *  0
+Q[ 3][ 1] * K[ 5][ 1] =  3 * -7
+Q[ 3][ 2] * K[ 5][ 2] =  6 *  3
+Q[ 3][ 3] * K[ 5][ 3] = -4 *  3
+Q[ 3][ 4] * K[ 5][ 4] =  6 * -2
+Q[ 3][ 5] * K[ 5][ 5] =  2 *  6
+Q[ 3][ 6] * K[ 5][ 6] =  1 *  4
+Q[ 3][ 7] * K[ 5][ 7] =  6 * -1
+@cycle 3: -17
+Q[ 3][ 0] * K[ 6][ 0] = -3 *  7
+Q[ 3][ 1] * K[ 6][ 1] =  3 * -5
+Q[ 3][ 2] * K[ 6][ 2] =  6 *  2
+Q[ 3][ 3] * K[ 6][ 3] = -4 *  1
+Q[ 3][ 4] * K[ 6][ 4] =  6 *  3
+Q[ 3][ 5] * K[ 6][ 5] =  2 *  6
+Q[ 3][ 6] * K[ 6][ 6] =  1 *  1
+Q[ 3][ 7] * K[ 6][ 7] =  6 * -5
+@cycle 3: -27
+Q[ 3][ 0] * K[ 7][ 0] = -3 *  3
+Q[ 3][ 1] * K[ 7][ 1] =  3 * -1
+Q[ 3][ 2] * K[ 7][ 2] =  6 *  6
+Q[ 3][ 3] * K[ 7][ 3] = -4 *  3
+Q[ 3][ 4] * K[ 7][ 4] =  6 * -6
+Q[ 3][ 5] * K[ 7][ 5] =  2 * -2
+Q[ 3][ 6] * K[ 7][ 6] =  1 *  1
+Q[ 3][ 7] * K[ 7][ 7] =  6 * -4
+@cycle 3: -51
+prd @cycle 3: 00021fffb6000110007dfffdbfffeffffe5fffcd
+Q[ 4][ 0] * K[ 0][ 0] = -8 * -6
+Q[ 4][ 1] * K[ 0][ 1] =  5 *  3
+Q[ 4][ 2] * K[ 0][ 2] = -2 * -2
+Q[ 4][ 3] * K[ 0][ 3] =  6 * -1
+Q[ 4][ 4] * K[ 0][ 4] =  2 * -5
+Q[ 4][ 5] * K[ 0][ 5] =  1 *  1
+Q[ 4][ 6] * K[ 0][ 6] = -3 *  0
+Q[ 4][ 7] * K[ 0][ 7] =  4 *  7
+@cycle 4:  80
+Q[ 4][ 0] * K[ 1][ 0] = -8 *  0
+Q[ 4][ 1] * K[ 1][ 1] =  5 * -5
+Q[ 4][ 2] * K[ 1][ 2] = -2 * -8
+Q[ 4][ 3] * K[ 1][ 3] =  6 *  0
+Q[ 4][ 4] * K[ 1][ 4] =  2 *  6
+Q[ 4][ 5] * K[ 1][ 5] =  1 *  0
+Q[ 4][ 6] * K[ 1][ 6] = -3 * -5
+Q[ 4][ 7] * K[ 1][ 7] =  4 * -7
+@cycle 4: -10
+Q[ 4][ 0] * K[ 2][ 0] = -8 *  4
+Q[ 4][ 1] * K[ 2][ 1] =  5 * -7
+Q[ 4][ 2] * K[ 2][ 2] = -2 * -6
+Q[ 4][ 3] * K[ 2][ 3] =  6 *  3
+Q[ 4][ 4] * K[ 2][ 4] =  2 *  7
+Q[ 4][ 5] * K[ 2][ 5] =  1 *  7
+Q[ 4][ 6] * K[ 2][ 6] = -3 *  6
+Q[ 4][ 7] * K[ 2][ 7] =  4 *  6
+@cycle 4: -10
+Q[ 4][ 0] * K[ 3][ 0] = -8 * -3
+Q[ 4][ 1] * K[ 3][ 1] =  5 *  0
+Q[ 4][ 2] * K[ 3][ 2] = -2 *  0
+Q[ 4][ 3] * K[ 3][ 3] =  6 * -7
+Q[ 4][ 4] * K[ 3][ 4] =  2 *  6
+Q[ 4][ 5] * K[ 3][ 5] =  1 *  3
+Q[ 4][ 6] * K[ 3][ 6] = -3 *  4
+Q[ 4][ 7] * K[ 3][ 7] =  4 *  7
+@cycle 4:  13
+Q[ 4][ 0] * K[ 4][ 0] = -8 *  6
+Q[ 4][ 1] * K[ 4][ 1] =  5 * -3
+Q[ 4][ 2] * K[ 4][ 2] = -2 *  4
+Q[ 4][ 3] * K[ 4][ 3] =  6 * -7
+Q[ 4][ 4] * K[ 4][ 4] =  2 * -4
+Q[ 4][ 5] * K[ 4][ 5] =  1 * -3
+Q[ 4][ 6] * K[ 4][ 6] = -3 * -2
+Q[ 4][ 7] * K[ 4][ 7] =  4 * -5
+@cycle 4: -138
+Q[ 4][ 0] * K[ 5][ 0] = -8 *  0
+Q[ 4][ 1] * K[ 5][ 1] =  5 * -7
+Q[ 4][ 2] * K[ 5][ 2] = -2 *  3
+Q[ 4][ 3] * K[ 5][ 3] =  6 *  3
+Q[ 4][ 4] * K[ 5][ 4] =  2 * -2
+Q[ 4][ 5] * K[ 5][ 5] =  1 *  6
+Q[ 4][ 6] * K[ 5][ 6] = -3 *  4
+Q[ 4][ 7] * K[ 5][ 7] =  4 * -1
+@cycle 4: -37
+Q[ 4][ 0] * K[ 6][ 0] = -8 *  7
+Q[ 4][ 1] * K[ 6][ 1] =  5 * -5
+Q[ 4][ 2] * K[ 6][ 2] = -2 *  2
+Q[ 4][ 3] * K[ 6][ 3] =  6 *  1
+Q[ 4][ 4] * K[ 6][ 4] =  2 *  3
+Q[ 4][ 5] * K[ 6][ 5] =  1 *  6
+Q[ 4][ 6] * K[ 6][ 6] = -3 *  1
+Q[ 4][ 7] * K[ 6][ 7] =  4 * -5
+@cycle 4: -90
+Q[ 4][ 0] * K[ 7][ 0] = -8 *  3
+Q[ 4][ 1] * K[ 7][ 1] =  5 * -1
+Q[ 4][ 2] * K[ 7][ 2] = -2 *  6
+Q[ 4][ 3] * K[ 7][ 3] =  6 *  3
+Q[ 4][ 4] * K[ 7][ 4] =  2 * -6
+Q[ 4][ 5] * K[ 7][ 5] =  1 * -2
+Q[ 4][ 6] * K[ 7][ 6] = -3 *  1
+Q[ 4][ 7] * K[ 7][ 7] =  4 * -4
+@cycle 4: -56
+prd @cycle 4: 00050ffff6ffff60000dfff76fffdbfffa6fffc8
+Q[ 5][ 0] * K[ 0][ 0] = -2 * -6
+Q[ 5][ 1] * K[ 0][ 1] = -1 *  3
+Q[ 5][ 2] * K[ 0][ 2] = -2 * -2
+Q[ 5][ 3] * K[ 0][ 3] = -6 * -1
+Q[ 5][ 4] * K[ 0][ 4] = -1 * -5
+Q[ 5][ 5] * K[ 0][ 5] =  4 *  1
+Q[ 5][ 6] * K[ 0][ 6] =  0 *  0
+Q[ 5][ 7] * K[ 0][ 7] =  2 *  7
+@cycle 5:  42
+Q[ 5][ 0] * K[ 1][ 0] = -2 *  0
+Q[ 5][ 1] * K[ 1][ 1] = -1 * -5
+Q[ 5][ 2] * K[ 1][ 2] = -2 * -8
+Q[ 5][ 3] * K[ 1][ 3] = -6 *  0
+Q[ 5][ 4] * K[ 1][ 4] = -1 *  6
+Q[ 5][ 5] * K[ 1][ 5] =  4 *  0
+Q[ 5][ 6] * K[ 1][ 6] =  0 * -5
+Q[ 5][ 7] * K[ 1][ 7] =  2 * -7
+@cycle 5:   1
+Q[ 5][ 0] * K[ 2][ 0] = -2 *  4
+Q[ 5][ 1] * K[ 2][ 1] = -1 * -7
+Q[ 5][ 2] * K[ 2][ 2] = -2 * -6
+Q[ 5][ 3] * K[ 2][ 3] = -6 *  3
+Q[ 5][ 4] * K[ 2][ 4] = -1 *  7
+Q[ 5][ 5] * K[ 2][ 5] =  4 *  7
+Q[ 5][ 6] * K[ 2][ 6] =  0 *  6
+Q[ 5][ 7] * K[ 2][ 7] =  2 *  6
+@cycle 5:  26
+Q[ 5][ 0] * K[ 3][ 0] = -2 * -3
+Q[ 5][ 1] * K[ 3][ 1] = -1 *  0
+Q[ 5][ 2] * K[ 3][ 2] = -2 *  0
+Q[ 5][ 3] * K[ 3][ 3] = -6 * -7
+Q[ 5][ 4] * K[ 3][ 4] = -1 *  6
+Q[ 5][ 5] * K[ 3][ 5] =  4 *  3
+Q[ 5][ 6] * K[ 3][ 6] =  0 *  4
+Q[ 5][ 7] * K[ 3][ 7] =  2 *  7
+@cycle 5:  68
+Q[ 5][ 0] * K[ 4][ 0] = -2 *  6
+Q[ 5][ 1] * K[ 4][ 1] = -1 * -3
+Q[ 5][ 2] * K[ 4][ 2] = -2 *  4
+Q[ 5][ 3] * K[ 4][ 3] = -6 * -7
+Q[ 5][ 4] * K[ 4][ 4] = -1 * -4
+Q[ 5][ 5] * K[ 4][ 5] =  4 * -3
+Q[ 5][ 6] * K[ 4][ 6] =  0 * -2
+Q[ 5][ 7] * K[ 4][ 7] =  2 * -5
+@cycle 5:   7
+Q[ 5][ 0] * K[ 5][ 0] = -2 *  0
+Q[ 5][ 1] * K[ 5][ 1] = -1 * -7
+Q[ 5][ 2] * K[ 5][ 2] = -2 *  3
+Q[ 5][ 3] * K[ 5][ 3] = -6 *  3
+Q[ 5][ 4] * K[ 5][ 4] = -1 * -2
+Q[ 5][ 5] * K[ 5][ 5] =  4 *  6
+Q[ 5][ 6] * K[ 5][ 6] =  0 *  4
+Q[ 5][ 7] * K[ 5][ 7] =  2 * -1
+@cycle 5:   7
+Q[ 5][ 0] * K[ 6][ 0] = -2 *  7
+Q[ 5][ 1] * K[ 6][ 1] = -1 * -5
+Q[ 5][ 2] * K[ 6][ 2] = -2 *  2
+Q[ 5][ 3] * K[ 6][ 3] = -6 *  1
+Q[ 5][ 4] * K[ 6][ 4] = -1 *  3
+Q[ 5][ 5] * K[ 6][ 5] =  4 *  6
+Q[ 5][ 6] * K[ 6][ 6] =  0 *  1
+Q[ 5][ 7] * K[ 6][ 7] =  2 * -5
+@cycle 5:  -8
+Q[ 5][ 0] * K[ 7][ 0] = -2 *  3
+Q[ 5][ 1] * K[ 7][ 1] = -1 * -1
+Q[ 5][ 2] * K[ 7][ 2] = -2 *  6
+Q[ 5][ 3] * K[ 7][ 3] = -6 *  3
+Q[ 5][ 4] * K[ 7][ 4] = -1 * -6
+Q[ 5][ 5] * K[ 7][ 5] =  4 * -2
+Q[ 5][ 6] * K[ 7][ 6] =  0 *  1
+Q[ 5][ 7] * K[ 7][ 7] =  2 * -4
+@cycle 5: -45
+prd @cycle 5: 0002a000010001a000440000700007ffff8fffd3
+Q[ 6][ 0] * K[ 0][ 0] =  5 * -6
+Q[ 6][ 1] * K[ 0][ 1] = -7 *  3
+Q[ 6][ 2] * K[ 0][ 2] = -1 * -2
+Q[ 6][ 3] * K[ 0][ 3] =  3 * -1
+Q[ 6][ 4] * K[ 0][ 4] =  2 * -5
+Q[ 6][ 5] * K[ 0][ 5] =  1 *  1
+Q[ 6][ 6] * K[ 0][ 6] = -7 *  0
+Q[ 6][ 7] * K[ 0][ 7] =  6 *  7
+@cycle 6: -19
+Q[ 6][ 0] * K[ 1][ 0] =  5 *  0
+Q[ 6][ 1] * K[ 1][ 1] = -7 * -5
+Q[ 6][ 2] * K[ 1][ 2] = -1 * -8
+Q[ 6][ 3] * K[ 1][ 3] =  3 *  0
+Q[ 6][ 4] * K[ 1][ 4] =  2 *  6
+Q[ 6][ 5] * K[ 1][ 5] =  1 *  0
+Q[ 6][ 6] * K[ 1][ 6] = -7 * -5
+Q[ 6][ 7] * K[ 1][ 7] =  6 * -7
+@cycle 6:  48
+Q[ 6][ 0] * K[ 2][ 0] =  5 *  4
+Q[ 6][ 1] * K[ 2][ 1] = -7 * -7
+Q[ 6][ 2] * K[ 2][ 2] = -1 * -6
+Q[ 6][ 3] * K[ 2][ 3] =  3 *  3
+Q[ 6][ 4] * K[ 2][ 4] =  2 *  7
+Q[ 6][ 5] * K[ 2][ 5] =  1 *  7
+Q[ 6][ 6] * K[ 2][ 6] = -7 *  6
+Q[ 6][ 7] * K[ 2][ 7] =  6 *  6
+@cycle 6:  99
+Q[ 6][ 0] * K[ 3][ 0] =  5 * -3
+Q[ 6][ 1] * K[ 3][ 1] = -7 *  0
+Q[ 6][ 2] * K[ 3][ 2] = -1 *  0
+Q[ 6][ 3] * K[ 3][ 3] =  3 * -7
+Q[ 6][ 4] * K[ 3][ 4] =  2 *  6
+Q[ 6][ 5] * K[ 3][ 5] =  1 *  3
+Q[ 6][ 6] * K[ 3][ 6] = -7 *  4
+Q[ 6][ 7] * K[ 3][ 7] =  6 *  7
+@cycle 6:  -7
+Q[ 6][ 0] * K[ 4][ 0] =  5 *  6
+Q[ 6][ 1] * K[ 4][ 1] = -7 * -3
+Q[ 6][ 2] * K[ 4][ 2] = -1 *  4
+Q[ 6][ 3] * K[ 4][ 3] =  3 * -7
+Q[ 6][ 4] * K[ 4][ 4] =  2 * -4
+Q[ 6][ 5] * K[ 4][ 5] =  1 * -3
+Q[ 6][ 6] * K[ 4][ 6] = -7 * -2
+Q[ 6][ 7] * K[ 4][ 7] =  6 * -5
+@cycle 6:  -1
+Q[ 6][ 0] * K[ 5][ 0] =  5 *  0
+Q[ 6][ 1] * K[ 5][ 1] = -7 * -7
+Q[ 6][ 2] * K[ 5][ 2] = -1 *  3
+Q[ 6][ 3] * K[ 5][ 3] =  3 *  3
+Q[ 6][ 4] * K[ 5][ 4] =  2 * -2
+Q[ 6][ 5] * K[ 5][ 5] =  1 *  6
+Q[ 6][ 6] * K[ 5][ 6] = -7 *  4
+Q[ 6][ 7] * K[ 5][ 7] =  6 * -1
+@cycle 6:  23
+Q[ 6][ 0] * K[ 6][ 0] =  5 *  7
+Q[ 6][ 1] * K[ 6][ 1] = -7 * -5
+Q[ 6][ 2] * K[ 6][ 2] = -1 *  2
+Q[ 6][ 3] * K[ 6][ 3] =  3 *  1
+Q[ 6][ 4] * K[ 6][ 4] =  2 *  3
+Q[ 6][ 5] * K[ 6][ 5] =  1 *  6
+Q[ 6][ 6] * K[ 6][ 6] = -7 *  1
+Q[ 6][ 7] * K[ 6][ 7] =  6 * -5
+@cycle 6:  46
+Q[ 6][ 0] * K[ 7][ 0] =  5 *  3
+Q[ 6][ 1] * K[ 7][ 1] = -7 * -1
+Q[ 6][ 2] * K[ 7][ 2] = -1 *  6
+Q[ 6][ 3] * K[ 7][ 3] =  3 *  3
+Q[ 6][ 4] * K[ 7][ 4] =  2 * -6
+Q[ 6][ 5] * K[ 7][ 5] =  1 * -2
+Q[ 6][ 6] * K[ 7][ 6] = -7 *  1
+Q[ 6][ 7] * K[ 7][ 7] =  6 * -4
+@cycle 6: -20
+prd @cycle 6: fffed0003000063ffff9fffff000170002efffec
+Q[ 7][ 0] * K[ 0][ 0] =  5 * -6
+Q[ 7][ 1] * K[ 0][ 1] = -8 *  3
+Q[ 7][ 2] * K[ 0][ 2] = -3 * -2
+Q[ 7][ 3] * K[ 0][ 3] =  6 * -1
+Q[ 7][ 4] * K[ 0][ 4] =  0 * -5
+Q[ 7][ 5] * K[ 0][ 5] = -2 *  1
+Q[ 7][ 6] * K[ 0][ 6] =  6 *  0
+Q[ 7][ 7] * K[ 0][ 7] = -1 *  7
+@cycle 7: -63
+Q[ 7][ 0] * K[ 1][ 0] =  5 *  0
+Q[ 7][ 1] * K[ 1][ 1] = -8 * -5
+Q[ 7][ 2] * K[ 1][ 2] = -3 * -8
+Q[ 7][ 3] * K[ 1][ 3] =  6 *  0
+Q[ 7][ 4] * K[ 1][ 4] =  0 *  6
+Q[ 7][ 5] * K[ 1][ 5] = -2 *  0
+Q[ 7][ 6] * K[ 1][ 6] =  6 * -5
+Q[ 7][ 7] * K[ 1][ 7] = -1 * -7
+@cycle 7:  41
+Q[ 7][ 0] * K[ 2][ 0] =  5 *  4
+Q[ 7][ 1] * K[ 2][ 1] = -8 * -7
+Q[ 7][ 2] * K[ 2][ 2] = -3 * -6
+Q[ 7][ 3] * K[ 2][ 3] =  6 *  3
+Q[ 7][ 4] * K[ 2][ 4] =  0 *  7
+Q[ 7][ 5] * K[ 2][ 5] = -2 *  7
+Q[ 7][ 6] * K[ 2][ 6] =  6 *  6
+Q[ 7][ 7] * K[ 2][ 7] = -1 *  6
+@cycle 7: 128
+Q[ 7][ 0] * K[ 3][ 0] =  5 * -3
+Q[ 7][ 1] * K[ 3][ 1] = -8 *  0
+Q[ 7][ 2] * K[ 3][ 2] = -3 *  0
+Q[ 7][ 3] * K[ 3][ 3] =  6 * -7
+Q[ 7][ 4] * K[ 3][ 4] =  0 *  6
+Q[ 7][ 5] * K[ 3][ 5] = -2 *  3
+Q[ 7][ 6] * K[ 3][ 6] =  6 *  4
+Q[ 7][ 7] * K[ 3][ 7] = -1 *  7
+@cycle 7: -46
+Q[ 7][ 0] * K[ 4][ 0] =  5 *  6
+Q[ 7][ 1] * K[ 4][ 1] = -8 * -3
+Q[ 7][ 2] * K[ 4][ 2] = -3 *  4
+Q[ 7][ 3] * K[ 4][ 3] =  6 * -7
+Q[ 7][ 4] * K[ 4][ 4] =  0 * -4
+Q[ 7][ 5] * K[ 4][ 5] = -2 * -3
+Q[ 7][ 6] * K[ 4][ 6] =  6 * -2
+Q[ 7][ 7] * K[ 4][ 7] = -1 * -5
+@cycle 7:  -1
+Q[ 7][ 0] * K[ 5][ 0] =  5 *  0
+Q[ 7][ 1] * K[ 5][ 1] = -8 * -7
+Q[ 7][ 2] * K[ 5][ 2] = -3 *  3
+Q[ 7][ 3] * K[ 5][ 3] =  6 *  3
+Q[ 7][ 4] * K[ 5][ 4] =  0 * -2
+Q[ 7][ 5] * K[ 5][ 5] = -2 *  6
+Q[ 7][ 6] * K[ 5][ 6] =  6 *  4
+Q[ 7][ 7] * K[ 5][ 7] = -1 * -1
+@cycle 7:  78
+Q[ 7][ 0] * K[ 6][ 0] =  5 *  7
+Q[ 7][ 1] * K[ 6][ 1] = -8 * -5
+Q[ 7][ 2] * K[ 6][ 2] = -3 *  2
+Q[ 7][ 3] * K[ 6][ 3] =  6 *  1
+Q[ 7][ 4] * K[ 6][ 4] =  0 *  3
+Q[ 7][ 5] * K[ 6][ 5] = -2 *  6
+Q[ 7][ 6] * K[ 6][ 6] =  6 *  1
+Q[ 7][ 7] * K[ 6][ 7] = -1 * -5
+@cycle 7:  74
+Q[ 7][ 0] * K[ 7][ 0] =  5 *  3
+Q[ 7][ 1] * K[ 7][ 1] = -8 * -1
+Q[ 7][ 2] * K[ 7][ 2] = -3 *  6
+Q[ 7][ 3] * K[ 7][ 3] =  6 *  3
+Q[ 7][ 4] * K[ 7][ 4] =  0 * -6
+Q[ 7][ 5] * K[ 7][ 5] = -2 * -2
+Q[ 7][ 6] * K[ 7][ 6] =  6 *  1
+Q[ 7][ 7] * K[ 7][ 7] = -1 * -4
+@cycle 7:  37
+prd @cycle 7: fffc10002900080fffd2fffff0004e0004a00025
+##### Estimated Multiplication Result (Decimal) #####
+---------------------------------------------------
+Cycle  0 |     93 |    -20 |     -7 |     94 |    -48 |    -45 |    -63 |    -86 |
+Cycle  1 |     52 |    -21 |    -73 |     24 |     -5 |    -33 |    -41 |    -23 |
+Cycle  2 |     52 |     -8 |     38 |     68 |    -25 |      3 |    -43 |    -44 |
+Cycle  3 |     33 |    -74 |     17 |    125 |    -37 |    -17 |    -27 |    -51 |
+Cycle  4 |     80 |    -10 |    -10 |     13 |   -138 |    -37 |    -90 |    -56 |
+Cycle  5 |     42 |      1 |     26 |     68 |      7 |      7 |     -8 |    -45 |
+Cycle  6 |    -19 |     48 |     99 |     -7 |     -1 |     23 |     46 |    -20 |
+Cycle  7 |    -63 |     41 |    128 |    -46 |     -1 |     78 |     74 |     37 |
+---------------------------------------------------
+##### Qmem writing  #####
+##### Kmem writing #####
+##### K data loading to processor #####
+##### execute #####
+##### move ofifo to pmem #####
+##### PMEM TO OUT #####
+Simulation complete via $finish(1) at time 102 NS + 0
+./netlist/fullchip_tb.v:379   #10 $finish;
+xcelium> probe -create -shm fullchip_tb.fullchip_instance.core_instance.out
+Created probe 2
+xcelium> run
+xmsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+xcelium> probe -create -shm fullchip_tb.fullchip_instance.reset fullchip_tb.fullchip_instance.q fullchip_tb.fullchip_instance.mem_in fullchip_tb.fullchip_instance.inst fullchip_tb.fullchip_instance.clk
+Created probe 3
+xcelium> run
+xmsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+xcelium> run
+xmsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+xcelium> scope -set fullchip_tb
+xcelium> 
