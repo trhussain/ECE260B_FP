@@ -1,0 +1,6 @@
+define fifo_mux_2_1 ./fifo_mux_2_1
+define fifo_mux_8_1 ./fifo_mux_8_1
+define fifo_depth8 ./fifo_depth8
+define fullchip ./fullchip
+define core ./core
+define tcbn65gplus ./tcbn65gplus

@@ -72,7 +72,7 @@ assign outmem_wr = inst[30];
 assign mac2_ofifo_rd = inst[29]; // mac2_fifo_rd signal for mac2 ofifo !!! Need to be added to fullchip_tb
 assign mac2_execute = inst[28];
 assign mac2_load = inst[27];
-assign vmem_add = inst[26:23];
+assign pmem_load = inst[26];
 assign vmem_rd = inst[22];
 assign vmem_wr = inst[21];
 
@@ -92,7 +92,7 @@ assign pmem_rd = inst[1];
 assign pmem_wr = inst[0];
 
 assign mac_in  = inst[6] ? kmem_out : qmem_out;
-assign pmem_in = sfp_out;
+assign pmem_in = pmem_load ? mem_in : sfp_out;
 assign mac_in2  = inst[27] ? vmem_out : pmem_out;
 
 assign out = outmem_out; // Delay by 1 cycle to ensure data is stable

@@ -1,0 +1,18 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-VFILE
+/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
+-VFILE
+./netlist/core.out.v
+-VFILE
+./netlist/fullchip.v
+-VFILE
+./netlist/fifo_depth8.v
+-VFILE
+./netlist/fifo_mux_8_1.v
+-VFILE
+./netlist/fifo_mux_2_1.v
+-DEFINE
+INITIALIZE_MEMORY
