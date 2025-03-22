@@ -1,0 +1,62 @@
+# PPCMD 1 
+# sroute 
+# 3 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 1 
+
+# PPCMD 2 
+# addStripe -number_of_sets 6 -spacing 4 -layer M4 -width 3 -nets { VSS VDD 
+# 2 
+# 2 
+# 1 
+# 0 
+# 0 
+# 2 
+# BOX_LIST 
+# 2000 2000 796800 795200 0 
+# 12000 12000 786800 785200 0 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# VDD 6000 4 0 34000 787800 148960 0 0 
+# VSS 6000 4 0 20000 787800 148960 0 0 
+# END_NET_INFO_LIST 
+# END_PPCMD 2 
+
+# PPCMD 3 
+# addRing -spacing {top 2 bottom 2 left 2 right 2} -width {top 3 bottom 3 left 3 right 3} -layer {top M1 bottom M1 left M2 right M2} -center 1 -type core_rings -nets {VSS  VDD}
+# 1 
+# 32 
+# 1 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# VDD 6000 1 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 402400 5000 402400 798200 
+# END_RING_PT_INFO_LIST 
+# VDD 6000 2 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 5000 401600 799800 401600 
+# END_RING_PT_INFO_LIST 
+# VSS 6000 1 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 402400 15000 402400 788200 
+# END_RING_PT_INFO_LIST 
+# VSS 6000 2 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 15000 401600 789800 401600 
+# END_RING_PT_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 3 
+
