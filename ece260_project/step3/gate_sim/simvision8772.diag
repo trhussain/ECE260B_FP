@@ -88,3 +88,15 @@ Create source window: "Source Browser 1"
 When: Fri Mar 21 17:28:00 PDT 2025
 Delete source window: "Source Browser 1"
  
+*** Message Type: info ***
+When: Fri Mar 21 17:44:51 PDT 2025
+Delete waveform window: "Waveform 3"
+ 
+*** Message Type: info ***
+When: Fri Mar 21 17:44:52 PDT 2025
+Delete browser window: "Design Browser 1"
+ 
+*** Message Type: info ***
+When: Fri Mar 21 17:44:58 PDT 2025
+SimVision Exit.
+ 

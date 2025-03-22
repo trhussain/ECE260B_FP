@@ -1052,4 +1052,9 @@ xmsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
 xcelium> run
 xmsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
 xcelium> scope -set fullchip_tb
-xcelium> 
+xcelium> ^C
+xcelium> exit
+xmsim: Memory Usage - Final: 145.3M, Peak: 162.7M, Peak virtual: 616.8M
+xmsim: Main Thread CPU Usage - 15.4s system + 10.7s user = 26.1s total
+xmsim: CPU Usage - 15.4s system + 10.4s user = 25.8s total (1284.2s, 2.0% cpu)
+TOOL:	xrun(64)	20.09-s017: Exiting on Mar 21, 2025 at 17:44:58 PDT  (total: 00:21:32)
