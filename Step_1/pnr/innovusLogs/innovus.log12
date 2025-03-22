@@ -21039,3 +21039,28 @@ ERROR     IMPSYT-6245          1  Error %s, while saving MS constraint fil...
 ERROR     IMPOAX-142           2  %s                                       
 *** Message Summary: 0 warning(s), 3 error(s)
 
+<CMD> verify_drc
+ *** Starting Verify DRC (MEM: 1910.2) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+  VERIFY DRC ...... Sub-Area : 1 of 4
+  VERIFY DRC ...... Sub-Area : 1 complete 0 Viols.
+  VERIFY DRC ...... Sub-Area : 2 of 4
+  VERIFY DRC ...... Sub-Area : 2 complete 0 Viols.
+  VERIFY DRC ...... Sub-Area : 3 of 4
+  VERIFY DRC ...... Sub-Area : 3 complete 2 Viols.
+  VERIFY DRC ...... Sub-Area : 4 of 4
+  VERIFY DRC ...... Sub-Area : 4 complete 0 Viols.
+
+  Verification Complete : 2 Viols.
+
+ *** End Verify DRC (CPU: 0:00:11.9  ELAPSED TIME: 12.00  MEM: 89.6M) ***
+
+<CMD> selectVia 110.8100 261.1950 111.1900 261.3750 2 mac_array_instance/col_idx_2__mac_col_inst/mac_16in_instance/FE_RN_3747_0
+<CMD> gui_select -rect {111.183 261.324 111.240 261.327}
+<CMD> selectVia 110.8100 261.1950 111.1900 261.3750 2 mac_array_instance/col_idx_2__mac_col_inst/mac_16in_instance/FE_RN_3747_0
+<CMD> gui_select -rect {111.153 261.316 111.195 261.314}

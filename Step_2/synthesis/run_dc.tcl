@@ -43,7 +43,6 @@ set verilogout_single_bit false
 
 # read RTL
 analyze -format verilog -lib WORK core.v
-analyze -format verilog -lib WORK sfp_row.v
 
 analyze -format verilog -lib WORK fifo_depth16.v
 analyze -format verilog -lib WORK fifo_mux_2_1.v
@@ -63,6 +62,7 @@ analyze -format verilog -lib WORK sram_128b_w16.v
 analyze -format verilog -lib WORK sram_160b_w16.v
 analyze -format verilog -lib WORK sram_w16.v
 analyze -format verilog -lib WORK sync.v
+analyze -format verilog -lib WORK sfp_row.v
 
 elaborate $top_module -lib WORK -update
 current_design $top_module

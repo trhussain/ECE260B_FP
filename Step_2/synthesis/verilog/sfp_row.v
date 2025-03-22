@@ -7,9 +7,10 @@ module sfp_row (clk, inst, sfp_in, sfp_out, reset);
   parameter bw_psum = 2*bw+4;
 
  
-  input  clk, div, reset;
+  input  clk, reset;
   input [1:0] inst;
-
+  wire div;
+  wire acc;
   assign acc = inst[1];
   assign div = inst[0];
 

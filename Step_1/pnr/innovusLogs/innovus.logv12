@@ -34602,3 +34602,28 @@ Total number of glitch violations: 0
 [03/22 14:10:27   5410] ERROR     IMPOAX-142           2  %s                                       
 [03/22 14:10:27   5410] *** Message Summary: 0 warning(s), 3 error(s)
 [03/22 14:10:27   5410] 
+[03/22 15:50:51   6584] <CMD> verify_drc
+[03/22 15:50:51   6584]  *** Starting Verify DRC (MEM: 1910.2) ***
+[03/22 15:50:51   6584] 
+[03/22 15:50:51   6584]   VERIFY DRC ...... Starting Verification
+[03/22 15:50:51   6584]   VERIFY DRC ...... Initializing
+[03/22 15:50:51   6584]   VERIFY DRC ...... Deleting Existing Violations
+[03/22 15:50:51   6584]   VERIFY DRC ...... Creating Sub-Areas
+[03/22 15:50:51   6584]   VERIFY DRC ...... Using new threading
+[03/22 15:50:51   6584]   VERIFY DRC ...... Sub-Area : 1 of 4
+[03/22 15:50:54   6586]   VERIFY DRC ...... Sub-Area : 1 complete 0 Viols.
+[03/22 15:50:54   6586]   VERIFY DRC ...... Sub-Area : 2 of 4
+[03/22 15:50:57   6589]   VERIFY DRC ...... Sub-Area : 2 complete 0 Viols.
+[03/22 15:50:57   6589]   VERIFY DRC ...... Sub-Area : 3 of 4
+[03/22 15:51:00   6592]   VERIFY DRC ...... Sub-Area : 3 complete 2 Viols.
+[03/22 15:51:00   6592]   VERIFY DRC ...... Sub-Area : 4 of 4
+[03/22 15:51:03   6596]   VERIFY DRC ...... Sub-Area : 4 complete 0 Viols.
+[03/22 15:51:03   6596] 
+[03/22 15:51:03   6596]   Verification Complete : 2 Viols.
+[03/22 15:51:03   6596] 
+[03/22 15:51:03   6596]  *** End Verify DRC (CPU: 0:00:11.9  ELAPSED TIME: 12.00  MEM: 89.6M) ***
+[03/22 15:51:03   6596] 
+[03/22 15:51:48   6605] <CMD> selectVia 110.8100 261.1950 111.1900 261.3750 2 mac_array_instance/col_idx_2__mac_col_inst/mac_16in_instance/FE_RN_3747_0
+[03/22 15:51:50   6605] <CMD> gui_select -rect {111.183 261.324 111.240 261.327}
+[03/22 15:51:51   6606] <CMD> selectVia 110.8100 261.1950 111.1900 261.3750 2 mac_array_instance/col_idx_2__mac_col_inst/mac_16in_instance/FE_RN_3747_0
+[03/22 15:51:52   6606] <CMD> gui_select -rect {111.153 261.316 111.195 261.314}
