@@ -1,0 +1,1289 @@
+[03/22 01:44:09      0] 
+[03/22 01:44:09      0] Cadence Innovus(TM) Implementation System.
+[03/22 01:44:09      0] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[03/22 01:44:09      0] 
+[03/22 01:44:09      0] Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+[03/22 01:44:09      0] Options:	
+[03/22 01:44:09      0] Date:		Sat Mar 22 01:44:09 2025
+[03/22 01:44:09      0] Host:		ieng6-ece-13.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB)
+[03/22 01:44:09      0] OS:		CentOS Linux release 7.9.2009 (Core)
+[03/22 01:44:09      0] 
+[03/22 01:44:09      0] License:
+[03/22 01:44:09      0] 		invs	Innovus Implementation System	15.2	checkout succeeded
+[03/22 01:44:09      0] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[03/22 01:44:10      0] **ERROR: (IMPOAX-142):	Could not open shared library libinnovusoax22.so : /acsnfs3/software/cadence-innovus152/tools/lib/64bit/libcdsSkillPcell.so: undefined symbol: _ZTIN12OpenAccess_413oaFSComponentE
+[03/22 01:44:10      0] 
+[03/22 01:44:10      0] **ERROR: (IMPOAX-142):	Could not open shared library libcdsSkillPcell.so : (null)
+[03/22 01:44:10      0] 
+[03/22 01:44:10      0] **ERROR: (IMPOAX-142):	OA features will be disabled in this session.
+[03/22 01:44:10      0] 
+[03/22 01:44:19      7] @(#)CDS: Innovus v15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+[03/22 01:44:19      7] @(#)CDS: NanoRoute 15.23-s045_1 NR160414-1105/15_23-UB (database version 2.30, 317.6.1) {superthreading v1.26}
+[03/22 01:44:19      7] @(#)CDS: AAE 15.23-s014 (64bit) 04/22/2016 (Linux 2.6.18-194.el5)
+[03/22 01:44:19      7] @(#)CDS: CTE 15.23-s022_1 () Apr 22 2016 09:38:45 ( )
+[03/22 01:44:19      7] @(#)CDS: SYNTECH 15.23-s008_1 () Apr 12 2016 21:52:59 ( )
+[03/22 01:44:19      7] @(#)CDS: CPE v15.23-s045
+[03/22 01:44:19      7] @(#)CDS: IQRC/TQRC 15.1.4-s213 (64bit) Tue Feb  9 17:31:28 PST 2016 (Linux 2.6.18-194.el5)
+[03/22 01:44:19      7] @(#)CDS: OA 22.50-p036 Tue Nov  3 09:29:52 2015
+[03/22 01:44:19      7] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[03/22 01:44:19      7] @(#)CDS: RCDB 11.7
+[03/22 01:44:19      7] --- Running on ieng6-ece-13.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB) ---
+[03/22 01:44:19      7] Create and set the environment variable TMPDIR to /tmp/innovus_temp_26055_ieng6-ece-13.ucsd.edu_trhussain_6EfLIH.
+
+[03/22 01:44:19      8] 
+[03/22 01:44:19      8] **INFO:  MMMC transition support version v31-84 
+[03/22 01:44:19      8] 
+[03/22 01:44:19      8] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[03/22 01:44:19      8] <CMD> suppressMessage ENCEXT-2799
+[03/22 01:44:19      8] <CMD> getDrawView
+[03/22 01:44:19      8] <CMD> loadWorkspace -name Physical
+[03/22 01:44:19      8] <CMD> win
+[03/22 01:44:28      9] <CMD> set init_pwr_net VDD
+[03/22 01:44:28      9] <CMD> set init_gnd_net VSS
+[03/22 01:44:28      9] <CMD> set init_verilog ./netlist/core.out.v
+[03/22 01:44:28      9] <CMD> set init_design_netlisttype Verilog
+[03/22 01:44:28      9] <CMD> set init_design_settop 1
+[03/22 01:44:28      9] <CMD> set init_top_cell core
+[03/22 01:44:28      9] <CMD> set init_lef_file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef
+[03/22 01:44:28      9] <CMD> create_library_set -name WC_LIB -timing $worst_timing_lib
+[03/22 01:44:28      9] <CMD> create_library_set -name BC_LIB -timing $best_timing_lib
+[03/22 01:44:28      9] <CMD> create_rc_corner -name Cmax -cap_table $worst_captbl -T 125
+[03/22 01:44:28      9] <CMD> create_rc_corner -name Cmin -cap_table $best_captbl -T -40
+[03/22 01:44:28      9] <CMD> create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
+[03/22 01:44:28      9] <CMD> create_delay_corner -name BC -library_set BC_LIB -rc_corner Cmin
+[03/22 01:44:28      9] <CMD> create_constraint_mode -name CON -sdc_file [list $sdc]
+[03/22 01:44:28      9] <CMD> create_analysis_view -name WC_VIEW -delay_corner WC -constraint_mode CON
+[03/22 01:44:28      9] <CMD> create_analysis_view -name BC_VIEW -delay_corner BC -constraint_mode CON
+[03/22 01:44:28      9] <CMD> init_design -setup WC_VIEW -hold BC_VIEW
+[03/22 01:44:28      9] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[03/22 01:44:28      9] 
+[03/22 01:44:28      9] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[03/22 01:44:28      9] 
+[03/22 01:44:28      9] Loading LEF file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef ...
+[03/22 01:44:28      9] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 28.
+[03/22 01:44:28      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 867.
+[03/22 01:44:28      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 877.
+[03/22 01:44:28      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1014.
+[03/22 01:44:28      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1024.
+[03/22 01:44:28      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1161.
+[03/22 01:44:28      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1171.
+[03/22 01:44:28      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1308.
+[03/22 01:44:28      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1318.
+[03/22 01:44:28      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1372.
+[03/22 01:44:28      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1383.
+[03/22 01:44:28      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1604.
+[03/22 01:44:28      9] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1614.
+[03/22 01:44:28      9] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1769.
+[03/22 01:44:28      9] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1771.
+[03/22 01:44:28      9] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1772.
+[03/22 01:44:28      9] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1776.
+[03/22 01:44:28      9] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1778.
+[03/22 01:44:28      9] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1779.
+[03/22 01:44:28      9] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/22 01:44:28      9] The LEF parser will ignore this statement.
+[03/22 01:44:28      9] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1783.
+[03/22 01:44:28      9] Set DBUPerIGU to M2 pitch 400.
+[03/22 01:44:29     10] **WARN: (IMPLF-200):	Pin 'I' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 01:44:29     10] Type 'man IMPLF-200' for more detail.
+[03/22 01:44:29     10] 
+[03/22 01:44:29     10] viaInitial starts at Sat Mar 22 01:44:29 2025
+viaInitial ends at Sat Mar 22 01:44:29 2025
+Reading WC_LIB timing library '/home/linux/ieng6/ee260bwi25/public/PDKdata/lib/tcbn65gpluswc.lib' ...
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D0' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D1' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D2' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D4' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D8' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2XD1' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D0' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D1' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D2' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D4' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D8' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3XD1' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D0' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D1' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D2' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D4' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D8' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4XD1' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AO211D0' is not defined in the library.
+[03/22 01:44:29     10] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AO211D1' is not defined in the library.
+[03/22 01:44:29     10] Message <TECHLIB-436> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+[03/22 01:44:30     11] Read 811 cells in library 'tcbn65gpluswc' 
+[03/22 01:44:30     11] Reading BC_LIB timing library '/home/linux/ieng6/ee260bwi25/public/PDKdata/lib/tcbn65gplusbc.lib' ...
+[03/22 01:44:31     12] Read 811 cells in library 'tcbn65gplusbc' 
+[03/22 01:44:31     12] *** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.20min, fe_real=0.37min, fe_mem=468.2M) ***
+[03/22 01:44:31     12] *** Begin netlist parsing (mem=468.2M) ***
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D4' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D4' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D2' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D2' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D1' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D1' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D0' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D0' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D4' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D4' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D2' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D2' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D1' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D1' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D0' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D0' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2D4' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2D4' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2D2' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2D2' is defined in LEF but not in the timing library.
+[03/22 01:44:31     12] **WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+[03/22 01:44:31     12] To increase the message display limit, refer to the product command reference manual.
+[03/22 01:44:31     12] Created 811 new cells from 2 timing libraries.
+[03/22 01:44:31     12] Reading netlist ...
+[03/22 01:44:31     12] Backslashed names will retain backslash and a trailing blank character.
+[03/22 01:44:31     12] Reading verilog netlist './netlist/core.out.v'
+[03/22 01:44:31     12] 
+[03/22 01:44:31     12] *** Memory Usage v#1 (Current mem = 475.238M, initial mem = 149.258M) ***
+[03/22 01:44:31     12] *** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=475.2M) ***
+[03/22 01:44:31     12] Set top cell to core.
+[03/22 01:44:31     12] Hooked 1622 DB cells to tlib cells.
+[03/22 01:44:31     12] Starting recursive module instantiation check.
+[03/22 01:44:31     12] No recursion found.
+[03/22 01:44:31     12] Building hierarchical netlist for Cell core ...
+[03/22 01:44:31     12] *** Netlist is unique.
+[03/22 01:44:31     12] ** info: there are 1751 modules.
+[03/22 01:44:31     12] ** info: there are 21582 stdCell insts.
+[03/22 01:44:31     12] 
+[03/22 01:44:31     12] *** Memory Usage v#1 (Current mem = 543.070M, initial mem = 149.258M) ***
+[03/22 01:44:31     12] **WARN: (IMPFP-3961):	The techSite 'dcore' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[03/22 01:44:31     12] Type 'man IMPFP-3961' for more detail.
+[03/22 01:44:31     12] **WARN: (IMPFP-3961):	The techSite 'ccore' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[03/22 01:44:31     12] Type 'man IMPFP-3961' for more detail.
+[03/22 01:44:31     12] Set Default Net Delay as 1000 ps.
+[03/22 01:44:31     12] Set Default Net Load as 0.5 pF. 
+[03/22 01:44:31     12] Set Default Input Pin Transition as 0.1 ps.
+[03/22 01:44:32     12] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[03/22 01:44:32     12] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/22 01:44:32     12] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/22 01:44:32     12] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/22 01:44:32     12] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/22 01:44:32     12] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/22 01:44:32     12] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable ...
+[03/22 01:44:32     12] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/22 01:44:32     12] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/22 01:44:32     12] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/22 01:44:32     12] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/22 01:44:32     13] Importing multi-corner RC tables ... 
+[03/22 01:44:32     13] Summary of Active RC-Corners : 
+[03/22 01:44:32     13]  
+[03/22 01:44:32     13]  Analysis View: WC_VIEW
+[03/22 01:44:32     13]     RC-Corner Name        : Cmax
+[03/22 01:44:32     13]     RC-Corner Index       : 0
+[03/22 01:44:32     13]     RC-Corner Temperature : 125 Celsius
+[03/22 01:44:32     13]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/22 01:44:32     13]     RC-Corner PreRoute Res Factor         : 1
+[03/22 01:44:32     13]     RC-Corner PreRoute Cap Factor         : 1
+[03/22 01:44:32     13]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/22 01:44:32     13]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/22 01:44:32     13]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/22 01:44:32     13]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/22 01:44:32     13]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/22 01:44:32     13]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/22 01:44:32     13]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/22 01:44:32     13]  
+[03/22 01:44:32     13]  Analysis View: BC_VIEW
+[03/22 01:44:32     13]     RC-Corner Name        : Cmin
+[03/22 01:44:32     13]     RC-Corner Index       : 1
+[03/22 01:44:32     13]     RC-Corner Temperature : -40 Celsius
+[03/22 01:44:32     13]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable'
+[03/22 01:44:32     13]     RC-Corner PreRoute Res Factor         : 1
+[03/22 01:44:32     13]     RC-Corner PreRoute Cap Factor         : 1
+[03/22 01:44:32     13]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/22 01:44:32     13]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/22 01:44:32     13]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/22 01:44:32     13]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/22 01:44:32     13]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/22 01:44:32     13]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/22 01:44:32     13]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/22 01:44:32     13] *Info: initialize multi-corner CTS.
+[03/22 01:44:32     13] Reading timing constraints file './constraints/core.sdc' ...
+[03/22 01:44:32     13] Current (total cpu=0:00:13.2, real=0:00:23.0, peak res=281.8M, current mem=666.4M)
+[03/22 01:44:32     13] INFO (CTE): Constraints read successfully.
+[03/22 01:44:32     13] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=296.8M, current mem=683.6M)
+[03/22 01:44:32     13] Current (total cpu=0:00:13.3, real=0:00:23.0, peak res=296.8M, current mem=683.6M)
+[03/22 01:44:32     13] Summary for sequential cells idenfication: 
+[03/22 01:44:32     13] Identified SBFF number: 199
+[03/22 01:44:32     13] Identified MBFF number: 0
+[03/22 01:44:32     13] Not identified SBFF number: 0
+[03/22 01:44:32     13] Not identified MBFF number: 0
+[03/22 01:44:32     13] Number of sequential cells which are not FFs: 104
+[03/22 01:44:32     13] 
+[03/22 01:44:32     13] Total number of combinational cells: 492
+[03/22 01:44:32     13] Total number of sequential cells: 303
+[03/22 01:44:32     13] Total number of tristate cells: 11
+[03/22 01:44:32     13] Total number of level shifter cells: 0
+[03/22 01:44:32     13] Total number of power gating cells: 0
+[03/22 01:44:32     13] Total number of isolation cells: 0
+[03/22 01:44:32     13] Total number of power switch cells: 0
+[03/22 01:44:32     13] Total number of pulse generator cells: 0
+[03/22 01:44:32     13] Total number of always on buffers: 0
+[03/22 01:44:32     13] Total number of retention cells: 0
+[03/22 01:44:32     13] List of usable buffers: BUFFD1 BUFFD0 BUFFD2 BUFFD3 BUFFD4 BUFFD6 BUFFD8 BUFFD12 BUFFD16 CKBD1 CKBD0 CKBD2 CKBD3 CKBD4 CKBD6 CKBD8 CKBD12 CKBD16
+[03/22 01:44:32     13] Total number of usable buffers: 18
+[03/22 01:44:32     13] List of unusable buffers: BUFFD20 BUFFD24 CKBD20 CKBD24 GBUFFD1 GBUFFD3 GBUFFD2 GBUFFD4 GBUFFD8
+[03/22 01:44:32     13] Total number of unusable buffers: 9
+[03/22 01:44:32     13] List of usable inverters: CKND1 CKND0 CKND2 CKND3 CKND4 CKND6 CKND8 CKND12 CKND16 INVD1 INVD0 INVD2 INVD3 INVD4 INVD6 INVD8 INVD12 INVD16
+[03/22 01:44:32     13] Total number of usable inverters: 18
+[03/22 01:44:32     13] List of unusable inverters: CKND20 CKND24 GINVD2 GINVD1 GINVD4 GINVD3 GINVD8 INVD20 INVD24
+[03/22 01:44:32     13] Total number of unusable inverters: 9
+[03/22 01:44:32     13] List of identified usable delay cells:
+[03/22 01:44:32     13] Total number of identified usable delay cells: 0
+[03/22 01:44:32     13] List of identified unusable delay cells: DEL0 DEL005 DEL01 DEL015 DEL02 DEL1 DEL2 DEL3 DEL4
+[03/22 01:44:32     13] Total number of identified unusable delay cells: 9
+[03/22 01:44:32     13] All delay cells are dont_use. Buffers will be used to fix hold violations.
+[03/22 01:44:32     13] 
+[03/22 01:44:32     13] *** Summary of all messages that are not suppressed in this session:
+[03/22 01:44:32     13] Severity  ID               Count  Summary                                  
+[03/22 01:44:32     13] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[03/22 01:44:32     13] WARNING   IMPFP-3961           2  The techSite '%s' has no related cells i...
+[03/22 01:44:32     13] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[03/22 01:44:32     13] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[03/22 01:44:32     13] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[03/22 01:44:32     13] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[03/22 01:44:32     13] WARNING   IMPVL-159         1622  Pin '%s' of cell '%s' is defined in LEF ...
+[03/22 01:44:32     13] ERROR     IMPOAX-820           1  The OA features are disabled in the curr...
+[03/22 01:44:32     13] ERROR     IMPOAX-850           1  %s command cannot be run as OA features ...
+[03/22 01:44:32     13] *** Message Summary: 1633 warning(s), 2 error(s)
+[03/22 01:44:32     13] 
+[03/22 01:44:32     13] <CMD> set_interactive_constraint_modes {CON}
+[03/22 01:44:32     13] <CMD> setDesignMode -process 65
+[03/22 01:44:32     13] Applying the recommended capacitance filtering threshold values for 65nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[03/22 01:44:32     13] 	These values will be used by all post-route extraction engines, including tQuantus, IQRC and Quantus QRC extraction.
+[03/22 01:44:32     13] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[03/22 01:44:32     13] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[03/22 01:44:32     13] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[03/22 01:44:32     13] Updating process node dependent CCOpt properties for the 65nm process node.
+[03/22 01:44:35     13] <CMD> floorPlan -site core -r 1 0.70 10.0 10.0 10.0 10.0
+[03/22 01:44:35     13] <CMD> timeDesign -preplace -prefix preplace
+[03/22 01:44:35     13] **WARN: (IMPOPT-7136):	timing_socv_statistical_min_max_mode 'statistical' is not supported by Innovus. Setting it to 'mean_and_three_sigma_bounded'.
+[03/22 01:44:35     13] Set Using Default Delay Limit as 101.
+[03/22 01:44:35     13] **WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+[03/22 01:44:35     13] Setting High Fanout Nets ( > 100 ) as ideal temporarily for -prePlace option
+[03/22 01:44:35     13] Set Default Net Delay as 0 ps.
+[03/22 01:44:35     13] Set Default Net Load as 0 pF. 
+[03/22 01:44:35     14] Effort level <high> specified for reg2reg path_group
+[03/22 01:44:36     14] #################################################################################
+[03/22 01:44:36     14] # Design Stage: PreRoute
+[03/22 01:44:36     14] # Design Name: core
+[03/22 01:44:36     14] # Design Mode: 65nm
+[03/22 01:44:36     14] # Analysis Mode: MMMC Non-OCV 
+[03/22 01:44:36     14] # Parasitics Mode: No SPEF/RCDB
+[03/22 01:44:36     14] # Signoff Settings: SI Off 
+[03/22 01:44:36     14] #################################################################################
+[03/22 01:44:36     14] AAE_INFO: 1 threads acquired from CTE.
+[03/22 01:44:36     14] Calculate delays in BcWc mode...
+[03/22 01:44:36     14] Topological Sorting (CPU = 0:00:00.0, MEM = 891.1M, InitMEM = 886.8M)
+[03/22 01:44:39     18] End Timing Check Calculation. (CPU Time=0:00:00.1, Real Time=0:00:00.0)
+[03/22 01:44:39     18] End delay calculation. (MEM=1081.71 CPU=0:00:02.4 REAL=0:00:02.0)
+[03/22 01:44:39     18] *** CDM Built up (cpu=0:00:03.4  real=0:00:03.0  mem= 1081.7M) ***
+[03/22 01:44:40     18] *** Done Building Timing Graph (cpu=0:00:03.9 real=0:00:04.0 totSessionCpu=0:00:18.6 mem=1081.7M)
+[03/22 01:44:40     19] 
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
+Setup views included:
+ WC_VIEW 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.668  | -0.668  | -0.451  |
+|           TNS (ns):|-796.876 |-647.476 |-150.149 |
+|    Violating Paths:|  2683   |  1487   |  1247   |
+|          All Paths:|  8040   |  6510   |  5722   |
++--------------------+---------+---------+---------+
+
+Density: 0.000%
+------------------------------------------------------------
+Set Using Default Delay Limit as 1000.
+[03/22 01:44:40     19] Resetting back High Fanout Nets as non-ideal
+[03/22 01:44:40     19] Set Default Net Delay as 1000 ps.
+[03/22 01:44:40     19] Set Default Net Load as 0.5 pF. 
+[03/22 01:44:40     19] Reported timing to dir ./timingReports
+[03/22 01:44:40     19] Total CPU time: 5.23 sec
+[03/22 01:44:40     19] Total Real time: 5.0 sec
+[03/22 01:44:40     19] Total Memory Usage: 1000.480469 Mbytes
+[03/22 01:44:40     19] <CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
+[03/22 01:44:40     19] 21582 new pwr-pin connections were made to global net 'VDD'.
+[03/22 01:44:40     19] <CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
+[03/22 01:44:40     19] 21582 new gnd-pin connections were made to global net 'VSS'.
+[03/22 01:44:40     19] <CMD> addRing -spacing {top 2 bottom 2 left 2 right 2} -width {top 3 bottom 3 left 3 right 3} -layer {top M1 bottom M1 left M2 right M2} -center 1 -type core_rings -nets {VSS  VDD}
+[03/22 01:44:40     19] 
+[03/22 01:44:40     19] Ring generation is complete; vias are now being generated.
+[03/22 01:44:40     19] The power planner created 8 wires.
+[03/22 01:44:40     19] *** Ending Ring Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 1000.5M) ***
+[03/22 01:44:40     19] <CMD> addStripe -number_of_sets 6 -spacing 4 -layer M4 -width 3 -nets { VSS VDD }
+[03/22 01:44:40     19] 
+[03/22 01:44:40     19] Starting stripe generation ...
+[03/22 01:44:40     19] Non-Default setAddStripeOption Settings :
+[03/22 01:44:40     19]   NONE
+[03/22 01:44:40     19] Stripe generation is complete; vias are now being generated.
+[03/22 01:44:40     19] The power planner created 12 wires.
+[03/22 01:44:40     19] *** Ending Stripe Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 1000.5M) ***
+[03/22 01:44:40     19] <CMD> sroute
+[03/22 01:44:41     19] *** Begin SPECIAL ROUTE on Sat Mar 22 01:44:41 2025 ***
+[03/22 01:44:41     19] SPECIAL ROUTE ran on directory: /home/linux/ieng6/ee260bwi25/trhussain/final_project/Step_1/pnr
+[03/22 01:44:41     19] SPECIAL ROUTE ran on machine: ieng6-ece-13.ucsd.edu (Linux 3.10.0-1160.119.1.el7.x86_64 Xeon 2.19Ghz)
+[03/22 01:44:41     19] 
+[03/22 01:44:41     19] Begin option processing ...
+[03/22 01:44:41     19] srouteConnectPowerBump set to false
+[03/22 01:44:41     19] routeSpecial set to true
+[03/22 01:44:41     19] srouteConnectConverterPin set to false
+[03/22 01:44:41     19] srouteFollowCorePinEnd set to 3
+[03/22 01:44:41     19] srouteJogControl set to "preferWithChanges differentLayer"
+[03/22 01:44:41     19] sroutePadPinAllPorts set to true
+[03/22 01:44:41     19] sroutePreserveExistingRoutes set to true
+[03/22 01:44:41     19] srouteRoutePowerBarPortOnBothDir set to true
+[03/22 01:44:41     19] End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1885.00 megs.
+[03/22 01:44:41     19] 
+[03/22 01:44:41     19] Reading DB technology information...
+[03/22 01:44:41     19] Finished reading DB technology information.
+[03/22 01:44:41     19] Reading floorplan and netlist information...
+[03/22 01:44:41     19] Finished reading floorplan and netlist information.
+[03/22 01:44:41     19] Read in 17 layers, 8 routing layers, 1 overlap layer
+[03/22 01:44:41     19] Read in 846 macros, 136 used
+[03/22 01:44:41     19] Read in 136 components
+[03/22 01:44:41     19]   136 core components: 136 unplaced, 0 placed, 0 fixed
+[03/22 01:44:41     19] Read in 243 logical pins
+[03/22 01:44:41     19] Read in 243 nets
+[03/22 01:44:41     19] Read in 2 special nets, 2 routed
+[03/22 01:44:41     19] Read in 272 terminals
+[03/22 01:44:41     19] Begin power routing ...
+[03/22 01:44:41     19] **WARN: (IMPSR-1254):	Cannot find any block pin of net VDD. Check netlist, or change option to include the pin.
+[03/22 01:44:41     19] **WARN: (IMPSR-1256):	Cannot find any CORE class pad pin of net VDD. Change routing area or layer to include the expected pin, or check netlist, or change port class in the technology file.
+[03/22 01:44:41     19] Type 'man IMPSR-1256' for more detail.
+[03/22 01:44:41     19] Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port class in the technology file, or change option to include pin in given range.
+[03/22 01:44:41     19] **WARN: (IMPSR-1254):	Cannot find any block pin of net VSS. Check netlist, or change option to include the pin.
+[03/22 01:44:41     19] **WARN: (IMPSR-1256):	Cannot find any CORE class pad pin of net VSS. Change routing area or layer to include the expected pin, or check netlist, or change port class in the technology file.
+[03/22 01:44:41     19] Type 'man IMPSR-1256' for more detail.
+[03/22 01:44:41     19] Cannot find any AREAIO class pad pin of net VSS. Check net list, or change port class in the technology file, or change option to include pin in given range.
+[03/22 01:44:41     19] CPU time for FollowPin 0 seconds
+[03/22 01:44:41     19] CPU time for FollowPin 0 seconds
+[03/22 01:44:41     19]   Number of IO ports routed: 0
+[03/22 01:44:41     19]   Number of Block ports routed: 0
+[03/22 01:44:41     19]   Number of Stripe ports routed: 0
+[03/22 01:44:41     19]   Number of Core ports routed: 426
+[03/22 01:44:41     19]   Number of Pad ports routed: 0
+[03/22 01:44:41     19]   Number of Power Bump ports routed: 0
+[03/22 01:44:41     19]   Number of Followpin connections: 213
+[03/22 01:44:41     19] End power routing: cpu: 0:00:00, real: 0:00:00, peak: 1902.00 megs.
+[03/22 01:44:41     19] 
+[03/22 01:44:41     19] 
+[03/22 01:44:41     19] 
+[03/22 01:44:41     19]  Begin updating DB with routing results ...
+[03/22 01:44:41     19]  Updating DB with 104 via definition ...Extracting standard cell pins and blockage ...... 
+[03/22 01:44:41     19] Pin and blockage extraction finished
+[03/22 01:44:41     19] 
+[03/22 01:44:41     19] 
+sroute post-processing starts at Sat Mar 22 01:44:41 2025
+The viaGen is rebuilding shadow vias for net VSS.
+[03/22 01:44:41     19] sroute post-processing ends at Sat Mar 22 01:44:41 2025
+
+sroute post-processing starts at Sat Mar 22 01:44:41 2025
+The viaGen is rebuilding shadow vias for net VDD.
+[03/22 01:44:41     19] sroute post-processing ends at Sat Mar 22 01:44:41 2025
+sroute: Total CPU time used = 0:0:0
+[03/22 01:44:41     19] sroute: Total Real time used = 0:0:1
+[03/22 01:44:41     19] sroute: Total Memory used = 13.50 megs
+[03/22 01:44:41     19] sroute: Total Peak Memory used = 1013.98 megs
+[03/22 01:44:44     20] <CMD> set ptngSprNoRefreshPins 0
+[03/22 01:44:44     20] <CMD_INTERNAL> ptnSprRefreshPinsAndBlockages
+[03/22 01:44:44     20] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 01:44:44     20] <CMD> editPin -pinWidth 0.1 -pinDepth 0.6 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType start -spacing 3 -start 0.0 0.2 -pin {clk {inst[0]} {inst[1]} {inst[2]} {inst[3]} {inst[4]} {inst[5]} {inst[6]} {inst[7]} {inst[8]} {inst[9]} {inst[10]} {inst[11]} {inst[12]} {inst[13]} {inst[14]} {inst[15]} {inst[16]} {mem_in[0]} {mem_in[1]} {mem_in[2]} {mem_in[3]} {mem_in[4]} {mem_in[5]} {mem_in[6]} {mem_in[7]} {mem_in[8]} {mem_in[9]} {mem_in[10]} {mem_in[11]} {mem_in[12]} {mem_in[13]} {mem_in[14]} {mem_in[15]} {mem_in[16]} {mem_in[17]} {mem_in[18]} {mem_in[19]} {mem_in[20]} {mem_in[21]} {mem_in[22]} {mem_in[23]} {mem_in[24]} {mem_in[25]} {mem_in[26]} {mem_in[27]} {mem_in[28]} {mem_in[29]} {mem_in[30]} {mem_in[31]} {mem_in[32]} {mem_in[33]} {mem_in[34]} {mem_in[35]} {mem_in[36]} {mem_in[37]} {mem_in[38]} {mem_in[39]} {mem_in[40]} {mem_in[41]} {mem_in[42]} {mem_in[43]} {mem_in[44]} {mem_in[45]} {mem_in[46]} {mem_in[47]} {mem_in[48]} {mem_in[49]} {mem_in[50]} {mem_in[51]} {mem_in[52]} {mem_in[53]} {mem_in[54]} {mem_in[55]} {mem_in[56]} {mem_in[57]} {mem_in[58]} {mem_in[59]} {mem_in[60]} {mem_in[61]} {mem_in[62]} {mem_in[63]} reset}
+[03/22 01:44:44     20] Successfully spread [83] pins.
+[03/22 01:44:44     20] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1015.0M).
+[03/22 01:44:44     20] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:44:44     20] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 01:44:44     20] <CMD> editPin -pinWidth 0.1 -pinDepth 0.52 -unit MICRON -spreadDirection clockwise -side Bottom -layer 3 -spreadType start -spacing 2 -start 402.4 401.4 -pin {{out[0]} {out[1]} {out[2]} {out[3]} {out[4]} {out[5]} {out[6]} {out[7]} {out[8]} {out[9]} {out[10]} {out[11]} {out[12]} {out[13]} {out[14]} {out[15]} {out[16]} {out[17]} {out[18]} {out[19]} {out[20]} {out[21]} {out[22]} {out[23]} {out[24]} {out[25]} {out[26]} {out[27]} {out[28]} {out[29]} {out[30]} {out[31]} {out[32]} {out[33]} {out[34]} {out[35]} {out[36]} {out[37]} {out[38]} {out[39]} {out[40]} {out[41]} {out[42]} {out[43]} {out[44]} {out[45]} {out[46]} {out[47]} {out[48]} {out[49]} {out[50]} {out[51]} {out[52]} {out[53]} {out[54]} {out[55]} {out[56]} {out[57]} {out[58]} {out[59]} {out[60]} {out[61]} {out[62]} {out[63]} {out[64]} {out[65]} {out[66]} {out[67]} {out[68]} {out[69]} {out[70]} {out[71]} {out[72]} {out[73]} {out[74]} {out[75]} {out[76]} {out[77]} {out[78]} {out[79]} {out[80]} {out[81]} {out[82]} {out[83]} {out[84]} {out[85]} {out[86]} {out[87]} {out[88]} {out[89]} {out[90]} {out[91]} {out[92]} {out[93]} {out[94]} {out[95]} {out[96]} {out[97]} {out[98]} {out[99]} {out[100]} {out[101]} {out[102]} {out[103]} {out[104]} {out[105]} {out[106]} {out[107]} {out[108]} {out[109]} {out[110]} {out[111]} {out[112]} {out[113]} {out[114]} {out[115]} {out[116]} {out[117]} {out[118]} {out[119]} {out[120]} {out[121]} {out[122]} {out[123]} {out[124]} {out[125]} {out[126]} {out[127]} {out[128]} {out[129]} {out[130]} {out[131]} {out[132]} {out[133]} {out[134]} {out[135]} {out[136]} {out[137]} {out[138]} {out[139]} {out[140]} {out[141]} {out[142]} {out[143]} {out[144]} {out[145]} {out[146]} {out[147]} {out[148]} {out[149]} {out[150]} {out[151]} {out[152]} {out[153]} {out[154]} {out[155]} {out[156]} {out[157]} {out[158]} {out[159]}}
+[03/22 01:44:44     20] Successfully spread [160] pins.
+[03/22 01:44:44     20] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1015.0M).
+[03/22 01:44:44     20] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:44:44     20] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[03/22 01:44:44     20] <CMD> legalizePin
+[03/22 01:44:45     20] 
+[03/22 01:44:45     20] Start pin legalization for the partition [core]:
+[03/22 01:44:45     20] Moving Pin [clk] to LEGAL location (   0.000    1.200 3 )
+[03/22 01:44:45     20] Moving Pin [out[159]] to LEGAL location (  84.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[158]] to LEGAL location (  86.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[157]] to LEGAL location (  88.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[156]] to LEGAL location (  90.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[155]] to LEGAL location (  92.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[154]] to LEGAL location (  94.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[153]] to LEGAL location (  96.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[152]] to LEGAL location (  98.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[151]] to LEGAL location ( 100.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[150]] to LEGAL location ( 102.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[149]] to LEGAL location ( 104.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[148]] to LEGAL location ( 106.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[147]] to LEGAL location ( 108.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[146]] to LEGAL location ( 110.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[145]] to LEGAL location ( 112.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[144]] to LEGAL location ( 114.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[143]] to LEGAL location ( 116.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[142]] to LEGAL location ( 118.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[141]] to LEGAL location ( 120.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[140]] to LEGAL location ( 122.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[139]] to LEGAL location ( 124.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[138]] to LEGAL location ( 126.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[137]] to LEGAL location ( 128.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[136]] to LEGAL location ( 130.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[135]] to LEGAL location ( 132.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[134]] to LEGAL location ( 134.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[133]] to LEGAL location ( 136.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[132]] to LEGAL location ( 138.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[131]] to LEGAL location ( 140.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[130]] to LEGAL location ( 142.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[129]] to LEGAL location ( 144.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[128]] to LEGAL location ( 146.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[127]] to LEGAL location ( 148.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[126]] to LEGAL location ( 150.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[125]] to LEGAL location ( 152.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[124]] to LEGAL location ( 154.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[123]] to LEGAL location ( 156.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[122]] to LEGAL location ( 158.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[121]] to LEGAL location ( 160.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[120]] to LEGAL location ( 162.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[119]] to LEGAL location ( 164.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[118]] to LEGAL location ( 166.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[117]] to LEGAL location ( 168.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[116]] to LEGAL location ( 170.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[115]] to LEGAL location ( 172.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[114]] to LEGAL location ( 174.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[113]] to LEGAL location ( 176.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[112]] to LEGAL location ( 178.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[111]] to LEGAL location ( 180.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[110]] to LEGAL location ( 182.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[109]] to LEGAL location ( 184.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[108]] to LEGAL location ( 186.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[107]] to LEGAL location ( 188.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[106]] to LEGAL location ( 190.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[105]] to LEGAL location ( 192.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[104]] to LEGAL location ( 194.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[103]] to LEGAL location ( 196.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[102]] to LEGAL location ( 198.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[101]] to LEGAL location ( 200.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[100]] to LEGAL location ( 202.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[99]] to LEGAL location ( 204.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[98]] to LEGAL location ( 206.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[97]] to LEGAL location ( 208.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[96]] to LEGAL location ( 210.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[95]] to LEGAL location ( 212.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[94]] to LEGAL location ( 214.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[93]] to LEGAL location ( 216.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[92]] to LEGAL location ( 218.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[91]] to LEGAL location ( 220.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[90]] to LEGAL location ( 222.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[89]] to LEGAL location ( 224.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[88]] to LEGAL location ( 226.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[87]] to LEGAL location ( 228.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[86]] to LEGAL location ( 230.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[85]] to LEGAL location ( 232.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[84]] to LEGAL location ( 234.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[83]] to LEGAL location ( 236.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[82]] to LEGAL location ( 238.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[81]] to LEGAL location ( 240.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[80]] to LEGAL location ( 242.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[79]] to LEGAL location ( 244.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[78]] to LEGAL location ( 246.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[77]] to LEGAL location ( 248.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[76]] to LEGAL location ( 250.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[75]] to LEGAL location ( 252.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[74]] to LEGAL location ( 254.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[73]] to LEGAL location ( 256.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[72]] to LEGAL location ( 258.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[71]] to LEGAL location ( 260.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[70]] to LEGAL location ( 262.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[69]] to LEGAL location ( 264.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[68]] to LEGAL location ( 266.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[67]] to LEGAL location ( 268.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[66]] to LEGAL location ( 270.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[65]] to LEGAL location ( 272.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[64]] to LEGAL location ( 274.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[63]] to LEGAL location ( 276.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[62]] to LEGAL location ( 278.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[61]] to LEGAL location ( 280.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[60]] to LEGAL location ( 282.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[59]] to LEGAL location ( 284.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[58]] to LEGAL location ( 286.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[57]] to LEGAL location ( 288.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[56]] to LEGAL location ( 290.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[55]] to LEGAL location ( 292.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[54]] to LEGAL location ( 294.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[53]] to LEGAL location ( 296.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[52]] to LEGAL location ( 298.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[51]] to LEGAL location ( 300.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[50]] to LEGAL location ( 302.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[49]] to LEGAL location ( 304.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[48]] to LEGAL location ( 306.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[47]] to LEGAL location ( 308.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[46]] to LEGAL location ( 310.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[45]] to LEGAL location ( 312.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[44]] to LEGAL location ( 314.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[43]] to LEGAL location ( 316.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[42]] to LEGAL location ( 318.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[41]] to LEGAL location ( 320.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[40]] to LEGAL location ( 322.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[39]] to LEGAL location ( 324.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[38]] to LEGAL location ( 326.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[37]] to LEGAL location ( 328.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[36]] to LEGAL location ( 330.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[35]] to LEGAL location ( 332.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[34]] to LEGAL location ( 334.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[33]] to LEGAL location ( 336.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[32]] to LEGAL location ( 338.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[31]] to LEGAL location ( 340.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[30]] to LEGAL location ( 342.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[29]] to LEGAL location ( 344.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[28]] to LEGAL location ( 346.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[27]] to LEGAL location ( 348.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[26]] to LEGAL location ( 350.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[25]] to LEGAL location ( 352.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[24]] to LEGAL location ( 354.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[23]] to LEGAL location ( 356.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[22]] to LEGAL location ( 358.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[21]] to LEGAL location ( 360.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[20]] to LEGAL location ( 362.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[19]] to LEGAL location ( 364.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[18]] to LEGAL location ( 366.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[17]] to LEGAL location ( 368.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[16]] to LEGAL location ( 370.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[15]] to LEGAL location ( 372.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[14]] to LEGAL location ( 374.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[13]] to LEGAL location ( 376.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[12]] to LEGAL location ( 378.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[11]] to LEGAL location ( 380.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[10]] to LEGAL location ( 382.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[9]] to LEGAL location ( 384.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[8]] to LEGAL location ( 386.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[7]] to LEGAL location ( 388.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[6]] to LEGAL location ( 390.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[5]] to LEGAL location ( 392.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[4]] to LEGAL location ( 394.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[3]] to LEGAL location ( 396.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[2]] to LEGAL location ( 398.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[1]] to LEGAL location ( 400.300    0.000 2 )
+[03/22 01:44:45     20] Moving Pin [out[0]] to LEGAL location ( 402.400    1.200 3 )
+[03/22 01:44:45     20] Summary report for top level: [core] 
+[03/22 01:44:45     20] 	Total Pads                         : 0
+[03/22 01:44:45     20] 	Total Pins                         : 243
+[03/22 01:44:45     20] 	Legally Assigned Pins              : 243
+[03/22 01:44:45     20] 	Illegally Assigned Pins            : 0
+[03/22 01:44:45     20] 	Unplaced Pins                      : 0
+[03/22 01:44:45     20] 	Constant/Spl Net Pins              : 0
+[03/22 01:44:45     20] 	Internal Pins                      : 0
+[03/22 01:44:45     20] 	Legally Assigned Feedthrough Pins  : 0
+[03/22 01:44:45     20] 	Illegally Assigned Feedthrough Pins: 0
+[03/22 01:44:45     20] End of Summary report
+[03/22 01:44:45     20] 161 pin(s) of the Partition core were legalized.
+[03/22 01:44:45     20] End pin legalization for the partition [core].
+[03/22 01:44:45     20] 
+[03/22 01:44:45     20] legalizePin : finished (cpu = 0:00:00.0 real = 0:00:01.0, mem = 1015.0M).
+[03/22 01:44:45     20] <CMD> editPin -fixedPin 1 -pin {clk {inst[0]} {inst[1]} {inst[2]} {inst[3]} {inst[4]} {inst[5]} {inst[6]} {inst[7]} {inst[8]} {inst[9]} {inst[10]} {inst[11]} {inst[12]} {inst[13]} {inst[14]} {inst[15]} {inst[16]} {mem_in[0]} {mem_in[1]} {mem_in[2]} {mem_in[3]} {mem_in[4]} {mem_in[5]} {mem_in[6]} {mem_in[7]} {mem_in[8]} {mem_in[9]} {mem_in[10]} {mem_in[11]} {mem_in[12]} {mem_in[13]} {mem_in[14]} {mem_in[15]} {mem_in[16]} {mem_in[17]} {mem_in[18]} {mem_in[19]} {mem_in[20]} {mem_in[21]} {mem_in[22]} {mem_in[23]} {mem_in[24]} {mem_in[25]} {mem_in[26]} {mem_in[27]} {mem_in[28]} {mem_in[29]} {mem_in[30]} {mem_in[31]} {mem_in[32]} {mem_in[33]} {mem_in[34]} {mem_in[35]} {mem_in[36]} {mem_in[37]} {mem_in[38]} {mem_in[39]} {mem_in[40]} {mem_in[41]} {mem_in[42]} {mem_in[43]} {mem_in[44]} {mem_in[45]} {mem_in[46]} {mem_in[47]} {mem_in[48]} {mem_in[49]} {mem_in[50]} {mem_in[51]} {mem_in[52]} {mem_in[53]} {mem_in[54]} {mem_in[55]} {mem_in[56]} {mem_in[57]} {mem_in[58]} {mem_in[59]} {mem_in[60]} {mem_in[61]} {mem_in[62]} {mem_in[63]} reset}
+[03/22 01:44:45     20] To speed up, if you have to run multiple editPin commands then wrap all editPin commands within  'setPinAssignMode -pinEditInBatch true' (then editPin commands) and 'setPinAssignMode -pinEditInBatch false'
+[03/22 01:44:45     20] Updated attributes of 83 pin(s) of partition core
+[03/22 01:44:45     20] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1015.0M).
+[03/22 01:44:45     20] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:44:45     20] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 01:44:45     20] <CMD> editPin -fixedPin 1 -pin {{out[0]} {out[1]} {out[2]} {out[3]} {out[4]} {out[5]} {out[6]} {out[7]} {out[8]} {out[9]} {out[10]} {out[11]} {out[12]} {out[13]} {out[14]} {out[15]} {out[16]} {out[17]} {out[18]} {out[19]} {out[20]} {out[21]} {out[22]} {out[23]} {out[24]} {out[25]} {out[26]} {out[27]} {out[28]} {out[29]} {out[30]} {out[31]} {out[32]} {out[33]} {out[34]} {out[35]} {out[36]} {out[37]} {out[38]} {out[39]} {out[40]} {out[41]} {out[42]} {out[43]} {out[44]} {out[45]} {out[46]} {out[47]} {out[48]} {out[49]} {out[50]} {out[51]} {out[52]} {out[53]} {out[54]} {out[55]} {out[56]} {out[57]} {out[58]} {out[59]} {out[60]} {out[61]} {out[62]} {out[63]} {out[64]} {out[65]} {out[66]} {out[67]} {out[68]} {out[69]} {out[70]} {out[71]} {out[72]} {out[73]} {out[74]} {out[75]} {out[76]} {out[77]} {out[78]} {out[79]} {out[80]} {out[81]} {out[82]} {out[83]} {out[84]} {out[85]} {out[86]} {out[87]} {out[88]} {out[89]} {out[90]} {out[91]} {out[92]} {out[93]} {out[94]} {out[95]} {out[96]} {out[97]} {out[98]} {out[99]} {out[100]} {out[101]} {out[102]} {out[103]} {out[104]} {out[105]} {out[106]} {out[107]} {out[108]} {out[109]} {out[110]} {out[111]} {out[112]} {out[113]} {out[114]} {out[115]} {out[116]} {out[117]} {out[118]} {out[119]} {out[120]} {out[121]} {out[122]} {out[123]} {out[124]} {out[125]} {out[126]} {out[127]} {out[128]} {out[129]} {out[130]} {out[131]} {out[132]} {out[133]} {out[134]} {out[135]} {out[136]} {out[137]} {out[138]} {out[139]} {out[140]} {out[141]} {out[142]} {out[143]} {out[144]} {out[145]} {out[146]} {out[147]} {out[148]} {out[149]} {out[150]} {out[151]} {out[152]} {out[153]} {out[154]} {out[155]} {out[156]} {out[157]} {out[158]} {out[159]}}
+[03/22 01:44:45     20] Updated attributes of 160 pin(s) of partition core
+[03/22 01:44:45     20] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1015.0M).
+[03/22 01:44:45     20] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:44:45     20] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[03/22 01:44:48     20] <CMD> pan 51.235 14.815
+[03/22 01:44:50     21] <CMD> pan 3.704 7.407
+[03/22 01:45:00     22] <CMD> fit
+[03/22 01:45:06     23] <CMD> pan -9.648 14.755
+[03/22 01:45:07     23] <CMD> pan -78.340 110.895
+[03/22 01:45:07     23] <CMD> pan -84.105 78.340
+[03/22 01:45:08     23] <CMD> pan -131.244 11.530
+[03/22 01:45:10     24] <CMD> pan -47.836 -0.640
+[03/22 01:45:19     25] <CMD> pan 54.580 7.937
+[03/22 01:45:20     25] <CMD> pan 110.451 -27.288
+[03/22 01:45:22     26] <CMD> pan -4.548 -70.168
+[03/22 01:45:42     29] <CMD> set ptngSprNoRefreshPins 0
+[03/22 01:45:42     29] <CMD_INTERNAL> ptnSprRefreshPinsAndBlockages
+[03/22 01:45:42     29] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 01:45:42     29] <CMD> editPin -pinWidth 0.1 -pinDepth 0.6 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType start -spacing 3 -start 0.0 0.2 -pin {clk {inst[0]} {inst[1]} {inst[2]} {inst[3]} {inst[4]} {inst[5]} {inst[6]} {inst[7]} {inst[8]} {inst[9]} {inst[10]} {inst[11]} {inst[12]} {inst[13]} {inst[14]} {inst[15]} {inst[16]} {mem_in[0]} {mem_in[1]} {mem_in[2]} {mem_in[3]} {mem_in[4]} {mem_in[5]} {mem_in[6]} {mem_in[7]} {mem_in[8]} {mem_in[9]} {mem_in[10]} {mem_in[11]} {mem_in[12]} {mem_in[13]} {mem_in[14]} {mem_in[15]} {mem_in[16]} {mem_in[17]} {mem_in[18]} {mem_in[19]} {mem_in[20]} {mem_in[21]} {mem_in[22]} {mem_in[23]} {mem_in[24]} {mem_in[25]} {mem_in[26]} {mem_in[27]} {mem_in[28]} {mem_in[29]} {mem_in[30]} {mem_in[31]} {mem_in[32]} {mem_in[33]} {mem_in[34]} {mem_in[35]} {mem_in[36]} {mem_in[37]} {mem_in[38]} {mem_in[39]} {mem_in[40]} {mem_in[41]} {mem_in[42]} {mem_in[43]} {mem_in[44]} {mem_in[45]} {mem_in[46]} {mem_in[47]} {mem_in[48]} {mem_in[49]} {mem_in[50]} {mem_in[51]} {mem_in[52]} {mem_in[53]} {mem_in[54]} {mem_in[55]} {mem_in[56]} {mem_in[57]} {mem_in[58]} {mem_in[59]} {mem_in[60]} {mem_in[61]} {mem_in[62]} {mem_in[63]} reset}
+[03/22 01:45:42     29] Successfully spread [83] pins.
+[03/22 01:45:42     29] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:45:42     29] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:45:42     29] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 01:45:42     29] <CMD> editPin -pinWidth 0.1 -pinDepth 0.52 -unit MICRON -spreadDirection clockwise -side Bottom -layer 3 -spreadType start -spacing 2 -start 202.4 401.4 -pin {{out[0]} {out[1]} {out[2]} {out[3]} {out[4]} {out[5]} {out[6]} {out[7]} {out[8]} {out[9]} {out[10]} {out[11]} {out[12]} {out[13]} {out[14]} {out[15]} {out[16]} {out[17]} {out[18]} {out[19]} {out[20]} {out[21]} {out[22]} {out[23]} {out[24]} {out[25]} {out[26]} {out[27]} {out[28]} {out[29]} {out[30]} {out[31]} {out[32]} {out[33]} {out[34]} {out[35]} {out[36]} {out[37]} {out[38]} {out[39]} {out[40]} {out[41]} {out[42]} {out[43]} {out[44]} {out[45]} {out[46]} {out[47]} {out[48]} {out[49]} {out[50]} {out[51]} {out[52]} {out[53]} {out[54]} {out[55]} {out[56]} {out[57]} {out[58]} {out[59]} {out[60]} {out[61]} {out[62]} {out[63]} {out[64]} {out[65]} {out[66]} {out[67]} {out[68]} {out[69]} {out[70]} {out[71]} {out[72]} {out[73]} {out[74]} {out[75]} {out[76]} {out[77]} {out[78]} {out[79]} {out[80]} {out[81]} {out[82]} {out[83]} {out[84]} {out[85]} {out[86]} {out[87]} {out[88]} {out[89]} {out[90]} {out[91]} {out[92]} {out[93]} {out[94]} {out[95]} {out[96]} {out[97]} {out[98]} {out[99]} {out[100]} {out[101]} {out[102]} {out[103]} {out[104]} {out[105]} {out[106]} {out[107]} {out[108]} {out[109]} {out[110]} {out[111]} {out[112]} {out[113]} {out[114]} {out[115]} {out[116]} {out[117]} {out[118]} {out[119]} {out[120]} {out[121]} {out[122]} {out[123]} {out[124]} {out[125]} {out[126]} {out[127]} {out[128]} {out[129]} {out[130]} {out[131]} {out[132]} {out[133]} {out[134]} {out[135]} {out[136]} {out[137]} {out[138]} {out[139]} {out[140]} {out[141]} {out[142]} {out[143]} {out[144]} {out[145]} {out[146]} {out[147]} {out[148]} {out[149]} {out[150]} {out[151]} {out[152]} {out[153]} {out[154]} {out[155]} {out[156]} {out[157]} {out[158]} {out[159]}}
+[03/22 01:45:42     29] Successfully spread [160] pins.
+[03/22 01:45:42     29] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:45:42     29] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:45:42     29] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[03/22 01:45:42     29] <CMD> legalizePin
+[03/22 01:45:42     29] 
+[03/22 01:45:42     29] Start pin legalization for the partition [core]:
+[03/22 01:45:42     29] Moving Pin [clk] to LEGAL location (   0.000    1.200 3 )
+[03/22 01:45:42     29] Moving Pin [out[159]] to LEGAL location ( 286.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[158]] to LEGAL location ( 288.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[157]] to LEGAL location ( 290.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[156]] to LEGAL location ( 292.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[155]] to LEGAL location ( 294.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[154]] to LEGAL location ( 296.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[153]] to LEGAL location ( 298.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[152]] to LEGAL location ( 300.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[151]] to LEGAL location ( 302.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[150]] to LEGAL location ( 304.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[149]] to LEGAL location ( 306.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[148]] to LEGAL location ( 308.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[147]] to LEGAL location ( 310.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[146]] to LEGAL location ( 312.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[145]] to LEGAL location ( 314.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[144]] to LEGAL location ( 316.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[143]] to LEGAL location ( 318.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[142]] to LEGAL location ( 320.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[141]] to LEGAL location ( 322.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[140]] to LEGAL location ( 324.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[139]] to LEGAL location ( 326.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[138]] to LEGAL location ( 328.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[137]] to LEGAL location ( 330.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[136]] to LEGAL location ( 332.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[135]] to LEGAL location ( 334.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[134]] to LEGAL location ( 336.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[133]] to LEGAL location ( 338.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[132]] to LEGAL location ( 340.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[131]] to LEGAL location ( 342.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[130]] to LEGAL location ( 344.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[129]] to LEGAL location ( 346.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[128]] to LEGAL location ( 348.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[127]] to LEGAL location ( 350.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[126]] to LEGAL location ( 352.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[125]] to LEGAL location ( 354.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[124]] to LEGAL location ( 356.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[123]] to LEGAL location ( 358.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[122]] to LEGAL location ( 360.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[121]] to LEGAL location ( 362.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[120]] to LEGAL location ( 364.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[119]] to LEGAL location ( 366.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[118]] to LEGAL location ( 368.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[117]] to LEGAL location ( 370.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[116]] to LEGAL location ( 372.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[115]] to LEGAL location ( 374.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[114]] to LEGAL location ( 376.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[113]] to LEGAL location ( 378.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[112]] to LEGAL location ( 380.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[111]] to LEGAL location ( 382.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[110]] to LEGAL location ( 384.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[109]] to LEGAL location ( 386.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[108]] to LEGAL location ( 388.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[107]] to LEGAL location ( 390.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[106]] to LEGAL location ( 392.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[105]] to LEGAL location ( 394.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[104]] to LEGAL location ( 396.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[103]] to LEGAL location ( 398.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[102]] to LEGAL location ( 400.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[101]] to LEGAL location ( 402.400    1.200 3 )
+[03/22 01:45:42     29] Moving Pin [out[100]] to LEGAL location (   2.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[99]] to LEGAL location (   4.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[98]] to LEGAL location (   6.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[97]] to LEGAL location (   8.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[96]] to LEGAL location (  10.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[95]] to LEGAL location (  12.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[94]] to LEGAL location (  14.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[93]] to LEGAL location (  16.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[92]] to LEGAL location (  18.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[91]] to LEGAL location (  20.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[90]] to LEGAL location (  22.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[89]] to LEGAL location (  24.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[88]] to LEGAL location (  26.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[87]] to LEGAL location (  28.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[86]] to LEGAL location (  30.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[85]] to LEGAL location (  32.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[84]] to LEGAL location (  34.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[83]] to LEGAL location (  36.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[82]] to LEGAL location (  38.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[81]] to LEGAL location (  40.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[80]] to LEGAL location (  42.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[79]] to LEGAL location (  44.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[78]] to LEGAL location (  46.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[77]] to LEGAL location (  48.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[76]] to LEGAL location (  50.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[75]] to LEGAL location (  52.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[74]] to LEGAL location (  54.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[73]] to LEGAL location (  56.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[72]] to LEGAL location (  58.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[71]] to LEGAL location (  60.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[70]] to LEGAL location (  62.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[69]] to LEGAL location (  64.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[68]] to LEGAL location (  66.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[67]] to LEGAL location (  68.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[66]] to LEGAL location (  70.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[65]] to LEGAL location (  72.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[64]] to LEGAL location (  74.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[63]] to LEGAL location (  76.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[62]] to LEGAL location (  78.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[61]] to LEGAL location (  80.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[60]] to LEGAL location (  82.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[59]] to LEGAL location (  84.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[58]] to LEGAL location (  86.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[57]] to LEGAL location (  88.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[56]] to LEGAL location (  90.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[55]] to LEGAL location (  92.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[54]] to LEGAL location (  94.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[53]] to LEGAL location (  96.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[52]] to LEGAL location (  98.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[51]] to LEGAL location ( 100.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[50]] to LEGAL location ( 102.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[49]] to LEGAL location ( 104.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[48]] to LEGAL location ( 106.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[47]] to LEGAL location ( 108.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[46]] to LEGAL location ( 110.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[45]] to LEGAL location ( 112.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[44]] to LEGAL location ( 114.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[43]] to LEGAL location ( 116.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[42]] to LEGAL location ( 118.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[41]] to LEGAL location ( 120.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[40]] to LEGAL location ( 122.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[39]] to LEGAL location ( 124.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[38]] to LEGAL location ( 126.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[37]] to LEGAL location ( 128.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[36]] to LEGAL location ( 130.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[35]] to LEGAL location ( 132.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[34]] to LEGAL location ( 134.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[33]] to LEGAL location ( 136.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[32]] to LEGAL location ( 138.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[31]] to LEGAL location ( 140.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[30]] to LEGAL location ( 142.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[29]] to LEGAL location ( 144.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[28]] to LEGAL location ( 146.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[27]] to LEGAL location ( 148.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[26]] to LEGAL location ( 150.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[25]] to LEGAL location ( 152.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[24]] to LEGAL location ( 154.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[23]] to LEGAL location ( 156.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[22]] to LEGAL location ( 158.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[21]] to LEGAL location ( 160.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[20]] to LEGAL location ( 162.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[19]] to LEGAL location ( 164.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[18]] to LEGAL location ( 166.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[17]] to LEGAL location ( 168.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[16]] to LEGAL location ( 170.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[15]] to LEGAL location ( 172.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[14]] to LEGAL location ( 174.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[13]] to LEGAL location ( 176.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[12]] to LEGAL location ( 178.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[11]] to LEGAL location ( 180.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[10]] to LEGAL location ( 182.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[9]] to LEGAL location ( 184.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[8]] to LEGAL location ( 186.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[7]] to LEGAL location ( 188.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[6]] to LEGAL location ( 190.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[5]] to LEGAL location ( 192.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[4]] to LEGAL location ( 194.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[3]] to LEGAL location ( 196.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[2]] to LEGAL location ( 198.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[1]] to LEGAL location ( 200.300    0.000 2 )
+[03/22 01:45:42     29] Moving Pin [out[0]] to LEGAL location ( 202.300    0.000 2 )
+[03/22 01:45:42     29] Summary report for top level: [core] 
+[03/22 01:45:42     29] 	Total Pads                         : 0
+[03/22 01:45:42     29] 	Total Pins                         : 243
+[03/22 01:45:42     29] 	Legally Assigned Pins              : 243
+[03/22 01:45:42     29] 	Illegally Assigned Pins            : 0
+[03/22 01:45:42     29] 	Unplaced Pins                      : 0
+[03/22 01:45:42     29] 	Constant/Spl Net Pins              : 0
+[03/22 01:45:42     29] 	Internal Pins                      : 0
+[03/22 01:45:42     29] 	Legally Assigned Feedthrough Pins  : 0
+[03/22 01:45:42     29] 	Illegally Assigned Feedthrough Pins: 0
+[03/22 01:45:42     29] End of Summary report
+[03/22 01:45:42     29] 161 pin(s) of the Partition core were legalized.
+[03/22 01:45:42     29] End pin legalization for the partition [core].
+[03/22 01:45:42     29] 
+[03/22 01:45:42     29] legalizePin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:45:42     29] <CMD> editPin -fixedPin 1 -pin {clk {inst[0]} {inst[1]} {inst[2]} {inst[3]} {inst[4]} {inst[5]} {inst[6]} {inst[7]} {inst[8]} {inst[9]} {inst[10]} {inst[11]} {inst[12]} {inst[13]} {inst[14]} {inst[15]} {inst[16]} {mem_in[0]} {mem_in[1]} {mem_in[2]} {mem_in[3]} {mem_in[4]} {mem_in[5]} {mem_in[6]} {mem_in[7]} {mem_in[8]} {mem_in[9]} {mem_in[10]} {mem_in[11]} {mem_in[12]} {mem_in[13]} {mem_in[14]} {mem_in[15]} {mem_in[16]} {mem_in[17]} {mem_in[18]} {mem_in[19]} {mem_in[20]} {mem_in[21]} {mem_in[22]} {mem_in[23]} {mem_in[24]} {mem_in[25]} {mem_in[26]} {mem_in[27]} {mem_in[28]} {mem_in[29]} {mem_in[30]} {mem_in[31]} {mem_in[32]} {mem_in[33]} {mem_in[34]} {mem_in[35]} {mem_in[36]} {mem_in[37]} {mem_in[38]} {mem_in[39]} {mem_in[40]} {mem_in[41]} {mem_in[42]} {mem_in[43]} {mem_in[44]} {mem_in[45]} {mem_in[46]} {mem_in[47]} {mem_in[48]} {mem_in[49]} {mem_in[50]} {mem_in[51]} {mem_in[52]} {mem_in[53]} {mem_in[54]} {mem_in[55]} {mem_in[56]} {mem_in[57]} {mem_in[58]} {mem_in[59]} {mem_in[60]} {mem_in[61]} {mem_in[62]} {mem_in[63]} reset}
+[03/22 01:45:42     29] To speed up, if you have to run multiple editPin commands then wrap all editPin commands within  'setPinAssignMode -pinEditInBatch true' (then editPin commands) and 'setPinAssignMode -pinEditInBatch false'
+[03/22 01:45:42     29] Updated attributes of 83 pin(s) of partition core
+[03/22 01:45:42     29] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:45:42     29] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:45:42     29] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 01:45:42     29] <CMD> editPin -fixedPin 1 -pin {{out[0]} {out[1]} {out[2]} {out[3]} {out[4]} {out[5]} {out[6]} {out[7]} {out[8]} {out[9]} {out[10]} {out[11]} {out[12]} {out[13]} {out[14]} {out[15]} {out[16]} {out[17]} {out[18]} {out[19]} {out[20]} {out[21]} {out[22]} {out[23]} {out[24]} {out[25]} {out[26]} {out[27]} {out[28]} {out[29]} {out[30]} {out[31]} {out[32]} {out[33]} {out[34]} {out[35]} {out[36]} {out[37]} {out[38]} {out[39]} {out[40]} {out[41]} {out[42]} {out[43]} {out[44]} {out[45]} {out[46]} {out[47]} {out[48]} {out[49]} {out[50]} {out[51]} {out[52]} {out[53]} {out[54]} {out[55]} {out[56]} {out[57]} {out[58]} {out[59]} {out[60]} {out[61]} {out[62]} {out[63]} {out[64]} {out[65]} {out[66]} {out[67]} {out[68]} {out[69]} {out[70]} {out[71]} {out[72]} {out[73]} {out[74]} {out[75]} {out[76]} {out[77]} {out[78]} {out[79]} {out[80]} {out[81]} {out[82]} {out[83]} {out[84]} {out[85]} {out[86]} {out[87]} {out[88]} {out[89]} {out[90]} {out[91]} {out[92]} {out[93]} {out[94]} {out[95]} {out[96]} {out[97]} {out[98]} {out[99]} {out[100]} {out[101]} {out[102]} {out[103]} {out[104]} {out[105]} {out[106]} {out[107]} {out[108]} {out[109]} {out[110]} {out[111]} {out[112]} {out[113]} {out[114]} {out[115]} {out[116]} {out[117]} {out[118]} {out[119]} {out[120]} {out[121]} {out[122]} {out[123]} {out[124]} {out[125]} {out[126]} {out[127]} {out[128]} {out[129]} {out[130]} {out[131]} {out[132]} {out[133]} {out[134]} {out[135]} {out[136]} {out[137]} {out[138]} {out[139]} {out[140]} {out[141]} {out[142]} {out[143]} {out[144]} {out[145]} {out[146]} {out[147]} {out[148]} {out[149]} {out[150]} {out[151]} {out[152]} {out[153]} {out[154]} {out[155]} {out[156]} {out[157]} {out[158]} {out[159]}}
+[03/22 01:45:42     29] Updated attributes of 160 pin(s) of partition core
+[03/22 01:45:42     29] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:45:42     29] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:45:42     29] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[03/22 01:45:44     29] <CMD> pan -63.672 0.650
+[03/22 01:45:45     29] <CMD> pan 96.157 11.045
+[03/22 01:45:53     30] <CMD> set ptngSprNoRefreshPins 0
+[03/22 01:45:53     30] <CMD_INTERNAL> ptnSprRefreshPinsAndBlockages
+[03/22 01:45:53     30] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 01:45:53     30] <CMD> editPin -pinWidth 0.1 -pinDepth 0.6 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType start -spacing 3 -start 0.0 0.2 -pin {clk {inst[0]} {inst[1]} {inst[2]} {inst[3]} {inst[4]} {inst[5]} {inst[6]} {inst[7]} {inst[8]} {inst[9]} {inst[10]} {inst[11]} {inst[12]} {inst[13]} {inst[14]} {inst[15]} {inst[16]} {mem_in[0]} {mem_in[1]} {mem_in[2]} {mem_in[3]} {mem_in[4]} {mem_in[5]} {mem_in[6]} {mem_in[7]} {mem_in[8]} {mem_in[9]} {mem_in[10]} {mem_in[11]} {mem_in[12]} {mem_in[13]} {mem_in[14]} {mem_in[15]} {mem_in[16]} {mem_in[17]} {mem_in[18]} {mem_in[19]} {mem_in[20]} {mem_in[21]} {mem_in[22]} {mem_in[23]} {mem_in[24]} {mem_in[25]} {mem_in[26]} {mem_in[27]} {mem_in[28]} {mem_in[29]} {mem_in[30]} {mem_in[31]} {mem_in[32]} {mem_in[33]} {mem_in[34]} {mem_in[35]} {mem_in[36]} {mem_in[37]} {mem_in[38]} {mem_in[39]} {mem_in[40]} {mem_in[41]} {mem_in[42]} {mem_in[43]} {mem_in[44]} {mem_in[45]} {mem_in[46]} {mem_in[47]} {mem_in[48]} {mem_in[49]} {mem_in[50]} {mem_in[51]} {mem_in[52]} {mem_in[53]} {mem_in[54]} {mem_in[55]} {mem_in[56]} {mem_in[57]} {mem_in[58]} {mem_in[59]} {mem_in[60]} {mem_in[61]} {mem_in[62]} {mem_in[63]} reset}
+[03/22 01:45:53     30] Successfully spread [83] pins.
+[03/22 01:45:53     30] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:45:53     30] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:45:53     30] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 01:45:53     30] <CMD> editPin -pinWidth 0.1 -pinDepth 0.52 -unit MICRON -spreadDirection clockwise -side Bottom -layer 3 -spreadType start -spacing 2 -start 302.4 401.4 -pin {{out[0]} {out[1]} {out[2]} {out[3]} {out[4]} {out[5]} {out[6]} {out[7]} {out[8]} {out[9]} {out[10]} {out[11]} {out[12]} {out[13]} {out[14]} {out[15]} {out[16]} {out[17]} {out[18]} {out[19]} {out[20]} {out[21]} {out[22]} {out[23]} {out[24]} {out[25]} {out[26]} {out[27]} {out[28]} {out[29]} {out[30]} {out[31]} {out[32]} {out[33]} {out[34]} {out[35]} {out[36]} {out[37]} {out[38]} {out[39]} {out[40]} {out[41]} {out[42]} {out[43]} {out[44]} {out[45]} {out[46]} {out[47]} {out[48]} {out[49]} {out[50]} {out[51]} {out[52]} {out[53]} {out[54]} {out[55]} {out[56]} {out[57]} {out[58]} {out[59]} {out[60]} {out[61]} {out[62]} {out[63]} {out[64]} {out[65]} {out[66]} {out[67]} {out[68]} {out[69]} {out[70]} {out[71]} {out[72]} {out[73]} {out[74]} {out[75]} {out[76]} {out[77]} {out[78]} {out[79]} {out[80]} {out[81]} {out[82]} {out[83]} {out[84]} {out[85]} {out[86]} {out[87]} {out[88]} {out[89]} {out[90]} {out[91]} {out[92]} {out[93]} {out[94]} {out[95]} {out[96]} {out[97]} {out[98]} {out[99]} {out[100]} {out[101]} {out[102]} {out[103]} {out[104]} {out[105]} {out[106]} {out[107]} {out[108]} {out[109]} {out[110]} {out[111]} {out[112]} {out[113]} {out[114]} {out[115]} {out[116]} {out[117]} {out[118]} {out[119]} {out[120]} {out[121]} {out[122]} {out[123]} {out[124]} {out[125]} {out[126]} {out[127]} {out[128]} {out[129]} {out[130]} {out[131]} {out[132]} {out[133]} {out[134]} {out[135]} {out[136]} {out[137]} {out[138]} {out[139]} {out[140]} {out[141]} {out[142]} {out[143]} {out[144]} {out[145]} {out[146]} {out[147]} {out[148]} {out[149]} {out[150]} {out[151]} {out[152]} {out[153]} {out[154]} {out[155]} {out[156]} {out[157]} {out[158]} {out[159]}}
+[03/22 01:45:53     30] Successfully spread [160] pins.
+[03/22 01:45:53     30] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:45:53     30] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:45:53     30] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[03/22 01:45:53     30] <CMD> legalizePin
+[03/22 01:45:53     30] 
+[03/22 01:45:53     30] Start pin legalization for the partition [core]:
+[03/22 01:45:53     30] Moving Pin [clk] to LEGAL location (   0.000    1.200 3 )
+[03/22 01:45:53     30] Moving Pin [out[159]] to LEGAL location ( 386.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[158]] to LEGAL location ( 388.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[157]] to LEGAL location ( 390.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[156]] to LEGAL location ( 392.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[155]] to LEGAL location ( 394.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[154]] to LEGAL location ( 396.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[153]] to LEGAL location ( 398.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[152]] to LEGAL location ( 400.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[151]] to LEGAL location ( 402.400    1.200 3 )
+[03/22 01:45:53     30] Moving Pin [out[150]] to LEGAL location (   2.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[149]] to LEGAL location (   4.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[148]] to LEGAL location (   6.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[147]] to LEGAL location (   8.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[146]] to LEGAL location (  10.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[145]] to LEGAL location (  12.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[144]] to LEGAL location (  14.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[143]] to LEGAL location (  16.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[142]] to LEGAL location (  18.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[141]] to LEGAL location (  20.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[140]] to LEGAL location (  22.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[139]] to LEGAL location (  24.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[138]] to LEGAL location (  26.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[137]] to LEGAL location (  28.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[136]] to LEGAL location (  30.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[135]] to LEGAL location (  32.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[134]] to LEGAL location (  34.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[133]] to LEGAL location (  36.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[132]] to LEGAL location (  38.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[131]] to LEGAL location (  40.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[130]] to LEGAL location (  42.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[129]] to LEGAL location (  44.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[128]] to LEGAL location (  46.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[127]] to LEGAL location (  48.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[126]] to LEGAL location (  50.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[125]] to LEGAL location (  52.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[124]] to LEGAL location (  54.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[123]] to LEGAL location (  56.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[122]] to LEGAL location (  58.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[121]] to LEGAL location (  60.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[120]] to LEGAL location (  62.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[119]] to LEGAL location (  64.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[118]] to LEGAL location (  66.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[117]] to LEGAL location (  68.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[116]] to LEGAL location (  70.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[115]] to LEGAL location (  72.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[114]] to LEGAL location (  74.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[113]] to LEGAL location (  76.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[112]] to LEGAL location (  78.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[111]] to LEGAL location (  80.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[110]] to LEGAL location (  82.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[109]] to LEGAL location (  84.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[108]] to LEGAL location (  86.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[107]] to LEGAL location (  88.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[106]] to LEGAL location (  90.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[105]] to LEGAL location (  92.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[104]] to LEGAL location (  94.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[103]] to LEGAL location (  96.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[102]] to LEGAL location (  98.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[101]] to LEGAL location ( 100.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[100]] to LEGAL location ( 102.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[99]] to LEGAL location ( 104.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[98]] to LEGAL location ( 106.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[97]] to LEGAL location ( 108.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[96]] to LEGAL location ( 110.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[95]] to LEGAL location ( 112.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[94]] to LEGAL location ( 114.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[93]] to LEGAL location ( 116.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[92]] to LEGAL location ( 118.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[91]] to LEGAL location ( 120.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[90]] to LEGAL location ( 122.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[89]] to LEGAL location ( 124.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[88]] to LEGAL location ( 126.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[87]] to LEGAL location ( 128.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[86]] to LEGAL location ( 130.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[85]] to LEGAL location ( 132.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[84]] to LEGAL location ( 134.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[83]] to LEGAL location ( 136.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[82]] to LEGAL location ( 138.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[81]] to LEGAL location ( 140.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[80]] to LEGAL location ( 142.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[79]] to LEGAL location ( 144.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[78]] to LEGAL location ( 146.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[77]] to LEGAL location ( 148.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[76]] to LEGAL location ( 150.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[75]] to LEGAL location ( 152.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[74]] to LEGAL location ( 154.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[73]] to LEGAL location ( 156.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[72]] to LEGAL location ( 158.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[71]] to LEGAL location ( 160.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[70]] to LEGAL location ( 162.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[69]] to LEGAL location ( 164.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[68]] to LEGAL location ( 166.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[67]] to LEGAL location ( 168.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[66]] to LEGAL location ( 170.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[65]] to LEGAL location ( 172.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[64]] to LEGAL location ( 174.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[63]] to LEGAL location ( 176.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[62]] to LEGAL location ( 178.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[61]] to LEGAL location ( 180.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[60]] to LEGAL location ( 182.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[59]] to LEGAL location ( 184.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[58]] to LEGAL location ( 186.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[57]] to LEGAL location ( 188.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[56]] to LEGAL location ( 190.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[55]] to LEGAL location ( 192.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[54]] to LEGAL location ( 194.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[53]] to LEGAL location ( 196.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[52]] to LEGAL location ( 198.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[51]] to LEGAL location ( 200.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[50]] to LEGAL location ( 202.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[49]] to LEGAL location ( 204.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[48]] to LEGAL location ( 206.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[47]] to LEGAL location ( 208.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[46]] to LEGAL location ( 210.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[45]] to LEGAL location ( 212.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[44]] to LEGAL location ( 214.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[43]] to LEGAL location ( 216.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[42]] to LEGAL location ( 218.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[41]] to LEGAL location ( 220.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[40]] to LEGAL location ( 222.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[39]] to LEGAL location ( 224.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[38]] to LEGAL location ( 226.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[37]] to LEGAL location ( 228.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[36]] to LEGAL location ( 230.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[35]] to LEGAL location ( 232.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[34]] to LEGAL location ( 234.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[33]] to LEGAL location ( 236.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[32]] to LEGAL location ( 238.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[31]] to LEGAL location ( 240.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[30]] to LEGAL location ( 242.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[29]] to LEGAL location ( 244.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[28]] to LEGAL location ( 246.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[27]] to LEGAL location ( 248.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[26]] to LEGAL location ( 250.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[25]] to LEGAL location ( 252.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[24]] to LEGAL location ( 254.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[23]] to LEGAL location ( 256.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[22]] to LEGAL location ( 258.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[21]] to LEGAL location ( 260.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[20]] to LEGAL location ( 262.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[19]] to LEGAL location ( 264.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[18]] to LEGAL location ( 266.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[17]] to LEGAL location ( 268.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[16]] to LEGAL location ( 270.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[15]] to LEGAL location ( 272.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[14]] to LEGAL location ( 274.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[13]] to LEGAL location ( 276.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[12]] to LEGAL location ( 278.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[11]] to LEGAL location ( 280.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[10]] to LEGAL location ( 282.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[9]] to LEGAL location ( 284.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[8]] to LEGAL location ( 286.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[7]] to LEGAL location ( 288.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[6]] to LEGAL location ( 290.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[5]] to LEGAL location ( 292.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[4]] to LEGAL location ( 294.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[3]] to LEGAL location ( 296.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[2]] to LEGAL location ( 298.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[1]] to LEGAL location ( 300.300    0.000 2 )
+[03/22 01:45:53     30] Moving Pin [out[0]] to LEGAL location ( 302.300    0.000 2 )
+[03/22 01:45:53     30] Summary report for top level: [core] 
+[03/22 01:45:53     30] 	Total Pads                         : 0
+[03/22 01:45:53     30] 	Total Pins                         : 243
+[03/22 01:45:53     30] 	Legally Assigned Pins              : 243
+[03/22 01:45:53     30] 	Illegally Assigned Pins            : 0
+[03/22 01:45:53     30] 	Unplaced Pins                      : 0
+[03/22 01:45:53     30] 	Constant/Spl Net Pins              : 0
+[03/22 01:45:53     30] 	Internal Pins                      : 0
+[03/22 01:45:53     30] 	Legally Assigned Feedthrough Pins  : 0
+[03/22 01:45:53     30] 	Illegally Assigned Feedthrough Pins: 0
+[03/22 01:45:53     30] End of Summary report
+[03/22 01:45:53     30] 161 pin(s) of the Partition core were legalized.
+[03/22 01:45:53     30] End pin legalization for the partition [core].
+[03/22 01:45:53     30] 
+[03/22 01:45:53     30] legalizePin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:45:53     30] <CMD> editPin -fixedPin 1 -pin {clk {inst[0]} {inst[1]} {inst[2]} {inst[3]} {inst[4]} {inst[5]} {inst[6]} {inst[7]} {inst[8]} {inst[9]} {inst[10]} {inst[11]} {inst[12]} {inst[13]} {inst[14]} {inst[15]} {inst[16]} {mem_in[0]} {mem_in[1]} {mem_in[2]} {mem_in[3]} {mem_in[4]} {mem_in[5]} {mem_in[6]} {mem_in[7]} {mem_in[8]} {mem_in[9]} {mem_in[10]} {mem_in[11]} {mem_in[12]} {mem_in[13]} {mem_in[14]} {mem_in[15]} {mem_in[16]} {mem_in[17]} {mem_in[18]} {mem_in[19]} {mem_in[20]} {mem_in[21]} {mem_in[22]} {mem_in[23]} {mem_in[24]} {mem_in[25]} {mem_in[26]} {mem_in[27]} {mem_in[28]} {mem_in[29]} {mem_in[30]} {mem_in[31]} {mem_in[32]} {mem_in[33]} {mem_in[34]} {mem_in[35]} {mem_in[36]} {mem_in[37]} {mem_in[38]} {mem_in[39]} {mem_in[40]} {mem_in[41]} {mem_in[42]} {mem_in[43]} {mem_in[44]} {mem_in[45]} {mem_in[46]} {mem_in[47]} {mem_in[48]} {mem_in[49]} {mem_in[50]} {mem_in[51]} {mem_in[52]} {mem_in[53]} {mem_in[54]} {mem_in[55]} {mem_in[56]} {mem_in[57]} {mem_in[58]} {mem_in[59]} {mem_in[60]} {mem_in[61]} {mem_in[62]} {mem_in[63]} reset}
+[03/22 01:45:53     30] To speed up, if you have to run multiple editPin commands then wrap all editPin commands within  'setPinAssignMode -pinEditInBatch true' (then editPin commands) and 'setPinAssignMode -pinEditInBatch false'
+[03/22 01:45:53     30] Updated attributes of 83 pin(s) of partition core
+[03/22 01:45:53     30] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:45:53     30] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:45:53     30] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 01:45:53     30] <CMD> editPin -fixedPin 1 -pin {{out[0]} {out[1]} {out[2]} {out[3]} {out[4]} {out[5]} {out[6]} {out[7]} {out[8]} {out[9]} {out[10]} {out[11]} {out[12]} {out[13]} {out[14]} {out[15]} {out[16]} {out[17]} {out[18]} {out[19]} {out[20]} {out[21]} {out[22]} {out[23]} {out[24]} {out[25]} {out[26]} {out[27]} {out[28]} {out[29]} {out[30]} {out[31]} {out[32]} {out[33]} {out[34]} {out[35]} {out[36]} {out[37]} {out[38]} {out[39]} {out[40]} {out[41]} {out[42]} {out[43]} {out[44]} {out[45]} {out[46]} {out[47]} {out[48]} {out[49]} {out[50]} {out[51]} {out[52]} {out[53]} {out[54]} {out[55]} {out[56]} {out[57]} {out[58]} {out[59]} {out[60]} {out[61]} {out[62]} {out[63]} {out[64]} {out[65]} {out[66]} {out[67]} {out[68]} {out[69]} {out[70]} {out[71]} {out[72]} {out[73]} {out[74]} {out[75]} {out[76]} {out[77]} {out[78]} {out[79]} {out[80]} {out[81]} {out[82]} {out[83]} {out[84]} {out[85]} {out[86]} {out[87]} {out[88]} {out[89]} {out[90]} {out[91]} {out[92]} {out[93]} {out[94]} {out[95]} {out[96]} {out[97]} {out[98]} {out[99]} {out[100]} {out[101]} {out[102]} {out[103]} {out[104]} {out[105]} {out[106]} {out[107]} {out[108]} {out[109]} {out[110]} {out[111]} {out[112]} {out[113]} {out[114]} {out[115]} {out[116]} {out[117]} {out[118]} {out[119]} {out[120]} {out[121]} {out[122]} {out[123]} {out[124]} {out[125]} {out[126]} {out[127]} {out[128]} {out[129]} {out[130]} {out[131]} {out[132]} {out[133]} {out[134]} {out[135]} {out[136]} {out[137]} {out[138]} {out[139]} {out[140]} {out[141]} {out[142]} {out[143]} {out[144]} {out[145]} {out[146]} {out[147]} {out[148]} {out[149]} {out[150]} {out[151]} {out[152]} {out[153]} {out[154]} {out[155]} {out[156]} {out[157]} {out[158]} {out[159]}}
+[03/22 01:45:53     30] Updated attributes of 160 pin(s) of partition core
+[03/22 01:45:53     30] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:45:53     30] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:45:53     30] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[03/22 01:45:54     30] <CMD> pan -8.446 29.237
+[03/22 01:46:00     31] <CMD> pan -11.220 0.000
+[03/22 01:46:04     32] <CMD> pan 150.826 4.389
+[03/22 01:46:05     32] <CMD> pan 27.133 -6.783
+[03/22 01:46:18     34] <CMD> set ptngSprNoRefreshPins 0
+[03/22 01:46:18     34] <CMD_INTERNAL> ptnSprRefreshPinsAndBlockages
+[03/22 01:46:18     34] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 01:46:18     34] <CMD> editPin -pinWidth 0.1 -pinDepth 0.6 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType start -spacing 3 -start 0.0 0.2 -pin {clk {inst[0]} {inst[1]} {inst[2]} {inst[3]} {inst[4]} {inst[5]} {inst[6]} {inst[7]} {inst[8]} {inst[9]} {inst[10]} {inst[11]} {inst[12]} {inst[13]} {inst[14]} {inst[15]} {inst[16]} {mem_in[0]} {mem_in[1]} {mem_in[2]} {mem_in[3]} {mem_in[4]} {mem_in[5]} {mem_in[6]} {mem_in[7]} {mem_in[8]} {mem_in[9]} {mem_in[10]} {mem_in[11]} {mem_in[12]} {mem_in[13]} {mem_in[14]} {mem_in[15]} {mem_in[16]} {mem_in[17]} {mem_in[18]} {mem_in[19]} {mem_in[20]} {mem_in[21]} {mem_in[22]} {mem_in[23]} {mem_in[24]} {mem_in[25]} {mem_in[26]} {mem_in[27]} {mem_in[28]} {mem_in[29]} {mem_in[30]} {mem_in[31]} {mem_in[32]} {mem_in[33]} {mem_in[34]} {mem_in[35]} {mem_in[36]} {mem_in[37]} {mem_in[38]} {mem_in[39]} {mem_in[40]} {mem_in[41]} {mem_in[42]} {mem_in[43]} {mem_in[44]} {mem_in[45]} {mem_in[46]} {mem_in[47]} {mem_in[48]} {mem_in[49]} {mem_in[50]} {mem_in[51]} {mem_in[52]} {mem_in[53]} {mem_in[54]} {mem_in[55]} {mem_in[56]} {mem_in[57]} {mem_in[58]} {mem_in[59]} {mem_in[60]} {mem_in[61]} {mem_in[62]} {mem_in[63]} reset}
+[03/22 01:46:18     34] Successfully spread [83] pins.
+[03/22 01:46:18     34] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:46:18     34] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:46:18     34] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 01:46:18     34] <CMD> editPin -pinWidth 0.1 -pinDepth 0.52 -unit MICRON -spreadDirection clockwise -side Bottom -layer 3 -spreadType start -spacing 2 -start 352.4 401.4 -pin {{out[0]} {out[1]} {out[2]} {out[3]} {out[4]} {out[5]} {out[6]} {out[7]} {out[8]} {out[9]} {out[10]} {out[11]} {out[12]} {out[13]} {out[14]} {out[15]} {out[16]} {out[17]} {out[18]} {out[19]} {out[20]} {out[21]} {out[22]} {out[23]} {out[24]} {out[25]} {out[26]} {out[27]} {out[28]} {out[29]} {out[30]} {out[31]} {out[32]} {out[33]} {out[34]} {out[35]} {out[36]} {out[37]} {out[38]} {out[39]} {out[40]} {out[41]} {out[42]} {out[43]} {out[44]} {out[45]} {out[46]} {out[47]} {out[48]} {out[49]} {out[50]} {out[51]} {out[52]} {out[53]} {out[54]} {out[55]} {out[56]} {out[57]} {out[58]} {out[59]} {out[60]} {out[61]} {out[62]} {out[63]} {out[64]} {out[65]} {out[66]} {out[67]} {out[68]} {out[69]} {out[70]} {out[71]} {out[72]} {out[73]} {out[74]} {out[75]} {out[76]} {out[77]} {out[78]} {out[79]} {out[80]} {out[81]} {out[82]} {out[83]} {out[84]} {out[85]} {out[86]} {out[87]} {out[88]} {out[89]} {out[90]} {out[91]} {out[92]} {out[93]} {out[94]} {out[95]} {out[96]} {out[97]} {out[98]} {out[99]} {out[100]} {out[101]} {out[102]} {out[103]} {out[104]} {out[105]} {out[106]} {out[107]} {out[108]} {out[109]} {out[110]} {out[111]} {out[112]} {out[113]} {out[114]} {out[115]} {out[116]} {out[117]} {out[118]} {out[119]} {out[120]} {out[121]} {out[122]} {out[123]} {out[124]} {out[125]} {out[126]} {out[127]} {out[128]} {out[129]} {out[130]} {out[131]} {out[132]} {out[133]} {out[134]} {out[135]} {out[136]} {out[137]} {out[138]} {out[139]} {out[140]} {out[141]} {out[142]} {out[143]} {out[144]} {out[145]} {out[146]} {out[147]} {out[148]} {out[149]} {out[150]} {out[151]} {out[152]} {out[153]} {out[154]} {out[155]} {out[156]} {out[157]} {out[158]} {out[159]}}
+[03/22 01:46:18     34] Successfully spread [160] pins.
+[03/22 01:46:18     34] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:46:18     34] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:46:18     34] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[03/22 01:46:18     34] <CMD> legalizePin
+[03/22 01:46:18     34] 
+[03/22 01:46:18     34] Start pin legalization for the partition [core]:
+[03/22 01:46:18     34] Moving Pin [clk] to LEGAL location (   0.000    1.200 3 )
+[03/22 01:46:18     34] Moving Pin [out[159]] to LEGAL location (  34.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[158]] to LEGAL location (  36.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[157]] to LEGAL location (  38.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[156]] to LEGAL location (  40.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[155]] to LEGAL location (  42.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[154]] to LEGAL location (  44.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[153]] to LEGAL location (  46.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[152]] to LEGAL location (  48.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[151]] to LEGAL location (  50.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[150]] to LEGAL location (  52.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[149]] to LEGAL location (  54.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[148]] to LEGAL location (  56.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[147]] to LEGAL location (  58.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[146]] to LEGAL location (  60.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[145]] to LEGAL location (  62.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[144]] to LEGAL location (  64.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[143]] to LEGAL location (  66.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[142]] to LEGAL location (  68.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[141]] to LEGAL location (  70.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[140]] to LEGAL location (  72.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[139]] to LEGAL location (  74.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[138]] to LEGAL location (  76.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[137]] to LEGAL location (  78.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[136]] to LEGAL location (  80.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[135]] to LEGAL location (  82.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[134]] to LEGAL location (  84.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[133]] to LEGAL location (  86.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[132]] to LEGAL location (  88.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[131]] to LEGAL location (  90.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[130]] to LEGAL location (  92.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[129]] to LEGAL location (  94.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[128]] to LEGAL location (  96.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[127]] to LEGAL location (  98.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[126]] to LEGAL location ( 100.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[125]] to LEGAL location ( 102.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[124]] to LEGAL location ( 104.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[123]] to LEGAL location ( 106.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[122]] to LEGAL location ( 108.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[121]] to LEGAL location ( 110.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[120]] to LEGAL location ( 112.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[119]] to LEGAL location ( 114.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[118]] to LEGAL location ( 116.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[117]] to LEGAL location ( 118.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[116]] to LEGAL location ( 120.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[115]] to LEGAL location ( 122.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[114]] to LEGAL location ( 124.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[113]] to LEGAL location ( 126.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[112]] to LEGAL location ( 128.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[111]] to LEGAL location ( 130.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[110]] to LEGAL location ( 132.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[109]] to LEGAL location ( 134.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[108]] to LEGAL location ( 136.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[107]] to LEGAL location ( 138.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[106]] to LEGAL location ( 140.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[105]] to LEGAL location ( 142.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[104]] to LEGAL location ( 144.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[103]] to LEGAL location ( 146.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[102]] to LEGAL location ( 148.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[101]] to LEGAL location ( 150.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[100]] to LEGAL location ( 152.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[99]] to LEGAL location ( 154.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[98]] to LEGAL location ( 156.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[97]] to LEGAL location ( 158.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[96]] to LEGAL location ( 160.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[95]] to LEGAL location ( 162.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[94]] to LEGAL location ( 164.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[93]] to LEGAL location ( 166.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[92]] to LEGAL location ( 168.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[91]] to LEGAL location ( 170.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[90]] to LEGAL location ( 172.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[89]] to LEGAL location ( 174.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[88]] to LEGAL location ( 176.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[87]] to LEGAL location ( 178.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[86]] to LEGAL location ( 180.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[85]] to LEGAL location ( 182.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[84]] to LEGAL location ( 184.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[83]] to LEGAL location ( 186.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[82]] to LEGAL location ( 188.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[81]] to LEGAL location ( 190.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[80]] to LEGAL location ( 192.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[79]] to LEGAL location ( 194.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[78]] to LEGAL location ( 196.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[77]] to LEGAL location ( 198.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[76]] to LEGAL location ( 200.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[75]] to LEGAL location ( 202.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[74]] to LEGAL location ( 204.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[73]] to LEGAL location ( 206.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[72]] to LEGAL location ( 208.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[71]] to LEGAL location ( 210.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[70]] to LEGAL location ( 212.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[69]] to LEGAL location ( 214.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[68]] to LEGAL location ( 216.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[67]] to LEGAL location ( 218.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[66]] to LEGAL location ( 220.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[65]] to LEGAL location ( 222.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[64]] to LEGAL location ( 224.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[63]] to LEGAL location ( 226.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[62]] to LEGAL location ( 228.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[61]] to LEGAL location ( 230.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[60]] to LEGAL location ( 232.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[59]] to LEGAL location ( 234.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[58]] to LEGAL location ( 236.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[57]] to LEGAL location ( 238.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[56]] to LEGAL location ( 240.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[55]] to LEGAL location ( 242.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[54]] to LEGAL location ( 244.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[53]] to LEGAL location ( 246.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[52]] to LEGAL location ( 248.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[51]] to LEGAL location ( 250.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[50]] to LEGAL location ( 252.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[49]] to LEGAL location ( 254.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[48]] to LEGAL location ( 256.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[47]] to LEGAL location ( 258.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[46]] to LEGAL location ( 260.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[45]] to LEGAL location ( 262.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[44]] to LEGAL location ( 264.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[43]] to LEGAL location ( 266.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[42]] to LEGAL location ( 268.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[41]] to LEGAL location ( 270.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[40]] to LEGAL location ( 272.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[39]] to LEGAL location ( 274.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[38]] to LEGAL location ( 276.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[37]] to LEGAL location ( 278.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[36]] to LEGAL location ( 280.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[35]] to LEGAL location ( 282.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[34]] to LEGAL location ( 284.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[33]] to LEGAL location ( 286.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[32]] to LEGAL location ( 288.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[31]] to LEGAL location ( 290.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[30]] to LEGAL location ( 292.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[29]] to LEGAL location ( 294.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[28]] to LEGAL location ( 296.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[27]] to LEGAL location ( 298.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[26]] to LEGAL location ( 300.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[25]] to LEGAL location ( 302.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[24]] to LEGAL location ( 304.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[23]] to LEGAL location ( 306.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[22]] to LEGAL location ( 308.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[21]] to LEGAL location ( 310.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[20]] to LEGAL location ( 312.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[19]] to LEGAL location ( 314.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[18]] to LEGAL location ( 316.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[17]] to LEGAL location ( 318.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[16]] to LEGAL location ( 320.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[15]] to LEGAL location ( 322.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[14]] to LEGAL location ( 324.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[13]] to LEGAL location ( 326.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[12]] to LEGAL location ( 328.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[11]] to LEGAL location ( 330.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[10]] to LEGAL location ( 332.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[9]] to LEGAL location ( 334.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[8]] to LEGAL location ( 336.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[7]] to LEGAL location ( 338.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[6]] to LEGAL location ( 340.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[5]] to LEGAL location ( 342.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[4]] to LEGAL location ( 344.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[3]] to LEGAL location ( 346.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[2]] to LEGAL location ( 348.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[1]] to LEGAL location ( 350.300    0.000 2 )
+[03/22 01:46:18     34] Moving Pin [out[0]] to LEGAL location ( 352.300    0.000 2 )
+[03/22 01:46:18     34] Summary report for top level: [core] 
+[03/22 01:46:18     34] 	Total Pads                         : 0
+[03/22 01:46:18     34] 	Total Pins                         : 243
+[03/22 01:46:18     34] 	Legally Assigned Pins              : 243
+[03/22 01:46:18     34] 	Illegally Assigned Pins            : 0
+[03/22 01:46:18     34] 	Unplaced Pins                      : 0
+[03/22 01:46:18     34] 	Constant/Spl Net Pins              : 0
+[03/22 01:46:18     34] 	Internal Pins                      : 0
+[03/22 01:46:18     34] 	Legally Assigned Feedthrough Pins  : 0
+[03/22 01:46:18     34] 	Illegally Assigned Feedthrough Pins: 0
+[03/22 01:46:18     34] End of Summary report
+[03/22 01:46:18     34] 161 pin(s) of the Partition core were legalized.
+[03/22 01:46:18     34] End pin legalization for the partition [core].
+[03/22 01:46:18     34] 
+[03/22 01:46:18     34] legalizePin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:46:18     34] <CMD> editPin -fixedPin 1 -pin {clk {inst[0]} {inst[1]} {inst[2]} {inst[3]} {inst[4]} {inst[5]} {inst[6]} {inst[7]} {inst[8]} {inst[9]} {inst[10]} {inst[11]} {inst[12]} {inst[13]} {inst[14]} {inst[15]} {inst[16]} {mem_in[0]} {mem_in[1]} {mem_in[2]} {mem_in[3]} {mem_in[4]} {mem_in[5]} {mem_in[6]} {mem_in[7]} {mem_in[8]} {mem_in[9]} {mem_in[10]} {mem_in[11]} {mem_in[12]} {mem_in[13]} {mem_in[14]} {mem_in[15]} {mem_in[16]} {mem_in[17]} {mem_in[18]} {mem_in[19]} {mem_in[20]} {mem_in[21]} {mem_in[22]} {mem_in[23]} {mem_in[24]} {mem_in[25]} {mem_in[26]} {mem_in[27]} {mem_in[28]} {mem_in[29]} {mem_in[30]} {mem_in[31]} {mem_in[32]} {mem_in[33]} {mem_in[34]} {mem_in[35]} {mem_in[36]} {mem_in[37]} {mem_in[38]} {mem_in[39]} {mem_in[40]} {mem_in[41]} {mem_in[42]} {mem_in[43]} {mem_in[44]} {mem_in[45]} {mem_in[46]} {mem_in[47]} {mem_in[48]} {mem_in[49]} {mem_in[50]} {mem_in[51]} {mem_in[52]} {mem_in[53]} {mem_in[54]} {mem_in[55]} {mem_in[56]} {mem_in[57]} {mem_in[58]} {mem_in[59]} {mem_in[60]} {mem_in[61]} {mem_in[62]} {mem_in[63]} reset}
+[03/22 01:46:18     34] To speed up, if you have to run multiple editPin commands then wrap all editPin commands within  'setPinAssignMode -pinEditInBatch true' (then editPin commands) and 'setPinAssignMode -pinEditInBatch false'
+[03/22 01:46:18     34] Updated attributes of 83 pin(s) of partition core
+[03/22 01:46:18     34] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:46:18     34] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:46:18     34] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 01:46:18     34] <CMD> editPin -fixedPin 1 -pin {{out[0]} {out[1]} {out[2]} {out[3]} {out[4]} {out[5]} {out[6]} {out[7]} {out[8]} {out[9]} {out[10]} {out[11]} {out[12]} {out[13]} {out[14]} {out[15]} {out[16]} {out[17]} {out[18]} {out[19]} {out[20]} {out[21]} {out[22]} {out[23]} {out[24]} {out[25]} {out[26]} {out[27]} {out[28]} {out[29]} {out[30]} {out[31]} {out[32]} {out[33]} {out[34]} {out[35]} {out[36]} {out[37]} {out[38]} {out[39]} {out[40]} {out[41]} {out[42]} {out[43]} {out[44]} {out[45]} {out[46]} {out[47]} {out[48]} {out[49]} {out[50]} {out[51]} {out[52]} {out[53]} {out[54]} {out[55]} {out[56]} {out[57]} {out[58]} {out[59]} {out[60]} {out[61]} {out[62]} {out[63]} {out[64]} {out[65]} {out[66]} {out[67]} {out[68]} {out[69]} {out[70]} {out[71]} {out[72]} {out[73]} {out[74]} {out[75]} {out[76]} {out[77]} {out[78]} {out[79]} {out[80]} {out[81]} {out[82]} {out[83]} {out[84]} {out[85]} {out[86]} {out[87]} {out[88]} {out[89]} {out[90]} {out[91]} {out[92]} {out[93]} {out[94]} {out[95]} {out[96]} {out[97]} {out[98]} {out[99]} {out[100]} {out[101]} {out[102]} {out[103]} {out[104]} {out[105]} {out[106]} {out[107]} {out[108]} {out[109]} {out[110]} {out[111]} {out[112]} {out[113]} {out[114]} {out[115]} {out[116]} {out[117]} {out[118]} {out[119]} {out[120]} {out[121]} {out[122]} {out[123]} {out[124]} {out[125]} {out[126]} {out[127]} {out[128]} {out[129]} {out[130]} {out[131]} {out[132]} {out[133]} {out[134]} {out[135]} {out[136]} {out[137]} {out[138]} {out[139]} {out[140]} {out[141]} {out[142]} {out[143]} {out[144]} {out[145]} {out[146]} {out[147]} {out[148]} {out[149]} {out[150]} {out[151]} {out[152]} {out[153]} {out[154]} {out[155]} {out[156]} {out[157]} {out[158]} {out[159]}}
+[03/22 01:46:18     34] Updated attributes of 160 pin(s) of partition core
+[03/22 01:46:18     34] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1016.0M).
+[03/22 01:46:18     34] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 01:46:18     34] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[03/22 01:46:20     35] <CMD> pan -54.270 -1.529
+[03/22 01:46:22     35] <CMD> pan 26.753 -98.605
+[03/22 01:46:27     36] 
+[03/22 01:46:27     36] *** Memory Usage v#1 (Current mem = 1015.977M, initial mem = 149.258M) ***
+[03/22 01:46:27     36] 
+[03/22 01:46:27     36] *** Summary of all messages that are not suppressed in this session:
+[03/22 01:46:27     36] Severity  ID               Count  Summary                                  
+[03/22 01:46:27     36] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[03/22 01:46:27     36] WARNING   IMPFP-3961           2  The techSite '%s' has no related cells i...
+[03/22 01:46:27     36] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[03/22 01:46:27     36] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[03/22 01:46:27     36] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[03/22 01:46:27     36] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[03/22 01:46:27     36] WARNING   IMPVL-159         1622  Pin '%s' of cell '%s' is defined in LEF ...
+[03/22 01:46:27     36] WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
+[03/22 01:46:27     36] WARNING   IMPSR-1254           2  Cannot find any block pin of net %s. Che...
+[03/22 01:46:27     36] WARNING   IMPSR-1256           2  Cannot find any CORE class pad pin of ne...
+[03/22 01:46:27     36] WARNING   IMPOPT-7136          1  %s '%s' is not supported by Innovus. Set...
+[03/22 01:46:27     36] ERROR     IMPOAX-142           3  %s                                       
+[03/22 01:46:27     36] ERROR     IMPOAX-820           1  The OA features are disabled in the curr...
+[03/22 01:46:27     36] ERROR     IMPOAX-850           1  %s command cannot be run as OA features ...
+[03/22 01:46:27     36] *** Message Summary: 1639 warning(s), 5 error(s)
+[03/22 01:46:27     36] 
+[03/22 01:46:27     36] --- Ending "Innovus" (totcpu=0:00:36.3, real=0:02:18, mem=1016.0M) ---

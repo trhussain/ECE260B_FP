@@ -1,0 +1,72 @@
+[03/21 21:12:39      0] 
+[03/21 21:12:39      0] Cadence Innovus(TM) Implementation System.
+[03/21 21:12:39      0] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[03/21 21:12:39      0] 
+[03/21 21:12:39      0] Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+[03/21 21:12:39      0] Options:	
+[03/21 21:12:39      0] Date:		Fri Mar 21 21:12:39 2025
+[03/21 21:12:39      0] Host:		ieng6-ece-11.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB)
+[03/21 21:12:39      0] OS:		CentOS Linux release 7.9.2009 (Core)
+[03/21 21:12:39      0] 
+[03/21 21:12:39      0] License:
+[03/21 21:12:39      0] 		invs	Innovus Implementation System	15.2	checkout succeeded
+[03/21 21:12:39      0] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[03/21 21:12:39      0] **ERROR: (IMPOAX-142):	Could not open shared library libinnovusoax22.so : /acsnfs3/software/cadence-innovus152/tools/lib/64bit/libcdsSkillPcell.so: undefined symbol: _ZTIN12OpenAccess_413oaFSComponentE
+[03/21 21:12:39      0] 
+[03/21 21:12:39      0] **ERROR: (IMPOAX-142):	Could not open shared library libcdsSkillPcell.so : (null)
+[03/21 21:12:39      0] 
+[03/21 21:12:39      0] **ERROR: (IMPOAX-142):	OA features will be disabled in this session.
+[03/21 21:12:39      0] 
+[03/21 21:12:48      7] @(#)CDS: Innovus v15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+[03/21 21:12:48      7] @(#)CDS: NanoRoute 15.23-s045_1 NR160414-1105/15_23-UB (database version 2.30, 317.6.1) {superthreading v1.26}
+[03/21 21:12:48      7] @(#)CDS: AAE 15.23-s014 (64bit) 04/22/2016 (Linux 2.6.18-194.el5)
+[03/21 21:12:48      7] @(#)CDS: CTE 15.23-s022_1 () Apr 22 2016 09:38:45 ( )
+[03/21 21:12:48      7] @(#)CDS: SYNTECH 15.23-s008_1 () Apr 12 2016 21:52:59 ( )
+[03/21 21:12:48      7] @(#)CDS: CPE v15.23-s045
+[03/21 21:12:48      7] @(#)CDS: IQRC/TQRC 15.1.4-s213 (64bit) Tue Feb  9 17:31:28 PST 2016 (Linux 2.6.18-194.el5)
+[03/21 21:12:48      7] @(#)CDS: OA 22.50-p036 Tue Nov  3 09:29:52 2015
+[03/21 21:12:48      7] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[03/21 21:12:48      7] @(#)CDS: RCDB 11.7
+[03/21 21:12:48      7] --- Running on ieng6-ece-11.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB) ---
+[03/21 21:12:48      7] Create and set the environment variable TMPDIR to /tmp/innovus_temp_18276_ieng6-ece-11.ucsd.edu_trhussain_rnVpq3.
+
+[03/21 21:12:49      7] 
+[03/21 21:12:49      7] **INFO:  MMMC transition support version v31-84 
+[03/21 21:12:49      7] 
+[03/21 21:12:49      7] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[03/21 21:12:49      7] <CMD> suppressMessage ENCEXT-2799
+[03/21 21:12:49      8] <CMD> getDrawView
+[03/21 21:12:49      8] <CMD> loadWorkspace -name Physical
+[03/21 21:12:49      8] <CMD> win
+[03/21 21:15:49     39] <CMD> floorPlan -site core -r 1 0.70 10.0 10.0 10.0 10.0
+[03/21 21:15:49     39] **ERROR: Design must be in memory before running "floorPlan"
+[03/21 21:15:49     39] Design must be in memory before running "floorPlan"
+[03/21 21:15:52     39] <CMD> set init_pwr_net VDD
+[03/21 21:15:52     39] <CMD> set init_gnd_net VSS
+[03/21 21:15:52     39] <CMD> set init_verilog ./netlist/core.out.v
+[03/21 21:15:52     39] <CMD> set init_design_netlisttype Verilog
+[03/21 21:15:52     39] <CMD> set init_design_settop 1
+[03/21 21:15:52     39] <CMD> set init_top_cell core
+[03/21 21:15:52     39] <CMD> set init_lef_file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef
+[03/21 21:15:52     39] <CMD> create_library_set -name WC_LIB -timing $worst_timing_lib
+[03/21 21:15:52     39] <CMD> create_library_set -name BC_LIB -timing $best_timing_lib
+[03/21 21:15:52     39] <CMD> create_rc_corner -name Cmax -cap_table $worst_captbl -T 125
+[03/21 21:15:52     39] <CMD> create_rc_corner -name Cmin -cap_table $best_captbl -T -40
+[03/21 21:15:52     39] <CMD> create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
+[03/21 21:15:52     39] <CMD> create_delay_corner -name BC -library_set BC_LIB -rc_corner Cmin
+[03/21 21:15:52     39] <CMD> create_constraint_mode -name CON -sdc_file [list $sdc]
+[03/21 21:15:52     39] **ERROR: (TCLCMD-989):	cannot open SDC file './constraints/core.sdc' for mode 'CON'
+[03/21 21:15:52     39] 
+[03/21 21:17:11     55] couldn't read file "loadDesignTech.tcl": stale remote file handle
+[03/21 21:17:22     57] couldn't change working directory to "..": stale remote file handle
+[03/21 21:17:24     57] child process exited abnormally
+[03/21 21:17:25     58] ambiguous command name "c": calNegSlack calculate_ccopt_cannot_clone_reason canvas case catch ccopt_add_exclusion_drivers ccopt_design ccopt_pro cd chan changeBBoxMasterFromR0 changeBBoxMasterToR0 changeBumpMaster changeClockMeshStatus changeClockStatus changeDieSize changeFloorplan changeInstName changeIoConstraints changeUseClockNetStatus characterizeClockMesh checkAssembledSdcCCD checkBondPadSpacing checkBudgetSdcCCD checkBump checkClockTreeCellHalo checkDesign checkFPlan checkFPlanSpace checkFiller checkFootPrint checkHierRoute checkMacroLLOnTrack checkMultiCpuUsage checkNamespaceBindings checkNetlist checkPinAssignment checkPlace checkRoute checkSdcCCD checkTQuantusModelFile checkTimingLibrary checkUnique checkWhatIfTiming check_ccopt_clock_tree_convergence check_instance_library_in_views check_ldb_version check_noise check_pg_library check_power_library check_sdp_group check_syntax check_timing checkbutton ciopLoadBumpColorMapFile ckCloneGate ckDecloneGate ckECO ckEcoBalanceRoute ckSynthesis cleanRedundantIsoCell cleanRedundantShifter cleanupExcludeNet cleanupSpecifyClockTree clearActiveLogicView clearClockDisplay clearDeCapCellCandidates clearDrc clearGlobalNets clearScanDisplay clearSpareCellDisplay clipboard clock clockDesign clockSpiceOut cloneMSVGate clonePlace close close_ctd_win close_on_eof cloud_opt cloud_place colorizeGeometry commitCPF commit_module_model commit_power_intent commit_proto_model commit_pushdown_eco comparePinAssignStatistics compareSdcCCD compare_cellview compare_collections compare_model_timing compileDesign concat configure_ipd_mode congRepair connectMacroFeedthrough continue convertBlackBoxToFence convertFenceToBlackBox convertFenceToLef copyOaRestoreFiles copyObject copy_bump copy_collection copy_design copy_design_hier coroutine createAbuttedFPlan createActiveLogicView createBasicPathGroups createBusGuide createClockMeshCutout createClockTreeSpec createDensityArea createFence createGAFillerGroup createGuide createInstGroup createInterfaceLogic createIoRow createLib createLogicHierarchy createMarker createNetGroup createPGPin createPhysicalPin createPinBlkg createPinGroup createPinGuide createPipelineBusGuide createPipelineNetGroup createPlaceBlockage createPtnCut createPtnFeedthrough createRcCornersFromConfigTop createRegion createRouteBlk createRow createSdpGroup createShield createShifterRows createSignalPin createSnapshot createSoftGuide createSpareModule createStairwayBoundary createTQuantusModelFile createTSVNoLoadSPEF createTrack createUserBundleNet createUserDisableForCombLoopBreak createWhatIfInternalGeneratedClock create_analysis_view create_buffer_psPM_table create_bump create_ccopt_clock_spine create_ccopt_clock_tree create_ccopt_clock_tree_source_group create_ccopt_clock_tree_spec create_ccopt_flexible_htree create_ccopt_generated_clock_tree create_ccopt_macro_model_spec create_ccopt_preferred_cell_stripe create_ccopt_skew_group create_clock create_constraint_mode create_current_region create_delay_corner create_die_model create_ecsm_extension create_flexfiller_route_blockage create_generated_clock create_hier_view create_inst_space_group create_library_set create_op_cond create_path_category create_power_pads create_proto_model create_ps_per_micron_model create_pushdown_eco create_rc_corner create_relative_floorplan create_route_type create_spice_deck create_stress_rule create_what_if_shape ctd_trace ctd_win cts_refine_clock_tree_placement current_design current_instance cutBoxListFromPowerDomain cutPowerDomainByOverlaps cutRectilinearInst cutRow
+[03/21 21:17:26     58] 
+[03/21 21:17:26     58] *** Memory Usage v#1 (Current mem = 421.609M, initial mem = 149.258M) ***
+[03/21 21:17:26     58] 
+[03/21 21:17:26     58] *** Summary of all messages that are not suppressed in this session:
+[03/21 21:17:26     58] Severity  ID               Count  Summary                                  
+[03/21 21:17:26     58] ERROR     IMPOAX-142           3  %s                                       
+[03/21 21:17:26     58] *** Message Summary: 0 warning(s), 3 error(s)
+[03/21 21:17:26     58] 
+[03/21 21:17:26     58] --- Ending "Innovus" (totcpu=0:00:58.4, real=0:04:47, mem=421.6M) ---
