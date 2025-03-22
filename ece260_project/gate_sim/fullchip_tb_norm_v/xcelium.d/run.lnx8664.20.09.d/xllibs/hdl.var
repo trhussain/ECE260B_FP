@@ -1,0 +1,8 @@
+define LIB_MAP ( $LIB_MAP \
+, ../../../netlist/fifo_mux_2_1.v => fifo_mux_2_1 \
+, ../../../netlist/fifo_mux_8_1.v => fifo_mux_8_1 \
+, ../../../netlist/fifo_depth8.v => fifo_depth8 \
+, ../../../netlist/fullchip.v => fullchip \
+, ../../../netlist/core.out.v => core \
+, ../../../../../../../../public/PDKdata/verilog/tcbn65gplus.v => tcbn65gplus \
+)
