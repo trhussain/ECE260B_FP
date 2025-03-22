@@ -1,12 +1,12 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
 //module core (clk, sum_out, mem_in, out, inst, reset);
-module core (clk, mem_in, out, inst, reset, core_sum_in, core_sum_out, vmem_in);
+module core #(parameter bw = 8, parameter bw_psum = 2*bw+4, parameter col = 8, parameter pr = 8) (clk, mem_in, out, inst, reset, core_sum_in, core_sum_out, vmem_in);
 
-parameter col = 8;
-parameter bw = 8;
-parameter bw_psum = 2*bw+4;
-parameter pr = 8;
+// parameter col = 8;
+// parameter bw = 8;
+// parameter bw_psum = 2*bw+4;
+// parameter pr = 8;
 
 parameter bw_sum = bw_psum+3;
 
@@ -209,6 +209,7 @@ sram_w16 #(.sram_bit(col*(bw_psum+bw+4))) outmem_instance (
 );
 
 normalization normalization_instance(
+        .reset(reset),
         .clk(clk),
         .execute(norm_execute),
         .abs_in(fifo_add_row_abs_out),

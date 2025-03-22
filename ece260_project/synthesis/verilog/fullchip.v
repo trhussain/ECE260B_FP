@@ -77,7 +77,17 @@ fifo_depth8 #(.bw(bw_psum+4))  fifo_core1_sum (
 
 integer q; // Declare loop variable properly
 
-always @(posedge clk) begin
+always @(posedge clk or posedge reset) begin
+    if (reset) begin
+        // core_0_add_sum_fifo <= 0;
+        // core_1_add_sum_fifo <= 0;
+        // core_0_add_sum <= 0;
+        // core_1_add_sum <= 0;
+        // core_0_fifo_empty <= 0;
+        // core_1_fifo_empty <= 0;
+        // core_0_fifo_full <= 0; 
+        // core_1_fifo_full <= 0;
+    end
     if (inst[31]) begin
         $write("Core Output |");
         for (q = 7; q >= 0; q = q - 1) begin

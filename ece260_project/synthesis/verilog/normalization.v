@@ -1,12 +1,13 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
-module normalization (clk, execute, abs_in, abs_sum_in, normalization_out);
+module normalization (reset, clk, execute, abs_in, abs_sum_in, normalization_out);
 
   parameter col = 8;
   parameter bw = 8;
   parameter bw_psum = 2*bw+4;
   parameter bw_out = 2*bw+9;
 
+  input reset;
   input  clk, execute;
   input [col*bw_psum-1:0] abs_in;
   input [bw_psum+4:0] abs_sum_in;
@@ -26,8 +27,11 @@ module normalization (clk, execute, abs_in, abs_sum_in, normalization_out);
 
   assign dec_abs_sum_in = abs_sum_in[0 +: 11];
 
-  always @ (posedge clk) begin
-    if (execute) begin
+  always @ (posedge clk or posedge reset) begin
+    if(reset) begin
+      normalization_out <= 0;
+    end
+    else if (execute) begin
       // $display("(normalization.v) div_result = %d abs_in_0 : %d abs_sum_in : %d", {abs_in_0,23'b0} / abs_sum_in, abs_in_0, abs_sum_in);
       if (0 == dec_abs_sum_in) begin
         normalization_out <= 0;
