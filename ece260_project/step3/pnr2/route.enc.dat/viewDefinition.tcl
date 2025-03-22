@@ -6,12 +6,12 @@ create_library_set -name WC_LIB\
    -timing\
     [list ${::IMEX::libVar}/mmmc/tcbn65gpluswc.lib\
     ${::IMEX::libVar}/mmmc/sram_w16_160_WC.lib\
-    ${::IMEX::libVar}/mmmc/sram_w16_WC.lib]
+    ${::IMEX::libVar}/mmmc/sram_w16_64_WC.lib]
 create_library_set -name BC_LIB\
    -timing\
     [list ${::IMEX::libVar}/mmmc/tcbn65gplusbc.lib\
     ${::IMEX::libVar}/mmmc/sram_w16_160_BC.lib\
-    ${::IMEX::libVar}/mmmc/sram_w16_BC.lib]
+    ${::IMEX::libVar}/mmmc/sram_w16_64_BC.lib]
 create_rc_corner -name Cmin\
    -cap_table ${::IMEX::libVar}/mmmc/cln65g+_1p08m+alrdl_top2_cbest.captable\
    -preRoute_res 1\
