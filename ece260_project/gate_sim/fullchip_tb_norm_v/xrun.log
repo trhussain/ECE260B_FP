@@ -1127,4 +1127,9 @@ Core Output |         -95 |          70 |           1 |        -134 |        -12
 ---------------------------------------------------
 Simulation complete via $finish(1) at time 1270 NS + 0
 ./netlist/fullchip_tb_norm_v.v:413   #10 $finish;
-xcelium> 
+xcelium> ^C
+xcelium> exit
+xmsim: Memory Usage - Final: 534.3M, Peak: 541.3M, Peak virtual: 878.3M
+xmsim: Main Thread CPU Usage - 10.8s system + 16.8s user = 27.6s total
+xmsim: CPU Usage - 10.8s system + 16.5s user = 27.3s total (831.7s, 3.3% cpu)
+TOOL:	xrun(64)	20.09-s017: Exiting on Mar 22, 2025 at 15:56:28 PDT  (total: 00:14:19)

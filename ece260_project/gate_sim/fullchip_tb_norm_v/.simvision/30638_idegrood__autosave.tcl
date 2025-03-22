@@ -45,5 +45,6 @@ set vcd_compact_mode 0
 alias . run
 alias quit exit
 database -open -shm -into waves.shm waves -default
+probe -create -database waves fullchip_tb_norm_v.clk
 
 simvision -input /home/linux/ieng6/ee260bwi25/idegrood/ECE260B_FP/ece260_project/gate_sim/fullchip_tb_norm_v/.simvision/30638_idegrood__autosave.tcl.svcf
