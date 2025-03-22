@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Ultra(TM) in wire load mode
 // Version   : K-2015.06-SP2
-// Date      : Fri Mar 21 16:36:15 2025
+// Date      : Fri Mar 21 16:54:20 2025
 /////////////////////////////////////////////////////////////
 
 
@@ -27834,8 +27834,7 @@ module sram_w16_sram_bit64_0 ( CLK, D, Q, CEN, WEN, A );
 endmodule
 
 
-module core #(parameter bw = 8, parameter bw_psum = 2*bw+4, parameter col = 8, parameter pr = 8)
-(clk, mem_in, out, inst, reset);
+module core ( clk, mem_in, out, inst, reset );
   input [63:0] mem_in;
   output [159:0] out;
   input [16:0] inst;

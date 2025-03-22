@@ -197,25 +197,32 @@ always  @(posedge clk) begin
                 // $display("PMEM WRITING: pmem_wr=%b | pmem_add=%d | ofifo_rd=%b", pmem_wr, pmem_add, ofifo_rd);
 
 //     if (|fifo_wr) begin  // If any bit of fifo_wr is high, meaning a valid write
-//         $write("Mac In: ");
+//         $write("FIFO Writing: ");
 //         for (fi = 0; fi < col; fi= fi + 1) begin
-//             $write("%h ", mac_in[63: 0]); 
+//             $write("%4d ", $signed(pmem_in[(i+1)*bw-1 -: bw]))
 //             //$write("%6d ", $signed(array_out[(fi+1)*bw_psum-1 -: bw_psum])); // Extract each column's result
 //         end
 //         $display("");  // New line
 //     end
-//         if (|fifo_wr) begin  // If any bit of fifo_wr is high, meaning a valid write
+//    if (|fifo_wr) begin  // If any bit of fifo_wr is high, meaning a valid write
 //         $write("Array Out : ");
 //         $write("%h ", array_out[159: 0]); 
 //         $display("");  // New line
 //     end
-//     if (ofifo_rd) begin
-//         $write("FIFO OUT: ");
-//         for (fi = 0; fi < col; fi = fi + 1) begin
-//             $write("%6d ", $signed(fifo_out[(fi+1)*bw_psum-1 -: bw_psum])); 
+//         if (|fifo_wr) begin  // If any bit of fifo_wr is high
+//         $write("Array Out (Decimal): ");
+//         for (i = 0; i < col; i = i + 1) begin
+//             $write("%d ", $signed(array_out[(i+1)*bw_psum-1 -: bw_psum])); 
 //         end
-//         $display("");  
-//          end
+//         $display("");  // New line
+//     end
+    if (ofifo_rd) begin
+        $write("FIFO OUT: ");
+        for (fi = 0; fi < col; fi = fi + 1) begin
+            $write("%6d ", $signed(fifo_out[(fi+1)*bw_psum-1 -: bw_psum])); 
+        end
+        $display("");  
+         end
 
 //     if (inst[6]) begin  // Check if mac_array is active (controlled by inst[6])
 //         $write("MAC IN (Cycle %0d): ", $time);

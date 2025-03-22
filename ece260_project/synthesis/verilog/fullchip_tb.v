@@ -313,7 +313,7 @@ $display("##### K data loading to processor #####");
 $display("##### execute #####");
   // INCREASED TOTAL CYCLE BY 1 => CC delay from SRAM <= to load data into Q, 
   // so increased CC count 
-  for (q=0; q<total_cycle+1; q=q+1) begin
+  for (q=0; q<total_cycle; q=q+1) begin
     #0.5 clk = 1'b0;  
     execute = 1; 
     qmem_rd = 1;
