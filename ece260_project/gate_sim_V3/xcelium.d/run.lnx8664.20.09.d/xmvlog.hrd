@@ -3,7 +3,7 @@
 // Do not modify this file
 //
 -VFILE
-./netlist/core.out.v
+./netlist/core.pnr.v
 -VFILE
 /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
 -VFILE

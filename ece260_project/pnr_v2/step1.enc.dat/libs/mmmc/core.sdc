@@ -1,0 +1,1 @@
+/home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/pnr_v2/constraints/core.sdc

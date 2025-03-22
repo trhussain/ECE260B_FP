@@ -13,7 +13,7 @@ INITIALIZE_MEMORY
 +xmtimescale+1ns/1ps
 +xmoveride_timescale
 -v
-./netlist/core.out.v
+./netlist/core.pnr.v
 -v
 /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
 ./netlist/fullchip_tb.v

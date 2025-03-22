@@ -1,0 +1,87 @@
+*----------------------------------------------------------------------------------------
+*	Innovus 15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+*	
+*
+* 	Date & Time:	2025-Mar-21 22:27:39 (2025-Mar-22 05:27:39 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: core
+*
+*	Liberty Libraries used: 
+*	        WC_VIEW: /home/linux/ieng6/ee260bwi25/public/PDKdata/lib/tcbn65gpluswc.lib
+*
+*	Power Domain used: 
+*		Rail:        VDD 	Voltage:        0.9 
+*
+*       Power View : WC_VIEW
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile ./timingReports/core_preCTS.power
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:       78.50881903 	   69.1476%
+Total Switching Power:      33.78155801 	   29.7535%
+Total Leakage Power:         1.24757687 	    1.0988%
+Total Power:               113.53795401 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                         44.92       3.357      0.3342       48.61       42.81 
+Macro                                  0           0           0           0           0 
+IO                                     0           0           0           0           0 
+Combinational                      33.59       30.42      0.9134       64.93       57.19 
+Clock (Combinational)                  0           0           0           0           0 
+Clock (Sequential)                     0           0           0           0           0 
+-----------------------------------------------------------------------------------------
+Total                              78.51       33.78       1.248       113.5         100 
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+VDD                       0.9      78.51       33.78       1.248       113.5         100 
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+* 		Highest Average Power: mac_array_instance/col_idx_5__mac_col_inst/mac_16in_instance/FE_OFC536_array_out_98_ (BUFFD16): 	    0.0884 
+* 		Highest Leakage Power: mac_array_instance/col_idx_1__mac_col_inst/mac_16in_instance/U780 (FA1D4): 	 0.0002649 
+* 		Total Cap: 	1.96362e-10 F
+* 		Total instances in design: 27241
+* 		Total instances in design with no power:     0
+*          Total instances in design with no activity:     0
+* 		Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+
+Total leakage power = 1.24758 mW
+ Cell usage statistics:  
+ Library tcbn65gpluswc , 27241 cells ( 100.000000%) , 1.24758 mW ( 100.000000%  ) 
+ 
