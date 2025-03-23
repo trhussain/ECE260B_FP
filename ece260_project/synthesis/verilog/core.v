@@ -105,6 +105,9 @@ wire sum_fifo_empty;
 wire abs_fifo_full;
 wire abs_fifo_empty;
 
+wire fifo_full;
+wire mac2_ofifo_full;
+
 
 mac_array #(.bw(bw), .bw_psum(bw_psum), .col(col), .pr(pr)) mac_array_instance (
         .in(mac_in), 
@@ -122,7 +125,8 @@ ofifo #(.bw(bw_psum), .col(col))  ofifo_mac ( //from mac array
         .wr(fifo_wr),
         .rd(ofifo_rd),
         .o_valid(fifo_valid),
-        .out(fifo_mac_out)
+        .out(fifo_mac_out),
+        .o_full(fifo_full)
 );
 
 //stores the sum output of the add_row
@@ -233,7 +237,8 @@ ofifo #(.bw(bw_psum+bw+4), .col(col))  ofifo_mac2 ( //from mac array
         .wr(mac2_ofifo_wr),
         .rd(mac2_ofifo_rd),
         .o_valid(mac2_ofifo_valid),
-        .out(outmem_in) //output to pmem
+        .out(outmem_in), //output to pmem
+        .o_full(mac2_ofifo_full)
 );
 
 integer i;
