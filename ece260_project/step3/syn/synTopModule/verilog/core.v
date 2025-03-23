@@ -40,6 +40,9 @@ wire  kmem_wr;
 wire  pmem_rd;
 wire  pmem_wr; 
 
+wire fifo_valid;
+wire fifo_full;
+
 assign ofifo_rd = inst[16];
 assign qkmem_add = inst[15:12];
 assign pmem_add = inst[11:8];
@@ -76,11 +79,12 @@ ofifo #(.bw(bw_psum), .col(col))  ofifo_inst (
         .wr(fifo_wr),
         .rd(ofifo_rd),
         .o_valid(fifo_valid),
-        .out(fifo_out)
+        .out(fifo_out),
+        .o_full(fifo_full)
 );
 
 
-sram_w16_64 /*#(.sram_bit(pr*bw))*/ qmem_instance (
+sram_w16_64 qmem_instance (
         .CLK(clk),
         .D(mem_in),
         .Q(qmem_out),
@@ -89,7 +93,7 @@ sram_w16_64 /*#(.sram_bit(pr*bw))*/ qmem_instance (
         .A(qkmem_add)
 );
 
-sram_w16_64 /*#(.sram_bit(pr*bw))*/ kmem_instance (
+sram_w16_64 kmem_instance (
         .CLK(clk),
         .D(mem_in),
         .Q(kmem_out),
@@ -99,7 +103,7 @@ sram_w16_64 /*#(.sram_bit(pr*bw))*/ kmem_instance (
 );
 
 // partial sum memory, pmemin = fifo_out 
-sram_w16_160 /*#(.sram_bit(col*bw_psum))*/ psum_mem_instance (
+sram_w16_160 psum_mem_instance (
         .CLK(clk),
         .D(pmem_in),
         .Q(pmem_out),
@@ -216,13 +220,13 @@ always  @(posedge clk) begin
 //         end
 //         $display("");  // New line
 //     end
-//     if (ofifo_rd) begin
-//         $write("FIFO OUT: ");
-//         for (fi = 0; fi < col; fi = fi + 1) begin
-//             $write("%6d ", $signed(fifo_out[(fi+1)*bw_psum-1 -: bw_psum])); 
-//         end
-//         $display("");  
-//          end
+    if (ofifo_rd) begin
+        $write("FIFO OUT: ");
+        for (fi = 0; fi < col; fi = fi + 1) begin
+            $write("%6d ", $signed(fifo_out[(fi+1)*bw_psum-1 -: bw_psum])); 
+        end
+        $display("");  
+         end
 
 //     if (inst[6]) begin  // Check if mac_array is active (controlled by inst[6])
 //         $write("MAC IN (Cycle %0d): ", $time);

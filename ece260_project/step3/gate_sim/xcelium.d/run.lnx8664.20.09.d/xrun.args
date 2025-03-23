@@ -13,11 +13,11 @@ INITIALIZE_MEMORY
 +xmtimescale+1ns/1ps
 +xmoveride_timescale
 -v
-./netlist/sram_w16_64.out.v
+./netlist/sram_w16_64.pnr.v
 -v
-./netlist/sram_w16_160.out.v
+./netlist/sram_w16_160.pnr.v
 -v
-./netlist/core.out.v
+./netlist/core.pnr.v
 -v
 /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
 ./netlist/fullchip_tb.v
