@@ -12,3 +12,6 @@ setAnalysisMode -hold
 set_analysis_view -setup BC_VIEW -hold BC_VIEW
 do_extract_model -view BC_VIEW -format dotlib ${design}_BC.lib
 write_sdf -view BC_VIEW ${design}_BC.sdf
+
+-stripePin -PGPinLayers {4} -extractBlockPGPinLayers {4}
+${design}.lef -specifyTopLayer 4

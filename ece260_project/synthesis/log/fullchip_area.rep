@@ -1,0 +1,34 @@
+Error: Current design is not defined. (UID-4)
+0
+Error: Current design is not defined. (UID-4)
+0
+ 
+****************************************
+Report : reference
+Design : fullchip
+Version: K-2015.06-SP2
+Date   : Sat Mar 22 15:26:25 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+core_bw8_bw_psum20_col8_pr8_0 400088.877599
+                                                 1  400088.877599 h, n
+core_bw8_bw_psum20_col8_pr8_1 400038.117605
+                                                 1  400038.117605 h, n
+fifo_depth8_bw24_0             1227.599988       1   1227.599988  h, n
+fifo_depth8_bw24_1             1229.759988       1   1229.759988  h, n
+-----------------------------------------------------------------------------
+Total 4 references                                  802584.355179
+1

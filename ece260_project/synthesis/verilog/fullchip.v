@@ -89,29 +89,30 @@ always @(posedge clk or posedge reset) begin
         // core_0_fifo_full <= 0; 
         // core_1_fifo_full <= 0;
     end
-    if (inst[31]) begin
-        $write("Core Output |");
-        for (q = 7; q >= 0; q = q - 1) begin
-            $write(" %d |", $signed(core_out1[q*32 +: 32]));
+    else begin
+        if (inst[31]) begin
+            $write("Core Output |");
+            for (q = 7; q >= 0; q = q - 1) begin
+                $write(" %d |", $signed(core_out1[q*32 +: 32]));
+            end
+            
+            for (q = 7; q >= 0; q = q - 1) begin
+                $write(" %d |", $signed(core_out0[q*32 +: 32]));
+            end
+            
+            // for (q = col*2-1; q >= 0; q = q - 1) begin  // Reverse the order to match expected output
+            //     if (q < col)
+            //         $write(" %d |", $signed(core_out0[q*32 +: 32])); // Convert HEX to signed DECIMAL
+            //     else
+            //         $write(" %d |", $signed(core_out1[(q%(col))*32 +: 32]));
+            // end
+            $display(""); // Move to new line
+            $display("---------------------------------------------------");
         end
-        
-        for (q = 7; q >= 0; q = q - 1) begin
-            $write(" %d |", $signed(core_out0[q*32 +: 32]));
-        end
-        
-        // for (q = col*2-1; q >= 0; q = q - 1) begin  // Reverse the order to match expected output
-        //     if (q < col)
-        //         $write(" %d |", $signed(core_out0[q*32 +: 32])); // Convert HEX to signed DECIMAL
-        //     else
-        //         $write(" %d |", $signed(core_out1[(q%(col))*32 +: 32]));
-        // end
-        $display(""); // Move to new line
-        $display("---------------------------------------------------");
-    end
 
     // if (sum_fifo_wr) begin
     //     $display("SUM: %d", core_1_add_sum);
-    // end
+    end
 end
 
 
