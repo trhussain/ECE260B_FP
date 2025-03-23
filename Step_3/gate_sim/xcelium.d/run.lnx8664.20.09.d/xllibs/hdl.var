@@ -1,7 +1,14 @@
 define LIB_MAP ( $LIB_MAP \
 , ../../../netlist/fullchip.v => fullchip \
-, ../../../../../../../../../public/PDKdata/verilog/tcbn65gplus.v => tcbn65gplus \
-, ../../../netlist/core.out.v => core \
-, ../../../netlist/sram_w16_160.out.v => sram_w16_160 \
-, ../../../netlist/sram_w16_64.out.v => sram_w16_64 \
+, ../../../../../../../../public/PDKdata/verilog/tcbn65gplus.v => tcbn65gplus \
+, ../../../netlist/core.pnr.v => core \
+, ../../../netlist/sram_w16_160.pnr.v => sram_w16_160 \
+, ../../../netlist/sram_w16_64.pnr.v => sram_w16_64 \
+)
+define LIB_MAP ( $LIB_MAP \
+, ../../../netlist/fullchip.v => fullchip \
+, ../../../../../../../../public/PDKdata/verilog/tcbn65gplus.v => tcbn65gplus \
+, ../../../netlist/core.pnr.v => core \
+, ../../../netlist/sram_w16_160.pnr.v => sram_w16_160 \
+, ../../../netlist/sram_w16_64.pnr.v => sram_w16_64 \
 )
