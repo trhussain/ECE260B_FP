@@ -1,0 +1,5 @@
+define fullchip ./fullchip
+define tcbn65gplus ./tcbn65gplus
+define core ./core
+define sram_w16_160 ./sram_w16_160
+define sram_w16_64 ./sram_w16_64

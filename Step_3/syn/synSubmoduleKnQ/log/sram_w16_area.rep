@@ -1,0 +1,554 @@
+ 
+****************************************
+Report : reference
+Design : sram_w16
+Version: K-2015.06-SP2
+Date   : Sat Mar 15 13:05:41 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22D0            tcbn65gplustc
+                                  2.520000     512   1290.239990  
+BUFFD0             tcbn65gplustc
+                                  1.440000      16     23.040001  
+BUFFD1             tcbn65gplustc
+                                  1.440000      27     38.880002  
+CKBD1              tcbn65gplustc
+                                  1.440000       5      7.200000  
+CKND2D0            tcbn65gplustc
+                                  1.440000       2      2.880000  
+EDFQD1             tcbn65gplustc
+                                  9.360000    1152  10782.719604  n
+IND2D0             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2XD0            tcbn65gplustc
+                                  2.160000       8     17.280001  
+INR3D0             tcbn65gplustc
+                                  2.520000       1      2.520000  
+INVD0              tcbn65gplustc
+                                  1.080000       2      2.160000  
+ND4D0              tcbn65gplustc
+                                  2.520000     128    322.559998  
+NR2D0              tcbn65gplustc
+                                  1.440000       3      4.320000  
+NR2XD0             tcbn65gplustc
+                                  1.440000       3      4.320000  
+NR3D0              tcbn65gplustc
+                                  2.160000       1      2.160000  
+NR3D1              tcbn65gplustc
+                                  3.240000       1      3.240000  
+OR3D0              tcbn65gplustc
+                                  2.520000       1      2.520000  
+-----------------------------------------------------------------------------
+Total 16 references                                 12508.199596
+1
+ 
+****************************************
+Report : reference
+Design : sram_w16
+Version: K-2015.06-SP2
+Date   : Sat Mar 15 13:07:53 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22D0            tcbn65gplustc
+                                  2.520000     512   1290.239990  
+BUFFD0             tcbn65gplustc
+                                  1.440000      16     23.040001  
+BUFFD1             tcbn65gplustc
+                                  1.440000      27     38.880002  
+CKBD1              tcbn65gplustc
+                                  1.440000       5      7.200000  
+CKND2D0            tcbn65gplustc
+                                  1.440000       2      2.880000  
+EDFQD1             tcbn65gplustc
+                                  9.360000    1152  10782.719604  n
+IND2D0             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2XD0            tcbn65gplustc
+                                  2.160000       8     17.280001  
+INR3D0             tcbn65gplustc
+                                  2.520000       1      2.520000  
+INVD0              tcbn65gplustc
+                                  1.080000       2      2.160000  
+ND4D0              tcbn65gplustc
+                                  2.520000     128    322.559998  
+NR2D0              tcbn65gplustc
+                                  1.440000       3      4.320000  
+NR2XD0             tcbn65gplustc
+                                  1.440000       3      4.320000  
+NR3D0              tcbn65gplustc
+                                  2.160000       1      2.160000  
+NR3D1              tcbn65gplustc
+                                  3.240000       1      3.240000  
+OR3D0              tcbn65gplustc
+                                  2.520000       1      2.520000  
+-----------------------------------------------------------------------------
+Total 16 references                                 12508.199596
+1
+ 
+****************************************
+Report : reference
+Design : sram_w16
+Version: K-2015.06-SP2
+Date   : Sat Mar 15 13:12:31 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22D0            tcbn65gplustc
+                                  2.520000     512   1290.239990  
+BUFFD1             tcbn65gplustc
+                                  1.440000      12     17.280001  
+CKBD2              tcbn65gplustc
+                                  2.160000      14     30.240001  
+CKND2D0            tcbn65gplustc
+                                  1.440000       2      2.880000  
+EDFQD1             tcbn65gplustc
+                                  9.360000    1152  10782.719604  n
+IND2D0             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2XD0            tcbn65gplustc
+                                  2.160000       8     17.280001  
+INR3D0             tcbn65gplustc
+                                  2.520000       1      2.520000  
+INVD0              tcbn65gplustc
+                                  1.080000       2      2.160000  
+ND4D0              tcbn65gplustc
+                                  2.520000     128    322.559998  
+NR2D0              tcbn65gplustc
+                                  1.440000       1      1.440000  
+NR2D1              tcbn65gplustc
+                                  1.440000       2      2.880000  
+NR2D2              tcbn65gplustc
+                                  2.520000       3      7.560000  
+NR3D0              tcbn65gplustc
+                                  2.160000       1      2.160000  
+NR3D1              tcbn65gplustc
+                                  3.240000       1      3.240000  
+OR3D0              tcbn65gplustc
+                                  2.520000       1      2.520000  
+-----------------------------------------------------------------------------
+Total 16 references                                 12489.839595
+1
+ 
+****************************************
+Report : reference
+Design : sram_w16
+Version: K-2015.06-SP2
+Date   : Sat Mar 15 13:13:46 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22D0            tcbn65gplustc
+                                  2.520000     512   1290.239990  
+BUFFD1             tcbn65gplustc
+                                  1.440000      12     17.280001  
+CKBD2              tcbn65gplustc
+                                  2.160000      14     30.240001  
+CKND2D0            tcbn65gplustc
+                                  1.440000       2      2.880000  
+EDFQD1             tcbn65gplustc
+                                  9.360000    1152  10782.719604  n
+IND2D0             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2XD0            tcbn65gplustc
+                                  2.160000       8     17.280001  
+INR3D0             tcbn65gplustc
+                                  2.520000       1      2.520000  
+INVD0              tcbn65gplustc
+                                  1.080000       2      2.160000  
+ND4D0              tcbn65gplustc
+                                  2.520000     128    322.559998  
+NR2D0              tcbn65gplustc
+                                  1.440000       1      1.440000  
+NR2D1              tcbn65gplustc
+                                  1.440000       2      2.880000  
+NR2D2              tcbn65gplustc
+                                  2.520000       3      7.560000  
+NR3D0              tcbn65gplustc
+                                  2.160000       1      2.160000  
+NR3D1              tcbn65gplustc
+                                  3.240000       1      3.240000  
+OR3D0              tcbn65gplustc
+                                  2.520000       1      2.520000  
+-----------------------------------------------------------------------------
+Total 16 references                                 12489.839595
+1
+ 
+****************************************
+Report : reference
+Design : sram_w16
+Version: K-2015.06-SP2
+Date   : Sat Mar 15 13:16:27 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22D0            tcbn65gplustc
+                                  2.520000     512   1290.239990  
+BUFFD1             tcbn65gplustc
+                                  1.440000       4      5.760000  
+BUFFD2             tcbn65gplustc
+                                  2.160000      10     21.600001  
+CKBD1              tcbn65gplustc
+                                  1.440000       6      8.640000  
+CKBD2              tcbn65gplustc
+                                  2.160000       1      2.160000  
+CKND2D0            tcbn65gplustc
+                                  1.440000       1      1.440000  
+CKND2D1            tcbn65gplustc
+                                  1.440000       1      1.440000  
+EDFQD1             tcbn65gplustc
+                                  9.360000    1152  10782.719604  n
+IND2D1             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2D1             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2D2             tcbn65gplustc
+                                  2.880000       4     11.520000  
+INR2XD2            tcbn65gplustc
+                                  4.680000       3     14.039999  
+INR3D0             tcbn65gplustc
+                                  2.520000       1      2.520000  
+INVD0              tcbn65gplustc
+                                  1.080000       1      1.080000  
+INVD1              tcbn65gplustc
+                                  1.080000       1      1.080000  
+ND4D0              tcbn65gplustc
+                                  2.520000     128    322.559998  
+NR2D2              tcbn65gplustc
+                                  2.520000       1      2.520000  
+NR2D3              tcbn65gplustc
+                                  3.240000       1      3.240000  
+NR2D4              tcbn65gplustc
+                                  4.320000       2      8.640000  
+NR2XD0             tcbn65gplustc
+                                  1.440000       2      2.880000  
+NR3D0              tcbn65gplustc
+                                  2.160000       1      2.160000  
+NR3D1              tcbn65gplustc
+                                  3.240000       1      3.240000  
+OR3D1              tcbn65gplustc
+                                  2.520000       1      2.520000  
+-----------------------------------------------------------------------------
+Total 23 references                                 12496.319595
+1
+ 
+****************************************
+Report : reference
+Design : sram_w16
+Version: K-2015.06-SP2
+Date   : Sat Mar 15 13:25:17 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22D0            tcbn65gplustc
+                                  2.520000     256    645.119995  
+BUFFD1             tcbn65gplustc
+                                  1.440000       2      2.880000  
+CKBD1              tcbn65gplustc
+                                  1.440000       4      5.760000  
+CKND2D0            tcbn65gplustc
+                                  1.440000       2      2.880000  
+EDFQD1             tcbn65gplustc
+                                  9.360000     576   5391.359802  n
+IND2D1             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2D1             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2D2             tcbn65gplustc
+                                  2.880000       2      5.760000  
+INR2XD1            tcbn65gplustc
+                                  2.880000       1      2.880000  
+INR2XD2            tcbn65gplustc
+                                  4.680000       4     18.719999  
+INR3D1             tcbn65gplustc
+                                  3.600000       1      3.600000  
+INVD0              tcbn65gplustc
+                                  1.080000       2      2.160000  
+ND4D0              tcbn65gplustc
+                                  2.520000      64    161.279999  
+NR2D0              tcbn65gplustc
+                                  1.440000       1      1.440000  
+NR2D2              tcbn65gplustc
+                                  2.520000       5     12.600000  
+NR3D1              tcbn65gplustc
+                                  3.240000       1      3.240000  
+NR3D2              tcbn65gplustc
+                                  5.760000       1      5.760000  
+OR3D1              tcbn65gplustc
+                                  2.520000       1      2.520000  
+-----------------------------------------------------------------------------
+Total 18 references                                  6272.279797
+1
+ 
+****************************************
+Report : reference
+Design : sram_w16
+Version: K-2015.06-SP2
+Date   : Thu Mar 20 19:05:31 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22D0            tcbn65gplustc
+                                  2.520000     512   1290.239990  
+BUFFD1             tcbn65gplustc
+                                  1.440000       4      5.760000  
+BUFFD2             tcbn65gplustc
+                                  2.160000      10     21.600001  
+CKBD1              tcbn65gplustc
+                                  1.440000       6      8.640000  
+CKBD2              tcbn65gplustc
+                                  2.160000       1      2.160000  
+CKND2D0            tcbn65gplustc
+                                  1.440000       1      1.440000  
+CKND2D1            tcbn65gplustc
+                                  1.440000       1      1.440000  
+EDFQD1             tcbn65gplustc
+                                  9.360000    1152  10782.719604  n
+IND2D1             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2D1             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2D2             tcbn65gplustc
+                                  2.880000       4     11.520000  
+INR2XD2            tcbn65gplustc
+                                  4.680000       3     14.039999  
+INR3D0             tcbn65gplustc
+                                  2.520000       1      2.520000  
+INVD0              tcbn65gplustc
+                                  1.080000       1      1.080000  
+INVD1              tcbn65gplustc
+                                  1.080000       1      1.080000  
+ND4D0              tcbn65gplustc
+                                  2.520000     128    322.559998  
+NR2D2              tcbn65gplustc
+                                  2.520000       1      2.520000  
+NR2D3              tcbn65gplustc
+                                  3.240000       1      3.240000  
+NR2D4              tcbn65gplustc
+                                  4.320000       2      8.640000  
+NR2XD0             tcbn65gplustc
+                                  1.440000       2      2.880000  
+NR3D0              tcbn65gplustc
+                                  2.160000       1      2.160000  
+NR3D1              tcbn65gplustc
+                                  3.240000       1      3.240000  
+OR3D1              tcbn65gplustc
+                                  2.520000       1      2.520000  
+-----------------------------------------------------------------------------
+Total 23 references                                 12496.319595
+1
+ 
+****************************************
+Report : reference
+Design : sram_w16
+Version: K-2015.06-SP2
+Date   : Fri Mar 21 14:31:31 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22D0            tcbn65gplustc
+                                  2.520000     512   1290.239990  
+BUFFD1             tcbn65gplustc
+                                  1.440000       4      5.760000  
+BUFFD2             tcbn65gplustc
+                                  2.160000      10     21.600001  
+CKBD1              tcbn65gplustc
+                                  1.440000       6      8.640000  
+CKBD2              tcbn65gplustc
+                                  2.160000       1      2.160000  
+CKND2D0            tcbn65gplustc
+                                  1.440000       1      1.440000  
+CKND2D1            tcbn65gplustc
+                                  1.440000       1      1.440000  
+EDFQD1             tcbn65gplustc
+                                  9.360000    1152  10782.719604  n
+IND2D1             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2D1             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2D2             tcbn65gplustc
+                                  2.880000       4     11.520000  
+INR2XD2            tcbn65gplustc
+                                  4.680000       3     14.039999  
+INR3D0             tcbn65gplustc
+                                  2.520000       1      2.520000  
+INVD0              tcbn65gplustc
+                                  1.080000       1      1.080000  
+INVD1              tcbn65gplustc
+                                  1.080000       1      1.080000  
+ND4D0              tcbn65gplustc
+                                  2.520000     128    322.559998  
+NR2D2              tcbn65gplustc
+                                  2.520000       1      2.520000  
+NR2D3              tcbn65gplustc
+                                  3.240000       1      3.240000  
+NR2D4              tcbn65gplustc
+                                  4.320000       2      8.640000  
+NR2XD0             tcbn65gplustc
+                                  1.440000       2      2.880000  
+NR3D0              tcbn65gplustc
+                                  2.160000       1      2.160000  
+NR3D1              tcbn65gplustc
+                                  3.240000       1      3.240000  
+OR3D1              tcbn65gplustc
+                                  2.520000       1      2.520000  
+-----------------------------------------------------------------------------
+Total 23 references                                 12496.319595
+1
+ 
+****************************************
+Report : reference
+Design : sram_w16
+Version: K-2015.06-SP2
+Date   : Fri Mar 21 18:07:24 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22D0            tcbn65gplustc
+                                  2.520000     256    645.119995  
+BUFFD1             tcbn65gplustc
+                                  1.440000       2      2.880000  
+CKBD1              tcbn65gplustc
+                                  1.440000       4      5.760000  
+CKND2D0            tcbn65gplustc
+                                  1.440000       2      2.880000  
+EDFQD1             tcbn65gplustc
+                                  9.360000     576   5391.359802  n
+IND2D1             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2D1             tcbn65gplustc
+                                  2.160000       1      2.160000  
+INR2D2             tcbn65gplustc
+                                  2.880000       2      5.760000  
+INR2XD1            tcbn65gplustc
+                                  2.880000       1      2.880000  
+INR2XD2            tcbn65gplustc
+                                  4.680000       4     18.719999  
+INR3D1             tcbn65gplustc
+                                  3.600000       1      3.600000  
+INVD0              tcbn65gplustc
+                                  1.080000       2      2.160000  
+ND4D0              tcbn65gplustc
+                                  2.520000      64    161.279999  
+NR2D0              tcbn65gplustc
+                                  1.440000       1      1.440000  
+NR2D2              tcbn65gplustc
+                                  2.520000       5     12.600000  
+NR3D1              tcbn65gplustc
+                                  3.240000       1      3.240000  
+NR3D2              tcbn65gplustc
+                                  5.760000       1      5.760000  
+OR3D1              tcbn65gplustc
+                                  2.520000       1      2.520000  
+-----------------------------------------------------------------------------
+Total 18 references                                  6272.279797
+1

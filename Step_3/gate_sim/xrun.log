@@ -1,0 +1,1698 @@
+xrun(64): 20.09-s017: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	20.09-s017: Started on Mar 22, 2025 at 16:59:53 PDT
+xrun
+	-define INITIALIZE_MEMORY
+	-xminitialize 0
+	+gui
+	+access+rwc
+	+xm64bit
+	+xmstatus
+	+xmtimescale+1ns/1ps
+	+xmoveride_timescale
+	-v ./netlist/sram_w16_64.out.v
+	-v ./netlist/sram_w16_160.out.v
+	-v ./netlist/core.out.v
+	-v /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
+	./netlist/fullchip_tb.v
+	-v ./netlist/fullchip.v
+
+   User defined plus("+") options:
+	+xmoveride_timescale
+
+file: ./netlist/sram_w16_64.out.v
+file: ./netlist/sram_w16_160.out.v
+file: ./netlist/core.out.v
+file: ./netlist/fullchip.v
+	module fullchip.fullchip:v
+		errors: 0, warnings: 0
+file: ./netlist/core.out.v
+	module core.core:v
+		errors: 0, warnings: 0
+file: ./netlist/core.out.v
+	module core.mac_array_col8_bw8_bw_psum20_pr8:v
+		errors: 0, warnings: 0
+	module core.ofifo_col8_bw20:v
+		errors: 0, warnings: 0
+file: ./netlist/core.out.v
+	module core.mac_col_bw8_bw_psum20_pr8_col_id1:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr8_col_id2:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr8_col_id3:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr8_col_id4:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr8_col_id5:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr8_col_id6:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr8_col_id7:v
+		errors: 0, warnings: 0
+	module core.mac_col_bw8_bw_psum20_pr8_col_id8:v
+		errors: 0, warnings: 0
+	module core.fifo_depth8_bw20_simd1_7:v
+		errors: 0, warnings: 0
+	module core.fifo_depth8_bw20_simd1_6:v
+		errors: 0, warnings: 0
+	module core.fifo_depth8_bw20_simd1_0:v
+		errors: 0, warnings: 0
+	module core.fifo_depth8_bw20_simd1_1:v
+		errors: 0, warnings: 0
+	module core.fifo_depth8_bw20_simd1_2:v
+		errors: 0, warnings: 0
+	module core.fifo_depth8_bw20_simd1_3:v
+		errors: 0, warnings: 0
+	module core.fifo_depth8_bw20_simd1_4:v
+		errors: 0, warnings: 0
+	module core.fifo_depth8_bw20_simd1_5:v
+		errors: 0, warnings: 0
+file: ./netlist/core.out.v
+	module core.mac_16in_bw8_bw_psum20_pr8_7:v
+		errors: 0, warnings: 0
+	module core.mac_16in_bw8_bw_psum20_pr8_6:v
+		errors: 0, warnings: 0
+	module core.mac_16in_bw8_bw_psum20_pr8_5:v
+		errors: 0, warnings: 0
+	module core.mac_16in_bw8_bw_psum20_pr8_4:v
+		errors: 0, warnings: 0
+	module core.mac_16in_bw8_bw_psum20_pr8_3:v
+		errors: 0, warnings: 0
+	module core.mac_16in_bw8_bw_psum20_pr8_2:v
+		errors: 0, warnings: 0
+	module core.mac_16in_bw8_bw_psum20_pr8_1:v
+		errors: 0, warnings: 0
+	module core.mac_16in_bw8_bw_psum20_pr8_0:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_7:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_6:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_0:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_1:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_2:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_3:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_4:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_8_1_bw20_simd1_5:v
+		errors: 0, warnings: 0
+file: ./netlist/core.out.v
+	module core.fifo_mux_2_1_bw20_simd1_55:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_49:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_50:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_51:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_52:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_53:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_54:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_42:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_43:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_44:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_45:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_46:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_47:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_48:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_0:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_1:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_2:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_3:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_4:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_5:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_6:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_7:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_8:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_9:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_10:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_11:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_12:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_13:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_14:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_15:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_16:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_17:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_18:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_19:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_20:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_21:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_22:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_23:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_24:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_25:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_26:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_27:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_28:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_29:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_30:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_31:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_32:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_33:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_34:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_35:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_36:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_37:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_38:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_39:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_40:v
+		errors: 0, warnings: 0
+	module core.fifo_mux_2_1_bw20_simd1_41:v
+		errors: 0, warnings: 0
+file: ./netlist/sram_w16_64.out.v
+	module sram_w16_64.sram_w16_64:v
+		errors: 0, warnings: 0
+file: ./netlist/sram_w16_160.out.v
+	module sram_w16_160.sram_w16_160:v
+		errors: 0, warnings: 0
+xmvlog: Memory Usage - Current physical: 21.9M, Current virtual: 94.1M
+xmvlog: CPU Usage - 0.1s system + 1.1s user = 1.2s total (1.4s, 80.1% cpu)
+		Caching library 'sram_w16_64' ....... Done
+		Caching library 'fullchip' ....... Done
+		Caching library 'worklib' ....... Done
+		Caching library 'sram_w16_160' ....... Done
+		Caching library 'core' ....... Done
+		Caching library 'tcbn65gplus' ....... Done
+	Elaborating the design hierarchy:
+  DFCND1 cnt_q_reg_1_ ( .D(n74), .CP(clk), .CDN(n80), .QN(n6) );
+                    |
+xmelab: *W,CUVWSP (./netlist/core.out.v,3516|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4786): Q
+
+  FA1D1 U434 ( .A(n953), .B(n954), .CI(n952), .CO(n61) );
+           |
+xmelab: *W,CUVWSP (./netlist/core.out.v,4265|11): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,9795): S
+
+  DFCND1 cnt_q_reg_1_ ( .D(n11), .CP(clk), .CDN(n15), .QN(n7) );
+                    |
+xmelab: *W,CUVWSP (./netlist/core.out.v,5275|20): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4786): Q
+
+  FA1D1 U686 ( .A(n496), .B(n495), .CI(n494), .S(n68) );
+           |
+xmelab: *W,CUVWSP (./netlist/core.out.v,6208|11): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,9795): CO
+
+  ofifo_col8_bw20 ofifo_inst ( .clk(clk), .in(array_out), .out(pmem_in), .rd(
+                           |
+xmelab: *W,CUVWSP (./netlist/core.out.v,18678|27): 2 output ports were not connected:
+xmelab: (./netlist/core.out.v,18616): o_valid
+xmelab: (./netlist/core.out.v,18616): o_full
+
+  fifo_depth8_bw20_simd1_7 col_idx_0__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                  |
+xmelab: *W,CUVWSP (./netlist/core.out.v,18626|50): 2 output ports were not connected:
+xmelab: (./netlist/core.out.v,14435): o_full
+xmelab: (./netlist/core.out.v,14436): o_empty
+
+  DFCND2 rd_ptr_reg_0_ ( .D(n79), .CP(rd_clk), .CDN(n109), .Q(rd_ptr[0]) );
+                     |
+xmelab: *W,CUVWSP (./netlist/core.out.v,14638|21): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4855): QN
+
+  fifo_depth8_bw20_simd1_6 col_idx_1__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                  |
+xmelab: *W,CUVWSP (./netlist/core.out.v,18629|50): 2 output ports were not connected:
+xmelab: (./netlist/core.out.v,14994): o_full
+xmelab: (./netlist/core.out.v,14995): o_empty
+
+  DFCND2 rd_ptr_reg_0_ ( .D(n79), .CP(rd_clk), .CDN(n93), .Q(rd_ptr[0]) );
+                     |
+xmelab: *W,CUVWSP (./netlist/core.out.v,15196|21): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4855): QN
+
+  fifo_depth8_bw20_simd1_5 col_idx_2__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                  |
+xmelab: *W,CUVWSP (./netlist/core.out.v,18632|50): 2 output ports were not connected:
+xmelab: (./netlist/core.out.v,18299): o_full
+xmelab: (./netlist/core.out.v,18300): o_empty
+
+  DFCND2 rd_ptr_reg_0_ ( .D(n111), .CP(rd_clk), .CDN(n108), .Q(rd_ptr[0]) );
+                     |
+xmelab: *W,CUVWSP (./netlist/core.out.v,18503|21): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4855): QN
+
+  fifo_depth8_bw20_simd1_4 col_idx_3__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                  |
+xmelab: *W,CUVWSP (./netlist/core.out.v,18635|50): 2 output ports were not connected:
+xmelab: (./netlist/core.out.v,17744): o_full
+xmelab: (./netlist/core.out.v,17745): o_empty
+
+  DFCND2 rd_ptr_reg_0_ ( .D(n107), .CP(rd_clk), .CDN(n104), .Q(rd_ptr[0]) );
+                     |
+xmelab: *W,CUVWSP (./netlist/core.out.v,17948|21): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4855): QN
+
+  fifo_depth8_bw20_simd1_3 col_idx_4__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                  |
+xmelab: *W,CUVWSP (./netlist/core.out.v,18638|50): 2 output ports were not connected:
+xmelab: (./netlist/core.out.v,17198): o_full
+xmelab: (./netlist/core.out.v,17199): o_empty
+
+  DFCND2 rd_ptr_reg_0_ ( .D(n100), .CP(rd_clk), .CDN(n97), .Q(rd_ptr[0]) );
+                     |
+xmelab: *W,CUVWSP (./netlist/core.out.v,17400|21): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4855): QN
+
+  DFD4 q6_reg_15_ ( .D(n118), .CP(wr_clk), .Q(n6) );
+                |
+xmelab: *W,CUVWSP (./netlist/core.out.v,17401|16): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5899): QN
+
+  fifo_depth8_bw20_simd1_2 col_idx_5__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                  |
+xmelab: *W,CUVWSP (./netlist/core.out.v,18641|50): 2 output ports were not connected:
+xmelab: (./netlist/core.out.v,16653): o_full
+xmelab: (./netlist/core.out.v,16654): o_empty
+
+  DFCND2 rd_ptr_reg_0_ ( .D(n98), .CP(rd_clk), .CDN(n95), .Q(rd_ptr[0]) );
+                     |
+xmelab: *W,CUVWSP (./netlist/core.out.v,16856|21): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4855): QN
+
+  fifo_depth8_bw20_simd1_1 col_idx_6__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                  |
+xmelab: *W,CUVWSP (./netlist/core.out.v,18644|50): 2 output ports were not connected:
+xmelab: (./netlist/core.out.v,16099): o_full
+xmelab: (./netlist/core.out.v,16100): o_empty
+
+  DFCND2 rd_ptr_reg_0_ ( .D(n106), .CP(rd_clk), .CDN(n103), .Q(rd_ptr[0]) );
+                     |
+xmelab: *W,CUVWSP (./netlist/core.out.v,16303|21): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4855): QN
+
+  fifo_depth8_bw20_simd1_0 col_idx_7__fifo_instance ( .rd_clk(clk), .wr_clk(
+                                                  |
+xmelab: *W,CUVWSP (./netlist/core.out.v,18647|50): 2 output ports were not connected:
+xmelab: (./netlist/core.out.v,15543): o_full
+xmelab: (./netlist/core.out.v,15544): o_empty
+
+  DFCND2 rd_ptr_reg_0_ ( .D(n108), .CP(rd_clk), .CDN(n105), .Q(rd_ptr[0]) );
+                     |
+xmelab: *W,CUVWSP (./netlist/core.out.v,15744|21): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4855): QN
+
+  DFD4 q0_reg_16_ ( .D(n136), .CP(wr_clk), .Q(n6) );
+                |
+xmelab: *W,CUVWSP (./netlist/core.out.v,15745|16): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5899): QN
+
+  DFD4 q6_reg_16_ ( .D(n127), .CP(wr_clk), .Q(n4) );
+                |
+xmelab: *W,CUVWSP (./netlist/core.out.v,15746|16): 1 output port was not connected:
+xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5899): QN
+
+	Top level design units:
+		fullchip_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		fullchip.fullchip:v <0x4b07e94e>
+			streams:   2, words:  2324
+		core.fifo_depth8_bw20_simd1_0:v <0x6903d9d3>
+			streams:   0, words:     0
+		core.fifo_depth8_bw20_simd1_3:v <0x2932091c>
+			streams:   0, words:     0
+		core.mac_col_bw8_bw_psum20_pr8_col_id4:v <0x0933301f>
+			streams:   0, words:     0
+		core.mac_array_col8_bw8_bw_psum20_pr8:v <0x50bab3f6>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:               20053     240
+		UDPs:                  15590       3
+		Primitives:            45948       9
+		Timing outputs:        22020     166
+		Registers:              5054      50
+		Scalar wires:          27259       -
+		Expanded wires:           72       3
+		Vectored wires:            1       -
+		Always blocks:             2       2
+		Initial blocks:           16      16
+		Cont. assignments:        12      12
+		Pseudo assignments:        3       3
+		Timing checks:         48344       -
+		Simulation timescale:    1ps
+	Writing initial simulation snapshot: worklib.fullchip_tb:v
+xmelab: Memory Usage - Final: 53.4M, Peak: 59.4M, Peak virtual: 185.1M
+xmelab: CPU Usage - 0.1s system + 2.2s user = 2.3s total (2.5s, 91.5% cpu)
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /software/ECE/XCELIUM-2009/tools/xcelium/files/xmsimrc
+xcelium> run
+##### Q data txt reading #####
+##### K data txt reading #####
+##### Feed in data for Q  #####
+---------------------------------------------------
+     -5 |      7 |     -5 |     -7 |     -1 |      6 |      1 |      2 |
+     -4 |      7 |     -2 |     -5 |     -3 |      4 |      1 |     -3 |
+     -4 |     -1 |     -4 |     -4 |     -1 |      0 |      5 |      2 |
+     -3 |      3 |      6 |     -4 |      6 |      2 |      1 |      6 |
+     -8 |      5 |     -2 |      6 |      2 |      1 |     -3 |      4 |
+     -2 |     -1 |     -2 |     -6 |     -1 |      4 |      0 |      2 |
+      5 |     -7 |     -1 |      3 |      2 |      1 |     -7 |      6 |
+      5 |     -8 |     -3 |      6 |      0 |     -2 |      6 |     -1 |
+---------------------------------------------------
+##### Feed in data for K  #####
+---------------------------------------------------
+     -6 |      3 |     -2 |     -1 |     -5 |      1 |      0 |      7 |
+      0 |     -5 |     -8 |      0 |      6 |      0 |     -5 |     -7 |
+      4 |     -7 |     -6 |      3 |      7 |      7 |      6 |      6 |
+     -3 |      0 |      0 |     -7 |      6 |      3 |      4 |      7 |
+      6 |     -3 |      4 |     -7 |     -4 |     -3 |     -2 |     -5 |
+      0 |     -7 |      3 |      3 |     -2 |      6 |      4 |     -1 |
+      7 |     -5 |      2 |      1 |      3 |      6 |      1 |     -5 |
+      3 |     -1 |      6 |      3 |     -6 |     -2 |      1 |     -4 |
+---------------------------------------------------
+##### Estimated multiplication result (HEX) #####
+Q[ 0][ 0] * K[ 0][ 0] = -5 * -6
+Q[ 0][ 1] * K[ 0][ 1] =  7 *  3
+Q[ 0][ 2] * K[ 0][ 2] = -5 * -2
+Q[ 0][ 3] * K[ 0][ 3] = -7 * -1
+Q[ 0][ 4] * K[ 0][ 4] = -1 * -5
+Q[ 0][ 5] * K[ 0][ 5] =  6 *  1
+Q[ 0][ 6] * K[ 0][ 6] =  1 *  0
+Q[ 0][ 7] * K[ 0][ 7] =  2 *  7
+@cycle 0:  93
+Q[ 0][ 0] * K[ 1][ 0] = -5 *  0
+Q[ 0][ 1] * K[ 1][ 1] =  7 * -5
+Q[ 0][ 2] * K[ 1][ 2] = -5 * -8
+Q[ 0][ 3] * K[ 1][ 3] = -7 *  0
+Q[ 0][ 4] * K[ 1][ 4] = -1 *  6
+Q[ 0][ 5] * K[ 1][ 5] =  6 *  0
+Q[ 0][ 6] * K[ 1][ 6] =  1 * -5
+Q[ 0][ 7] * K[ 1][ 7] =  2 * -7
+@cycle 0: -20
+Q[ 0][ 0] * K[ 2][ 0] = -5 *  4
+Q[ 0][ 1] * K[ 2][ 1] =  7 * -7
+Q[ 0][ 2] * K[ 2][ 2] = -5 * -6
+Q[ 0][ 3] * K[ 2][ 3] = -7 *  3
+Q[ 0][ 4] * K[ 2][ 4] = -1 *  7
+Q[ 0][ 5] * K[ 2][ 5] =  6 *  7
+Q[ 0][ 6] * K[ 2][ 6] =  1 *  6
+Q[ 0][ 7] * K[ 2][ 7] =  2 *  6
+@cycle 0:  -7
+Q[ 0][ 0] * K[ 3][ 0] = -5 * -3
+Q[ 0][ 1] * K[ 3][ 1] =  7 *  0
+Q[ 0][ 2] * K[ 3][ 2] = -5 *  0
+Q[ 0][ 3] * K[ 3][ 3] = -7 * -7
+Q[ 0][ 4] * K[ 3][ 4] = -1 *  6
+Q[ 0][ 5] * K[ 3][ 5] =  6 *  3
+Q[ 0][ 6] * K[ 3][ 6] =  1 *  4
+Q[ 0][ 7] * K[ 3][ 7] =  2 *  7
+@cycle 0:  94
+Q[ 0][ 0] * K[ 4][ 0] = -5 *  6
+Q[ 0][ 1] * K[ 4][ 1] =  7 * -3
+Q[ 0][ 2] * K[ 4][ 2] = -5 *  4
+Q[ 0][ 3] * K[ 4][ 3] = -7 * -7
+Q[ 0][ 4] * K[ 4][ 4] = -1 * -4
+Q[ 0][ 5] * K[ 4][ 5] =  6 * -3
+Q[ 0][ 6] * K[ 4][ 6] =  1 * -2
+Q[ 0][ 7] * K[ 4][ 7] =  2 * -5
+@cycle 0: -48
+Q[ 0][ 0] * K[ 5][ 0] = -5 *  0
+Q[ 0][ 1] * K[ 5][ 1] =  7 * -7
+Q[ 0][ 2] * K[ 5][ 2] = -5 *  3
+Q[ 0][ 3] * K[ 5][ 3] = -7 *  3
+Q[ 0][ 4] * K[ 5][ 4] = -1 * -2
+Q[ 0][ 5] * K[ 5][ 5] =  6 *  6
+Q[ 0][ 6] * K[ 5][ 6] =  1 *  4
+Q[ 0][ 7] * K[ 5][ 7] =  2 * -1
+@cycle 0: -45
+Q[ 0][ 0] * K[ 6][ 0] = -5 *  7
+Q[ 0][ 1] * K[ 6][ 1] =  7 * -5
+Q[ 0][ 2] * K[ 6][ 2] = -5 *  2
+Q[ 0][ 3] * K[ 6][ 3] = -7 *  1
+Q[ 0][ 4] * K[ 6][ 4] = -1 *  3
+Q[ 0][ 5] * K[ 6][ 5] =  6 *  6
+Q[ 0][ 6] * K[ 6][ 6] =  1 *  1
+Q[ 0][ 7] * K[ 6][ 7] =  2 * -5
+@cycle 0: -63
+Q[ 0][ 0] * K[ 7][ 0] = -5 *  3
+Q[ 0][ 1] * K[ 7][ 1] =  7 * -1
+Q[ 0][ 2] * K[ 7][ 2] = -5 *  6
+Q[ 0][ 3] * K[ 7][ 3] = -7 *  3
+Q[ 0][ 4] * K[ 7][ 4] = -1 * -6
+Q[ 0][ 5] * K[ 7][ 5] =  6 * -2
+Q[ 0][ 6] * K[ 7][ 6] =  1 *  1
+Q[ 0][ 7] * K[ 7][ 7] =  2 * -4
+@cycle 0: -86
+prd @cycle 0: 0005dfffecffff90005efffd0fffd3fffc1fffaa
+Q[ 1][ 0] * K[ 0][ 0] = -4 * -6
+Q[ 1][ 1] * K[ 0][ 1] =  7 *  3
+Q[ 1][ 2] * K[ 0][ 2] = -2 * -2
+Q[ 1][ 3] * K[ 0][ 3] = -5 * -1
+Q[ 1][ 4] * K[ 0][ 4] = -3 * -5
+Q[ 1][ 5] * K[ 0][ 5] =  4 *  1
+Q[ 1][ 6] * K[ 0][ 6] =  1 *  0
+Q[ 1][ 7] * K[ 0][ 7] = -3 *  7
+@cycle 1:  52
+Q[ 1][ 0] * K[ 1][ 0] = -4 *  0
+Q[ 1][ 1] * K[ 1][ 1] =  7 * -5
+Q[ 1][ 2] * K[ 1][ 2] = -2 * -8
+Q[ 1][ 3] * K[ 1][ 3] = -5 *  0
+Q[ 1][ 4] * K[ 1][ 4] = -3 *  6
+Q[ 1][ 5] * K[ 1][ 5] =  4 *  0
+Q[ 1][ 6] * K[ 1][ 6] =  1 * -5
+Q[ 1][ 7] * K[ 1][ 7] = -3 * -7
+@cycle 1: -21
+Q[ 1][ 0] * K[ 2][ 0] = -4 *  4
+Q[ 1][ 1] * K[ 2][ 1] =  7 * -7
+Q[ 1][ 2] * K[ 2][ 2] = -2 * -6
+Q[ 1][ 3] * K[ 2][ 3] = -5 *  3
+Q[ 1][ 4] * K[ 2][ 4] = -3 *  7
+Q[ 1][ 5] * K[ 2][ 5] =  4 *  7
+Q[ 1][ 6] * K[ 2][ 6] =  1 *  6
+Q[ 1][ 7] * K[ 2][ 7] = -3 *  6
+@cycle 1: -73
+Q[ 1][ 0] * K[ 3][ 0] = -4 * -3
+Q[ 1][ 1] * K[ 3][ 1] =  7 *  0
+Q[ 1][ 2] * K[ 3][ 2] = -2 *  0
+Q[ 1][ 3] * K[ 3][ 3] = -5 * -7
+Q[ 1][ 4] * K[ 3][ 4] = -3 *  6
+Q[ 1][ 5] * K[ 3][ 5] =  4 *  3
+Q[ 1][ 6] * K[ 3][ 6] =  1 *  4
+Q[ 1][ 7] * K[ 3][ 7] = -3 *  7
+@cycle 1:  24
+Q[ 1][ 0] * K[ 4][ 0] = -4 *  6
+Q[ 1][ 1] * K[ 4][ 1] =  7 * -3
+Q[ 1][ 2] * K[ 4][ 2] = -2 *  4
+Q[ 1][ 3] * K[ 4][ 3] = -5 * -7
+Q[ 1][ 4] * K[ 4][ 4] = -3 * -4
+Q[ 1][ 5] * K[ 4][ 5] =  4 * -3
+Q[ 1][ 6] * K[ 4][ 6] =  1 * -2
+Q[ 1][ 7] * K[ 4][ 7] = -3 * -5
+@cycle 1:  -5
+Q[ 1][ 0] * K[ 5][ 0] = -4 *  0
+Q[ 1][ 1] * K[ 5][ 1] =  7 * -7
+Q[ 1][ 2] * K[ 5][ 2] = -2 *  3
+Q[ 1][ 3] * K[ 5][ 3] = -5 *  3
+Q[ 1][ 4] * K[ 5][ 4] = -3 * -2
+Q[ 1][ 5] * K[ 5][ 5] =  4 *  6
+Q[ 1][ 6] * K[ 5][ 6] =  1 *  4
+Q[ 1][ 7] * K[ 5][ 7] = -3 * -1
+@cycle 1: -33
+Q[ 1][ 0] * K[ 6][ 0] = -4 *  7
+Q[ 1][ 1] * K[ 6][ 1] =  7 * -5
+Q[ 1][ 2] * K[ 6][ 2] = -2 *  2
+Q[ 1][ 3] * K[ 6][ 3] = -5 *  1
+Q[ 1][ 4] * K[ 6][ 4] = -3 *  3
+Q[ 1][ 5] * K[ 6][ 5] =  4 *  6
+Q[ 1][ 6] * K[ 6][ 6] =  1 *  1
+Q[ 1][ 7] * K[ 6][ 7] = -3 * -5
+@cycle 1: -41
+Q[ 1][ 0] * K[ 7][ 0] = -4 *  3
+Q[ 1][ 1] * K[ 7][ 1] =  7 * -1
+Q[ 1][ 2] * K[ 7][ 2] = -2 *  6
+Q[ 1][ 3] * K[ 7][ 3] = -5 *  3
+Q[ 1][ 4] * K[ 7][ 4] = -3 * -6
+Q[ 1][ 5] * K[ 7][ 5] =  4 * -2
+Q[ 1][ 6] * K[ 7][ 6] =  1 *  1
+Q[ 1][ 7] * K[ 7][ 7] = -3 * -4
+@cycle 1: -23
+prd @cycle 1: 00034fffebfffb700018ffffbfffdffffd7fffe9
+Q[ 2][ 0] * K[ 0][ 0] = -4 * -6
+Q[ 2][ 1] * K[ 0][ 1] = -1 *  3
+Q[ 2][ 2] * K[ 0][ 2] = -4 * -2
+Q[ 2][ 3] * K[ 0][ 3] = -4 * -1
+Q[ 2][ 4] * K[ 0][ 4] = -1 * -5
+Q[ 2][ 5] * K[ 0][ 5] =  0 *  1
+Q[ 2][ 6] * K[ 0][ 6] =  5 *  0
+Q[ 2][ 7] * K[ 0][ 7] =  2 *  7
+@cycle 2:  52
+Q[ 2][ 0] * K[ 1][ 0] = -4 *  0
+Q[ 2][ 1] * K[ 1][ 1] = -1 * -5
+Q[ 2][ 2] * K[ 1][ 2] = -4 * -8
+Q[ 2][ 3] * K[ 1][ 3] = -4 *  0
+Q[ 2][ 4] * K[ 1][ 4] = -1 *  6
+Q[ 2][ 5] * K[ 1][ 5] =  0 *  0
+Q[ 2][ 6] * K[ 1][ 6] =  5 * -5
+Q[ 2][ 7] * K[ 1][ 7] =  2 * -7
+@cycle 2:  -8
+Q[ 2][ 0] * K[ 2][ 0] = -4 *  4
+Q[ 2][ 1] * K[ 2][ 1] = -1 * -7
+Q[ 2][ 2] * K[ 2][ 2] = -4 * -6
+Q[ 2][ 3] * K[ 2][ 3] = -4 *  3
+Q[ 2][ 4] * K[ 2][ 4] = -1 *  7
+Q[ 2][ 5] * K[ 2][ 5] =  0 *  7
+Q[ 2][ 6] * K[ 2][ 6] =  5 *  6
+Q[ 2][ 7] * K[ 2][ 7] =  2 *  6
+@cycle 2:  38
+Q[ 2][ 0] * K[ 3][ 0] = -4 * -3
+Q[ 2][ 1] * K[ 3][ 1] = -1 *  0
+Q[ 2][ 2] * K[ 3][ 2] = -4 *  0
+Q[ 2][ 3] * K[ 3][ 3] = -4 * -7
+Q[ 2][ 4] * K[ 3][ 4] = -1 *  6
+Q[ 2][ 5] * K[ 3][ 5] =  0 *  3
+Q[ 2][ 6] * K[ 3][ 6] =  5 *  4
+Q[ 2][ 7] * K[ 3][ 7] =  2 *  7
+@cycle 2:  68
+Q[ 2][ 0] * K[ 4][ 0] = -4 *  6
+Q[ 2][ 1] * K[ 4][ 1] = -1 * -3
+Q[ 2][ 2] * K[ 4][ 2] = -4 *  4
+Q[ 2][ 3] * K[ 4][ 3] = -4 * -7
+Q[ 2][ 4] * K[ 4][ 4] = -1 * -4
+Q[ 2][ 5] * K[ 4][ 5] =  0 * -3
+Q[ 2][ 6] * K[ 4][ 6] =  5 * -2
+Q[ 2][ 7] * K[ 4][ 7] =  2 * -5
+@cycle 2: -25
+Q[ 2][ 0] * K[ 5][ 0] = -4 *  0
+Q[ 2][ 1] * K[ 5][ 1] = -1 * -7
+Q[ 2][ 2] * K[ 5][ 2] = -4 *  3
+Q[ 2][ 3] * K[ 5][ 3] = -4 *  3
+Q[ 2][ 4] * K[ 5][ 4] = -1 * -2
+Q[ 2][ 5] * K[ 5][ 5] =  0 *  6
+Q[ 2][ 6] * K[ 5][ 6] =  5 *  4
+Q[ 2][ 7] * K[ 5][ 7] =  2 * -1
+@cycle 2:   3
+Q[ 2][ 0] * K[ 6][ 0] = -4 *  7
+Q[ 2][ 1] * K[ 6][ 1] = -1 * -5
+Q[ 2][ 2] * K[ 6][ 2] = -4 *  2
+Q[ 2][ 3] * K[ 6][ 3] = -4 *  1
+Q[ 2][ 4] * K[ 6][ 4] = -1 *  3
+Q[ 2][ 5] * K[ 6][ 5] =  0 *  6
+Q[ 2][ 6] * K[ 6][ 6] =  5 *  1
+Q[ 2][ 7] * K[ 6][ 7] =  2 * -5
+@cycle 2: -43
+Q[ 2][ 0] * K[ 7][ 0] = -4 *  3
+Q[ 2][ 1] * K[ 7][ 1] = -1 * -1
+Q[ 2][ 2] * K[ 7][ 2] = -4 *  6
+Q[ 2][ 3] * K[ 7][ 3] = -4 *  3
+Q[ 2][ 4] * K[ 7][ 4] = -1 * -6
+Q[ 2][ 5] * K[ 7][ 5] =  0 * -2
+Q[ 2][ 6] * K[ 7][ 6] =  5 *  1
+Q[ 2][ 7] * K[ 7][ 7] =  2 * -4
+@cycle 2: -44
+prd @cycle 2: 00034ffff80002600044fffe700003fffd5fffd4
+Q[ 3][ 0] * K[ 0][ 0] = -3 * -6
+Q[ 3][ 1] * K[ 0][ 1] =  3 *  3
+Q[ 3][ 2] * K[ 0][ 2] =  6 * -2
+Q[ 3][ 3] * K[ 0][ 3] = -4 * -1
+Q[ 3][ 4] * K[ 0][ 4] =  6 * -5
+Q[ 3][ 5] * K[ 0][ 5] =  2 *  1
+Q[ 3][ 6] * K[ 0][ 6] =  1 *  0
+Q[ 3][ 7] * K[ 0][ 7] =  6 *  7
+@cycle 3:  33
+Q[ 3][ 0] * K[ 1][ 0] = -3 *  0
+Q[ 3][ 1] * K[ 1][ 1] =  3 * -5
+Q[ 3][ 2] * K[ 1][ 2] =  6 * -8
+Q[ 3][ 3] * K[ 1][ 3] = -4 *  0
+Q[ 3][ 4] * K[ 1][ 4] =  6 *  6
+Q[ 3][ 5] * K[ 1][ 5] =  2 *  0
+Q[ 3][ 6] * K[ 1][ 6] =  1 * -5
+Q[ 3][ 7] * K[ 1][ 7] =  6 * -7
+@cycle 3: -74
+Q[ 3][ 0] * K[ 2][ 0] = -3 *  4
+Q[ 3][ 1] * K[ 2][ 1] =  3 * -7
+Q[ 3][ 2] * K[ 2][ 2] =  6 * -6
+Q[ 3][ 3] * K[ 2][ 3] = -4 *  3
+Q[ 3][ 4] * K[ 2][ 4] =  6 *  7
+Q[ 3][ 5] * K[ 2][ 5] =  2 *  7
+Q[ 3][ 6] * K[ 2][ 6] =  1 *  6
+Q[ 3][ 7] * K[ 2][ 7] =  6 *  6
+@cycle 3:  17
+Q[ 3][ 0] * K[ 3][ 0] = -3 * -3
+Q[ 3][ 1] * K[ 3][ 1] =  3 *  0
+Q[ 3][ 2] * K[ 3][ 2] =  6 *  0
+Q[ 3][ 3] * K[ 3][ 3] = -4 * -7
+Q[ 3][ 4] * K[ 3][ 4] =  6 *  6
+Q[ 3][ 5] * K[ 3][ 5] =  2 *  3
+Q[ 3][ 6] * K[ 3][ 6] =  1 *  4
+Q[ 3][ 7] * K[ 3][ 7] =  6 *  7
+@cycle 3: 125
+Q[ 3][ 0] * K[ 4][ 0] = -3 *  6
+Q[ 3][ 1] * K[ 4][ 1] =  3 * -3
+Q[ 3][ 2] * K[ 4][ 2] =  6 *  4
+Q[ 3][ 3] * K[ 4][ 3] = -4 * -7
+Q[ 3][ 4] * K[ 4][ 4] =  6 * -4
+Q[ 3][ 5] * K[ 4][ 5] =  2 * -3
+Q[ 3][ 6] * K[ 4][ 6] =  1 * -2
+Q[ 3][ 7] * K[ 4][ 7] =  6 * -5
+@cycle 3: -37
+Q[ 3][ 0] * K[ 5][ 0] = -3 *  0
+Q[ 3][ 1] * K[ 5][ 1] =  3 * -7
+Q[ 3][ 2] * K[ 5][ 2] =  6 *  3
+Q[ 3][ 3] * K[ 5][ 3] = -4 *  3
+Q[ 3][ 4] * K[ 5][ 4] =  6 * -2
+Q[ 3][ 5] * K[ 5][ 5] =  2 *  6
+Q[ 3][ 6] * K[ 5][ 6] =  1 *  4
+Q[ 3][ 7] * K[ 5][ 7] =  6 * -1
+@cycle 3: -17
+Q[ 3][ 0] * K[ 6][ 0] = -3 *  7
+Q[ 3][ 1] * K[ 6][ 1] =  3 * -5
+Q[ 3][ 2] * K[ 6][ 2] =  6 *  2
+Q[ 3][ 3] * K[ 6][ 3] = -4 *  1
+Q[ 3][ 4] * K[ 6][ 4] =  6 *  3
+Q[ 3][ 5] * K[ 6][ 5] =  2 *  6
+Q[ 3][ 6] * K[ 6][ 6] =  1 *  1
+Q[ 3][ 7] * K[ 6][ 7] =  6 * -5
+@cycle 3: -27
+Q[ 3][ 0] * K[ 7][ 0] = -3 *  3
+Q[ 3][ 1] * K[ 7][ 1] =  3 * -1
+Q[ 3][ 2] * K[ 7][ 2] =  6 *  6
+Q[ 3][ 3] * K[ 7][ 3] = -4 *  3
+Q[ 3][ 4] * K[ 7][ 4] =  6 * -6
+Q[ 3][ 5] * K[ 7][ 5] =  2 * -2
+Q[ 3][ 6] * K[ 7][ 6] =  1 *  1
+Q[ 3][ 7] * K[ 7][ 7] =  6 * -4
+@cycle 3: -51
+prd @cycle 3: 00021fffb6000110007dfffdbfffeffffe5fffcd
+Q[ 4][ 0] * K[ 0][ 0] = -8 * -6
+Q[ 4][ 1] * K[ 0][ 1] =  5 *  3
+Q[ 4][ 2] * K[ 0][ 2] = -2 * -2
+Q[ 4][ 3] * K[ 0][ 3] =  6 * -1
+Q[ 4][ 4] * K[ 0][ 4] =  2 * -5
+Q[ 4][ 5] * K[ 0][ 5] =  1 *  1
+Q[ 4][ 6] * K[ 0][ 6] = -3 *  0
+Q[ 4][ 7] * K[ 0][ 7] =  4 *  7
+@cycle 4:  80
+Q[ 4][ 0] * K[ 1][ 0] = -8 *  0
+Q[ 4][ 1] * K[ 1][ 1] =  5 * -5
+Q[ 4][ 2] * K[ 1][ 2] = -2 * -8
+Q[ 4][ 3] * K[ 1][ 3] =  6 *  0
+Q[ 4][ 4] * K[ 1][ 4] =  2 *  6
+Q[ 4][ 5] * K[ 1][ 5] =  1 *  0
+Q[ 4][ 6] * K[ 1][ 6] = -3 * -5
+Q[ 4][ 7] * K[ 1][ 7] =  4 * -7
+@cycle 4: -10
+Q[ 4][ 0] * K[ 2][ 0] = -8 *  4
+Q[ 4][ 1] * K[ 2][ 1] =  5 * -7
+Q[ 4][ 2] * K[ 2][ 2] = -2 * -6
+Q[ 4][ 3] * K[ 2][ 3] =  6 *  3
+Q[ 4][ 4] * K[ 2][ 4] =  2 *  7
+Q[ 4][ 5] * K[ 2][ 5] =  1 *  7
+Q[ 4][ 6] * K[ 2][ 6] = -3 *  6
+Q[ 4][ 7] * K[ 2][ 7] =  4 *  6
+@cycle 4: -10
+Q[ 4][ 0] * K[ 3][ 0] = -8 * -3
+Q[ 4][ 1] * K[ 3][ 1] =  5 *  0
+Q[ 4][ 2] * K[ 3][ 2] = -2 *  0
+Q[ 4][ 3] * K[ 3][ 3] =  6 * -7
+Q[ 4][ 4] * K[ 3][ 4] =  2 *  6
+Q[ 4][ 5] * K[ 3][ 5] =  1 *  3
+Q[ 4][ 6] * K[ 3][ 6] = -3 *  4
+Q[ 4][ 7] * K[ 3][ 7] =  4 *  7
+@cycle 4:  13
+Q[ 4][ 0] * K[ 4][ 0] = -8 *  6
+Q[ 4][ 1] * K[ 4][ 1] =  5 * -3
+Q[ 4][ 2] * K[ 4][ 2] = -2 *  4
+Q[ 4][ 3] * K[ 4][ 3] =  6 * -7
+Q[ 4][ 4] * K[ 4][ 4] =  2 * -4
+Q[ 4][ 5] * K[ 4][ 5] =  1 * -3
+Q[ 4][ 6] * K[ 4][ 6] = -3 * -2
+Q[ 4][ 7] * K[ 4][ 7] =  4 * -5
+@cycle 4: -138
+Q[ 4][ 0] * K[ 5][ 0] = -8 *  0
+Q[ 4][ 1] * K[ 5][ 1] =  5 * -7
+Q[ 4][ 2] * K[ 5][ 2] = -2 *  3
+Q[ 4][ 3] * K[ 5][ 3] =  6 *  3
+Q[ 4][ 4] * K[ 5][ 4] =  2 * -2
+Q[ 4][ 5] * K[ 5][ 5] =  1 *  6
+Q[ 4][ 6] * K[ 5][ 6] = -3 *  4
+Q[ 4][ 7] * K[ 5][ 7] =  4 * -1
+@cycle 4: -37
+Q[ 4][ 0] * K[ 6][ 0] = -8 *  7
+Q[ 4][ 1] * K[ 6][ 1] =  5 * -5
+Q[ 4][ 2] * K[ 6][ 2] = -2 *  2
+Q[ 4][ 3] * K[ 6][ 3] =  6 *  1
+Q[ 4][ 4] * K[ 6][ 4] =  2 *  3
+Q[ 4][ 5] * K[ 6][ 5] =  1 *  6
+Q[ 4][ 6] * K[ 6][ 6] = -3 *  1
+Q[ 4][ 7] * K[ 6][ 7] =  4 * -5
+@cycle 4: -90
+Q[ 4][ 0] * K[ 7][ 0] = -8 *  3
+Q[ 4][ 1] * K[ 7][ 1] =  5 * -1
+Q[ 4][ 2] * K[ 7][ 2] = -2 *  6
+Q[ 4][ 3] * K[ 7][ 3] =  6 *  3
+Q[ 4][ 4] * K[ 7][ 4] =  2 * -6
+Q[ 4][ 5] * K[ 7][ 5] =  1 * -2
+Q[ 4][ 6] * K[ 7][ 6] = -3 *  1
+Q[ 4][ 7] * K[ 7][ 7] =  4 * -4
+@cycle 4: -56
+prd @cycle 4: 00050ffff6ffff60000dfff76fffdbfffa6fffc8
+Q[ 5][ 0] * K[ 0][ 0] = -2 * -6
+Q[ 5][ 1] * K[ 0][ 1] = -1 *  3
+Q[ 5][ 2] * K[ 0][ 2] = -2 * -2
+Q[ 5][ 3] * K[ 0][ 3] = -6 * -1
+Q[ 5][ 4] * K[ 0][ 4] = -1 * -5
+Q[ 5][ 5] * K[ 0][ 5] =  4 *  1
+Q[ 5][ 6] * K[ 0][ 6] =  0 *  0
+Q[ 5][ 7] * K[ 0][ 7] =  2 *  7
+@cycle 5:  42
+Q[ 5][ 0] * K[ 1][ 0] = -2 *  0
+Q[ 5][ 1] * K[ 1][ 1] = -1 * -5
+Q[ 5][ 2] * K[ 1][ 2] = -2 * -8
+Q[ 5][ 3] * K[ 1][ 3] = -6 *  0
+Q[ 5][ 4] * K[ 1][ 4] = -1 *  6
+Q[ 5][ 5] * K[ 1][ 5] =  4 *  0
+Q[ 5][ 6] * K[ 1][ 6] =  0 * -5
+Q[ 5][ 7] * K[ 1][ 7] =  2 * -7
+@cycle 5:   1
+Q[ 5][ 0] * K[ 2][ 0] = -2 *  4
+Q[ 5][ 1] * K[ 2][ 1] = -1 * -7
+Q[ 5][ 2] * K[ 2][ 2] = -2 * -6
+Q[ 5][ 3] * K[ 2][ 3] = -6 *  3
+Q[ 5][ 4] * K[ 2][ 4] = -1 *  7
+Q[ 5][ 5] * K[ 2][ 5] =  4 *  7
+Q[ 5][ 6] * K[ 2][ 6] =  0 *  6
+Q[ 5][ 7] * K[ 2][ 7] =  2 *  6
+@cycle 5:  26
+Q[ 5][ 0] * K[ 3][ 0] = -2 * -3
+Q[ 5][ 1] * K[ 3][ 1] = -1 *  0
+Q[ 5][ 2] * K[ 3][ 2] = -2 *  0
+Q[ 5][ 3] * K[ 3][ 3] = -6 * -7
+Q[ 5][ 4] * K[ 3][ 4] = -1 *  6
+Q[ 5][ 5] * K[ 3][ 5] =  4 *  3
+Q[ 5][ 6] * K[ 3][ 6] =  0 *  4
+Q[ 5][ 7] * K[ 3][ 7] =  2 *  7
+@cycle 5:  68
+Q[ 5][ 0] * K[ 4][ 0] = -2 *  6
+Q[ 5][ 1] * K[ 4][ 1] = -1 * -3
+Q[ 5][ 2] * K[ 4][ 2] = -2 *  4
+Q[ 5][ 3] * K[ 4][ 3] = -6 * -7
+Q[ 5][ 4] * K[ 4][ 4] = -1 * -4
+Q[ 5][ 5] * K[ 4][ 5] =  4 * -3
+Q[ 5][ 6] * K[ 4][ 6] =  0 * -2
+Q[ 5][ 7] * K[ 4][ 7] =  2 * -5
+@cycle 5:   7
+Q[ 5][ 0] * K[ 5][ 0] = -2 *  0
+Q[ 5][ 1] * K[ 5][ 1] = -1 * -7
+Q[ 5][ 2] * K[ 5][ 2] = -2 *  3
+Q[ 5][ 3] * K[ 5][ 3] = -6 *  3
+Q[ 5][ 4] * K[ 5][ 4] = -1 * -2
+Q[ 5][ 5] * K[ 5][ 5] =  4 *  6
+Q[ 5][ 6] * K[ 5][ 6] =  0 *  4
+Q[ 5][ 7] * K[ 5][ 7] =  2 * -1
+@cycle 5:   7
+Q[ 5][ 0] * K[ 6][ 0] = -2 *  7
+Q[ 5][ 1] * K[ 6][ 1] = -1 * -5
+Q[ 5][ 2] * K[ 6][ 2] = -2 *  2
+Q[ 5][ 3] * K[ 6][ 3] = -6 *  1
+Q[ 5][ 4] * K[ 6][ 4] = -1 *  3
+Q[ 5][ 5] * K[ 6][ 5] =  4 *  6
+Q[ 5][ 6] * K[ 6][ 6] =  0 *  1
+Q[ 5][ 7] * K[ 6][ 7] =  2 * -5
+@cycle 5:  -8
+Q[ 5][ 0] * K[ 7][ 0] = -2 *  3
+Q[ 5][ 1] * K[ 7][ 1] = -1 * -1
+Q[ 5][ 2] * K[ 7][ 2] = -2 *  6
+Q[ 5][ 3] * K[ 7][ 3] = -6 *  3
+Q[ 5][ 4] * K[ 7][ 4] = -1 * -6
+Q[ 5][ 5] * K[ 7][ 5] =  4 * -2
+Q[ 5][ 6] * K[ 7][ 6] =  0 *  1
+Q[ 5][ 7] * K[ 7][ 7] =  2 * -4
+@cycle 5: -45
+prd @cycle 5: 0002a000010001a000440000700007ffff8fffd3
+Q[ 6][ 0] * K[ 0][ 0] =  5 * -6
+Q[ 6][ 1] * K[ 0][ 1] = -7 *  3
+Q[ 6][ 2] * K[ 0][ 2] = -1 * -2
+Q[ 6][ 3] * K[ 0][ 3] =  3 * -1
+Q[ 6][ 4] * K[ 0][ 4] =  2 * -5
+Q[ 6][ 5] * K[ 0][ 5] =  1 *  1
+Q[ 6][ 6] * K[ 0][ 6] = -7 *  0
+Q[ 6][ 7] * K[ 0][ 7] =  6 *  7
+@cycle 6: -19
+Q[ 6][ 0] * K[ 1][ 0] =  5 *  0
+Q[ 6][ 1] * K[ 1][ 1] = -7 * -5
+Q[ 6][ 2] * K[ 1][ 2] = -1 * -8
+Q[ 6][ 3] * K[ 1][ 3] =  3 *  0
+Q[ 6][ 4] * K[ 1][ 4] =  2 *  6
+Q[ 6][ 5] * K[ 1][ 5] =  1 *  0
+Q[ 6][ 6] * K[ 1][ 6] = -7 * -5
+Q[ 6][ 7] * K[ 1][ 7] =  6 * -7
+@cycle 6:  48
+Q[ 6][ 0] * K[ 2][ 0] =  5 *  4
+Q[ 6][ 1] * K[ 2][ 1] = -7 * -7
+Q[ 6][ 2] * K[ 2][ 2] = -1 * -6
+Q[ 6][ 3] * K[ 2][ 3] =  3 *  3
+Q[ 6][ 4] * K[ 2][ 4] =  2 *  7
+Q[ 6][ 5] * K[ 2][ 5] =  1 *  7
+Q[ 6][ 6] * K[ 2][ 6] = -7 *  6
+Q[ 6][ 7] * K[ 2][ 7] =  6 *  6
+@cycle 6:  99
+Q[ 6][ 0] * K[ 3][ 0] =  5 * -3
+Q[ 6][ 1] * K[ 3][ 1] = -7 *  0
+Q[ 6][ 2] * K[ 3][ 2] = -1 *  0
+Q[ 6][ 3] * K[ 3][ 3] =  3 * -7
+Q[ 6][ 4] * K[ 3][ 4] =  2 *  6
+Q[ 6][ 5] * K[ 3][ 5] =  1 *  3
+Q[ 6][ 6] * K[ 3][ 6] = -7 *  4
+Q[ 6][ 7] * K[ 3][ 7] =  6 *  7
+@cycle 6:  -7
+Q[ 6][ 0] * K[ 4][ 0] =  5 *  6
+Q[ 6][ 1] * K[ 4][ 1] = -7 * -3
+Q[ 6][ 2] * K[ 4][ 2] = -1 *  4
+Q[ 6][ 3] * K[ 4][ 3] =  3 * -7
+Q[ 6][ 4] * K[ 4][ 4] =  2 * -4
+Q[ 6][ 5] * K[ 4][ 5] =  1 * -3
+Q[ 6][ 6] * K[ 4][ 6] = -7 * -2
+Q[ 6][ 7] * K[ 4][ 7] =  6 * -5
+@cycle 6:  -1
+Q[ 6][ 0] * K[ 5][ 0] =  5 *  0
+Q[ 6][ 1] * K[ 5][ 1] = -7 * -7
+Q[ 6][ 2] * K[ 5][ 2] = -1 *  3
+Q[ 6][ 3] * K[ 5][ 3] =  3 *  3
+Q[ 6][ 4] * K[ 5][ 4] =  2 * -2
+Q[ 6][ 5] * K[ 5][ 5] =  1 *  6
+Q[ 6][ 6] * K[ 5][ 6] = -7 *  4
+Q[ 6][ 7] * K[ 5][ 7] =  6 * -1
+@cycle 6:  23
+Q[ 6][ 0] * K[ 6][ 0] =  5 *  7
+Q[ 6][ 1] * K[ 6][ 1] = -7 * -5
+Q[ 6][ 2] * K[ 6][ 2] = -1 *  2
+Q[ 6][ 3] * K[ 6][ 3] =  3 *  1
+Q[ 6][ 4] * K[ 6][ 4] =  2 *  3
+Q[ 6][ 5] * K[ 6][ 5] =  1 *  6
+Q[ 6][ 6] * K[ 6][ 6] = -7 *  1
+Q[ 6][ 7] * K[ 6][ 7] =  6 * -5
+@cycle 6:  46
+Q[ 6][ 0] * K[ 7][ 0] =  5 *  3
+Q[ 6][ 1] * K[ 7][ 1] = -7 * -1
+Q[ 6][ 2] * K[ 7][ 2] = -1 *  6
+Q[ 6][ 3] * K[ 7][ 3] =  3 *  3
+Q[ 6][ 4] * K[ 7][ 4] =  2 * -6
+Q[ 6][ 5] * K[ 7][ 5] =  1 * -2
+Q[ 6][ 6] * K[ 7][ 6] = -7 *  1
+Q[ 6][ 7] * K[ 7][ 7] =  6 * -4
+@cycle 6: -20
+prd @cycle 6: fffed0003000063ffff9fffff000170002efffec
+Q[ 7][ 0] * K[ 0][ 0] =  5 * -6
+Q[ 7][ 1] * K[ 0][ 1] = -8 *  3
+Q[ 7][ 2] * K[ 0][ 2] = -3 * -2
+Q[ 7][ 3] * K[ 0][ 3] =  6 * -1
+Q[ 7][ 4] * K[ 0][ 4] =  0 * -5
+Q[ 7][ 5] * K[ 0][ 5] = -2 *  1
+Q[ 7][ 6] * K[ 0][ 6] =  6 *  0
+Q[ 7][ 7] * K[ 0][ 7] = -1 *  7
+@cycle 7: -63
+Q[ 7][ 0] * K[ 1][ 0] =  5 *  0
+Q[ 7][ 1] * K[ 1][ 1] = -8 * -5
+Q[ 7][ 2] * K[ 1][ 2] = -3 * -8
+Q[ 7][ 3] * K[ 1][ 3] =  6 *  0
+Q[ 7][ 4] * K[ 1][ 4] =  0 *  6
+Q[ 7][ 5] * K[ 1][ 5] = -2 *  0
+Q[ 7][ 6] * K[ 1][ 6] =  6 * -5
+Q[ 7][ 7] * K[ 1][ 7] = -1 * -7
+@cycle 7:  41
+Q[ 7][ 0] * K[ 2][ 0] =  5 *  4
+Q[ 7][ 1] * K[ 2][ 1] = -8 * -7
+Q[ 7][ 2] * K[ 2][ 2] = -3 * -6
+Q[ 7][ 3] * K[ 2][ 3] =  6 *  3
+Q[ 7][ 4] * K[ 2][ 4] =  0 *  7
+Q[ 7][ 5] * K[ 2][ 5] = -2 *  7
+Q[ 7][ 6] * K[ 2][ 6] =  6 *  6
+Q[ 7][ 7] * K[ 2][ 7] = -1 *  6
+@cycle 7: 128
+Q[ 7][ 0] * K[ 3][ 0] =  5 * -3
+Q[ 7][ 1] * K[ 3][ 1] = -8 *  0
+Q[ 7][ 2] * K[ 3][ 2] = -3 *  0
+Q[ 7][ 3] * K[ 3][ 3] =  6 * -7
+Q[ 7][ 4] * K[ 3][ 4] =  0 *  6
+Q[ 7][ 5] * K[ 3][ 5] = -2 *  3
+Q[ 7][ 6] * K[ 3][ 6] =  6 *  4
+Q[ 7][ 7] * K[ 3][ 7] = -1 *  7
+@cycle 7: -46
+Q[ 7][ 0] * K[ 4][ 0] =  5 *  6
+Q[ 7][ 1] * K[ 4][ 1] = -8 * -3
+Q[ 7][ 2] * K[ 4][ 2] = -3 *  4
+Q[ 7][ 3] * K[ 4][ 3] =  6 * -7
+Q[ 7][ 4] * K[ 4][ 4] =  0 * -4
+Q[ 7][ 5] * K[ 4][ 5] = -2 * -3
+Q[ 7][ 6] * K[ 4][ 6] =  6 * -2
+Q[ 7][ 7] * K[ 4][ 7] = -1 * -5
+@cycle 7:  -1
+Q[ 7][ 0] * K[ 5][ 0] =  5 *  0
+Q[ 7][ 1] * K[ 5][ 1] = -8 * -7
+Q[ 7][ 2] * K[ 5][ 2] = -3 *  3
+Q[ 7][ 3] * K[ 5][ 3] =  6 *  3
+Q[ 7][ 4] * K[ 5][ 4] =  0 * -2
+Q[ 7][ 5] * K[ 5][ 5] = -2 *  6
+Q[ 7][ 6] * K[ 5][ 6] =  6 *  4
+Q[ 7][ 7] * K[ 5][ 7] = -1 * -1
+@cycle 7:  78
+Q[ 7][ 0] * K[ 6][ 0] =  5 *  7
+Q[ 7][ 1] * K[ 6][ 1] = -8 * -5
+Q[ 7][ 2] * K[ 6][ 2] = -3 *  2
+Q[ 7][ 3] * K[ 6][ 3] =  6 *  1
+Q[ 7][ 4] * K[ 6][ 4] =  0 *  3
+Q[ 7][ 5] * K[ 6][ 5] = -2 *  6
+Q[ 7][ 6] * K[ 6][ 6] =  6 *  1
+Q[ 7][ 7] * K[ 6][ 7] = -1 * -5
+@cycle 7:  74
+Q[ 7][ 0] * K[ 7][ 0] =  5 *  3
+Q[ 7][ 1] * K[ 7][ 1] = -8 * -1
+Q[ 7][ 2] * K[ 7][ 2] = -3 *  6
+Q[ 7][ 3] * K[ 7][ 3] =  6 *  3
+Q[ 7][ 4] * K[ 7][ 4] =  0 * -6
+Q[ 7][ 5] * K[ 7][ 5] = -2 * -2
+Q[ 7][ 6] * K[ 7][ 6] =  6 *  1
+Q[ 7][ 7] * K[ 7][ 7] = -1 * -4
+@cycle 7:  37
+prd @cycle 7: fffc10002900080fffd2fffff0004e0004a00025
+##### Estimated Multiplication Result (Decimal) #####
+---------------------------------------------------
+Cycle  0 |     93 |    -20 |     -7 |     94 |    -48 |    -45 |    -63 |    -86 |
+Cycle  1 |     52 |    -21 |    -73 |     24 |     -5 |    -33 |    -41 |    -23 |
+Cycle  2 |     52 |     -8 |     38 |     68 |    -25 |      3 |    -43 |    -44 |
+Cycle  3 |     33 |    -74 |     17 |    125 |    -37 |    -17 |    -27 |    -51 |
+Cycle  4 |     80 |    -10 |    -10 |     13 |   -138 |    -37 |    -90 |    -56 |
+Cycle  5 |     42 |      1 |     26 |     68 |      7 |      7 |     -8 |    -45 |
+Cycle  6 |    -19 |     48 |     99 |     -7 |     -1 |     23 |     46 |    -20 |
+Cycle  7 |    -63 |     41 |    128 |    -46 |     -1 |     78 |     74 |     37 |
+---------------------------------------------------
+##### Qmem writing  #####
+##### Kmem writing #####
+##### K data loading to processor #####
+##### execute #####
+##### move ofifo to pmem #####
+##### PMEM TO OUT #####
+Core Output |      x |      x |      x |      x |      x |      x |      x |      x |
+---------------------------------------------------
+Core Output |     93 |    -20 |     -7 |     94 |    -48 |    -45 |    -63 |    -86 |
+---------------------------------------------------
+Core Output |     52 |    -21 |    -73 |     24 |     -5 |    -33 |    -41 |    -23 |
+---------------------------------------------------
+Core Output |     52 |     -8 |     38 |     68 |    -25 |      3 |    -43 |    -44 |
+---------------------------------------------------
+Core Output |     33 |    -74 |     17 |    125 |    -37 |    -17 |    -27 |    -51 |
+---------------------------------------------------
+Core Output |     80 |    -10 |    -10 |     13 |   -138 |    -37 |    -90 |    -56 |
+---------------------------------------------------
+Core Output |     42 |      1 |     26 |     68 |      7 |      7 |     -8 |    -45 |
+---------------------------------------------------
+Core Output |    -19 |     48 |     99 |     -7 |     -1 |     23 |     46 |    -20 |
+---------------------------------------------------
+Core Output |    -63 |     41 |    128 |    -46 |     -1 |     78 |     74 |     37 |
+---------------------------------------------------
+Simulation complete via $finish(1) at time 915 NS + 0
+/home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/gate_sim/netlist/fullchip_tb.v:381 
+xcelium> probe -create -shm fullchip_tb.fullchipout fullchip_tb.fullchip_instance.core_out fullchip_tb.fullchip_instance.full_out fullchip_tb.fullchip_instance.reset fullchip_tb.fullchip_instance.clk fullchip_tb.fullchip_instance.core_instance.pmem_in fullchip_tb.fullchip_instance.core_instance.qmem_out
+Created default SHM database xcelium.shm
+Created probe 1
+xcelium> reset
+Loaded snapshot worklib.fullchip_tb:v
+xcelium> run
+##### Q data txt reading #####
+##### K data txt reading #####
+##### Feed in data for Q  #####
+---------------------------------------------------
+     -5 |      7 |     -5 |     -7 |     -1 |      6 |      1 |      2 |
+     -4 |      7 |     -2 |     -5 |     -3 |      4 |      1 |     -3 |
+     -4 |     -1 |     -4 |     -4 |     -1 |      0 |      5 |      2 |
+     -3 |      3 |      6 |     -4 |      6 |      2 |      1 |      6 |
+     -8 |      5 |     -2 |      6 |      2 |      1 |     -3 |      4 |
+     -2 |     -1 |     -2 |     -6 |     -1 |      4 |      0 |      2 |
+      5 |     -7 |     -1 |      3 |      2 |      1 |     -7 |      6 |
+      5 |     -8 |     -3 |      6 |      0 |     -2 |      6 |     -1 |
+---------------------------------------------------
+##### Feed in data for K  #####
+---------------------------------------------------
+     -6 |      3 |     -2 |     -1 |     -5 |      1 |      0 |      7 |
+      0 |     -5 |     -8 |      0 |      6 |      0 |     -5 |     -7 |
+      4 |     -7 |     -6 |      3 |      7 |      7 |      6 |      6 |
+     -3 |      0 |      0 |     -7 |      6 |      3 |      4 |      7 |
+      6 |     -3 |      4 |     -7 |     -4 |     -3 |     -2 |     -5 |
+      0 |     -7 |      3 |      3 |     -2 |      6 |      4 |     -1 |
+      7 |     -5 |      2 |      1 |      3 |      6 |      1 |     -5 |
+      3 |     -1 |      6 |      3 |     -6 |     -2 |      1 |     -4 |
+---------------------------------------------------
+##### Estimated multiplication result (HEX) #####
+Q[ 0][ 0] * K[ 0][ 0] = -5 * -6
+Q[ 0][ 1] * K[ 0][ 1] =  7 *  3
+Q[ 0][ 2] * K[ 0][ 2] = -5 * -2
+Q[ 0][ 3] * K[ 0][ 3] = -7 * -1
+Q[ 0][ 4] * K[ 0][ 4] = -1 * -5
+Q[ 0][ 5] * K[ 0][ 5] =  6 *  1
+Q[ 0][ 6] * K[ 0][ 6] =  1 *  0
+Q[ 0][ 7] * K[ 0][ 7] =  2 *  7
+@cycle 0:  93
+Q[ 0][ 0] * K[ 1][ 0] = -5 *  0
+Q[ 0][ 1] * K[ 1][ 1] =  7 * -5
+Q[ 0][ 2] * K[ 1][ 2] = -5 * -8
+Q[ 0][ 3] * K[ 1][ 3] = -7 *  0
+Q[ 0][ 4] * K[ 1][ 4] = -1 *  6
+Q[ 0][ 5] * K[ 1][ 5] =  6 *  0
+Q[ 0][ 6] * K[ 1][ 6] =  1 * -5
+Q[ 0][ 7] * K[ 1][ 7] =  2 * -7
+@cycle 0: -20
+Q[ 0][ 0] * K[ 2][ 0] = -5 *  4
+Q[ 0][ 1] * K[ 2][ 1] =  7 * -7
+Q[ 0][ 2] * K[ 2][ 2] = -5 * -6
+Q[ 0][ 3] * K[ 2][ 3] = -7 *  3
+Q[ 0][ 4] * K[ 2][ 4] = -1 *  7
+Q[ 0][ 5] * K[ 2][ 5] =  6 *  7
+Q[ 0][ 6] * K[ 2][ 6] =  1 *  6
+Q[ 0][ 7] * K[ 2][ 7] =  2 *  6
+@cycle 0:  -7
+Q[ 0][ 0] * K[ 3][ 0] = -5 * -3
+Q[ 0][ 1] * K[ 3][ 1] =  7 *  0
+Q[ 0][ 2] * K[ 3][ 2] = -5 *  0
+Q[ 0][ 3] * K[ 3][ 3] = -7 * -7
+Q[ 0][ 4] * K[ 3][ 4] = -1 *  6
+Q[ 0][ 5] * K[ 3][ 5] =  6 *  3
+Q[ 0][ 6] * K[ 3][ 6] =  1 *  4
+Q[ 0][ 7] * K[ 3][ 7] =  2 *  7
+@cycle 0:  94
+Q[ 0][ 0] * K[ 4][ 0] = -5 *  6
+Q[ 0][ 1] * K[ 4][ 1] =  7 * -3
+Q[ 0][ 2] * K[ 4][ 2] = -5 *  4
+Q[ 0][ 3] * K[ 4][ 3] = -7 * -7
+Q[ 0][ 4] * K[ 4][ 4] = -1 * -4
+Q[ 0][ 5] * K[ 4][ 5] =  6 * -3
+Q[ 0][ 6] * K[ 4][ 6] =  1 * -2
+Q[ 0][ 7] * K[ 4][ 7] =  2 * -5
+@cycle 0: -48
+Q[ 0][ 0] * K[ 5][ 0] = -5 *  0
+Q[ 0][ 1] * K[ 5][ 1] =  7 * -7
+Q[ 0][ 2] * K[ 5][ 2] = -5 *  3
+Q[ 0][ 3] * K[ 5][ 3] = -7 *  3
+Q[ 0][ 4] * K[ 5][ 4] = -1 * -2
+Q[ 0][ 5] * K[ 5][ 5] =  6 *  6
+Q[ 0][ 6] * K[ 5][ 6] =  1 *  4
+Q[ 0][ 7] * K[ 5][ 7] =  2 * -1
+@cycle 0: -45
+Q[ 0][ 0] * K[ 6][ 0] = -5 *  7
+Q[ 0][ 1] * K[ 6][ 1] =  7 * -5
+Q[ 0][ 2] * K[ 6][ 2] = -5 *  2
+Q[ 0][ 3] * K[ 6][ 3] = -7 *  1
+Q[ 0][ 4] * K[ 6][ 4] = -1 *  3
+Q[ 0][ 5] * K[ 6][ 5] =  6 *  6
+Q[ 0][ 6] * K[ 6][ 6] =  1 *  1
+Q[ 0][ 7] * K[ 6][ 7] =  2 * -5
+@cycle 0: -63
+Q[ 0][ 0] * K[ 7][ 0] = -5 *  3
+Q[ 0][ 1] * K[ 7][ 1] =  7 * -1
+Q[ 0][ 2] * K[ 7][ 2] = -5 *  6
+Q[ 0][ 3] * K[ 7][ 3] = -7 *  3
+Q[ 0][ 4] * K[ 7][ 4] = -1 * -6
+Q[ 0][ 5] * K[ 7][ 5] =  6 * -2
+Q[ 0][ 6] * K[ 7][ 6] =  1 *  1
+Q[ 0][ 7] * K[ 7][ 7] =  2 * -4
+@cycle 0: -86
+prd @cycle 0: 0005dfffecffff90005efffd0fffd3fffc1fffaa
+Q[ 1][ 0] * K[ 0][ 0] = -4 * -6
+Q[ 1][ 1] * K[ 0][ 1] =  7 *  3
+Q[ 1][ 2] * K[ 0][ 2] = -2 * -2
+Q[ 1][ 3] * K[ 0][ 3] = -5 * -1
+Q[ 1][ 4] * K[ 0][ 4] = -3 * -5
+Q[ 1][ 5] * K[ 0][ 5] =  4 *  1
+Q[ 1][ 6] * K[ 0][ 6] =  1 *  0
+Q[ 1][ 7] * K[ 0][ 7] = -3 *  7
+@cycle 1:  52
+Q[ 1][ 0] * K[ 1][ 0] = -4 *  0
+Q[ 1][ 1] * K[ 1][ 1] =  7 * -5
+Q[ 1][ 2] * K[ 1][ 2] = -2 * -8
+Q[ 1][ 3] * K[ 1][ 3] = -5 *  0
+Q[ 1][ 4] * K[ 1][ 4] = -3 *  6
+Q[ 1][ 5] * K[ 1][ 5] =  4 *  0
+Q[ 1][ 6] * K[ 1][ 6] =  1 * -5
+Q[ 1][ 7] * K[ 1][ 7] = -3 * -7
+@cycle 1: -21
+Q[ 1][ 0] * K[ 2][ 0] = -4 *  4
+Q[ 1][ 1] * K[ 2][ 1] =  7 * -7
+Q[ 1][ 2] * K[ 2][ 2] = -2 * -6
+Q[ 1][ 3] * K[ 2][ 3] = -5 *  3
+Q[ 1][ 4] * K[ 2][ 4] = -3 *  7
+Q[ 1][ 5] * K[ 2][ 5] =  4 *  7
+Q[ 1][ 6] * K[ 2][ 6] =  1 *  6
+Q[ 1][ 7] * K[ 2][ 7] = -3 *  6
+@cycle 1: -73
+Q[ 1][ 0] * K[ 3][ 0] = -4 * -3
+Q[ 1][ 1] * K[ 3][ 1] =  7 *  0
+Q[ 1][ 2] * K[ 3][ 2] = -2 *  0
+Q[ 1][ 3] * K[ 3][ 3] = -5 * -7
+Q[ 1][ 4] * K[ 3][ 4] = -3 *  6
+Q[ 1][ 5] * K[ 3][ 5] =  4 *  3
+Q[ 1][ 6] * K[ 3][ 6] =  1 *  4
+Q[ 1][ 7] * K[ 3][ 7] = -3 *  7
+@cycle 1:  24
+Q[ 1][ 0] * K[ 4][ 0] = -4 *  6
+Q[ 1][ 1] * K[ 4][ 1] =  7 * -3
+Q[ 1][ 2] * K[ 4][ 2] = -2 *  4
+Q[ 1][ 3] * K[ 4][ 3] = -5 * -7
+Q[ 1][ 4] * K[ 4][ 4] = -3 * -4
+Q[ 1][ 5] * K[ 4][ 5] =  4 * -3
+Q[ 1][ 6] * K[ 4][ 6] =  1 * -2
+Q[ 1][ 7] * K[ 4][ 7] = -3 * -5
+@cycle 1:  -5
+Q[ 1][ 0] * K[ 5][ 0] = -4 *  0
+Q[ 1][ 1] * K[ 5][ 1] =  7 * -7
+Q[ 1][ 2] * K[ 5][ 2] = -2 *  3
+Q[ 1][ 3] * K[ 5][ 3] = -5 *  3
+Q[ 1][ 4] * K[ 5][ 4] = -3 * -2
+Q[ 1][ 5] * K[ 5][ 5] =  4 *  6
+Q[ 1][ 6] * K[ 5][ 6] =  1 *  4
+Q[ 1][ 7] * K[ 5][ 7] = -3 * -1
+@cycle 1: -33
+Q[ 1][ 0] * K[ 6][ 0] = -4 *  7
+Q[ 1][ 1] * K[ 6][ 1] =  7 * -5
+Q[ 1][ 2] * K[ 6][ 2] = -2 *  2
+Q[ 1][ 3] * K[ 6][ 3] = -5 *  1
+Q[ 1][ 4] * K[ 6][ 4] = -3 *  3
+Q[ 1][ 5] * K[ 6][ 5] =  4 *  6
+Q[ 1][ 6] * K[ 6][ 6] =  1 *  1
+Q[ 1][ 7] * K[ 6][ 7] = -3 * -5
+@cycle 1: -41
+Q[ 1][ 0] * K[ 7][ 0] = -4 *  3
+Q[ 1][ 1] * K[ 7][ 1] =  7 * -1
+Q[ 1][ 2] * K[ 7][ 2] = -2 *  6
+Q[ 1][ 3] * K[ 7][ 3] = -5 *  3
+Q[ 1][ 4] * K[ 7][ 4] = -3 * -6
+Q[ 1][ 5] * K[ 7][ 5] =  4 * -2
+Q[ 1][ 6] * K[ 7][ 6] =  1 *  1
+Q[ 1][ 7] * K[ 7][ 7] = -3 * -4
+@cycle 1: -23
+prd @cycle 1: 00034fffebfffb700018ffffbfffdffffd7fffe9
+Q[ 2][ 0] * K[ 0][ 0] = -4 * -6
+Q[ 2][ 1] * K[ 0][ 1] = -1 *  3
+Q[ 2][ 2] * K[ 0][ 2] = -4 * -2
+Q[ 2][ 3] * K[ 0][ 3] = -4 * -1
+Q[ 2][ 4] * K[ 0][ 4] = -1 * -5
+Q[ 2][ 5] * K[ 0][ 5] =  0 *  1
+Q[ 2][ 6] * K[ 0][ 6] =  5 *  0
+Q[ 2][ 7] * K[ 0][ 7] =  2 *  7
+@cycle 2:  52
+Q[ 2][ 0] * K[ 1][ 0] = -4 *  0
+Q[ 2][ 1] * K[ 1][ 1] = -1 * -5
+Q[ 2][ 2] * K[ 1][ 2] = -4 * -8
+Q[ 2][ 3] * K[ 1][ 3] = -4 *  0
+Q[ 2][ 4] * K[ 1][ 4] = -1 *  6
+Q[ 2][ 5] * K[ 1][ 5] =  0 *  0
+Q[ 2][ 6] * K[ 1][ 6] =  5 * -5
+Q[ 2][ 7] * K[ 1][ 7] =  2 * -7
+@cycle 2:  -8
+Q[ 2][ 0] * K[ 2][ 0] = -4 *  4
+Q[ 2][ 1] * K[ 2][ 1] = -1 * -7
+Q[ 2][ 2] * K[ 2][ 2] = -4 * -6
+Q[ 2][ 3] * K[ 2][ 3] = -4 *  3
+Q[ 2][ 4] * K[ 2][ 4] = -1 *  7
+Q[ 2][ 5] * K[ 2][ 5] =  0 *  7
+Q[ 2][ 6] * K[ 2][ 6] =  5 *  6
+Q[ 2][ 7] * K[ 2][ 7] =  2 *  6
+@cycle 2:  38
+Q[ 2][ 0] * K[ 3][ 0] = -4 * -3
+Q[ 2][ 1] * K[ 3][ 1] = -1 *  0
+Q[ 2][ 2] * K[ 3][ 2] = -4 *  0
+Q[ 2][ 3] * K[ 3][ 3] = -4 * -7
+Q[ 2][ 4] * K[ 3][ 4] = -1 *  6
+Q[ 2][ 5] * K[ 3][ 5] =  0 *  3
+Q[ 2][ 6] * K[ 3][ 6] =  5 *  4
+Q[ 2][ 7] * K[ 3][ 7] =  2 *  7
+@cycle 2:  68
+Q[ 2][ 0] * K[ 4][ 0] = -4 *  6
+Q[ 2][ 1] * K[ 4][ 1] = -1 * -3
+Q[ 2][ 2] * K[ 4][ 2] = -4 *  4
+Q[ 2][ 3] * K[ 4][ 3] = -4 * -7
+Q[ 2][ 4] * K[ 4][ 4] = -1 * -4
+Q[ 2][ 5] * K[ 4][ 5] =  0 * -3
+Q[ 2][ 6] * K[ 4][ 6] =  5 * -2
+Q[ 2][ 7] * K[ 4][ 7] =  2 * -5
+@cycle 2: -25
+Q[ 2][ 0] * K[ 5][ 0] = -4 *  0
+Q[ 2][ 1] * K[ 5][ 1] = -1 * -7
+Q[ 2][ 2] * K[ 5][ 2] = -4 *  3
+Q[ 2][ 3] * K[ 5][ 3] = -4 *  3
+Q[ 2][ 4] * K[ 5][ 4] = -1 * -2
+Q[ 2][ 5] * K[ 5][ 5] =  0 *  6
+Q[ 2][ 6] * K[ 5][ 6] =  5 *  4
+Q[ 2][ 7] * K[ 5][ 7] =  2 * -1
+@cycle 2:   3
+Q[ 2][ 0] * K[ 6][ 0] = -4 *  7
+Q[ 2][ 1] * K[ 6][ 1] = -1 * -5
+Q[ 2][ 2] * K[ 6][ 2] = -4 *  2
+Q[ 2][ 3] * K[ 6][ 3] = -4 *  1
+Q[ 2][ 4] * K[ 6][ 4] = -1 *  3
+Q[ 2][ 5] * K[ 6][ 5] =  0 *  6
+Q[ 2][ 6] * K[ 6][ 6] =  5 *  1
+Q[ 2][ 7] * K[ 6][ 7] =  2 * -5
+@cycle 2: -43
+Q[ 2][ 0] * K[ 7][ 0] = -4 *  3
+Q[ 2][ 1] * K[ 7][ 1] = -1 * -1
+Q[ 2][ 2] * K[ 7][ 2] = -4 *  6
+Q[ 2][ 3] * K[ 7][ 3] = -4 *  3
+Q[ 2][ 4] * K[ 7][ 4] = -1 * -6
+Q[ 2][ 5] * K[ 7][ 5] =  0 * -2
+Q[ 2][ 6] * K[ 7][ 6] =  5 *  1
+Q[ 2][ 7] * K[ 7][ 7] =  2 * -4
+@cycle 2: -44
+prd @cycle 2: 00034ffff80002600044fffe700003fffd5fffd4
+Q[ 3][ 0] * K[ 0][ 0] = -3 * -6
+Q[ 3][ 1] * K[ 0][ 1] =  3 *  3
+Q[ 3][ 2] * K[ 0][ 2] =  6 * -2
+Q[ 3][ 3] * K[ 0][ 3] = -4 * -1
+Q[ 3][ 4] * K[ 0][ 4] =  6 * -5
+Q[ 3][ 5] * K[ 0][ 5] =  2 *  1
+Q[ 3][ 6] * K[ 0][ 6] =  1 *  0
+Q[ 3][ 7] * K[ 0][ 7] =  6 *  7
+@cycle 3:  33
+Q[ 3][ 0] * K[ 1][ 0] = -3 *  0
+Q[ 3][ 1] * K[ 1][ 1] =  3 * -5
+Q[ 3][ 2] * K[ 1][ 2] =  6 * -8
+Q[ 3][ 3] * K[ 1][ 3] = -4 *  0
+Q[ 3][ 4] * K[ 1][ 4] =  6 *  6
+Q[ 3][ 5] * K[ 1][ 5] =  2 *  0
+Q[ 3][ 6] * K[ 1][ 6] =  1 * -5
+Q[ 3][ 7] * K[ 1][ 7] =  6 * -7
+@cycle 3: -74
+Q[ 3][ 0] * K[ 2][ 0] = -3 *  4
+Q[ 3][ 1] * K[ 2][ 1] =  3 * -7
+Q[ 3][ 2] * K[ 2][ 2] =  6 * -6
+Q[ 3][ 3] * K[ 2][ 3] = -4 *  3
+Q[ 3][ 4] * K[ 2][ 4] =  6 *  7
+Q[ 3][ 5] * K[ 2][ 5] =  2 *  7
+Q[ 3][ 6] * K[ 2][ 6] =  1 *  6
+Q[ 3][ 7] * K[ 2][ 7] =  6 *  6
+@cycle 3:  17
+Q[ 3][ 0] * K[ 3][ 0] = -3 * -3
+Q[ 3][ 1] * K[ 3][ 1] =  3 *  0
+Q[ 3][ 2] * K[ 3][ 2] =  6 *  0
+Q[ 3][ 3] * K[ 3][ 3] = -4 * -7
+Q[ 3][ 4] * K[ 3][ 4] =  6 *  6
+Q[ 3][ 5] * K[ 3][ 5] =  2 *  3
+Q[ 3][ 6] * K[ 3][ 6] =  1 *  4
+Q[ 3][ 7] * K[ 3][ 7] =  6 *  7
+@cycle 3: 125
+Q[ 3][ 0] * K[ 4][ 0] = -3 *  6
+Q[ 3][ 1] * K[ 4][ 1] =  3 * -3
+Q[ 3][ 2] * K[ 4][ 2] =  6 *  4
+Q[ 3][ 3] * K[ 4][ 3] = -4 * -7
+Q[ 3][ 4] * K[ 4][ 4] =  6 * -4
+Q[ 3][ 5] * K[ 4][ 5] =  2 * -3
+Q[ 3][ 6] * K[ 4][ 6] =  1 * -2
+Q[ 3][ 7] * K[ 4][ 7] =  6 * -5
+@cycle 3: -37
+Q[ 3][ 0] * K[ 5][ 0] = -3 *  0
+Q[ 3][ 1] * K[ 5][ 1] =  3 * -7
+Q[ 3][ 2] * K[ 5][ 2] =  6 *  3
+Q[ 3][ 3] * K[ 5][ 3] = -4 *  3
+Q[ 3][ 4] * K[ 5][ 4] =  6 * -2
+Q[ 3][ 5] * K[ 5][ 5] =  2 *  6
+Q[ 3][ 6] * K[ 5][ 6] =  1 *  4
+Q[ 3][ 7] * K[ 5][ 7] =  6 * -1
+@cycle 3: -17
+Q[ 3][ 0] * K[ 6][ 0] = -3 *  7
+Q[ 3][ 1] * K[ 6][ 1] =  3 * -5
+Q[ 3][ 2] * K[ 6][ 2] =  6 *  2
+Q[ 3][ 3] * K[ 6][ 3] = -4 *  1
+Q[ 3][ 4] * K[ 6][ 4] =  6 *  3
+Q[ 3][ 5] * K[ 6][ 5] =  2 *  6
+Q[ 3][ 6] * K[ 6][ 6] =  1 *  1
+Q[ 3][ 7] * K[ 6][ 7] =  6 * -5
+@cycle 3: -27
+Q[ 3][ 0] * K[ 7][ 0] = -3 *  3
+Q[ 3][ 1] * K[ 7][ 1] =  3 * -1
+Q[ 3][ 2] * K[ 7][ 2] =  6 *  6
+Q[ 3][ 3] * K[ 7][ 3] = -4 *  3
+Q[ 3][ 4] * K[ 7][ 4] =  6 * -6
+Q[ 3][ 5] * K[ 7][ 5] =  2 * -2
+Q[ 3][ 6] * K[ 7][ 6] =  1 *  1
+Q[ 3][ 7] * K[ 7][ 7] =  6 * -4
+@cycle 3: -51
+prd @cycle 3: 00021fffb6000110007dfffdbfffeffffe5fffcd
+Q[ 4][ 0] * K[ 0][ 0] = -8 * -6
+Q[ 4][ 1] * K[ 0][ 1] =  5 *  3
+Q[ 4][ 2] * K[ 0][ 2] = -2 * -2
+Q[ 4][ 3] * K[ 0][ 3] =  6 * -1
+Q[ 4][ 4] * K[ 0][ 4] =  2 * -5
+Q[ 4][ 5] * K[ 0][ 5] =  1 *  1
+Q[ 4][ 6] * K[ 0][ 6] = -3 *  0
+Q[ 4][ 7] * K[ 0][ 7] =  4 *  7
+@cycle 4:  80
+Q[ 4][ 0] * K[ 1][ 0] = -8 *  0
+Q[ 4][ 1] * K[ 1][ 1] =  5 * -5
+Q[ 4][ 2] * K[ 1][ 2] = -2 * -8
+Q[ 4][ 3] * K[ 1][ 3] =  6 *  0
+Q[ 4][ 4] * K[ 1][ 4] =  2 *  6
+Q[ 4][ 5] * K[ 1][ 5] =  1 *  0
+Q[ 4][ 6] * K[ 1][ 6] = -3 * -5
+Q[ 4][ 7] * K[ 1][ 7] =  4 * -7
+@cycle 4: -10
+Q[ 4][ 0] * K[ 2][ 0] = -8 *  4
+Q[ 4][ 1] * K[ 2][ 1] =  5 * -7
+Q[ 4][ 2] * K[ 2][ 2] = -2 * -6
+Q[ 4][ 3] * K[ 2][ 3] =  6 *  3
+Q[ 4][ 4] * K[ 2][ 4] =  2 *  7
+Q[ 4][ 5] * K[ 2][ 5] =  1 *  7
+Q[ 4][ 6] * K[ 2][ 6] = -3 *  6
+Q[ 4][ 7] * K[ 2][ 7] =  4 *  6
+@cycle 4: -10
+Q[ 4][ 0] * K[ 3][ 0] = -8 * -3
+Q[ 4][ 1] * K[ 3][ 1] =  5 *  0
+Q[ 4][ 2] * K[ 3][ 2] = -2 *  0
+Q[ 4][ 3] * K[ 3][ 3] =  6 * -7
+Q[ 4][ 4] * K[ 3][ 4] =  2 *  6
+Q[ 4][ 5] * K[ 3][ 5] =  1 *  3
+Q[ 4][ 6] * K[ 3][ 6] = -3 *  4
+Q[ 4][ 7] * K[ 3][ 7] =  4 *  7
+@cycle 4:  13
+Q[ 4][ 0] * K[ 4][ 0] = -8 *  6
+Q[ 4][ 1] * K[ 4][ 1] =  5 * -3
+Q[ 4][ 2] * K[ 4][ 2] = -2 *  4
+Q[ 4][ 3] * K[ 4][ 3] =  6 * -7
+Q[ 4][ 4] * K[ 4][ 4] =  2 * -4
+Q[ 4][ 5] * K[ 4][ 5] =  1 * -3
+Q[ 4][ 6] * K[ 4][ 6] = -3 * -2
+Q[ 4][ 7] * K[ 4][ 7] =  4 * -5
+@cycle 4: -138
+Q[ 4][ 0] * K[ 5][ 0] = -8 *  0
+Q[ 4][ 1] * K[ 5][ 1] =  5 * -7
+Q[ 4][ 2] * K[ 5][ 2] = -2 *  3
+Q[ 4][ 3] * K[ 5][ 3] =  6 *  3
+Q[ 4][ 4] * K[ 5][ 4] =  2 * -2
+Q[ 4][ 5] * K[ 5][ 5] =  1 *  6
+Q[ 4][ 6] * K[ 5][ 6] = -3 *  4
+Q[ 4][ 7] * K[ 5][ 7] =  4 * -1
+@cycle 4: -37
+Q[ 4][ 0] * K[ 6][ 0] = -8 *  7
+Q[ 4][ 1] * K[ 6][ 1] =  5 * -5
+Q[ 4][ 2] * K[ 6][ 2] = -2 *  2
+Q[ 4][ 3] * K[ 6][ 3] =  6 *  1
+Q[ 4][ 4] * K[ 6][ 4] =  2 *  3
+Q[ 4][ 5] * K[ 6][ 5] =  1 *  6
+Q[ 4][ 6] * K[ 6][ 6] = -3 *  1
+Q[ 4][ 7] * K[ 6][ 7] =  4 * -5
+@cycle 4: -90
+Q[ 4][ 0] * K[ 7][ 0] = -8 *  3
+Q[ 4][ 1] * K[ 7][ 1] =  5 * -1
+Q[ 4][ 2] * K[ 7][ 2] = -2 *  6
+Q[ 4][ 3] * K[ 7][ 3] =  6 *  3
+Q[ 4][ 4] * K[ 7][ 4] =  2 * -6
+Q[ 4][ 5] * K[ 7][ 5] =  1 * -2
+Q[ 4][ 6] * K[ 7][ 6] = -3 *  1
+Q[ 4][ 7] * K[ 7][ 7] =  4 * -4
+@cycle 4: -56
+prd @cycle 4: 00050ffff6ffff60000dfff76fffdbfffa6fffc8
+Q[ 5][ 0] * K[ 0][ 0] = -2 * -6
+Q[ 5][ 1] * K[ 0][ 1] = -1 *  3
+Q[ 5][ 2] * K[ 0][ 2] = -2 * -2
+Q[ 5][ 3] * K[ 0][ 3] = -6 * -1
+Q[ 5][ 4] * K[ 0][ 4] = -1 * -5
+Q[ 5][ 5] * K[ 0][ 5] =  4 *  1
+Q[ 5][ 6] * K[ 0][ 6] =  0 *  0
+Q[ 5][ 7] * K[ 0][ 7] =  2 *  7
+@cycle 5:  42
+Q[ 5][ 0] * K[ 1][ 0] = -2 *  0
+Q[ 5][ 1] * K[ 1][ 1] = -1 * -5
+Q[ 5][ 2] * K[ 1][ 2] = -2 * -8
+Q[ 5][ 3] * K[ 1][ 3] = -6 *  0
+Q[ 5][ 4] * K[ 1][ 4] = -1 *  6
+Q[ 5][ 5] * K[ 1][ 5] =  4 *  0
+Q[ 5][ 6] * K[ 1][ 6] =  0 * -5
+Q[ 5][ 7] * K[ 1][ 7] =  2 * -7
+@cycle 5:   1
+Q[ 5][ 0] * K[ 2][ 0] = -2 *  4
+Q[ 5][ 1] * K[ 2][ 1] = -1 * -7
+Q[ 5][ 2] * K[ 2][ 2] = -2 * -6
+Q[ 5][ 3] * K[ 2][ 3] = -6 *  3
+Q[ 5][ 4] * K[ 2][ 4] = -1 *  7
+Q[ 5][ 5] * K[ 2][ 5] =  4 *  7
+Q[ 5][ 6] * K[ 2][ 6] =  0 *  6
+Q[ 5][ 7] * K[ 2][ 7] =  2 *  6
+@cycle 5:  26
+Q[ 5][ 0] * K[ 3][ 0] = -2 * -3
+Q[ 5][ 1] * K[ 3][ 1] = -1 *  0
+Q[ 5][ 2] * K[ 3][ 2] = -2 *  0
+Q[ 5][ 3] * K[ 3][ 3] = -6 * -7
+Q[ 5][ 4] * K[ 3][ 4] = -1 *  6
+Q[ 5][ 5] * K[ 3][ 5] =  4 *  3
+Q[ 5][ 6] * K[ 3][ 6] =  0 *  4
+Q[ 5][ 7] * K[ 3][ 7] =  2 *  7
+@cycle 5:  68
+Q[ 5][ 0] * K[ 4][ 0] = -2 *  6
+Q[ 5][ 1] * K[ 4][ 1] = -1 * -3
+Q[ 5][ 2] * K[ 4][ 2] = -2 *  4
+Q[ 5][ 3] * K[ 4][ 3] = -6 * -7
+Q[ 5][ 4] * K[ 4][ 4] = -1 * -4
+Q[ 5][ 5] * K[ 4][ 5] =  4 * -3
+Q[ 5][ 6] * K[ 4][ 6] =  0 * -2
+Q[ 5][ 7] * K[ 4][ 7] =  2 * -5
+@cycle 5:   7
+Q[ 5][ 0] * K[ 5][ 0] = -2 *  0
+Q[ 5][ 1] * K[ 5][ 1] = -1 * -7
+Q[ 5][ 2] * K[ 5][ 2] = -2 *  3
+Q[ 5][ 3] * K[ 5][ 3] = -6 *  3
+Q[ 5][ 4] * K[ 5][ 4] = -1 * -2
+Q[ 5][ 5] * K[ 5][ 5] =  4 *  6
+Q[ 5][ 6] * K[ 5][ 6] =  0 *  4
+Q[ 5][ 7] * K[ 5][ 7] =  2 * -1
+@cycle 5:   7
+Q[ 5][ 0] * K[ 6][ 0] = -2 *  7
+Q[ 5][ 1] * K[ 6][ 1] = -1 * -5
+Q[ 5][ 2] * K[ 6][ 2] = -2 *  2
+Q[ 5][ 3] * K[ 6][ 3] = -6 *  1
+Q[ 5][ 4] * K[ 6][ 4] = -1 *  3
+Q[ 5][ 5] * K[ 6][ 5] =  4 *  6
+Q[ 5][ 6] * K[ 6][ 6] =  0 *  1
+Q[ 5][ 7] * K[ 6][ 7] =  2 * -5
+@cycle 5:  -8
+Q[ 5][ 0] * K[ 7][ 0] = -2 *  3
+Q[ 5][ 1] * K[ 7][ 1] = -1 * -1
+Q[ 5][ 2] * K[ 7][ 2] = -2 *  6
+Q[ 5][ 3] * K[ 7][ 3] = -6 *  3
+Q[ 5][ 4] * K[ 7][ 4] = -1 * -6
+Q[ 5][ 5] * K[ 7][ 5] =  4 * -2
+Q[ 5][ 6] * K[ 7][ 6] =  0 *  1
+Q[ 5][ 7] * K[ 7][ 7] =  2 * -4
+@cycle 5: -45
+prd @cycle 5: 0002a000010001a000440000700007ffff8fffd3
+Q[ 6][ 0] * K[ 0][ 0] =  5 * -6
+Q[ 6][ 1] * K[ 0][ 1] = -7 *  3
+Q[ 6][ 2] * K[ 0][ 2] = -1 * -2
+Q[ 6][ 3] * K[ 0][ 3] =  3 * -1
+Q[ 6][ 4] * K[ 0][ 4] =  2 * -5
+Q[ 6][ 5] * K[ 0][ 5] =  1 *  1
+Q[ 6][ 6] * K[ 0][ 6] = -7 *  0
+Q[ 6][ 7] * K[ 0][ 7] =  6 *  7
+@cycle 6: -19
+Q[ 6][ 0] * K[ 1][ 0] =  5 *  0
+Q[ 6][ 1] * K[ 1][ 1] = -7 * -5
+Q[ 6][ 2] * K[ 1][ 2] = -1 * -8
+Q[ 6][ 3] * K[ 1][ 3] =  3 *  0
+Q[ 6][ 4] * K[ 1][ 4] =  2 *  6
+Q[ 6][ 5] * K[ 1][ 5] =  1 *  0
+Q[ 6][ 6] * K[ 1][ 6] = -7 * -5
+Q[ 6][ 7] * K[ 1][ 7] =  6 * -7
+@cycle 6:  48
+Q[ 6][ 0] * K[ 2][ 0] =  5 *  4
+Q[ 6][ 1] * K[ 2][ 1] = -7 * -7
+Q[ 6][ 2] * K[ 2][ 2] = -1 * -6
+Q[ 6][ 3] * K[ 2][ 3] =  3 *  3
+Q[ 6][ 4] * K[ 2][ 4] =  2 *  7
+Q[ 6][ 5] * K[ 2][ 5] =  1 *  7
+Q[ 6][ 6] * K[ 2][ 6] = -7 *  6
+Q[ 6][ 7] * K[ 2][ 7] =  6 *  6
+@cycle 6:  99
+Q[ 6][ 0] * K[ 3][ 0] =  5 * -3
+Q[ 6][ 1] * K[ 3][ 1] = -7 *  0
+Q[ 6][ 2] * K[ 3][ 2] = -1 *  0
+Q[ 6][ 3] * K[ 3][ 3] =  3 * -7
+Q[ 6][ 4] * K[ 3][ 4] =  2 *  6
+Q[ 6][ 5] * K[ 3][ 5] =  1 *  3
+Q[ 6][ 6] * K[ 3][ 6] = -7 *  4
+Q[ 6][ 7] * K[ 3][ 7] =  6 *  7
+@cycle 6:  -7
+Q[ 6][ 0] * K[ 4][ 0] =  5 *  6
+Q[ 6][ 1] * K[ 4][ 1] = -7 * -3
+Q[ 6][ 2] * K[ 4][ 2] = -1 *  4
+Q[ 6][ 3] * K[ 4][ 3] =  3 * -7
+Q[ 6][ 4] * K[ 4][ 4] =  2 * -4
+Q[ 6][ 5] * K[ 4][ 5] =  1 * -3
+Q[ 6][ 6] * K[ 4][ 6] = -7 * -2
+Q[ 6][ 7] * K[ 4][ 7] =  6 * -5
+@cycle 6:  -1
+Q[ 6][ 0] * K[ 5][ 0] =  5 *  0
+Q[ 6][ 1] * K[ 5][ 1] = -7 * -7
+Q[ 6][ 2] * K[ 5][ 2] = -1 *  3
+Q[ 6][ 3] * K[ 5][ 3] =  3 *  3
+Q[ 6][ 4] * K[ 5][ 4] =  2 * -2
+Q[ 6][ 5] * K[ 5][ 5] =  1 *  6
+Q[ 6][ 6] * K[ 5][ 6] = -7 *  4
+Q[ 6][ 7] * K[ 5][ 7] =  6 * -1
+@cycle 6:  23
+Q[ 6][ 0] * K[ 6][ 0] =  5 *  7
+Q[ 6][ 1] * K[ 6][ 1] = -7 * -5
+Q[ 6][ 2] * K[ 6][ 2] = -1 *  2
+Q[ 6][ 3] * K[ 6][ 3] =  3 *  1
+Q[ 6][ 4] * K[ 6][ 4] =  2 *  3
+Q[ 6][ 5] * K[ 6][ 5] =  1 *  6
+Q[ 6][ 6] * K[ 6][ 6] = -7 *  1
+Q[ 6][ 7] * K[ 6][ 7] =  6 * -5
+@cycle 6:  46
+Q[ 6][ 0] * K[ 7][ 0] =  5 *  3
+Q[ 6][ 1] * K[ 7][ 1] = -7 * -1
+Q[ 6][ 2] * K[ 7][ 2] = -1 *  6
+Q[ 6][ 3] * K[ 7][ 3] =  3 *  3
+Q[ 6][ 4] * K[ 7][ 4] =  2 * -6
+Q[ 6][ 5] * K[ 7][ 5] =  1 * -2
+Q[ 6][ 6] * K[ 7][ 6] = -7 *  1
+Q[ 6][ 7] * K[ 7][ 7] =  6 * -4
+@cycle 6: -20
+prd @cycle 6: fffed0003000063ffff9fffff000170002efffec
+Q[ 7][ 0] * K[ 0][ 0] =  5 * -6
+Q[ 7][ 1] * K[ 0][ 1] = -8 *  3
+Q[ 7][ 2] * K[ 0][ 2] = -3 * -2
+Q[ 7][ 3] * K[ 0][ 3] =  6 * -1
+Q[ 7][ 4] * K[ 0][ 4] =  0 * -5
+Q[ 7][ 5] * K[ 0][ 5] = -2 *  1
+Q[ 7][ 6] * K[ 0][ 6] =  6 *  0
+Q[ 7][ 7] * K[ 0][ 7] = -1 *  7
+@cycle 7: -63
+Q[ 7][ 0] * K[ 1][ 0] =  5 *  0
+Q[ 7][ 1] * K[ 1][ 1] = -8 * -5
+Q[ 7][ 2] * K[ 1][ 2] = -3 * -8
+Q[ 7][ 3] * K[ 1][ 3] =  6 *  0
+Q[ 7][ 4] * K[ 1][ 4] =  0 *  6
+Q[ 7][ 5] * K[ 1][ 5] = -2 *  0
+Q[ 7][ 6] * K[ 1][ 6] =  6 * -5
+Q[ 7][ 7] * K[ 1][ 7] = -1 * -7
+@cycle 7:  41
+Q[ 7][ 0] * K[ 2][ 0] =  5 *  4
+Q[ 7][ 1] * K[ 2][ 1] = -8 * -7
+Q[ 7][ 2] * K[ 2][ 2] = -3 * -6
+Q[ 7][ 3] * K[ 2][ 3] =  6 *  3
+Q[ 7][ 4] * K[ 2][ 4] =  0 *  7
+Q[ 7][ 5] * K[ 2][ 5] = -2 *  7
+Q[ 7][ 6] * K[ 2][ 6] =  6 *  6
+Q[ 7][ 7] * K[ 2][ 7] = -1 *  6
+@cycle 7: 128
+Q[ 7][ 0] * K[ 3][ 0] =  5 * -3
+Q[ 7][ 1] * K[ 3][ 1] = -8 *  0
+Q[ 7][ 2] * K[ 3][ 2] = -3 *  0
+Q[ 7][ 3] * K[ 3][ 3] =  6 * -7
+Q[ 7][ 4] * K[ 3][ 4] =  0 *  6
+Q[ 7][ 5] * K[ 3][ 5] = -2 *  3
+Q[ 7][ 6] * K[ 3][ 6] =  6 *  4
+Q[ 7][ 7] * K[ 3][ 7] = -1 *  7
+@cycle 7: -46
+Q[ 7][ 0] * K[ 4][ 0] =  5 *  6
+Q[ 7][ 1] * K[ 4][ 1] = -8 * -3
+Q[ 7][ 2] * K[ 4][ 2] = -3 *  4
+Q[ 7][ 3] * K[ 4][ 3] =  6 * -7
+Q[ 7][ 4] * K[ 4][ 4] =  0 * -4
+Q[ 7][ 5] * K[ 4][ 5] = -2 * -3
+Q[ 7][ 6] * K[ 4][ 6] =  6 * -2
+Q[ 7][ 7] * K[ 4][ 7] = -1 * -5
+@cycle 7:  -1
+Q[ 7][ 0] * K[ 5][ 0] =  5 *  0
+Q[ 7][ 1] * K[ 5][ 1] = -8 * -7
+Q[ 7][ 2] * K[ 5][ 2] = -3 *  3
+Q[ 7][ 3] * K[ 5][ 3] =  6 *  3
+Q[ 7][ 4] * K[ 5][ 4] =  0 * -2
+Q[ 7][ 5] * K[ 5][ 5] = -2 *  6
+Q[ 7][ 6] * K[ 5][ 6] =  6 *  4
+Q[ 7][ 7] * K[ 5][ 7] = -1 * -1
+@cycle 7:  78
+Q[ 7][ 0] * K[ 6][ 0] =  5 *  7
+Q[ 7][ 1] * K[ 6][ 1] = -8 * -5
+Q[ 7][ 2] * K[ 6][ 2] = -3 *  2
+Q[ 7][ 3] * K[ 6][ 3] =  6 *  1
+Q[ 7][ 4] * K[ 6][ 4] =  0 *  3
+Q[ 7][ 5] * K[ 6][ 5] = -2 *  6
+Q[ 7][ 6] * K[ 6][ 6] =  6 *  1
+Q[ 7][ 7] * K[ 6][ 7] = -1 * -5
+@cycle 7:  74
+Q[ 7][ 0] * K[ 7][ 0] =  5 *  3
+Q[ 7][ 1] * K[ 7][ 1] = -8 * -1
+Q[ 7][ 2] * K[ 7][ 2] = -3 *  6
+Q[ 7][ 3] * K[ 7][ 3] =  6 *  3
+Q[ 7][ 4] * K[ 7][ 4] =  0 * -6
+Q[ 7][ 5] * K[ 7][ 5] = -2 * -2
+Q[ 7][ 6] * K[ 7][ 6] =  6 *  1
+Q[ 7][ 7] * K[ 7][ 7] = -1 * -4
+@cycle 7:  37
+prd @cycle 7: fffc10002900080fffd2fffff0004e0004a00025
+##### Estimated Multiplication Result (Decimal) #####
+---------------------------------------------------
+Cycle  0 |     93 |    -20 |     -7 |     94 |    -48 |    -45 |    -63 |    -86 |
+Cycle  1 |     52 |    -21 |    -73 |     24 |     -5 |    -33 |    -41 |    -23 |
+Cycle  2 |     52 |     -8 |     38 |     68 |    -25 |      3 |    -43 |    -44 |
+Cycle  3 |     33 |    -74 |     17 |    125 |    -37 |    -17 |    -27 |    -51 |
+Cycle  4 |     80 |    -10 |    -10 |     13 |   -138 |    -37 |    -90 |    -56 |
+Cycle  5 |     42 |      1 |     26 |     68 |      7 |      7 |     -8 |    -45 |
+Cycle  6 |    -19 |     48 |     99 |     -7 |     -1 |     23 |     46 |    -20 |
+Cycle  7 |    -63 |     41 |    128 |    -46 |     -1 |     78 |     74 |     37 |
+---------------------------------------------------
+##### Qmem writing  #####
+##### Kmem writing #####
+##### K data loading to processor #####
+##### execute #####
+##### move ofifo to pmem #####
+##### PMEM TO OUT #####
+Core Output |      x |      x |      x |      x |      x |      x |      x |      x |
+---------------------------------------------------
+Core Output |     93 |    -20 |     -7 |     94 |    -48 |    -45 |    -63 |    -86 |
+---------------------------------------------------
+Core Output |     52 |    -21 |    -73 |     24 |     -5 |    -33 |    -41 |    -23 |
+---------------------------------------------------
+Core Output |     52 |     -8 |     38 |     68 |    -25 |      3 |    -43 |    -44 |
+---------------------------------------------------
+Core Output |     33 |    -74 |     17 |    125 |    -37 |    -17 |    -27 |    -51 |
+---------------------------------------------------
+Core Output |     80 |    -10 |    -10 |     13 |   -138 |    -37 |    -90 |    -56 |
+---------------------------------------------------
+Core Output |     42 |      1 |     26 |     68 |      7 |      7 |     -8 |    -45 |
+---------------------------------------------------
+Core Output |    -19 |     48 |     99 |     -7 |     -1 |     23 |     46 |    -20 |
+---------------------------------------------------
+Core Output |    -63 |     41 |    128 |    -46 |     -1 |     78 |     74 |     37 |
+---------------------------------------------------
+Simulation complete via $finish(1) at time 915 NS + 0
+/home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/gate_sim/netlist/fullchip_tb.v:381 
+xcelium> 
