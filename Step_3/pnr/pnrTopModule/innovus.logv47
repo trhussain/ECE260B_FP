@@ -1,0 +1,787 @@
+[03/22 00:30:36      0] 
+[03/22 00:30:36      0] Cadence Innovus(TM) Implementation System.
+[03/22 00:30:36      0] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[03/22 00:30:36      0] 
+[03/22 00:30:36      0] Version:	v15.23-s045_1, built Fri Apr 22 12:32:52 PDT 2016
+[03/22 00:30:36      0] Options:	
+[03/22 00:30:36      0] Date:		Sat Mar 22 00:30:36 2025
+[03/22 00:30:36      0] Host:		ieng6-ece-17.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB)
+[03/22 00:30:36      0] OS:		CentOS Linux release 7.9.2009 (Core)
+[03/22 00:30:36      0] 
+[03/22 00:30:36      0] License:
+[03/22 00:30:36      0] 		invs	Innovus Implementation System	15.2	checkout succeeded
+[03/22 00:30:36      0] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[03/22 00:30:46      0] **ERROR: (IMPOAX-142):	Could not open shared library libinnovusoax22.so : /acsnfs3/software/cadence-innovus152/tools/lib/64bit/libcdsSkillPcell.so: undefined symbol: _ZTIN12OpenAccess_413oaFSComponentE
+[03/22 00:30:46      0] 
+[03/22 00:30:46      0] **ERROR: (IMPOAX-142):	Could not open shared library libcdsSkillPcell.so : (null)
+[03/22 00:30:46      0] 
+[03/22 00:30:46      0] **ERROR: (IMPOAX-142):	OA features will be disabled in this session.
+[03/22 00:30:46      0] 
+[03/22 00:30:54      7] @(#)CDS: Innovus v15.23-s045_1 (64bit) 04/22/2016 12:32 (Linux 2.6.18-194.el5)
+[03/22 00:30:54      7] @(#)CDS: NanoRoute 15.23-s045_1 NR160414-1105/15_23-UB (database version 2.30, 317.6.1) {superthreading v1.26}
+[03/22 00:30:54      7] @(#)CDS: AAE 15.23-s014 (64bit) 04/22/2016 (Linux 2.6.18-194.el5)
+[03/22 00:30:54      7] @(#)CDS: CTE 15.23-s022_1 () Apr 22 2016 09:38:45 ( )
+[03/22 00:30:54      7] @(#)CDS: SYNTECH 15.23-s008_1 () Apr 12 2016 21:52:59 ( )
+[03/22 00:30:54      7] @(#)CDS: CPE v15.23-s045
+[03/22 00:30:54      7] @(#)CDS: IQRC/TQRC 15.1.4-s213 (64bit) Tue Feb  9 17:31:28 PST 2016 (Linux 2.6.18-194.el5)
+[03/22 00:30:54      7] @(#)CDS: OA 22.50-p036 Tue Nov  3 09:29:52 2015
+[03/22 00:30:54      7] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[03/22 00:30:54      7] @(#)CDS: RCDB 11.7
+[03/22 00:30:54      7] --- Running on ieng6-ece-17.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB) ---
+[03/22 00:30:54      7] Create and set the environment variable TMPDIR to /tmp/innovus_temp_15532_ieng6-ece-17.ucsd.edu_aekeng_G6VWtg.
+
+[03/22 00:30:54      7] 
+[03/22 00:30:54      7] **INFO:  MMMC transition support version v31-84 
+[03/22 00:30:54      7] 
+[03/22 00:30:54      7] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[03/22 00:30:54      7] <CMD> suppressMessage ENCEXT-2799
+[03/22 00:30:54      7] <CMD> getDrawView
+[03/22 00:30:54      7] <CMD> loadWorkspace -name Physical
+[03/22 00:30:54      7] <CMD> win
+[03/22 00:30:58      7] <CMD> set init_pwr_net VDD
+[03/22 00:30:58      7] <CMD> set init_gnd_net VSS
+[03/22 00:30:58      7] <CMD> set init_verilog ./netlist/core.out.v
+[03/22 00:30:58      7] <CMD> set init_design_netlisttype Verilog
+[03/22 00:30:58      7] <CMD> set init_design_settop 1
+[03/22 00:30:58      7] <CMD> set init_top_cell core
+[03/22 00:30:58      7] <CMD> set init_lef_file {/home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef ./subckt/sram_w16_160.lef ./subckt/sram_w16_64.lef}
+[03/22 00:30:58      7] <CMD> create_library_set -name WC_LIB -timing "$worst_timing_lib ./subckt/sram_w16_160_WC.lib ./subckt/sram_w16_64_WC.lib"
+[03/22 00:30:58      7] <CMD> create_library_set -name BC_LIB -timing "$best_timing_lib ./subckt/sram_w16_160_BC.lib ./subckt/sram_w16_64_BC.lib"
+[03/22 00:30:58      7] <CMD> create_rc_corner -name Cmax -cap_table $worst_captbl -T 125
+[03/22 00:30:58      7] <CMD> create_rc_corner -name Cmin -cap_table $best_captbl -T -40
+[03/22 00:30:58      7] <CMD> create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
+[03/22 00:30:58      7] <CMD> create_delay_corner -name BC -library_set BC_LIB -rc_corner Cmin
+[03/22 00:30:58      7] <CMD> create_constraint_mode -name CON -sdc_file [list $sdc]
+[03/22 00:30:58      7] <CMD> create_analysis_view -name WC_VIEW -delay_corner WC -constraint_mode CON
+[03/22 00:30:58      7] <CMD> create_analysis_view -name BC_VIEW -delay_corner BC -constraint_mode CON
+[03/22 00:30:58      7] <CMD> init_design -setup WC_VIEW -hold BC_VIEW
+[03/22 00:30:58      7] **ERROR: (IMPOAX-820):	The OA features are disabled in the current session of Innovus because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Innovus either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[03/22 00:30:58      7] 
+[03/22 00:30:58      7] **ERROR: (IMPOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[03/22 00:30:58      7] 
+[03/22 00:30:58      7] Loading LEF file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef ...
+[03/22 00:30:58      7] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 28.
+[03/22 00:30:58      7] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 867.
+[03/22 00:30:58      7] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 877.
+[03/22 00:30:58      7] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1014.
+[03/22 00:30:58      7] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1024.
+[03/22 00:30:58      7] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1161.
+[03/22 00:30:58      7] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1171.
+[03/22 00:30:58      7] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1308.
+[03/22 00:30:58      7] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1318.
+[03/22 00:30:58      7] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1372.
+[03/22 00:30:58      7] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1383.
+[03/22 00:30:58      7] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1604.
+[03/22 00:30:58      7] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1614.
+[03/22 00:30:58      7] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1769.
+[03/22 00:30:58      7] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1771.
+[03/22 00:30:58      7] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1772.
+[03/22 00:30:58      7] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1776.
+[03/22 00:30:58      7] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1778.
+[03/22 00:30:58      7] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1779.
+[03/22 00:30:58      7] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[03/22 00:30:58      7] The LEF parser will ignore this statement.
+[03/22 00:30:58      7] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/ee260bwi25/public/PDKdata/lef/tcbn65gplus_8lmT2.lef at line 1783.
+[03/22 00:30:58      7] Set DBUPerIGU to M2 pitch 400.
+[03/22 00:30:59      8] 
+[03/22 00:30:59      8] Loading LEF file ./subckt/sram_w16_160.lef ...
+[03/22 00:30:59      8] 
+[03/22 00:30:59      8] Loading LEF file ./subckt/sram_w16_64.lef ...
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'CLK' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[63]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[62]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[61]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[60]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[59]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[58]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[57]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[56]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[55]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[54]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[53]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[52]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[51]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[50]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[49]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[48]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[47]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[46]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-200):	Pin 'D[45]' in macro 'sram_w16_64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-200' for more detail.
+[03/22 00:30:59      8] **WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+[03/22 00:30:59      8] To increase the message display limit, refer to the product command reference manual.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[63]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[62]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[61]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[60]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[59]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[58]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[57]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[56]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[55]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[54]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[53]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[52]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[51]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[50]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[49]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[48]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[47]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[46]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[45]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (IMPLF-201):	Pin 'Q[44]' in macro 'sram_w16_64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[03/22 00:30:59      8] Type 'man IMPLF-201' for more detail.
+[03/22 00:30:59      8] **WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
+[03/22 00:30:59      8] To increase the message display limit, refer to the product command reference manual.
+[03/22 00:30:59      8] 
+[03/22 00:30:59      8] viaInitial starts at Sat Mar 22 00:30:59 2025
+viaInitial ends at Sat Mar 22 00:30:59 2025
+Reading WC_LIB timing library '/home/linux/ieng6/ee260bwi25/public/PDKdata/lib/tcbn65gpluswc.lib' ...
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D0' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D1' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D2' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D4' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2D8' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN2XD1' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D0' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D1' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D2' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D4' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3D8' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN3XD1' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D0' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D1' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D2' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D4' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4D8' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AN4XD1' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AO211D0' is not defined in the library.
+[03/22 00:30:59      8] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Z' of cell 'AO211D1' is not defined in the library.
+[03/22 00:30:59      8] Message <TECHLIB-436> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+[03/22 00:31:00      9] Read 811 cells in library 'tcbn65gpluswc' 
+[03/22 00:31:00      9] Reading WC_LIB timing library '/home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/pnr2/subckt/sram_w16_160_WC.lib' ...
+[03/22 00:31:00      9] Read 1 cells in library 'sram_w16_160' 
+[03/22 00:31:00      9] Reading WC_LIB timing library '/home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/pnr2/subckt/sram_w16_64_WC.lib' ...
+[03/22 00:31:00      9] Read 1 cells in library 'sram_w16_64' 
+[03/22 00:31:00      9] Reading BC_LIB timing library '/home/linux/ieng6/ee260bwi25/public/PDKdata/lib/tcbn65gplusbc.lib' ...
+[03/22 00:31:01     10] Read 811 cells in library 'tcbn65gplusbc' 
+[03/22 00:31:01     10] Reading BC_LIB timing library '/home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/pnr2/subckt/sram_w16_160_BC.lib' ...
+[03/22 00:31:01     10] Read 1 cells in library 'sram_w16_160' 
+[03/22 00:31:01     10] Reading BC_LIB timing library '/home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/pnr2/subckt/sram_w16_64_BC.lib' ...
+[03/22 00:31:01     10] Read 1 cells in library 'sram_w16_64' 
+[03/22 00:31:01     10] *** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.17min, fe_real=0.42min, fe_mem=469.5M) ***
+[03/22 00:31:01     10] *** Begin netlist parsing (mem=469.5M) ***
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D4' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D4' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D2' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D2' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D1' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D1' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D0' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D0' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D4' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D4' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D2' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D2' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D1' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D1' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D0' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D0' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2D4' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2D4' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2D2' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2D2' is defined in LEF but not in the timing library.
+[03/22 00:31:01     10] **WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+[03/22 00:31:01     10] To increase the message display limit, refer to the product command reference manual.
+[03/22 00:31:01     10] Created 813 new cells from 6 timing libraries.
+[03/22 00:31:01     10] Reading netlist ...
+[03/22 00:31:01     10] Backslashed names will retain backslash and a trailing blank character.
+[03/22 00:31:01     10] Reading verilog netlist './netlist/core.out.v'
+[03/22 00:31:02     10] 
+[03/22 00:31:02     10] *** Memory Usage v#1 (Current mem = 471.535M, initial mem = 149.258M) ***
+[03/22 00:31:02     10] *** End netlist parsing (cpu=0:00:00.1, real=0:00:01.0, mem=471.5M) ***
+[03/22 00:31:02     10] Set top cell to core.
+[03/22 00:31:02     10] Hooked 1626 DB cells to tlib cells.
+[03/22 00:31:02     10] Starting recursive module instantiation check.
+[03/22 00:31:02     10] No recursion found.
+[03/22 00:31:02     10] Building hierarchical netlist for Cell core ...
+[03/22 00:31:02     10] *** Netlist is unique.
+[03/22 00:31:02     10] ** info: there are 1752 modules.
+[03/22 00:31:02     10] ** info: there are 15818 stdCell insts.
+[03/22 00:31:02     10] ** info: there are 3 macros.
+[03/22 00:31:02     10] 
+[03/22 00:31:02     10] *** Memory Usage v#1 (Current mem = 535.617M, initial mem = 149.258M) ***
+[03/22 00:31:02     10] **WARN: (IMPFP-3961):	The techSite 'dcore' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[03/22 00:31:02     10] Type 'man IMPFP-3961' for more detail.
+[03/22 00:31:02     10] **WARN: (IMPFP-3961):	The techSite 'ccore' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[03/22 00:31:02     10] Type 'man IMPFP-3961' for more detail.
+[03/22 00:31:02     10] Set Default Net Delay as 1000 ps.
+[03/22 00:31:02     10] Set Default Net Load as 0.5 pF. 
+[03/22 00:31:02     10] Set Default Input Pin Transition as 0.1 ps.
+[03/22 00:31:02     11] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[03/22 00:31:02     11] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[03/22 00:31:02     11] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/22 00:31:02     11] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/22 00:31:02     11] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/22 00:31:02     11] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/22 00:31:02     11] Reading Capacitance Table File /home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable ...
+[03/22 00:31:02     11] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/22 00:31:02     11] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[03/22 00:31:02     11] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[03/22 00:31:02     11] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[03/22 00:31:02     11] Importing multi-corner RC tables ... 
+[03/22 00:31:02     11] Summary of Active RC-Corners : 
+[03/22 00:31:02     11]  
+[03/22 00:31:02     11]  Analysis View: WC_VIEW
+[03/22 00:31:02     11]     RC-Corner Name        : Cmax
+[03/22 00:31:02     11]     RC-Corner Index       : 0
+[03/22 00:31:02     11]     RC-Corner Temperature : 125 Celsius
+[03/22 00:31:02     11]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[03/22 00:31:02     11]     RC-Corner PreRoute Res Factor         : 1
+[03/22 00:31:02     11]     RC-Corner PreRoute Cap Factor         : 1
+[03/22 00:31:02     11]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/22 00:31:02     11]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/22 00:31:02     11]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/22 00:31:02     11]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/22 00:31:02     11]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/22 00:31:02     11]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/22 00:31:02     11]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/22 00:31:02     11]  
+[03/22 00:31:02     11]  Analysis View: BC_VIEW
+[03/22 00:31:02     11]     RC-Corner Name        : Cmin
+[03/22 00:31:02     11]     RC-Corner Index       : 1
+[03/22 00:31:02     11]     RC-Corner Temperature : -40 Celsius
+[03/22 00:31:02     11]     RC-Corner Cap Table   : '/home/linux/ieng6/ee260bwi25/public/PDKdata/captbl/cln65g+_1p08m+alrdl_top2_cbest.captable'
+[03/22 00:31:02     11]     RC-Corner PreRoute Res Factor         : 1
+[03/22 00:31:02     11]     RC-Corner PreRoute Cap Factor         : 1
+[03/22 00:31:02     11]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[03/22 00:31:02     11]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[03/22 00:31:02     11]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[03/22 00:31:02     11]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[03/22 00:31:02     11]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[03/22 00:31:02     11]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[03/22 00:31:02     11]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[03/22 00:31:02     11] *Info: initialize multi-corner CTS.
+[03/22 00:31:02     11] Reading timing constraints file './constraints/core.sdc' ...
+[03/22 00:31:02     11] Current (total cpu=0:00:11.2, real=0:00:26.0, peak res=291.1M, current mem=658.6M)
+[03/22 00:31:02     11] INFO (CTE): Constraints read successfully.
+[03/22 00:31:02     11] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=306.2M, current mem=675.8M)
+[03/22 00:31:02     11] Current (total cpu=0:00:11.3, real=0:00:26.0, peak res=306.2M, current mem=675.8M)
+[03/22 00:31:03     11] Summary for sequential cells idenfication: 
+[03/22 00:31:03     11] Identified SBFF number: 199
+[03/22 00:31:03     11] Identified MBFF number: 0
+[03/22 00:31:03     11] Not identified SBFF number: 0
+[03/22 00:31:03     11] Not identified MBFF number: 0
+[03/22 00:31:03     11] Number of sequential cells which are not FFs: 104
+[03/22 00:31:03     11] 
+[03/22 00:31:03     11] Total number of combinational cells: 492
+[03/22 00:31:03     11] Total number of sequential cells: 303
+[03/22 00:31:03     11] Total number of tristate cells: 11
+[03/22 00:31:03     11] Total number of level shifter cells: 0
+[03/22 00:31:03     11] Total number of power gating cells: 0
+[03/22 00:31:03     11] Total number of isolation cells: 0
+[03/22 00:31:03     11] Total number of power switch cells: 0
+[03/22 00:31:03     11] Total number of pulse generator cells: 0
+[03/22 00:31:03     11] Total number of always on buffers: 0
+[03/22 00:31:03     11] Total number of retention cells: 0
+[03/22 00:31:03     11] List of usable buffers: BUFFD1 BUFFD0 BUFFD2 BUFFD3 BUFFD4 BUFFD6 BUFFD8 BUFFD12 BUFFD16 CKBD1 CKBD0 CKBD2 CKBD3 CKBD4 CKBD6 CKBD8 CKBD12 CKBD16
+[03/22 00:31:03     11] Total number of usable buffers: 18
+[03/22 00:31:03     11] List of unusable buffers: BUFFD20 BUFFD24 CKBD20 CKBD24 GBUFFD1 GBUFFD3 GBUFFD2 GBUFFD4 GBUFFD8
+[03/22 00:31:03     11] Total number of unusable buffers: 9
+[03/22 00:31:03     11] List of usable inverters: CKND1 CKND0 CKND2 CKND3 CKND4 CKND6 CKND8 CKND12 CKND16 INVD1 INVD0 INVD2 INVD3 INVD4 INVD6 INVD8 INVD12 INVD16
+[03/22 00:31:03     11] Total number of usable inverters: 18
+[03/22 00:31:03     11] List of unusable inverters: CKND20 CKND24 GINVD2 GINVD1 GINVD4 GINVD3 GINVD8 INVD20 INVD24
+[03/22 00:31:03     11] Total number of unusable inverters: 9
+[03/22 00:31:03     11] List of identified usable delay cells:
+[03/22 00:31:03     11] Total number of identified usable delay cells: 0
+[03/22 00:31:03     11] List of identified unusable delay cells: DEL0 DEL005 DEL01 DEL015 DEL02 DEL1 DEL2 DEL3 DEL4
+[03/22 00:31:03     11] Total number of identified unusable delay cells: 9
+[03/22 00:31:03     11] All delay cells are dont_use. Buffers will be used to fix hold violations.
+[03/22 00:31:03     11] 
+[03/22 00:31:03     11] *** Summary of all messages that are not suppressed in this session:
+[03/22 00:31:03     11] Severity  ID               Count  Summary                                  
+[03/22 00:31:03     11] WARNING   IMPLF-200          239  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[03/22 00:31:03     11] WARNING   IMPLF-201          224  Pin '%s' in macro '%s' has no ANTENNADIF...
+[03/22 00:31:03     11] WARNING   IMPFP-3961           2  The techSite '%s' has no related cells i...
+[03/22 00:31:03     11] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[03/22 00:31:03     11] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[03/22 00:31:03     11] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[03/22 00:31:03     11] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[03/22 00:31:03     11] WARNING   IMPVL-159         1626  Pin '%s' of cell '%s' is defined in LEF ...
+[03/22 00:31:03     11] ERROR     IMPOAX-820           1  The OA features are disabled in the curr...
+[03/22 00:31:03     11] ERROR     IMPOAX-850           1  %s command cannot be run as OA features ...
+[03/22 00:31:03     11] *** Message Summary: 2099 warning(s), 2 error(s)
+[03/22 00:31:03     11] 
+[03/22 00:31:03     11] <CMD> set_interactive_constraint_modes {CON}
+[03/22 00:31:03     11] <CMD> setDesignMode -process 65
+[03/22 00:31:03     11] Applying the recommended capacitance filtering threshold values for 65nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[03/22 00:31:03     11] 	These values will be used by all post-route extraction engines, including tQuantus, IQRC and Quantus QRC extraction.
+[03/22 00:31:03     11] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[03/22 00:31:03     11] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[03/22 00:31:03     11] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[03/22 00:31:03     11] Updating process node dependent CCOpt properties for the 65nm process node.
+[03/22 00:31:03     11] <CMD> floorPlan -site core -r 0.5 0.70 10.0 10.0 10.0 10.0
+[03/22 00:31:03     11] **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+[03/22 00:31:03     11] <CMD> timeDesign -preplace -prefix preplace
+[03/22 00:31:03     11] **WARN: (IMPOPT-7136):	timing_socv_statistical_min_max_mode 'statistical' is not supported by Innovus. Setting it to 'mean_and_three_sigma_bounded'.
+[03/22 00:31:03     11] Set Using Default Delay Limit as 101.
+[03/22 00:31:03     11] **WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+[03/22 00:31:03     11] Setting High Fanout Nets ( > 100 ) as ideal temporarily for -prePlace option
+[03/22 00:31:03     11] Set Default Net Delay as 0 ps.
+[03/22 00:31:03     11] Set Default Net Load as 0 pF. 
+[03/22 00:31:03     11] Effort level <high> specified for reg2reg path_group
+[03/22 00:31:03     12] #################################################################################
+[03/22 00:31:03     12] # Design Stage: PreRoute
+[03/22 00:31:03     12] # Design Name: core
+[03/22 00:31:03     12] # Design Mode: 65nm
+[03/22 00:31:03     12] # Analysis Mode: MMMC Non-OCV 
+[03/22 00:31:03     12] # Parasitics Mode: No SPEF/RCDB
+[03/22 00:31:03     12] # Signoff Settings: SI Off 
+[03/22 00:31:03     12] #################################################################################
+[03/22 00:31:03     12] AAE_INFO: 1 threads acquired from CTE.
+[03/22 00:31:03     12] Calculate delays in BcWc mode...
+[03/22 00:31:04     12] Topological Sorting (CPU = 0:00:00.0, MEM = 703.0M, InitMEM = 699.6M)
+[03/22 00:31:07     14] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[03/22 00:31:07     14] End delay calculation. (MEM=896.539 CPU=0:00:01.9 REAL=0:00:02.0)
+[03/22 00:31:07     14] *** CDM Built up (cpu=0:00:02.9  real=0:00:04.0  mem= 896.5M) ***
+[03/22 00:31:07     15] *** Done Building Timing Graph (cpu=0:00:03.2 real=0:00:04.0 totSessionCpu=0:00:15.2 mem=896.5M)
+[03/22 00:31:08     15] 
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
+Setup views included:
+ WC_VIEW 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.677  | -0.677  | -0.165  |
+|           TNS (ns):|-666.148 |-665.369 | -0.779  |
+|    Violating Paths:|  1573   |  1567   |    6    |
+|          All Paths:|  4890   |  4462   |  2892   |
++--------------------+---------+---------+---------+
+
+Density: 0.000%
+------------------------------------------------------------
+Set Using Default Delay Limit as 1000.
+[03/22 00:31:08     15] Resetting back High Fanout Nets as non-ideal
+[03/22 00:31:08     15] Set Default Net Delay as 1000 ps.
+[03/22 00:31:08     15] Set Default Net Load as 0.5 pF. 
+[03/22 00:31:08     15] Reported timing to dir ./timingReports
+[03/22 00:31:08     15] Total CPU time: 4.22 sec
+[03/22 00:31:08     15] Total Real time: 5.0 sec
+[03/22 00:31:08     15] Total Memory Usage: 816.214844 Mbytes
+[03/22 00:31:08     15] <CMD> globalNetConnect VDD -type pgpin -pin VDD -inst * -verbose
+[03/22 00:31:08     15] 15821 new pwr-pin connections were made to global net 'VDD'.
+[03/22 00:31:08     15] <CMD> globalNetConnect VSS -type pgpin -pin VSS -inst * -verbose
+[03/22 00:31:08     15] 15821 new gnd-pin connections were made to global net 'VSS'.
+[03/22 00:31:08     15] <CMD> addRing -spacing {top 2 bottom 2 left 2 right 2} -width {top 3 bottom 3 left 3 right 3} -layer {top M1 bottom M1 left M2 right M2} -center 1 -type core_rings -nets {VSS  VDD}
+[03/22 00:31:08     15] 
+[03/22 00:31:08     15] Ring generation is complete; vias are now being generated.
+[03/22 00:31:08     15] The power planner created 8 wires.
+[03/22 00:31:08     15] *** Ending Ring Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 816.2M) ***
+[03/22 00:31:08     15] <CMD> addStripe -number_of_sets 30 -spacing 5 -layer M6 -width 2 -start_offset 20 -stop_offset 20 -nets { VSS VDD } -direction horizontal
+[03/22 00:31:08     15] 
+[03/22 00:31:08     15] Starting stripe generation ...
+[03/22 00:31:08     15] Non-Default setAddStripeOption Settings :
+[03/22 00:31:08     15]   NONE
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 39.86 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 48.72 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 57.58 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 66.44 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 75.30 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 84.16 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 93.02 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 101.88 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 110.74 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 119.60 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 128.46 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 137.32 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 146.18 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 155.04 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 163.90 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 172.76 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 181.62 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 190.48 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 199.34 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 208.20 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+[03/22 00:31:08     15] **WARN: (EMS-27):	Message (IMPPP-354) has exceeded the current message display limit of 20.
+[03/22 00:31:08     15] To increase the message display limit, refer to the product command reference manual.
+[03/22 00:31:08     15] Stripe generation is complete; vias are now being generated.
+[03/22 00:31:08     15] The power planner created 31 wires.
+[03/22 00:31:08     15] *** Ending Stripe Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 816.2M) ***
+[03/22 00:31:08     15] <CMD> setObjFPlanBox Instance qmem_instance 75 190 300 290
+[03/22 00:31:08     15] <CMD> setObjFPlanBox Instance kmem_instance 415 190 700 290
+[03/22 00:31:08     15] <CMD> setObjFPlanBox Instance psum_mem_instance 160 50 500 200
+[03/22 00:31:08     15] <CMD> flipOrRotateObject -flip MY -name qmem_instance
+[03/22 00:31:08     15] <CMD> flipOrRotateObject -flip MY -name kmem_instance
+[03/22 00:31:08     15] <CMD> flipOrRotateObject -flip MY -name psum_mem_instance
+[03/22 00:31:08     15] <CMD> addHaloToBlock {3 3 3 3} qmem_instance
+[03/22 00:31:08     15] <CMD> addHaloToBlock {3 3 3 3} kmem_instance
+[03/22 00:31:08     15] <CMD> addHaloToBlock {3 3 3 3} psum_mem_instance
+[03/22 00:31:08     15] <CMD> sroute
+[03/22 00:31:08     15] *** Begin SPECIAL ROUTE on Sat Mar 22 00:31:08 2025 ***
+[03/22 00:31:08     15] SPECIAL ROUTE ran on directory: /home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/pnr2
+[03/22 00:31:08     15] SPECIAL ROUTE ran on machine: ieng6-ece-17.ucsd.edu (Linux 3.10.0-1160.119.1.el7.x86_64 Xeon 2.19Ghz)
+[03/22 00:31:08     15] 
+[03/22 00:31:08     15] Begin option processing ...
+[03/22 00:31:08     15] srouteConnectPowerBump set to false
+[03/22 00:31:08     15] routeSpecial set to true
+[03/22 00:31:08     15] srouteConnectConverterPin set to false
+[03/22 00:31:08     15] srouteFollowCorePinEnd set to 3
+[03/22 00:31:08     15] srouteJogControl set to "preferWithChanges differentLayer"
+[03/22 00:31:08     15] sroutePadPinAllPorts set to true
+[03/22 00:31:08     15] sroutePreserveExistingRoutes set to true
+[03/22 00:31:08     15] srouteRoutePowerBarPortOnBothDir set to true
+[03/22 00:31:08     15] End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1795.00 megs.
+[03/22 00:31:08     15] 
+[03/22 00:31:08     15] Reading DB technology information...
+[03/22 00:31:08     15] Finished reading DB technology information.
+[03/22 00:31:08     15] Reading floorplan and netlist information...
+[03/22 00:31:08     15] Finished reading floorplan and netlist information.
+[03/22 00:31:08     16] Read in 17 layers, 8 routing layers, 1 overlap layer
+[03/22 00:31:08     16] Read in 848 macros, 140 used
+[03/22 00:31:08     16] Read in 141 components
+[03/22 00:31:08     16]   138 core components: 138 unplaced, 0 placed, 0 fixed
+[03/22 00:31:08     16]   3 block/ring components: 0 unplaced, 3 placed, 0 fixed
+[03/22 00:31:08     16] Read in 243 logical pins
+[03/22 00:31:08     16] Read in 4 blockages
+[03/22 00:31:08     16] Read in 243 nets
+[03/22 00:31:08     16] Read in 2 special nets, 2 routed
+[03/22 00:31:08     16] Read in 282 terminals
+[03/22 00:31:08     16] Begin power routing ...
+[03/22 00:31:08     16] **WARN: (IMPSR-1256):	Cannot find any CORE class pad pin of net VDD. Change routing area or layer to include the expected pin, or check netlist, or change port class in the technology file.
+[03/22 00:31:08     16] Type 'man IMPSR-1256' for more detail.
+[03/22 00:31:08     16] Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port class in the technology file, or change option to include pin in given range.
+[03/22 00:31:08     16] **WARN: (IMPSR-1256):	Cannot find any CORE class pad pin of net VSS. Change routing area or layer to include the expected pin, or check netlist, or change port class in the technology file.
+[03/22 00:31:08     16] Type 'man IMPSR-1256' for more detail.
+[03/22 00:31:08     16] Cannot find any AREAIO class pad pin of net VSS. Check net list, or change port class in the technology file, or change option to include pin in given range.
+[03/22 00:31:08     16] CPU time for FollowPin 0 seconds
+[03/22 00:31:08     16] CPU time for FollowPin 0 seconds
+[03/22 00:31:09     16]   Number of IO ports routed: 0
+[03/22 00:31:09     16]   Number of Block ports routed: 6
+[03/22 00:31:09     16]   Number of Stripe ports routed: 0
+[03/22 00:31:09     16]   Number of Core ports routed: 342  open: 314
+[03/22 00:31:09     16]   Number of Pad ports routed: 0
+[03/22 00:31:09     16]   Number of Power Bump ports routed: 0
+[03/22 00:31:09     16]   Number of Followpin connections: 328
+[03/22 00:31:09     16] End power routing: cpu: 0:00:00, real: 0:00:01, peak: 1812.00 megs.
+[03/22 00:31:09     16] 
+[03/22 00:31:09     16] 
+[03/22 00:31:09     16] 
+[03/22 00:31:09     16]  Begin updating DB with routing results ...
+[03/22 00:31:09     16]  Updating DB with 118 via definition ...Extracting standard cell pins and blockage ...... 
+[03/22 00:31:09     16] Pin and blockage extraction finished
+[03/22 00:31:09     16] 
+[03/22 00:31:09     16] 
+sroute post-processing starts at Sat Mar 22 00:31:09 2025
+The viaGen is rebuilding shadow vias for net VSS.
+[03/22 00:31:09     16] sroute post-processing ends at Sat Mar 22 00:31:09 2025
+
+sroute post-processing starts at Sat Mar 22 00:31:09 2025
+The viaGen is rebuilding shadow vias for net VDD.
+[03/22 00:31:09     16] sroute post-processing ends at Sat Mar 22 00:31:09 2025
+sroute: Total CPU time used = 0:0:0
+[03/22 00:31:09     16] sroute: Total Real time used = 0:0:1
+[03/22 00:31:09     16] sroute: Total Memory used = 15.25 megs
+[03/22 00:31:09     16] sroute: Total Peak Memory used = 831.46 megs
+[03/22 00:31:09     16] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[03/22 00:31:09     16] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 00:31:09     16] <CMD> setPinAssignMode -pinEditInBatch true
+[03/22 00:31:09     16] <CMD> editPin -fixedPin 1 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 1.75 -pin {clk {inst[0]} {inst[1]} {inst[2]} {inst[3]} {inst[4]} {inst[5]} {inst[6]} {inst[7]} {inst[8]} {inst[9]} {inst[10]} {inst[11]} {inst[12]} {inst[13]} {inst[14]} {inst[15]} {inst[16]} {mem_in[0]} {mem_in[1]} {mem_in[2]} {mem_in[3]} {mem_in[4]} {mem_in[5]} {mem_in[6]} {mem_in[7]} {mem_in[8]} {mem_in[9]} {mem_in[10]} {mem_in[11]} {mem_in[12]} {mem_in[13]} {mem_in[14]} {mem_in[15]} {mem_in[16]} {mem_in[17]} {mem_in[18]} {mem_in[19]} {mem_in[20]} {mem_in[21]} {mem_in[22]} {mem_in[23]} {mem_in[24]} {mem_in[25]} {mem_in[26]} {mem_in[27]} {mem_in[28]} {mem_in[29]} {mem_in[30]} {mem_in[31]} {mem_in[32]} {mem_in[33]} {mem_in[34]} {mem_in[35]} {mem_in[36]} {mem_in[37]} {mem_in[38]} {mem_in[39]} {mem_in[40]} {mem_in[41]} {mem_in[42]} {mem_in[43]} {mem_in[44]} {mem_in[45]} {mem_in[46]} {mem_in[47]} {mem_in[48]} {mem_in[49]} {mem_in[50]} {mem_in[51]} {mem_in[52]} {mem_in[53]} {mem_in[54]} {mem_in[55]} {mem_in[56]} {mem_in[57]} {mem_in[58]} {mem_in[59]} {mem_in[60]} {mem_in[61]} {mem_in[62]} {mem_in[63]}  reset}
+[03/22 00:31:09     16] Successfully spread [83] pins.
+[03/22 00:31:09     16] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 833.5M).
+[03/22 00:31:09     16] <CMD> editPin -fixedPin 1 -pinWidth 0.1 -pinDepth 0.6 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Bottom -layer 3 -spreadType center -spacing 3.5 -pin {{out[0]} {out[1]} {out[2]} {out[3]} {out[4]} {out[5]} {out[6]} {out[7]} {out[8]} {out[9]} {out[10]} {out[11]} {out[12]} {out[13]} {out[14]} {out[15]} {out[16]} {out[17]} {out[18]} {out[19]} {out[20]} {out[21]} {out[22]} {out[23]} {out[24]} {out[25]} {out[26]} {out[27]} {out[28]} {out[29]} {out[30]} {out[31]} {out[32]} {out[33]} {out[34]} {out[35]} {out[36]} {out[37]} {out[38]} {out[39]} {out[40]} {out[41]} {out[42]} {out[43]} {out[44]} {out[45]} {out[46]} {out[47]} {out[48]} {out[49]} {out[50]} {out[51]} {out[52]} {out[53]} {out[54]} {out[55]} {out[56]} {out[57]} {out[58]} {out[59]} {out[60]} {out[61]} {out[62]} {out[63]} {out[64]} {out[65]} {out[66]} {out[67]} {out[68]} {out[69]} {out[70]} {out[71]} {out[72]} {out[73]} {out[74]} {out[75]} {out[76]} {out[77]} {out[78]} {out[79]} {out[80]} {out[81]} {out[82]} {out[83]} {out[84]} {out[85]} {out[86]} {out[87]} {out[88]} {out[89]} {out[90]} {out[91]} {out[92]} {out[93]} {out[94]} {out[95]} {out[96]} {out[97]} {out[98]} {out[99]} {out[100]} {out[101]} {out[102]} {out[103]} {out[104]} {out[105]} {out[106]} {out[107]} {out[108]} {out[109]} {out[110]} {out[111]} {out[112]} {out[113]} {out[114]} {out[115]} {out[116]} {out[117]} {out[118]} {out[119]} {out[120]} {out[121]} {out[122]} {out[123]} {out[124]} {out[125]} {out[126]} {out[127]} {out[128]} {out[129]} {out[130]} {out[131]} {out[132]} {out[133]} {out[134]} {out[135]} {out[136]} {out[137]} {out[138]} {out[139]} {out[140]} {out[141]} {out[142]} {out[143]} {out[144]} {out[145]} {out[146]} {out[147]} {out[148]} {out[149]} {out[150]} {out[151]} {out[152]} {out[153]} {out[154]} {out[155]} {out[156]} {out[157]} {out[158]} {out[159]}}
+[03/22 00:31:09     16] Successfully spread [160] pins.
+[03/22 00:31:09     16] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 833.5M).
+[03/22 00:31:09     16] <CMD> setPinAssignMode -pinEditInBatch false
+[03/22 00:32:07     19] <CMD> pan -216.377 97.885
+[03/22 00:32:20     20] <CMD> pan 91.257 -14.145
+[03/22 00:32:22     20] <CMD> pan 127.611 -129.720
+[03/22 00:32:25     21] <CMD> pan -5.606 29.068
+[03/22 00:32:26     21] <CMD> pan -49.209 16.403
+[03/22 00:32:28     21] <CMD> pan -166.112 61.721
+[03/22 00:32:29     21] <CMD> pan -155.445 76.960
+[03/22 00:32:35     21] <CMD> pan 288.027 2.796
+[03/22 00:32:36     22] <CMD> fit
+[03/22 00:32:57     23] <CMD> legalizePin
+[03/22 00:32:57     23] 
+[03/22 00:32:57     23] Start pin legalization for the partition [core]:
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[159]] is [FIXED] at location (  30.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[158]] is [FIXED] at location (  34.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[157]] is [FIXED] at location (  38.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[156]] is [FIXED] at location (  41.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[155]] is [FIXED] at location (  45.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[154]] is [FIXED] at location (  48.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[153]] is [FIXED] at location (  52.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[152]] is [FIXED] at location (  56.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[151]] is [FIXED] at location (  59.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[150]] is [FIXED] at location (  63.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[149]] is [FIXED] at location (  66.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[148]] is [FIXED] at location (  70.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[147]] is [FIXED] at location (  74.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[146]] is [FIXED] at location (  77.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[145]] is [FIXED] at location (  81.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[144]] is [FIXED] at location (  84.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[143]] is [FIXED] at location (  88.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[142]] is [FIXED] at location (  92.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[141]] is [FIXED] at location (  95.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[140]] is [FIXED] at location (  99.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[139]] is [FIXED] at location ( 102.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[138]] is [FIXED] at location ( 106.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[137]] is [FIXED] at location ( 110.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[136]] is [FIXED] at location ( 113.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[135]] is [FIXED] at location ( 117.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[134]] is [FIXED] at location ( 120.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[133]] is [FIXED] at location ( 124.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[132]] is [FIXED] at location ( 128.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[131]] is [FIXED] at location ( 131.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[130]] is [FIXED] at location ( 135.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[129]] is [FIXED] at location ( 138.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[128]] is [FIXED] at location ( 142.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[127]] is [FIXED] at location ( 146.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[126]] is [FIXED] at location ( 149.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[125]] is [FIXED] at location ( 153.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[124]] is [FIXED] at location ( 156.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[123]] is [FIXED] at location ( 160.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[122]] is [FIXED] at location ( 164.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[121]] is [FIXED] at location ( 167.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[120]] is [FIXED] at location ( 171.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[119]] is [FIXED] at location ( 174.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[118]] is [FIXED] at location ( 178.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[117]] is [FIXED] at location ( 182.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[116]] is [FIXED] at location ( 185.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[115]] is [FIXED] at location ( 189.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[114]] is [FIXED] at location ( 192.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[113]] is [FIXED] at location ( 196.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[112]] is [FIXED] at location ( 200.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[111]] is [FIXED] at location ( 203.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[110]] is [FIXED] at location ( 207.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[109]] is [FIXED] at location ( 210.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[108]] is [FIXED] at location ( 214.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[107]] is [FIXED] at location ( 218.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[106]] is [FIXED] at location ( 221.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[105]] is [FIXED] at location ( 225.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[104]] is [FIXED] at location ( 228.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[103]] is [FIXED] at location ( 232.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[102]] is [FIXED] at location ( 236.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[101]] is [FIXED] at location ( 239.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[100]] is [FIXED] at location ( 243.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[99]] is [FIXED] at location ( 246.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[98]] is [FIXED] at location ( 250.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[97]] is [FIXED] at location ( 254.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[96]] is [FIXED] at location ( 257.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[95]] is [FIXED] at location ( 261.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[94]] is [FIXED] at location ( 264.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[93]] is [FIXED] at location ( 268.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[92]] is [FIXED] at location ( 272.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[91]] is [FIXED] at location ( 275.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[90]] is [FIXED] at location ( 279.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[89]] is [FIXED] at location ( 282.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[88]] is [FIXED] at location ( 286.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[87]] is [FIXED] at location ( 290.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[86]] is [FIXED] at location ( 293.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[85]] is [FIXED] at location ( 297.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[84]] is [FIXED] at location ( 300.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[83]] is [FIXED] at location ( 304.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[82]] is [FIXED] at location ( 308.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[81]] is [FIXED] at location ( 311.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[80]] is [FIXED] at location ( 315.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[79]] is [FIXED] at location ( 318.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[78]] is [FIXED] at location ( 322.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[77]] is [FIXED] at location ( 326.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[76]] is [FIXED] at location ( 329.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[75]] is [FIXED] at location ( 333.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[74]] is [FIXED] at location ( 336.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[73]] is [FIXED] at location ( 340.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[72]] is [FIXED] at location ( 344.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[71]] is [FIXED] at location ( 347.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[70]] is [FIXED] at location ( 351.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[69]] is [FIXED] at location ( 354.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[68]] is [FIXED] at location ( 358.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[67]] is [FIXED] at location ( 362.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[66]] is [FIXED] at location ( 365.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[65]] is [FIXED] at location ( 369.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[64]] is [FIXED] at location ( 372.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[63]] is [FIXED] at location ( 376.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[62]] is [FIXED] at location ( 380.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[61]] is [FIXED] at location ( 383.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[60]] is [FIXED] at location ( 387.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[59]] is [FIXED] at location ( 390.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[58]] is [FIXED] at location ( 394.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[57]] is [FIXED] at location ( 398.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[56]] is [FIXED] at location ( 401.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[55]] is [FIXED] at location ( 405.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[54]] is [FIXED] at location ( 408.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[53]] is [FIXED] at location ( 412.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[52]] is [FIXED] at location ( 416.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[51]] is [FIXED] at location ( 419.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[50]] is [FIXED] at location ( 423.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[49]] is [FIXED] at location ( 426.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[48]] is [FIXED] at location ( 430.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[47]] is [FIXED] at location ( 434.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[46]] is [FIXED] at location ( 437.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[45]] is [FIXED] at location ( 441.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[44]] is [FIXED] at location ( 444.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[43]] is [FIXED] at location ( 448.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[42]] is [FIXED] at location ( 452.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[41]] is [FIXED] at location ( 455.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[40]] is [FIXED] at location ( 459.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[39]] is [FIXED] at location ( 462.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[38]] is [FIXED] at location ( 466.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[37]] is [FIXED] at location ( 470.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[36]] is [FIXED] at location ( 473.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[35]] is [FIXED] at location ( 477.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[34]] is [FIXED] at location ( 480.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[33]] is [FIXED] at location ( 484.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[32]] is [FIXED] at location ( 488.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[31]] is [FIXED] at location ( 491.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[30]] is [FIXED] at location ( 495.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[29]] is [FIXED] at location ( 498.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[28]] is [FIXED] at location ( 502.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[27]] is [FIXED] at location ( 506.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[26]] is [FIXED] at location ( 509.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[25]] is [FIXED] at location ( 513.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[24]] is [FIXED] at location ( 516.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[23]] is [FIXED] at location ( 520.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[22]] is [FIXED] at location ( 524.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[21]] is [FIXED] at location ( 527.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[20]] is [FIXED] at location ( 531.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[19]] is [FIXED] at location ( 534.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[18]] is [FIXED] at location ( 538.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[17]] is [FIXED] at location ( 542.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[16]] is [FIXED] at location ( 545.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[15]] is [FIXED] at location ( 549.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[14]] is [FIXED] at location ( 552.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[13]] is [FIXED] at location ( 556.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[12]] is [FIXED] at location ( 560.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[11]] is [FIXED] at location ( 563.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[10]] is [FIXED] at location ( 567.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[9]] is [FIXED] at location ( 570.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[8]] is [FIXED] at location ( 574.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[7]] is [FIXED] at location ( 578.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[6]] is [FIXED] at location ( 581.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[5]] is [FIXED] at location ( 585.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[4]] is [FIXED] at location ( 588.900,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[3]] is [FIXED] at location ( 592.500,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[2]] is [FIXED] at location ( 596.100,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[1]] is [FIXED] at location ( 599.700,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] **WARN: (IMPPTN-562):	Pin [out[0]] is [FIXED] at location ( 603.300,    0.000 3 ) is NOT ON ALLOWED PIN LAYER.
+[03/22 00:32:57     23] Summary report for top level: [core] 
+[03/22 00:32:57     23] 	Total Pads                         : 0
+[03/22 00:32:57     23] 	Total Pins                         : 243
+[03/22 00:32:57     23] 	Legally Assigned Pins              : 83
+[03/22 00:32:57     23] 	Illegally Assigned Pins            : 160
+[03/22 00:32:57     23] 	Unplaced Pins                      : 0
+[03/22 00:32:57     23] 	Constant/Spl Net Pins              : 0
+[03/22 00:32:57     23] 	Internal Pins                      : 0
+[03/22 00:32:57     23] 	Legally Assigned Feedthrough Pins  : 0
+[03/22 00:32:57     23] 	Illegally Assigned Feedthrough Pins: 0
+[03/22 00:32:57     23] End of Summary report
+[03/22 00:32:57     23] 160 pin(s) of the Partition core could not be legalized.
+[03/22 00:32:57     23] End pin legalization for the partition [core].
+[03/22 00:32:57     23] 
+[03/22 00:32:57     23] legalizePin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 905.5M).
+[03/22 00:34:44     30] invalid command name "clearexit"
+[03/22 00:34:45     30] 
+[03/22 00:34:45     30] *** Memory Usage v#1 (Current mem = 905.477M, initial mem = 149.258M) ***
+[03/22 00:34:45     30] 
+[03/22 00:34:45     30] *** Summary of all messages that are not suppressed in this session:
+[03/22 00:34:45     30] Severity  ID               Count  Summary                                  
+[03/22 00:34:45     30] WARNING   IMPLF-200          239  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[03/22 00:34:45     30] WARNING   IMPLF-201          224  Pin '%s' in macro '%s' has no ANTENNADIF...
+[03/22 00:34:45     30] WARNING   IMPFP-325            1  Floorplan of the design is resized. All ...
+[03/22 00:34:45     30] WARNING   IMPFP-3961           2  The techSite '%s' has no related cells i...
+[03/22 00:34:45     30] WARNING   IMPPTN-562         160  Pin [%s] is [%s] at location (%8.3f, %8....
+[03/22 00:34:45     30] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[03/22 00:34:45     30] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[03/22 00:34:45     30] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[03/22 00:34:45     30] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[03/22 00:34:45     30] WARNING   IMPVL-159         1626  Pin '%s' of cell '%s' is defined in LEF ...
+[03/22 00:34:45     30] WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
+[03/22 00:34:45     30] WARNING   IMPPP-354           29  The power planner did not generate %s st...
+[03/22 00:34:45     30] WARNING   IMPSR-1256           2  Cannot find any CORE class pad pin of ne...
+[03/22 00:34:45     30] WARNING   IMPOPT-7136          1  %s '%s' is not supported by Innovus. Set...
+[03/22 00:34:45     30] ERROR     IMPOAX-142           3  %s                                       
+[03/22 00:34:45     30] ERROR     IMPOAX-820           1  The OA features are disabled in the curr...
+[03/22 00:34:45     30] ERROR     IMPOAX-850           1  %s command cannot be run as OA features ...
+[03/22 00:34:45     30] *** Message Summary: 2293 warning(s), 5 error(s)
+[03/22 00:34:45     30] 
+[03/22 00:34:45     30] --- Ending "Innovus" (totcpu=0:00:30.1, real=0:04:09, mem=905.5M) ---
