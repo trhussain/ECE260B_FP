@@ -1,5 +1,5 @@
 xrun(64): 20.09-s017: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s017: Started on Mar 21, 2025 at 23:32:54 PDT
+TOOL:	xrun(64)	20.09-s017: Started on Mar 22, 2025 at 18:10:37 PDT
 xrun
 	-define INITIALIZE_MEMORY
 	-xminitialize 0
@@ -17,328 +17,15 @@ xrun
    User defined plus("+") options:
 	+xmoveride_timescale
 
-Recompiling... reason: unable to stat '/./home/linux/ieng6/ee260bwi25/trhussain/finalProject/ece260_project/gate_sim_V3/netlist/core.out.v'.
-file: ./netlist/core.pnr.v
-file: ./netlist/core.pnr.v
-	module core.core:v
-		errors: 0, warnings: 0
-xmvlog: Memory Usage - Current physical: 24.0M, Current virtual: 96.0M
-xmvlog: CPU Usage - 0.0s system + 1.3s user = 1.4s total (1.4s, 96.4% cpu)
-		Caching library 'fullchip' ....... Done
-		Caching library 'worklib' ....... Done
-		Caching library 'core' ....... Done
-		Caching library 'tcbn65gplus' ....... Done
-	Elaborating the design hierarchy:
-   FA1D1 U13 (.A(n731),
-           |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,17008|11): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,9795): CO
-
-   DFCND1 cnt_q_reg_1_ (.CDN(FE_OFN415_reset),
-                     |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,21080|21): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4786): Q
-
-   DFCND1 cnt_q_reg_1_ (.CDN(FE_OFN410_reset),
-                     |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,30858|21): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4786): Q
-
-   FA1D4 U331 (.A(n1086),
-            |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,76607|12): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,9877): CO
-
-   FA1D1 U335 (.A(n334),
-            |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,76619|12): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,9795): CO
-
-   FA1D4 U678 (.A(n1206),
-            |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,77548|12): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,9877): CO
-
-   ofifo_col8_bw20 ofifo_inst (.in({ array_out[159],
-                            |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,127899|28): 2 output ports were not connected:
-xmelab: (./netlist/core.pnr.v,97846): o_valid
-xmelab: (./netlist/core.pnr.v,97848): o_full
-
-   fifo_depth8_bw20_simd1_7 col_idx_0__fifo_instance (.in({ in[19],
-                                                   |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,97947|51): 2 output ports were not connected:
-xmelab: (./netlist/core.pnr.v,82685): o_full
-xmelab: (./netlist/core.pnr.v,82686): o_empty
-
-   DFCND1 rd_ptr_reg_0_ (.CDN(FE_OFN399_reset),
-                      |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,83121|22): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4786): QN
-
-   fifo_depth8_bw20_simd1_6 col_idx_1__fifo_instance (.in({ in[39],
-                                                   |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,97995|51): 2 output ports were not connected:
-xmelab: (./netlist/core.pnr.v,84666): o_full
-xmelab: (./netlist/core.pnr.v,84667): o_empty
-
-   DFCND1 rd_ptr_reg_0_ (.CDN(FE_OFN398_reset),
-                      |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,85161|22): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4786): QN
-
-   fifo_depth8_bw20_simd1_5 col_idx_2__fifo_instance (.in({ in[59],
-                                                   |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,98044|51): 2 output ports were not connected:
-xmelab: (./netlist/core.pnr.v,96634): o_full
-xmelab: (./netlist/core.pnr.v,96635): o_empty
-
-   DFCND1 rd_ptr_reg_0_ (.CDN(FE_OFN414_reset),
-                      |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,97057|22): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4786): QN
-
-   fifo_depth8_bw20_simd1_4 col_idx_3__fifo_instance (.in({ in[79],
-                                                   |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,98094|51): 2 output ports were not connected:
-xmelab: (./netlist/core.pnr.v,94659): o_full
-xmelab: (./netlist/core.pnr.v,94660): o_empty
-
-   DFCND1 rd_ptr_reg_0_ (.CDN(FE_OFN408_reset),
-                      |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,95093|22): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4786): QN
-
-   fifo_depth8_bw20_simd1_3 col_idx_4__fifo_instance (.in({ in[99],
-                                                   |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,98142|51): 2 output ports were not connected:
-xmelab: (./netlist/core.pnr.v,92677): o_full
-xmelab: (./netlist/core.pnr.v,92678): o_empty
-
-   DFCND1 rd_ptr_reg_0_ (.CDN(FE_OFN405_reset),
-                      |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,93138|22): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4786): QN
-
-   fifo_depth8_bw20_simd1_2 col_idx_5__fifo_instance (.in({ in[119],
-                                                   |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,98193|51): 2 output ports were not connected:
-xmelab: (./netlist/core.pnr.v,90732): o_full
-xmelab: (./netlist/core.pnr.v,90733): o_empty
-
-   DFCND1 rd_ptr_reg_0_ (.CDN(FE_OFN401_reset),
-                      |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,91152|22): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4786): QN
-
-   fifo_depth8_bw20_simd1_1 col_idx_6__fifo_instance (.in({ in[139],
-                                                   |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,98240|51): 2 output ports were not connected:
-xmelab: (./netlist/core.pnr.v,88668): o_full
-xmelab: (./netlist/core.pnr.v,88669): o_empty
-
-   DFCND1 rd_ptr_reg_0_ (.CDN(FE_OFN402_reset),
-                      |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,89241|22): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4786): QN
-
-   EDFD1 q5_reg_16_ (.CP(rd_clk_clone2),
-                  |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,89770|18): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,8968): QN
-
-   EDFD1 q4_reg_16_ (.CP(rd_clk_clone2),
-                  |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,89774|18): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,8968): QN
-
-   EDFD1 q1_reg_16_ (.CP(rd_clk_clone2),
-                  |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,89778|18): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,8968): QN
-
-   EDFD1 q3_reg_16_ (.CP(rd_clk_clone2),
-                  |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,89782|18): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,8968): QN
-
-   EDFD1 q2_reg_16_ (.CP(rd_clk_clone2),
-                  |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,89786|18): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,8968): QN
-
-   EDFD1 q7_reg_16_ (.CP(rd_clk_clone2),
-                  |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,89790|18): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,8968): QN
-
-   fifo_depth8_bw20_simd1_0 col_idx_7__fifo_instance (.in({ in[159],
-                                                   |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,98287|51): 2 output ports were not connected:
-xmelab: (./netlist/core.pnr.v,86645): o_full
-xmelab: (./netlist/core.pnr.v,86646): o_empty
-
-   DFCND1 rd_ptr_reg_0_ (.CDN(FE_OFN400_reset),
-                      |
-xmelab: *W,CUVWSP (./netlist/core.pnr.v,87133|22): 1 output port was not connected:
-xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,4786): QN
-
-	Top level design units:
-		fullchip_tb
-	Building instance overlay tables: .................... Done
-	Generating native compiled code:
-		core.fifo_depth8_bw20_simd1_0:v <0x207f3436>
-			streams:   0, words:     0
-		core.fifo_depth8_bw20_simd1_1:v <0x02c53c70>
-			streams:   0, words:     0
-		core.fifo_depth8_bw20_simd1_2:v <0x3d6c91f6>
-			streams:   0, words:     0
-		core.fifo_depth8_bw20_simd1_3:v <0x6fcd3887>
-			streams:   0, words:     0
-		core.fifo_depth8_bw20_simd1_4:v <0x169daae1>
-			streams:   0, words:     0
-		core.fifo_depth8_bw20_simd1_5:v <0x486ea0ad>
-			streams:   0, words:     0
-		core.fifo_depth8_bw20_simd1_6:v <0x71de67c7>
-			streams:   0, words:     0
-		core.fifo_depth8_bw20_simd1_7:v <0x51b398be>
-			streams:   0, words:     0
-		core.ofifo_col8_bw20:v <0x582c6eef>
-			streams:   0, words:     0
-		core.mac_16in_bw8_bw_psum20_pr8_0:v <0x778dfd36>
-			streams:   0, words:     0
-		core.mac_col_bw8_bw_psum20_pr8_col_id8:v <0x75cd6737>
-			streams:   0, words:     0
-		core.mac_16in_bw8_bw_psum20_pr8_1:v <0x0a8a4afb>
-			streams:   0, words:     0
-		core.mac_col_bw8_bw_psum20_pr8_col_id7:v <0x673c8afc>
-			streams:   0, words:     0
-		core.mac_16in_bw8_bw_psum20_pr8_2:v <0x72d4d129>
-			streams:   0, words:     0
-		core.mac_col_bw8_bw_psum20_pr8_col_id6:v <0x48f8ab58>
-			streams:   0, words:     0
-		core.mac_16in_bw8_bw_psum20_pr8_3:v <0x472e5776>
-			streams:   0, words:     0
-		core.mac_col_bw8_bw_psum20_pr8_col_id5:v <0x4451932c>
-			streams:   0, words:     0
-		core.mac_16in_bw8_bw_psum20_pr8_4:v <0x1f5620fd>
-			streams:   0, words:     0
-		core.mac_col_bw8_bw_psum20_pr8_col_id4:v <0x501aaa65>
-			streams:   0, words:     0
-		core.mac_16in_bw8_bw_psum20_pr8_5:v <0x2c010036>
-			streams:   0, words:     0
-		core.mac_col_bw8_bw_psum20_pr8_col_id3:v <0x1e5e30d4>
-			streams:   0, words:     0
-		core.mac_16in_bw8_bw_psum20_pr8_6:v <0x264a9159>
-			streams:   0, words:     0
-		core.mac_col_bw8_bw_psum20_pr8_col_id2:v <0x2ddaa846>
-			streams:   0, words:     0
-		core.mac_16in_bw8_bw_psum20_pr8_7:v <0x5be2b8a0>
-			streams:   0, words:     0
-		core.mac_col_bw8_bw_psum20_pr8_col_id1:v <0x2dc29e6a>
-			streams:   0, words:     0
-		core.mac_array_col8_bw8_bw_psum20_pr8:v <0x2be89b8d>
-			streams:   0, words:     0
-		core.core:v <0x5452370a>
-			streams:   0, words:     0
-		tcbn65gplus.DFQD4:v <0x6227c851>
-			streams:   0, words:     0
-		tcbn65gplus.DFQD1:v <0x4040b153>
-			streams:   0, words:     0
-		tcbn65gplus.DFQD2:v <0x00d946b1>
-			streams:   0, words:     0
-		tcbn65gplus.EDFD1:v <0x0ffd6e8c>
-			streams:   0, words:     0
-		tcbn65gplus.CKMUX2D2:v <0x4e7e41fb>
-			streams:   0, words:     0
-		tcbn65gplus.EDFCNQD1:v <0x68af578c>
-			streams:   0, words:     0
-		tcbn65gplus.CKMUX2D1:v <0x37838521>
-			streams:   0, words:     0
-		tcbn65gplus.XOR3D0:v <0x4f6c26f8>
-			streams:   0, words:     0
-		tcbn65gplus.MUX2D2:v <0x030c1112>
-			streams:   0, words:     0
-		tcbn65gplus.CKXOR2D2:v <0x7d1068cf>
-			streams:   0, words:     0
-		tcbn65gplus.MUX4ND1:v <0x71a99ae7>
-			streams:   0, words:     0
-		tcbn65gplus.DFCNQD2:v <0x4e7f72a5>
-			streams:   0, words:     0
-		tcbn65gplus.MUX4D2:v <0x76e64344>
-			streams:   0, words:     0
-		tcbn65gplus.XOR2D1:v <0x0b5e8841>
-			streams:   0, words:     0
-		tcbn65gplus.MUX2D4:v <0x063ca997>
-			streams:   0, words:     0
-		tcbn65gplus.FCICOND1:v <0x7dff51ce>
-			streams:   0, words:     0
-		tcbn65gplus.MUX2D1:v <0x3d6adf94>
-			streams:   0, words:     0
-		tcbn65gplus.DFQD2:v <0x33dafabb>
-			streams:   0, words:     0
-		tcbn65gplus.DFQD1:v <0x73430d59>
-			streams:   0, words:     0
-		tcbn65gplus.DFQD4:v <0x5124745b>
-			streams:   0, words:     0
-		tcbn65gplus.DFCND1:v <0x45292d76>
-			streams:   0, words:     0
-		tcbn65gplus.XOR3D4:v <0x4bd76c99>
-			streams:   0, words:     0
-		tcbn65gplus.MUX2D1:v <0x5a0781b8>
-			streams:   0, words:     0
-		tcbn65gplus.EDFQD1:v <0x675ea67f>
-			streams:   0, words:     0
-		tcbn65gplus.EDFQD1:v <0x0033f853>
-			streams:   0, words:     0
-		tcbn65gplus.EDFQD2:v <0x34678329>
-			streams:   0, words:     0
-		tcbn65gplus.EDFQD4:v <0x60d32db0>
-			streams:   0, words:     0
-		tcbn65gplus.EDFQD4:v <0x07be739c>
-			streams:   0, words:     0
-		tcbn65gplus.EDFQD2:v <0x530add05>
-			streams:   0, words:     0
-		tcbn65gplus.DFCNQD1:v <0x626419a0>
-			streams:   0, words:     0
-		tcbn65gplus.DFCNQD1:v <0x0509478c>
-			streams:   0, words:     0
-		tcbn65gplus.HA1D4:v <0x2d39f143>
-			streams:   0, words:     0
-		tcbn65gplus.XOR2D4:v <0x6397f1cd>
-			streams:   0, words:     0
-		tcbn65gplus.CKXOR2D4:v <0x19bf4a3f>
-			streams:   0, words:     0
-		tcbn65gplus.MUX2D2:v <0x64614f3e>
-			streams:   0, words:     0
-		tcbn65gplus.MUX2ND4:v <0x71c344a9>
-			streams:   0, words:     0
-	Building instance specific data structures.
-	Loading native compiled code:     .................... Done
-	Design hierarchy summary:
-		                   Instances  Unique
-		Modules:               27487     313
-		UDPs:                  12334       3
-		Primitives:            58996       9
-		Timing outputs:        29188     229
-		Registers:              5051      47
-		Scalar wires:          34433       -
-		Expanded wires:           72       3
-		Vectored wires:            1       -
-		Always blocks:             1       1
-		Initial blocks:           14      14
-		Cont. assignments:        12      20
-		Pseudo assignments:        3       3
-		Timing checks:         41432       -
-		Simulation timescale:    1ps
-	Writing initial simulation snapshot: worklib.fullchip_tb:v
-xmelab: Memory Usage - Final: 61.7M, Peak: 68.1M, Peak virtual: 192.6M
-xmelab: CPU Usage - 0.2s system + 3.2s user = 3.4s total (3.6s, 94.0% cpu)
 
 -------------------------------------
 Relinquished control to SimVision...
 xcelium> 
 xcelium> source /software/ECE/XCELIUM-2009/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm fullchip_tb.fullchip_instance.full_out
+Created probe 1
 xcelium> reset
 Loaded snapshot worklib.fullchip_tb:v
 xcelium> run
@@ -970,24 +657,26 @@ Cycle  7 |    -63 |     41 |    128 |    -46 |     -1 |     78 |     74 |     37
 ##### PMEM TO OUT #####
 Core Output |      x |      x |      x |      x |      x |      x |      x |      x |
 ---------------------------------------------------
-Core Output |      x |      X |      X | -227370 |      X |  71415 | -16857 |      X |
+Core Output |     93 |    -20 |     -7 |     94 |    -48 |    -45 |    -63 |    -86 |
 ---------------------------------------------------
-Core Output |      X | -136616 |      X |  33360 |  -1943 |  78055 | -148355 | 181221 |
+Core Output |     52 |    -21 |    -73 |     24 |     -5 |    -33 |    -41 |    -23 |
 ---------------------------------------------------
-Core Output |      X | -132630 |   1332 | 212959 | -82179 | -523413 | -131487 |  -5356 |
+Core Output |     52 |     -8 |     38 |     68 |    -25 |      3 |    -43 |    -44 |
 ---------------------------------------------------
-Core Output | 262093 | -67197 |   6763 | -296633 |  15683 | -449737 | -131462 | -15999 |
+Core Output |     33 |    -74 |     17 |    125 |    -37 |    -17 |    -27 |    -51 |
 ---------------------------------------------------
-Core Output |    -87 |  50544 | -10653 | -504196 |  -8774 | -445933 |   -348 | -92984 |
+Core Output |     80 |    -10 |    -10 |     13 |   -138 |    -37 |    -90 |    -56 |
 ---------------------------------------------------
-Core Output |  15998 | 181201 | -251430 | 211941 | 238561 | -80617 | -394282 | -488155 |
+Core Output |     42 |      1 |     26 |     68 |      7 |      7 |     -8 |    -45 |
 ---------------------------------------------------
-Core Output | -64770 | 147894 | -479421 | -230696 | -134255 | 318330 | 147486 | -110292 |
+Core Output |    -19 |     48 |     99 |     -7 |     -1 |     23 |     46 |    -20 |
 ---------------------------------------------------
-Core Output |      X |      X | 230029 |      X | 140167 | -520854 | 394330 |      X |
+Core Output |    -63 |     41 |    128 |    -46 |     -1 |     78 |     74 |     37 |
 ---------------------------------------------------
 Simulation complete via $finish(1) at time 915 NS + 0
 ./netlist/fullchip_tb.v:381   #0.50 $finish;
+xcelium> probe -create -shm fullchip_tb.fullchip_instance.clk
+Created probe 2
 xcelium> reset
 Loaded snapshot worklib.fullchip_tb:v
 xcelium> run
@@ -1619,22 +1308,26 @@ Cycle  7 |    -63 |     41 |    128 |    -46 |     -1 |     78 |     74 |     37
 ##### PMEM TO OUT #####
 Core Output |      x |      x |      x |      x |      x |      x |      x |      x |
 ---------------------------------------------------
-Core Output |      x |      X |      X | -227370 |      X |  71415 | -16857 |      X |
+Core Output |     93 |    -20 |     -7 |     94 |    -48 |    -45 |    -63 |    -86 |
 ---------------------------------------------------
-Core Output |      X | -136616 |      X |  33360 |  -1943 |  78055 | -148355 | 181221 |
+Core Output |     52 |    -21 |    -73 |     24 |     -5 |    -33 |    -41 |    -23 |
 ---------------------------------------------------
-Core Output |      X | -132630 |   1332 | 212959 | -82179 | -523413 | -131487 |  -5356 |
+Core Output |     52 |     -8 |     38 |     68 |    -25 |      3 |    -43 |    -44 |
 ---------------------------------------------------
-Core Output | 262093 | -67197 |   6763 | -296633 |  15683 | -449737 | -131462 | -15999 |
+Core Output |     33 |    -74 |     17 |    125 |    -37 |    -17 |    -27 |    -51 |
 ---------------------------------------------------
-Core Output |    -87 |  50544 | -10653 | -504196 |  -8774 | -445933 |   -348 | -92984 |
+Core Output |     80 |    -10 |    -10 |     13 |   -138 |    -37 |    -90 |    -56 |
 ---------------------------------------------------
-Core Output |  15998 | 181201 | -251430 | 211941 | 238561 | -80617 | -394282 | -488155 |
+Core Output |     42 |      1 |     26 |     68 |      7 |      7 |     -8 |    -45 |
 ---------------------------------------------------
-Core Output | -64770 | 147894 | -479421 | -230696 | -134255 | 318330 | 147486 | -110292 |
+Core Output |    -19 |     48 |     99 |     -7 |     -1 |     23 |     46 |    -20 |
 ---------------------------------------------------
-Core Output |      X |      X | 230029 |      X | 140167 | -520854 | 394330 |      X |
+Core Output |    -63 |     41 |    128 |    -46 |     -1 |     78 |     74 |     37 |
 ---------------------------------------------------
 Simulation complete via $finish(1) at time 915 NS + 0
 ./netlist/fullchip_tb.v:381   #0.50 $finish;
-xcelium> 
+xcelium> exit
+xmsim: Memory Usage - Final: 113.7M, Peak: 117.1M, Peak virtual: 453.5M
+xmsim: Main Thread CPU Usage - 7.7s system + 5.9s user = 13.6s total
+xmsim: CPU Usage - 7.7s system + 5.6s user = 13.3s total (411.1s, 3.2% cpu)
+TOOL:	xrun(64)	20.09-s017: Exiting on Mar 22, 2025 at 18:17:29 PDT  (total: 00:06:52)

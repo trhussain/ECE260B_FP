@@ -1448,3 +1448,41 @@ sram_w16_sram_bit160          16008.840062       1  16008.840062  h, n
 -----------------------------------------------------------------------------
 Total 9 references                                  102110.039650
 1
+Error: Current design is not defined. (UID-4)
+0
+ 
+****************************************
+Report : reference
+Design : core
+Version: K-2015.06-SP2
+Date   : Sat Mar 22 17:08:50 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+INVD0              tcbn65gplustc
+                                  1.080000       3      3.240000  
+MUX2D0             tcbn65gplustc
+                                  3.240000      64    207.360001  
+NR2D0              tcbn65gplustc
+                                  1.440000       3      4.320000  
+mac_array_col8_bw8_bw_psum20_pr8
+                              45009.719381       1  45009.719381  h, n
+ofifo_col8_bw20               16905.599794       1  16905.599794  h, n
+sram_w16_sram_bit64_0          6426.000026       1   6426.000026  h, n
+sram_w16_sram_bit64_1          6426.000026       1   6426.000026  h, n
+sram_w16_sram_bit160          15995.880063       1  15995.880063  h, n
+-----------------------------------------------------------------------------
+Total 8 references                                  90978.119292
+1
