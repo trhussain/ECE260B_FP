@@ -1,5 +1,5 @@
 xrun(64): 20.09-s017: (c) Copyright 1995-2021 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	20.09-s017: Started on Mar 22, 2025 at 15:33:18 PDT
+TOOL:	xrun(64)	20.09-s017: Started on Mar 22, 2025 at 16:59:53 PDT
 xrun
 	-define INITIALIZE_MEMORY
 	-xminitialize 0
@@ -19,13 +19,9 @@ xrun
    User defined plus("+") options:
 	+xmoveride_timescale
 
-file: ./netlist/fullchip_tb.v
-	module worklib.fullchip_tb:v
-		errors: 0, warnings: 0
 file: ./netlist/sram_w16_64.out.v
 file: ./netlist/sram_w16_160.out.v
 file: ./netlist/core.out.v
-file: /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
 file: ./netlist/fullchip.v
 	module fullchip.fullchip:v
 		errors: 0, warnings: 0
@@ -216,312 +212,14 @@ file: ./netlist/core.out.v
 		errors: 0, warnings: 0
 	module core.fifo_mux_2_1_bw20_simd1_41:v
 		errors: 0, warnings: 0
-file: /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
-	module tcbn65gplus.AN2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AN2D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AN2XD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AN3D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AO21D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AO21D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AO22D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AOI21D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AOI21D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AOI21D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AOI21D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AOI221D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.AOI22D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.BUFFD0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.BUFFD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.BUFFD2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.BUFFD3:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.BUFFD6:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.BUFFD8:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKAN2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKAN2D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKAN2D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKBD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKBD2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKBD3:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKBD4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKMUX2D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKND2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKND2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKND2D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKND2D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKND2D3:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKND2D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKND2D8:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKND3:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKND4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKXOR2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKXOR2D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.CKXOR2D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.DFCND1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.DFCND2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.DFCNQD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.DFD4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.DFQD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.DFQD2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.DFQD4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.EDFCNQD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.EDFQD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.EDFQD2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.EDFQD4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.FA1D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.FA1D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.FA1D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.FA1D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.FICOND1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.HA1D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.HA1D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.HA1D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IAO21D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IAO21D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IND2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IND2D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IND2D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IND3D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IND4D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR2D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR2D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR2XD0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR2XD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR4D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INVD0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INVD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INVD2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INVD3:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INVD4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IOA21D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IOA21D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.IOA21D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.MOAI22D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.MUX2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.MUX2ND0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND2D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND2D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND2D3:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND2D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND2D8:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND3D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND3D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND3D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND3D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2D3:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2XD0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2XD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2XD2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2XD3:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR2XD8:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR3D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR3D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR4D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OA21D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OA21D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OA21D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OA22D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OA22D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI211D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI21D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI21D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI21D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI21D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI221D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI22D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI22D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI22D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OAI22D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OR2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OR2D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OR2XD1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OR3D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.OR4D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XNR2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XNR2D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XNR2D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XNR2D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XNR3D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XNR3D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XNR3D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XNR3D4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XOR2D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XOR2D2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XOR3D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XOR3D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.XOR3D2:v
-		errors: 0, warnings: 0
-	primitive tcbn65gplus.tsmc_mux:v
-		errors: 0, warnings: 0
-	primitive tcbn65gplus.tsmc_xbuf:v
-		errors: 0, warnings: 0
-	primitive tcbn65gplus.tsmc_dff:v
-		errors: 0, warnings: 0
 file: ./netlist/sram_w16_64.out.v
 	module sram_w16_64.sram_w16_64:v
 		errors: 0, warnings: 0
 file: ./netlist/sram_w16_160.out.v
 	module sram_w16_160.sram_w16_160:v
 		errors: 0, warnings: 0
-file: /home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v
-	module tcbn65gplus.AOI22D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR2XD2:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR2XD4:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR3D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.INR3D1:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.ND4D0:v
-		errors: 0, warnings: 0
-	module tcbn65gplus.NR3D2:v
-		errors: 0, warnings: 0
-xmvlog: Memory Usage - Current physical: 20.8M, Current virtual: 92.5M
-xmvlog: CPU Usage - 0.0s system + 1.0s user = 1.1s total (1.3s, 85.1% cpu)
+xmvlog: Memory Usage - Current physical: 21.9M, Current virtual: 94.1M
+xmvlog: CPU Usage - 0.1s system + 1.1s user = 1.2s total (1.4s, 80.1% cpu)
 		Caching library 'sram_w16_64' ....... Done
 		Caching library 'fullchip' ....... Done
 		Caching library 'worklib' ....... Done
@@ -662,8 +360,6 @@ xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5899)
 		fullchip_tb
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.fullchip_tb:v <0x138d4667>
-			streams:  34, words: 53026
 		fullchip.fullchip:v <0x4b07e94e>
 			streams:   2, words:  2324
 		core.fifo_depth8_bw20_simd1_0:v <0x6903d9d3>
@@ -673,108 +369,6 @@ xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5899)
 		core.mac_col_bw8_bw_psum20_pr8_col_id4:v <0x0933301f>
 			streams:   0, words:     0
 		core.mac_array_col8_bw8_bw_psum20_pr8:v <0x50bab3f6>
-			streams:   0, words:     0
-		tcbn65gplus.DFD4:v <0x2e9ac623>
-			streams:   0, words:     0
-		tcbn65gplus.CKXOR2D0:v <0x65cbc26e>
-			streams:   0, words:     0
-		tcbn65gplus.MUX2ND0:v <0x059508c6>
-			streams:   0, words:     0
-		tcbn65gplus.CKMUX2D1:v <0x50eedb0d>
-			streams:   0, words:     0
-		tcbn65gplus.DFCND2:v <0x2ea777ae>
-			streams:   0, words:     0
-		tcbn65gplus.EDFCNQD1:v <0x76c01172>
-			streams:   0, words:     0
-		tcbn65gplus.MUX2D0:v <0x48ec7697>
-			streams:   0, words:     0
-		tcbn65gplus.CKXOR2D0:v <0x7e9bb5e8>
-			streams:   0, words:     0
-		tcbn65gplus.CKXOR2D4:v <0x02ef3db9>
-			streams:   0, words:     0
-		tcbn65gplus.XNR3D0:v <0x2bdb6696>
-			streams:   0, words:     0
-		tcbn65gplus.MUX2ND0:v <0x62f856ea>
-			streams:   0, words:     0
-		tcbn65gplus.MUX2D0:v <0x2f8128bb>
-			streams:   0, words:     0
-		tcbn65gplus.DFQD2:v <0x3b012f70>
-			streams:   0, words:     0
-		tcbn65gplus.DFQD4:v <0x59ffa190>
-			streams:   0, words:     0
-		tcbn65gplus.DFQD1:v <0x7b98d892>
-			streams:   0, words:     0
-		tcbn65gplus.DFCND1:v <0x1af30cd4>
-			streams:   0, words:     0
-		tcbn65gplus.HA1D2:v <0x69e29046>
-			streams:   0, words:     0
-		tcbn65gplus.XNR2D0:v <0x10461c8a>
-			streams:   0, words:     0
-		tcbn65gplus.EDFQD4:v <0x427664a8>
-			streams:   0, words:     0
-		tcbn65gplus.EDFQD2:v <0x16c2ca31>
-			streams:   0, words:     0
-		tcbn65gplus.EDFQD1:v <0x2296b14b>
-			streams:   0, words:     0
-		tcbn65gplus.EDFQD4:v <0x251b3a84>
-			streams:   0, words:     0
-		tcbn65gplus.EDFQD2:v <0x71af941d>
-			streams:   0, words:     0
-		tcbn65gplus.EDFQD1:v <0x45fbef67>
-			streams:   0, words:     0
-		tcbn65gplus.DFCNQD1:v <0x1e8ccfcd>
-			streams:   0, words:     0
-		tcbn65gplus.DFCNQD1:v <0x79e191e1>
-			streams:   0, words:     0
-		tcbn65gplus.FICOND1:v <0x5dcdc2b6>
-			streams:   0, words:     0
-		tcbn65gplus.FA1D4:v <0x7b44e6d1>
-			streams:   0, words:     0
-		tcbn65gplus.XNR2D1:v <0x2f2c9321>
-			streams:   0, words:     0
-		tcbn65gplus.CKXOR2D1:v <0x67663f2b>
-			streams:   0, words:     0
-		tcbn65gplus.XNR2D0:v <0x0b166b0c>
-			streams:   0, words:     0
-		tcbn65gplus.XNR2D2:v <0x4d7f133f>
-			streams:   0, words:     0
-		tcbn65gplus.XNR3D4:v <0x40653b8f>
-			streams:   0, words:     0
-		tcbn65gplus.XOR2D0:v <0x343407ea>
-			streams:   0, words:     0
-		tcbn65gplus.XNR3D2:v <0x73bccb3a>
-			streams:   0, words:     0
-		tcbn65gplus.XOR2D2:v <0x690d085f>
-			streams:   0, words:     0
-		tcbn65gplus.XOR2D2:v <0x725d7fd9>
-			streams:   0, words:     0
-		tcbn65gplus.XNR3D1:v <0x28eda738>
-			streams:   0, words:     0
-		tcbn65gplus.XNR2D4:v <0x47e5eaad>
-			streams:   0, words:     0
-		tcbn65gplus.XNR2D4:v <0x5cb59d2b>
-			streams:   0, words:     0
-		tcbn65gplus.CKXOR2D1:v <0x7c3648ad>
-			streams:   0, words:     0
-		tcbn65gplus.XNR2D2:v <0x562f64b9>
-			streams:   0, words:     0
-		tcbn65gplus.FA1D2:v <0x3183ed1f>
-			streams:   0, words:     0
-		tcbn65gplus.XOR3D2:v <0x780e9c2c>
-			streams:   0, words:     0
-		tcbn65gplus.HA1D1:v <0x22c15b11>
-			streams:   0, words:     0
-		tcbn65gplus.XNR2D1:v <0x347ce4a7>
-			streams:   0, words:     0
-		tcbn65gplus.HA1D0:v <0x21f3d3ab>
-			streams:   0, words:     0
-		tcbn65gplus.FA1D0:v <0x4111e99a>
-			streams:   0, words:     0
-		tcbn65gplus.XOR3D1:v <0x4c5ae756>
-			streams:   0, words:     0
-		tcbn65gplus.FA1D1:v <0x54e068f8>
-			streams:   0, words:     0
-		tcbn65gplus.XOR3D0:v <0x20693180>
 			streams:   0, words:     0
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
@@ -795,16 +389,662 @@ xmelab: (/home/linux/ieng6/ee260bwi25/public/PDKdata/verilog/tcbn65gplus.v,5899)
 		Timing checks:         48344       -
 		Simulation timescale:    1ps
 	Writing initial simulation snapshot: worklib.fullchip_tb:v
-xmelab: Memory Usage - Final: 53.3M, Peak: 59.6M, Peak virtual: 184.3M
-xmelab: CPU Usage - 0.1s system + 2.1s user = 2.3s total (2.6s, 86.6% cpu)
+xmelab: Memory Usage - Final: 53.4M, Peak: 59.4M, Peak virtual: 185.1M
+xmelab: CPU Usage - 0.1s system + 2.2s user = 2.3s total (2.5s, 91.5% cpu)
 
 -------------------------------------
 Relinquished control to SimVision...
 xcelium> 
 xcelium> source /software/ECE/XCELIUM-2009/tools/xcelium/files/xmsimrc
-xcelium> database -open waves -into waves.shm -default
-Created default SHM database waves
-xcelium> probe -create -shm fullchip_tb.expected_out fullchip_tb.fullchip_instance.clk fullchip_tb.fullchip_instance.core_out fullchip_tb.fullchip_instance.full_out fullchip_tb.fullchip_instance.inst fullchip_tb.fullchip_instance.mem_in fullchip_tb.fullchip_instance.q fullchip_tb.fullchip_instance.reset
+xcelium> run
+##### Q data txt reading #####
+##### K data txt reading #####
+##### Feed in data for Q  #####
+---------------------------------------------------
+     -5 |      7 |     -5 |     -7 |     -1 |      6 |      1 |      2 |
+     -4 |      7 |     -2 |     -5 |     -3 |      4 |      1 |     -3 |
+     -4 |     -1 |     -4 |     -4 |     -1 |      0 |      5 |      2 |
+     -3 |      3 |      6 |     -4 |      6 |      2 |      1 |      6 |
+     -8 |      5 |     -2 |      6 |      2 |      1 |     -3 |      4 |
+     -2 |     -1 |     -2 |     -6 |     -1 |      4 |      0 |      2 |
+      5 |     -7 |     -1 |      3 |      2 |      1 |     -7 |      6 |
+      5 |     -8 |     -3 |      6 |      0 |     -2 |      6 |     -1 |
+---------------------------------------------------
+##### Feed in data for K  #####
+---------------------------------------------------
+     -6 |      3 |     -2 |     -1 |     -5 |      1 |      0 |      7 |
+      0 |     -5 |     -8 |      0 |      6 |      0 |     -5 |     -7 |
+      4 |     -7 |     -6 |      3 |      7 |      7 |      6 |      6 |
+     -3 |      0 |      0 |     -7 |      6 |      3 |      4 |      7 |
+      6 |     -3 |      4 |     -7 |     -4 |     -3 |     -2 |     -5 |
+      0 |     -7 |      3 |      3 |     -2 |      6 |      4 |     -1 |
+      7 |     -5 |      2 |      1 |      3 |      6 |      1 |     -5 |
+      3 |     -1 |      6 |      3 |     -6 |     -2 |      1 |     -4 |
+---------------------------------------------------
+##### Estimated multiplication result (HEX) #####
+Q[ 0][ 0] * K[ 0][ 0] = -5 * -6
+Q[ 0][ 1] * K[ 0][ 1] =  7 *  3
+Q[ 0][ 2] * K[ 0][ 2] = -5 * -2
+Q[ 0][ 3] * K[ 0][ 3] = -7 * -1
+Q[ 0][ 4] * K[ 0][ 4] = -1 * -5
+Q[ 0][ 5] * K[ 0][ 5] =  6 *  1
+Q[ 0][ 6] * K[ 0][ 6] =  1 *  0
+Q[ 0][ 7] * K[ 0][ 7] =  2 *  7
+@cycle 0:  93
+Q[ 0][ 0] * K[ 1][ 0] = -5 *  0
+Q[ 0][ 1] * K[ 1][ 1] =  7 * -5
+Q[ 0][ 2] * K[ 1][ 2] = -5 * -8
+Q[ 0][ 3] * K[ 1][ 3] = -7 *  0
+Q[ 0][ 4] * K[ 1][ 4] = -1 *  6
+Q[ 0][ 5] * K[ 1][ 5] =  6 *  0
+Q[ 0][ 6] * K[ 1][ 6] =  1 * -5
+Q[ 0][ 7] * K[ 1][ 7] =  2 * -7
+@cycle 0: -20
+Q[ 0][ 0] * K[ 2][ 0] = -5 *  4
+Q[ 0][ 1] * K[ 2][ 1] =  7 * -7
+Q[ 0][ 2] * K[ 2][ 2] = -5 * -6
+Q[ 0][ 3] * K[ 2][ 3] = -7 *  3
+Q[ 0][ 4] * K[ 2][ 4] = -1 *  7
+Q[ 0][ 5] * K[ 2][ 5] =  6 *  7
+Q[ 0][ 6] * K[ 2][ 6] =  1 *  6
+Q[ 0][ 7] * K[ 2][ 7] =  2 *  6
+@cycle 0:  -7
+Q[ 0][ 0] * K[ 3][ 0] = -5 * -3
+Q[ 0][ 1] * K[ 3][ 1] =  7 *  0
+Q[ 0][ 2] * K[ 3][ 2] = -5 *  0
+Q[ 0][ 3] * K[ 3][ 3] = -7 * -7
+Q[ 0][ 4] * K[ 3][ 4] = -1 *  6
+Q[ 0][ 5] * K[ 3][ 5] =  6 *  3
+Q[ 0][ 6] * K[ 3][ 6] =  1 *  4
+Q[ 0][ 7] * K[ 3][ 7] =  2 *  7
+@cycle 0:  94
+Q[ 0][ 0] * K[ 4][ 0] = -5 *  6
+Q[ 0][ 1] * K[ 4][ 1] =  7 * -3
+Q[ 0][ 2] * K[ 4][ 2] = -5 *  4
+Q[ 0][ 3] * K[ 4][ 3] = -7 * -7
+Q[ 0][ 4] * K[ 4][ 4] = -1 * -4
+Q[ 0][ 5] * K[ 4][ 5] =  6 * -3
+Q[ 0][ 6] * K[ 4][ 6] =  1 * -2
+Q[ 0][ 7] * K[ 4][ 7] =  2 * -5
+@cycle 0: -48
+Q[ 0][ 0] * K[ 5][ 0] = -5 *  0
+Q[ 0][ 1] * K[ 5][ 1] =  7 * -7
+Q[ 0][ 2] * K[ 5][ 2] = -5 *  3
+Q[ 0][ 3] * K[ 5][ 3] = -7 *  3
+Q[ 0][ 4] * K[ 5][ 4] = -1 * -2
+Q[ 0][ 5] * K[ 5][ 5] =  6 *  6
+Q[ 0][ 6] * K[ 5][ 6] =  1 *  4
+Q[ 0][ 7] * K[ 5][ 7] =  2 * -1
+@cycle 0: -45
+Q[ 0][ 0] * K[ 6][ 0] = -5 *  7
+Q[ 0][ 1] * K[ 6][ 1] =  7 * -5
+Q[ 0][ 2] * K[ 6][ 2] = -5 *  2
+Q[ 0][ 3] * K[ 6][ 3] = -7 *  1
+Q[ 0][ 4] * K[ 6][ 4] = -1 *  3
+Q[ 0][ 5] * K[ 6][ 5] =  6 *  6
+Q[ 0][ 6] * K[ 6][ 6] =  1 *  1
+Q[ 0][ 7] * K[ 6][ 7] =  2 * -5
+@cycle 0: -63
+Q[ 0][ 0] * K[ 7][ 0] = -5 *  3
+Q[ 0][ 1] * K[ 7][ 1] =  7 * -1
+Q[ 0][ 2] * K[ 7][ 2] = -5 *  6
+Q[ 0][ 3] * K[ 7][ 3] = -7 *  3
+Q[ 0][ 4] * K[ 7][ 4] = -1 * -6
+Q[ 0][ 5] * K[ 7][ 5] =  6 * -2
+Q[ 0][ 6] * K[ 7][ 6] =  1 *  1
+Q[ 0][ 7] * K[ 7][ 7] =  2 * -4
+@cycle 0: -86
+prd @cycle 0: 0005dfffecffff90005efffd0fffd3fffc1fffaa
+Q[ 1][ 0] * K[ 0][ 0] = -4 * -6
+Q[ 1][ 1] * K[ 0][ 1] =  7 *  3
+Q[ 1][ 2] * K[ 0][ 2] = -2 * -2
+Q[ 1][ 3] * K[ 0][ 3] = -5 * -1
+Q[ 1][ 4] * K[ 0][ 4] = -3 * -5
+Q[ 1][ 5] * K[ 0][ 5] =  4 *  1
+Q[ 1][ 6] * K[ 0][ 6] =  1 *  0
+Q[ 1][ 7] * K[ 0][ 7] = -3 *  7
+@cycle 1:  52
+Q[ 1][ 0] * K[ 1][ 0] = -4 *  0
+Q[ 1][ 1] * K[ 1][ 1] =  7 * -5
+Q[ 1][ 2] * K[ 1][ 2] = -2 * -8
+Q[ 1][ 3] * K[ 1][ 3] = -5 *  0
+Q[ 1][ 4] * K[ 1][ 4] = -3 *  6
+Q[ 1][ 5] * K[ 1][ 5] =  4 *  0
+Q[ 1][ 6] * K[ 1][ 6] =  1 * -5
+Q[ 1][ 7] * K[ 1][ 7] = -3 * -7
+@cycle 1: -21
+Q[ 1][ 0] * K[ 2][ 0] = -4 *  4
+Q[ 1][ 1] * K[ 2][ 1] =  7 * -7
+Q[ 1][ 2] * K[ 2][ 2] = -2 * -6
+Q[ 1][ 3] * K[ 2][ 3] = -5 *  3
+Q[ 1][ 4] * K[ 2][ 4] = -3 *  7
+Q[ 1][ 5] * K[ 2][ 5] =  4 *  7
+Q[ 1][ 6] * K[ 2][ 6] =  1 *  6
+Q[ 1][ 7] * K[ 2][ 7] = -3 *  6
+@cycle 1: -73
+Q[ 1][ 0] * K[ 3][ 0] = -4 * -3
+Q[ 1][ 1] * K[ 3][ 1] =  7 *  0
+Q[ 1][ 2] * K[ 3][ 2] = -2 *  0
+Q[ 1][ 3] * K[ 3][ 3] = -5 * -7
+Q[ 1][ 4] * K[ 3][ 4] = -3 *  6
+Q[ 1][ 5] * K[ 3][ 5] =  4 *  3
+Q[ 1][ 6] * K[ 3][ 6] =  1 *  4
+Q[ 1][ 7] * K[ 3][ 7] = -3 *  7
+@cycle 1:  24
+Q[ 1][ 0] * K[ 4][ 0] = -4 *  6
+Q[ 1][ 1] * K[ 4][ 1] =  7 * -3
+Q[ 1][ 2] * K[ 4][ 2] = -2 *  4
+Q[ 1][ 3] * K[ 4][ 3] = -5 * -7
+Q[ 1][ 4] * K[ 4][ 4] = -3 * -4
+Q[ 1][ 5] * K[ 4][ 5] =  4 * -3
+Q[ 1][ 6] * K[ 4][ 6] =  1 * -2
+Q[ 1][ 7] * K[ 4][ 7] = -3 * -5
+@cycle 1:  -5
+Q[ 1][ 0] * K[ 5][ 0] = -4 *  0
+Q[ 1][ 1] * K[ 5][ 1] =  7 * -7
+Q[ 1][ 2] * K[ 5][ 2] = -2 *  3
+Q[ 1][ 3] * K[ 5][ 3] = -5 *  3
+Q[ 1][ 4] * K[ 5][ 4] = -3 * -2
+Q[ 1][ 5] * K[ 5][ 5] =  4 *  6
+Q[ 1][ 6] * K[ 5][ 6] =  1 *  4
+Q[ 1][ 7] * K[ 5][ 7] = -3 * -1
+@cycle 1: -33
+Q[ 1][ 0] * K[ 6][ 0] = -4 *  7
+Q[ 1][ 1] * K[ 6][ 1] =  7 * -5
+Q[ 1][ 2] * K[ 6][ 2] = -2 *  2
+Q[ 1][ 3] * K[ 6][ 3] = -5 *  1
+Q[ 1][ 4] * K[ 6][ 4] = -3 *  3
+Q[ 1][ 5] * K[ 6][ 5] =  4 *  6
+Q[ 1][ 6] * K[ 6][ 6] =  1 *  1
+Q[ 1][ 7] * K[ 6][ 7] = -3 * -5
+@cycle 1: -41
+Q[ 1][ 0] * K[ 7][ 0] = -4 *  3
+Q[ 1][ 1] * K[ 7][ 1] =  7 * -1
+Q[ 1][ 2] * K[ 7][ 2] = -2 *  6
+Q[ 1][ 3] * K[ 7][ 3] = -5 *  3
+Q[ 1][ 4] * K[ 7][ 4] = -3 * -6
+Q[ 1][ 5] * K[ 7][ 5] =  4 * -2
+Q[ 1][ 6] * K[ 7][ 6] =  1 *  1
+Q[ 1][ 7] * K[ 7][ 7] = -3 * -4
+@cycle 1: -23
+prd @cycle 1: 00034fffebfffb700018ffffbfffdffffd7fffe9
+Q[ 2][ 0] * K[ 0][ 0] = -4 * -6
+Q[ 2][ 1] * K[ 0][ 1] = -1 *  3
+Q[ 2][ 2] * K[ 0][ 2] = -4 * -2
+Q[ 2][ 3] * K[ 0][ 3] = -4 * -1
+Q[ 2][ 4] * K[ 0][ 4] = -1 * -5
+Q[ 2][ 5] * K[ 0][ 5] =  0 *  1
+Q[ 2][ 6] * K[ 0][ 6] =  5 *  0
+Q[ 2][ 7] * K[ 0][ 7] =  2 *  7
+@cycle 2:  52
+Q[ 2][ 0] * K[ 1][ 0] = -4 *  0
+Q[ 2][ 1] * K[ 1][ 1] = -1 * -5
+Q[ 2][ 2] * K[ 1][ 2] = -4 * -8
+Q[ 2][ 3] * K[ 1][ 3] = -4 *  0
+Q[ 2][ 4] * K[ 1][ 4] = -1 *  6
+Q[ 2][ 5] * K[ 1][ 5] =  0 *  0
+Q[ 2][ 6] * K[ 1][ 6] =  5 * -5
+Q[ 2][ 7] * K[ 1][ 7] =  2 * -7
+@cycle 2:  -8
+Q[ 2][ 0] * K[ 2][ 0] = -4 *  4
+Q[ 2][ 1] * K[ 2][ 1] = -1 * -7
+Q[ 2][ 2] * K[ 2][ 2] = -4 * -6
+Q[ 2][ 3] * K[ 2][ 3] = -4 *  3
+Q[ 2][ 4] * K[ 2][ 4] = -1 *  7
+Q[ 2][ 5] * K[ 2][ 5] =  0 *  7
+Q[ 2][ 6] * K[ 2][ 6] =  5 *  6
+Q[ 2][ 7] * K[ 2][ 7] =  2 *  6
+@cycle 2:  38
+Q[ 2][ 0] * K[ 3][ 0] = -4 * -3
+Q[ 2][ 1] * K[ 3][ 1] = -1 *  0
+Q[ 2][ 2] * K[ 3][ 2] = -4 *  0
+Q[ 2][ 3] * K[ 3][ 3] = -4 * -7
+Q[ 2][ 4] * K[ 3][ 4] = -1 *  6
+Q[ 2][ 5] * K[ 3][ 5] =  0 *  3
+Q[ 2][ 6] * K[ 3][ 6] =  5 *  4
+Q[ 2][ 7] * K[ 3][ 7] =  2 *  7
+@cycle 2:  68
+Q[ 2][ 0] * K[ 4][ 0] = -4 *  6
+Q[ 2][ 1] * K[ 4][ 1] = -1 * -3
+Q[ 2][ 2] * K[ 4][ 2] = -4 *  4
+Q[ 2][ 3] * K[ 4][ 3] = -4 * -7
+Q[ 2][ 4] * K[ 4][ 4] = -1 * -4
+Q[ 2][ 5] * K[ 4][ 5] =  0 * -3
+Q[ 2][ 6] * K[ 4][ 6] =  5 * -2
+Q[ 2][ 7] * K[ 4][ 7] =  2 * -5
+@cycle 2: -25
+Q[ 2][ 0] * K[ 5][ 0] = -4 *  0
+Q[ 2][ 1] * K[ 5][ 1] = -1 * -7
+Q[ 2][ 2] * K[ 5][ 2] = -4 *  3
+Q[ 2][ 3] * K[ 5][ 3] = -4 *  3
+Q[ 2][ 4] * K[ 5][ 4] = -1 * -2
+Q[ 2][ 5] * K[ 5][ 5] =  0 *  6
+Q[ 2][ 6] * K[ 5][ 6] =  5 *  4
+Q[ 2][ 7] * K[ 5][ 7] =  2 * -1
+@cycle 2:   3
+Q[ 2][ 0] * K[ 6][ 0] = -4 *  7
+Q[ 2][ 1] * K[ 6][ 1] = -1 * -5
+Q[ 2][ 2] * K[ 6][ 2] = -4 *  2
+Q[ 2][ 3] * K[ 6][ 3] = -4 *  1
+Q[ 2][ 4] * K[ 6][ 4] = -1 *  3
+Q[ 2][ 5] * K[ 6][ 5] =  0 *  6
+Q[ 2][ 6] * K[ 6][ 6] =  5 *  1
+Q[ 2][ 7] * K[ 6][ 7] =  2 * -5
+@cycle 2: -43
+Q[ 2][ 0] * K[ 7][ 0] = -4 *  3
+Q[ 2][ 1] * K[ 7][ 1] = -1 * -1
+Q[ 2][ 2] * K[ 7][ 2] = -4 *  6
+Q[ 2][ 3] * K[ 7][ 3] = -4 *  3
+Q[ 2][ 4] * K[ 7][ 4] = -1 * -6
+Q[ 2][ 5] * K[ 7][ 5] =  0 * -2
+Q[ 2][ 6] * K[ 7][ 6] =  5 *  1
+Q[ 2][ 7] * K[ 7][ 7] =  2 * -4
+@cycle 2: -44
+prd @cycle 2: 00034ffff80002600044fffe700003fffd5fffd4
+Q[ 3][ 0] * K[ 0][ 0] = -3 * -6
+Q[ 3][ 1] * K[ 0][ 1] =  3 *  3
+Q[ 3][ 2] * K[ 0][ 2] =  6 * -2
+Q[ 3][ 3] * K[ 0][ 3] = -4 * -1
+Q[ 3][ 4] * K[ 0][ 4] =  6 * -5
+Q[ 3][ 5] * K[ 0][ 5] =  2 *  1
+Q[ 3][ 6] * K[ 0][ 6] =  1 *  0
+Q[ 3][ 7] * K[ 0][ 7] =  6 *  7
+@cycle 3:  33
+Q[ 3][ 0] * K[ 1][ 0] = -3 *  0
+Q[ 3][ 1] * K[ 1][ 1] =  3 * -5
+Q[ 3][ 2] * K[ 1][ 2] =  6 * -8
+Q[ 3][ 3] * K[ 1][ 3] = -4 *  0
+Q[ 3][ 4] * K[ 1][ 4] =  6 *  6
+Q[ 3][ 5] * K[ 1][ 5] =  2 *  0
+Q[ 3][ 6] * K[ 1][ 6] =  1 * -5
+Q[ 3][ 7] * K[ 1][ 7] =  6 * -7
+@cycle 3: -74
+Q[ 3][ 0] * K[ 2][ 0] = -3 *  4
+Q[ 3][ 1] * K[ 2][ 1] =  3 * -7
+Q[ 3][ 2] * K[ 2][ 2] =  6 * -6
+Q[ 3][ 3] * K[ 2][ 3] = -4 *  3
+Q[ 3][ 4] * K[ 2][ 4] =  6 *  7
+Q[ 3][ 5] * K[ 2][ 5] =  2 *  7
+Q[ 3][ 6] * K[ 2][ 6] =  1 *  6
+Q[ 3][ 7] * K[ 2][ 7] =  6 *  6
+@cycle 3:  17
+Q[ 3][ 0] * K[ 3][ 0] = -3 * -3
+Q[ 3][ 1] * K[ 3][ 1] =  3 *  0
+Q[ 3][ 2] * K[ 3][ 2] =  6 *  0
+Q[ 3][ 3] * K[ 3][ 3] = -4 * -7
+Q[ 3][ 4] * K[ 3][ 4] =  6 *  6
+Q[ 3][ 5] * K[ 3][ 5] =  2 *  3
+Q[ 3][ 6] * K[ 3][ 6] =  1 *  4
+Q[ 3][ 7] * K[ 3][ 7] =  6 *  7
+@cycle 3: 125
+Q[ 3][ 0] * K[ 4][ 0] = -3 *  6
+Q[ 3][ 1] * K[ 4][ 1] =  3 * -3
+Q[ 3][ 2] * K[ 4][ 2] =  6 *  4
+Q[ 3][ 3] * K[ 4][ 3] = -4 * -7
+Q[ 3][ 4] * K[ 4][ 4] =  6 * -4
+Q[ 3][ 5] * K[ 4][ 5] =  2 * -3
+Q[ 3][ 6] * K[ 4][ 6] =  1 * -2
+Q[ 3][ 7] * K[ 4][ 7] =  6 * -5
+@cycle 3: -37
+Q[ 3][ 0] * K[ 5][ 0] = -3 *  0
+Q[ 3][ 1] * K[ 5][ 1] =  3 * -7
+Q[ 3][ 2] * K[ 5][ 2] =  6 *  3
+Q[ 3][ 3] * K[ 5][ 3] = -4 *  3
+Q[ 3][ 4] * K[ 5][ 4] =  6 * -2
+Q[ 3][ 5] * K[ 5][ 5] =  2 *  6
+Q[ 3][ 6] * K[ 5][ 6] =  1 *  4
+Q[ 3][ 7] * K[ 5][ 7] =  6 * -1
+@cycle 3: -17
+Q[ 3][ 0] * K[ 6][ 0] = -3 *  7
+Q[ 3][ 1] * K[ 6][ 1] =  3 * -5
+Q[ 3][ 2] * K[ 6][ 2] =  6 *  2
+Q[ 3][ 3] * K[ 6][ 3] = -4 *  1
+Q[ 3][ 4] * K[ 6][ 4] =  6 *  3
+Q[ 3][ 5] * K[ 6][ 5] =  2 *  6
+Q[ 3][ 6] * K[ 6][ 6] =  1 *  1
+Q[ 3][ 7] * K[ 6][ 7] =  6 * -5
+@cycle 3: -27
+Q[ 3][ 0] * K[ 7][ 0] = -3 *  3
+Q[ 3][ 1] * K[ 7][ 1] =  3 * -1
+Q[ 3][ 2] * K[ 7][ 2] =  6 *  6
+Q[ 3][ 3] * K[ 7][ 3] = -4 *  3
+Q[ 3][ 4] * K[ 7][ 4] =  6 * -6
+Q[ 3][ 5] * K[ 7][ 5] =  2 * -2
+Q[ 3][ 6] * K[ 7][ 6] =  1 *  1
+Q[ 3][ 7] * K[ 7][ 7] =  6 * -4
+@cycle 3: -51
+prd @cycle 3: 00021fffb6000110007dfffdbfffeffffe5fffcd
+Q[ 4][ 0] * K[ 0][ 0] = -8 * -6
+Q[ 4][ 1] * K[ 0][ 1] =  5 *  3
+Q[ 4][ 2] * K[ 0][ 2] = -2 * -2
+Q[ 4][ 3] * K[ 0][ 3] =  6 * -1
+Q[ 4][ 4] * K[ 0][ 4] =  2 * -5
+Q[ 4][ 5] * K[ 0][ 5] =  1 *  1
+Q[ 4][ 6] * K[ 0][ 6] = -3 *  0
+Q[ 4][ 7] * K[ 0][ 7] =  4 *  7
+@cycle 4:  80
+Q[ 4][ 0] * K[ 1][ 0] = -8 *  0
+Q[ 4][ 1] * K[ 1][ 1] =  5 * -5
+Q[ 4][ 2] * K[ 1][ 2] = -2 * -8
+Q[ 4][ 3] * K[ 1][ 3] =  6 *  0
+Q[ 4][ 4] * K[ 1][ 4] =  2 *  6
+Q[ 4][ 5] * K[ 1][ 5] =  1 *  0
+Q[ 4][ 6] * K[ 1][ 6] = -3 * -5
+Q[ 4][ 7] * K[ 1][ 7] =  4 * -7
+@cycle 4: -10
+Q[ 4][ 0] * K[ 2][ 0] = -8 *  4
+Q[ 4][ 1] * K[ 2][ 1] =  5 * -7
+Q[ 4][ 2] * K[ 2][ 2] = -2 * -6
+Q[ 4][ 3] * K[ 2][ 3] =  6 *  3
+Q[ 4][ 4] * K[ 2][ 4] =  2 *  7
+Q[ 4][ 5] * K[ 2][ 5] =  1 *  7
+Q[ 4][ 6] * K[ 2][ 6] = -3 *  6
+Q[ 4][ 7] * K[ 2][ 7] =  4 *  6
+@cycle 4: -10
+Q[ 4][ 0] * K[ 3][ 0] = -8 * -3
+Q[ 4][ 1] * K[ 3][ 1] =  5 *  0
+Q[ 4][ 2] * K[ 3][ 2] = -2 *  0
+Q[ 4][ 3] * K[ 3][ 3] =  6 * -7
+Q[ 4][ 4] * K[ 3][ 4] =  2 *  6
+Q[ 4][ 5] * K[ 3][ 5] =  1 *  3
+Q[ 4][ 6] * K[ 3][ 6] = -3 *  4
+Q[ 4][ 7] * K[ 3][ 7] =  4 *  7
+@cycle 4:  13
+Q[ 4][ 0] * K[ 4][ 0] = -8 *  6
+Q[ 4][ 1] * K[ 4][ 1] =  5 * -3
+Q[ 4][ 2] * K[ 4][ 2] = -2 *  4
+Q[ 4][ 3] * K[ 4][ 3] =  6 * -7
+Q[ 4][ 4] * K[ 4][ 4] =  2 * -4
+Q[ 4][ 5] * K[ 4][ 5] =  1 * -3
+Q[ 4][ 6] * K[ 4][ 6] = -3 * -2
+Q[ 4][ 7] * K[ 4][ 7] =  4 * -5
+@cycle 4: -138
+Q[ 4][ 0] * K[ 5][ 0] = -8 *  0
+Q[ 4][ 1] * K[ 5][ 1] =  5 * -7
+Q[ 4][ 2] * K[ 5][ 2] = -2 *  3
+Q[ 4][ 3] * K[ 5][ 3] =  6 *  3
+Q[ 4][ 4] * K[ 5][ 4] =  2 * -2
+Q[ 4][ 5] * K[ 5][ 5] =  1 *  6
+Q[ 4][ 6] * K[ 5][ 6] = -3 *  4
+Q[ 4][ 7] * K[ 5][ 7] =  4 * -1
+@cycle 4: -37
+Q[ 4][ 0] * K[ 6][ 0] = -8 *  7
+Q[ 4][ 1] * K[ 6][ 1] =  5 * -5
+Q[ 4][ 2] * K[ 6][ 2] = -2 *  2
+Q[ 4][ 3] * K[ 6][ 3] =  6 *  1
+Q[ 4][ 4] * K[ 6][ 4] =  2 *  3
+Q[ 4][ 5] * K[ 6][ 5] =  1 *  6
+Q[ 4][ 6] * K[ 6][ 6] = -3 *  1
+Q[ 4][ 7] * K[ 6][ 7] =  4 * -5
+@cycle 4: -90
+Q[ 4][ 0] * K[ 7][ 0] = -8 *  3
+Q[ 4][ 1] * K[ 7][ 1] =  5 * -1
+Q[ 4][ 2] * K[ 7][ 2] = -2 *  6
+Q[ 4][ 3] * K[ 7][ 3] =  6 *  3
+Q[ 4][ 4] * K[ 7][ 4] =  2 * -6
+Q[ 4][ 5] * K[ 7][ 5] =  1 * -2
+Q[ 4][ 6] * K[ 7][ 6] = -3 *  1
+Q[ 4][ 7] * K[ 7][ 7] =  4 * -4
+@cycle 4: -56
+prd @cycle 4: 00050ffff6ffff60000dfff76fffdbfffa6fffc8
+Q[ 5][ 0] * K[ 0][ 0] = -2 * -6
+Q[ 5][ 1] * K[ 0][ 1] = -1 *  3
+Q[ 5][ 2] * K[ 0][ 2] = -2 * -2
+Q[ 5][ 3] * K[ 0][ 3] = -6 * -1
+Q[ 5][ 4] * K[ 0][ 4] = -1 * -5
+Q[ 5][ 5] * K[ 0][ 5] =  4 *  1
+Q[ 5][ 6] * K[ 0][ 6] =  0 *  0
+Q[ 5][ 7] * K[ 0][ 7] =  2 *  7
+@cycle 5:  42
+Q[ 5][ 0] * K[ 1][ 0] = -2 *  0
+Q[ 5][ 1] * K[ 1][ 1] = -1 * -5
+Q[ 5][ 2] * K[ 1][ 2] = -2 * -8
+Q[ 5][ 3] * K[ 1][ 3] = -6 *  0
+Q[ 5][ 4] * K[ 1][ 4] = -1 *  6
+Q[ 5][ 5] * K[ 1][ 5] =  4 *  0
+Q[ 5][ 6] * K[ 1][ 6] =  0 * -5
+Q[ 5][ 7] * K[ 1][ 7] =  2 * -7
+@cycle 5:   1
+Q[ 5][ 0] * K[ 2][ 0] = -2 *  4
+Q[ 5][ 1] * K[ 2][ 1] = -1 * -7
+Q[ 5][ 2] * K[ 2][ 2] = -2 * -6
+Q[ 5][ 3] * K[ 2][ 3] = -6 *  3
+Q[ 5][ 4] * K[ 2][ 4] = -1 *  7
+Q[ 5][ 5] * K[ 2][ 5] =  4 *  7
+Q[ 5][ 6] * K[ 2][ 6] =  0 *  6
+Q[ 5][ 7] * K[ 2][ 7] =  2 *  6
+@cycle 5:  26
+Q[ 5][ 0] * K[ 3][ 0] = -2 * -3
+Q[ 5][ 1] * K[ 3][ 1] = -1 *  0
+Q[ 5][ 2] * K[ 3][ 2] = -2 *  0
+Q[ 5][ 3] * K[ 3][ 3] = -6 * -7
+Q[ 5][ 4] * K[ 3][ 4] = -1 *  6
+Q[ 5][ 5] * K[ 3][ 5] =  4 *  3
+Q[ 5][ 6] * K[ 3][ 6] =  0 *  4
+Q[ 5][ 7] * K[ 3][ 7] =  2 *  7
+@cycle 5:  68
+Q[ 5][ 0] * K[ 4][ 0] = -2 *  6
+Q[ 5][ 1] * K[ 4][ 1] = -1 * -3
+Q[ 5][ 2] * K[ 4][ 2] = -2 *  4
+Q[ 5][ 3] * K[ 4][ 3] = -6 * -7
+Q[ 5][ 4] * K[ 4][ 4] = -1 * -4
+Q[ 5][ 5] * K[ 4][ 5] =  4 * -3
+Q[ 5][ 6] * K[ 4][ 6] =  0 * -2
+Q[ 5][ 7] * K[ 4][ 7] =  2 * -5
+@cycle 5:   7
+Q[ 5][ 0] * K[ 5][ 0] = -2 *  0
+Q[ 5][ 1] * K[ 5][ 1] = -1 * -7
+Q[ 5][ 2] * K[ 5][ 2] = -2 *  3
+Q[ 5][ 3] * K[ 5][ 3] = -6 *  3
+Q[ 5][ 4] * K[ 5][ 4] = -1 * -2
+Q[ 5][ 5] * K[ 5][ 5] =  4 *  6
+Q[ 5][ 6] * K[ 5][ 6] =  0 *  4
+Q[ 5][ 7] * K[ 5][ 7] =  2 * -1
+@cycle 5:   7
+Q[ 5][ 0] * K[ 6][ 0] = -2 *  7
+Q[ 5][ 1] * K[ 6][ 1] = -1 * -5
+Q[ 5][ 2] * K[ 6][ 2] = -2 *  2
+Q[ 5][ 3] * K[ 6][ 3] = -6 *  1
+Q[ 5][ 4] * K[ 6][ 4] = -1 *  3
+Q[ 5][ 5] * K[ 6][ 5] =  4 *  6
+Q[ 5][ 6] * K[ 6][ 6] =  0 *  1
+Q[ 5][ 7] * K[ 6][ 7] =  2 * -5
+@cycle 5:  -8
+Q[ 5][ 0] * K[ 7][ 0] = -2 *  3
+Q[ 5][ 1] * K[ 7][ 1] = -1 * -1
+Q[ 5][ 2] * K[ 7][ 2] = -2 *  6
+Q[ 5][ 3] * K[ 7][ 3] = -6 *  3
+Q[ 5][ 4] * K[ 7][ 4] = -1 * -6
+Q[ 5][ 5] * K[ 7][ 5] =  4 * -2
+Q[ 5][ 6] * K[ 7][ 6] =  0 *  1
+Q[ 5][ 7] * K[ 7][ 7] =  2 * -4
+@cycle 5: -45
+prd @cycle 5: 0002a000010001a000440000700007ffff8fffd3
+Q[ 6][ 0] * K[ 0][ 0] =  5 * -6
+Q[ 6][ 1] * K[ 0][ 1] = -7 *  3
+Q[ 6][ 2] * K[ 0][ 2] = -1 * -2
+Q[ 6][ 3] * K[ 0][ 3] =  3 * -1
+Q[ 6][ 4] * K[ 0][ 4] =  2 * -5
+Q[ 6][ 5] * K[ 0][ 5] =  1 *  1
+Q[ 6][ 6] * K[ 0][ 6] = -7 *  0
+Q[ 6][ 7] * K[ 0][ 7] =  6 *  7
+@cycle 6: -19
+Q[ 6][ 0] * K[ 1][ 0] =  5 *  0
+Q[ 6][ 1] * K[ 1][ 1] = -7 * -5
+Q[ 6][ 2] * K[ 1][ 2] = -1 * -8
+Q[ 6][ 3] * K[ 1][ 3] =  3 *  0
+Q[ 6][ 4] * K[ 1][ 4] =  2 *  6
+Q[ 6][ 5] * K[ 1][ 5] =  1 *  0
+Q[ 6][ 6] * K[ 1][ 6] = -7 * -5
+Q[ 6][ 7] * K[ 1][ 7] =  6 * -7
+@cycle 6:  48
+Q[ 6][ 0] * K[ 2][ 0] =  5 *  4
+Q[ 6][ 1] * K[ 2][ 1] = -7 * -7
+Q[ 6][ 2] * K[ 2][ 2] = -1 * -6
+Q[ 6][ 3] * K[ 2][ 3] =  3 *  3
+Q[ 6][ 4] * K[ 2][ 4] =  2 *  7
+Q[ 6][ 5] * K[ 2][ 5] =  1 *  7
+Q[ 6][ 6] * K[ 2][ 6] = -7 *  6
+Q[ 6][ 7] * K[ 2][ 7] =  6 *  6
+@cycle 6:  99
+Q[ 6][ 0] * K[ 3][ 0] =  5 * -3
+Q[ 6][ 1] * K[ 3][ 1] = -7 *  0
+Q[ 6][ 2] * K[ 3][ 2] = -1 *  0
+Q[ 6][ 3] * K[ 3][ 3] =  3 * -7
+Q[ 6][ 4] * K[ 3][ 4] =  2 *  6
+Q[ 6][ 5] * K[ 3][ 5] =  1 *  3
+Q[ 6][ 6] * K[ 3][ 6] = -7 *  4
+Q[ 6][ 7] * K[ 3][ 7] =  6 *  7
+@cycle 6:  -7
+Q[ 6][ 0] * K[ 4][ 0] =  5 *  6
+Q[ 6][ 1] * K[ 4][ 1] = -7 * -3
+Q[ 6][ 2] * K[ 4][ 2] = -1 *  4
+Q[ 6][ 3] * K[ 4][ 3] =  3 * -7
+Q[ 6][ 4] * K[ 4][ 4] =  2 * -4
+Q[ 6][ 5] * K[ 4][ 5] =  1 * -3
+Q[ 6][ 6] * K[ 4][ 6] = -7 * -2
+Q[ 6][ 7] * K[ 4][ 7] =  6 * -5
+@cycle 6:  -1
+Q[ 6][ 0] * K[ 5][ 0] =  5 *  0
+Q[ 6][ 1] * K[ 5][ 1] = -7 * -7
+Q[ 6][ 2] * K[ 5][ 2] = -1 *  3
+Q[ 6][ 3] * K[ 5][ 3] =  3 *  3
+Q[ 6][ 4] * K[ 5][ 4] =  2 * -2
+Q[ 6][ 5] * K[ 5][ 5] =  1 *  6
+Q[ 6][ 6] * K[ 5][ 6] = -7 *  4
+Q[ 6][ 7] * K[ 5][ 7] =  6 * -1
+@cycle 6:  23
+Q[ 6][ 0] * K[ 6][ 0] =  5 *  7
+Q[ 6][ 1] * K[ 6][ 1] = -7 * -5
+Q[ 6][ 2] * K[ 6][ 2] = -1 *  2
+Q[ 6][ 3] * K[ 6][ 3] =  3 *  1
+Q[ 6][ 4] * K[ 6][ 4] =  2 *  3
+Q[ 6][ 5] * K[ 6][ 5] =  1 *  6
+Q[ 6][ 6] * K[ 6][ 6] = -7 *  1
+Q[ 6][ 7] * K[ 6][ 7] =  6 * -5
+@cycle 6:  46
+Q[ 6][ 0] * K[ 7][ 0] =  5 *  3
+Q[ 6][ 1] * K[ 7][ 1] = -7 * -1
+Q[ 6][ 2] * K[ 7][ 2] = -1 *  6
+Q[ 6][ 3] * K[ 7][ 3] =  3 *  3
+Q[ 6][ 4] * K[ 7][ 4] =  2 * -6
+Q[ 6][ 5] * K[ 7][ 5] =  1 * -2
+Q[ 6][ 6] * K[ 7][ 6] = -7 *  1
+Q[ 6][ 7] * K[ 7][ 7] =  6 * -4
+@cycle 6: -20
+prd @cycle 6: fffed0003000063ffff9fffff000170002efffec
+Q[ 7][ 0] * K[ 0][ 0] =  5 * -6
+Q[ 7][ 1] * K[ 0][ 1] = -8 *  3
+Q[ 7][ 2] * K[ 0][ 2] = -3 * -2
+Q[ 7][ 3] * K[ 0][ 3] =  6 * -1
+Q[ 7][ 4] * K[ 0][ 4] =  0 * -5
+Q[ 7][ 5] * K[ 0][ 5] = -2 *  1
+Q[ 7][ 6] * K[ 0][ 6] =  6 *  0
+Q[ 7][ 7] * K[ 0][ 7] = -1 *  7
+@cycle 7: -63
+Q[ 7][ 0] * K[ 1][ 0] =  5 *  0
+Q[ 7][ 1] * K[ 1][ 1] = -8 * -5
+Q[ 7][ 2] * K[ 1][ 2] = -3 * -8
+Q[ 7][ 3] * K[ 1][ 3] =  6 *  0
+Q[ 7][ 4] * K[ 1][ 4] =  0 *  6
+Q[ 7][ 5] * K[ 1][ 5] = -2 *  0
+Q[ 7][ 6] * K[ 1][ 6] =  6 * -5
+Q[ 7][ 7] * K[ 1][ 7] = -1 * -7
+@cycle 7:  41
+Q[ 7][ 0] * K[ 2][ 0] =  5 *  4
+Q[ 7][ 1] * K[ 2][ 1] = -8 * -7
+Q[ 7][ 2] * K[ 2][ 2] = -3 * -6
+Q[ 7][ 3] * K[ 2][ 3] =  6 *  3
+Q[ 7][ 4] * K[ 2][ 4] =  0 *  7
+Q[ 7][ 5] * K[ 2][ 5] = -2 *  7
+Q[ 7][ 6] * K[ 2][ 6] =  6 *  6
+Q[ 7][ 7] * K[ 2][ 7] = -1 *  6
+@cycle 7: 128
+Q[ 7][ 0] * K[ 3][ 0] =  5 * -3
+Q[ 7][ 1] * K[ 3][ 1] = -8 *  0
+Q[ 7][ 2] * K[ 3][ 2] = -3 *  0
+Q[ 7][ 3] * K[ 3][ 3] =  6 * -7
+Q[ 7][ 4] * K[ 3][ 4] =  0 *  6
+Q[ 7][ 5] * K[ 3][ 5] = -2 *  3
+Q[ 7][ 6] * K[ 3][ 6] =  6 *  4
+Q[ 7][ 7] * K[ 3][ 7] = -1 *  7
+@cycle 7: -46
+Q[ 7][ 0] * K[ 4][ 0] =  5 *  6
+Q[ 7][ 1] * K[ 4][ 1] = -8 * -3
+Q[ 7][ 2] * K[ 4][ 2] = -3 *  4
+Q[ 7][ 3] * K[ 4][ 3] =  6 * -7
+Q[ 7][ 4] * K[ 4][ 4] =  0 * -4
+Q[ 7][ 5] * K[ 4][ 5] = -2 * -3
+Q[ 7][ 6] * K[ 4][ 6] =  6 * -2
+Q[ 7][ 7] * K[ 4][ 7] = -1 * -5
+@cycle 7:  -1
+Q[ 7][ 0] * K[ 5][ 0] =  5 *  0
+Q[ 7][ 1] * K[ 5][ 1] = -8 * -7
+Q[ 7][ 2] * K[ 5][ 2] = -3 *  3
+Q[ 7][ 3] * K[ 5][ 3] =  6 *  3
+Q[ 7][ 4] * K[ 5][ 4] =  0 * -2
+Q[ 7][ 5] * K[ 5][ 5] = -2 *  6
+Q[ 7][ 6] * K[ 5][ 6] =  6 *  4
+Q[ 7][ 7] * K[ 5][ 7] = -1 * -1
+@cycle 7:  78
+Q[ 7][ 0] * K[ 6][ 0] =  5 *  7
+Q[ 7][ 1] * K[ 6][ 1] = -8 * -5
+Q[ 7][ 2] * K[ 6][ 2] = -3 *  2
+Q[ 7][ 3] * K[ 6][ 3] =  6 *  1
+Q[ 7][ 4] * K[ 6][ 4] =  0 *  3
+Q[ 7][ 5] * K[ 6][ 5] = -2 *  6
+Q[ 7][ 6] * K[ 6][ 6] =  6 *  1
+Q[ 7][ 7] * K[ 6][ 7] = -1 * -5
+@cycle 7:  74
+Q[ 7][ 0] * K[ 7][ 0] =  5 *  3
+Q[ 7][ 1] * K[ 7][ 1] = -8 * -1
+Q[ 7][ 2] * K[ 7][ 2] = -3 *  6
+Q[ 7][ 3] * K[ 7][ 3] =  6 *  3
+Q[ 7][ 4] * K[ 7][ 4] =  0 * -6
+Q[ 7][ 5] * K[ 7][ 5] = -2 * -2
+Q[ 7][ 6] * K[ 7][ 6] =  6 *  1
+Q[ 7][ 7] * K[ 7][ 7] = -1 * -4
+@cycle 7:  37
+prd @cycle 7: fffc10002900080fffd2fffff0004e0004a00025
+##### Estimated Multiplication Result (Decimal) #####
+---------------------------------------------------
+Cycle  0 |     93 |    -20 |     -7 |     94 |    -48 |    -45 |    -63 |    -86 |
+Cycle  1 |     52 |    -21 |    -73 |     24 |     -5 |    -33 |    -41 |    -23 |
+Cycle  2 |     52 |     -8 |     38 |     68 |    -25 |      3 |    -43 |    -44 |
+Cycle  3 |     33 |    -74 |     17 |    125 |    -37 |    -17 |    -27 |    -51 |
+Cycle  4 |     80 |    -10 |    -10 |     13 |   -138 |    -37 |    -90 |    -56 |
+Cycle  5 |     42 |      1 |     26 |     68 |      7 |      7 |     -8 |    -45 |
+Cycle  6 |    -19 |     48 |     99 |     -7 |     -1 |     23 |     46 |    -20 |
+Cycle  7 |    -63 |     41 |    128 |    -46 |     -1 |     78 |     74 |     37 |
+---------------------------------------------------
+##### Qmem writing  #####
+##### Kmem writing #####
+##### K data loading to processor #####
+##### execute #####
+##### move ofifo to pmem #####
+##### PMEM TO OUT #####
+Core Output |      x |      x |      x |      x |      x |      x |      x |      x |
+---------------------------------------------------
+Core Output |     93 |    -20 |     -7 |     94 |    -48 |    -45 |    -63 |    -86 |
+---------------------------------------------------
+Core Output |     52 |    -21 |    -73 |     24 |     -5 |    -33 |    -41 |    -23 |
+---------------------------------------------------
+Core Output |     52 |     -8 |     38 |     68 |    -25 |      3 |    -43 |    -44 |
+---------------------------------------------------
+Core Output |     33 |    -74 |     17 |    125 |    -37 |    -17 |    -27 |    -51 |
+---------------------------------------------------
+Core Output |     80 |    -10 |    -10 |     13 |   -138 |    -37 |    -90 |    -56 |
+---------------------------------------------------
+Core Output |     42 |      1 |     26 |     68 |      7 |      7 |     -8 |    -45 |
+---------------------------------------------------
+Core Output |    -19 |     48 |     99 |     -7 |     -1 |     23 |     46 |    -20 |
+---------------------------------------------------
+Core Output |    -63 |     41 |    128 |    -46 |     -1 |     78 |     74 |     37 |
+---------------------------------------------------
+Simulation complete via $finish(1) at time 915 NS + 0
+/home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/gate_sim/netlist/fullchip_tb.v:381 
+xcelium> probe -create -shm fullchip_tb.fullchipout fullchip_tb.fullchip_instance.core_out fullchip_tb.fullchip_instance.full_out fullchip_tb.fullchip_instance.reset fullchip_tb.fullchip_instance.clk fullchip_tb.fullchip_instance.core_instance.pmem_in fullchip_tb.fullchip_instance.core_instance.qmem_out
+Created default SHM database xcelium.shm
 Created probe 1
 xcelium> reset
 Loaded snapshot worklib.fullchip_tb:v
@@ -1454,10 +1694,5 @@ Core Output |    -19 |     48 |     99 |     -7 |     -1 |     23 |     46 |    
 Core Output |    -63 |     41 |    128 |    -46 |     -1 |     78 |     74 |     37 |
 ---------------------------------------------------
 Simulation complete via $finish(1) at time 915 NS + 0
-./netlist/fullchip_tb.v:381   #0.50 $finish;
-xcelium> ^C
-xcelium> exit
-xmsim: Memory Usage - Final: 105.8M, Peak: 116.3M, Peak virtual: 448.4M
-xmsim: Main Thread CPU Usage - 3.7s system + 3.4s user = 7.1s total
-xmsim: CPU Usage - 3.7s system + 3.1s user = 6.8s total (465.4s, 1.5% cpu)
-TOOL:	xrun(64)	20.09-s017: Exiting on Mar 22, 2025 at 15:41:08 PDT  (total: 00:07:50)
+/home/linux/ieng6/ee260bwi25/aekeng/test/ECE260B_FP/ece260_project/step3/gate_sim/netlist/fullchip_tb.v:381 
+xcelium> 

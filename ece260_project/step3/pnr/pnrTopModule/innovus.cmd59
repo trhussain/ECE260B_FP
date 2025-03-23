@@ -76,3 +76,4 @@ setDesignMode -process 65
 restoreDesign /home/linux/ieng6/ee260bwi25/trhussain/allenTest/ECE260B_FP/ece260_project/step3/pnr/pnrTopModule/route.enc.dat core
 restoreDesign /home/linux/ieng6/ee260bwi25/trhussain/allenTest/ECE260B_FP/ece260_project/step3/pnr/pnrTopModule/route.enc.dat core
 restoreDesign /home/linux/ieng6/ee260bwi25/trhussain/allenTest/ECE260B_FP/ece260_project/step3/pnr/pnrTopModule/route.enc.dat core
+verify_drc

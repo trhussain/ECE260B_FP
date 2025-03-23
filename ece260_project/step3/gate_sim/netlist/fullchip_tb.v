@@ -382,25 +382,7 @@ pmem_add = 0;
 
 
 end
-// Declare variables
-reg [bw_psum*col-1:0] expected_out; 
-integer first = 0;  // assuming 'k' is an integer index for the cycles
-integer second = 0;  // assuming 'p' is the column index
-//integer m = 0;  // This could be used for other shifting logic
 
-always @(posedge clk) begin
-    if ($time > 825000) 
-        // Store the current value into expected_out when pmem_rd is high
-        expected_out <= result[first][second];  // or whatever value you want to store in expected_out
-        
-        // Increment p until it reaches col-1, then reset p and increment k
-        if (second < col - 1) begin
-            second <= second + 1;  // Increment p until it reaches col-1
-        end else begin
-            second <= 0;      // Reset p to 0 when it reaches col-1
-            first <= first + 1;  // Increment k when p resets
-        end
-end
 
 endmodule
 

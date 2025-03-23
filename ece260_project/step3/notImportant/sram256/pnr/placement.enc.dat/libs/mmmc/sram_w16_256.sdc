@@ -1,1 +1,0 @@
-/home/linux/ieng6/ee260bwi25/aekeng/ECE260B_FP/ece260_project/step3/sram256/pnr/constraints/sram_w16_256.sdc
